@@ -1,0 +1,13 @@
+{
+  "name": "angular-toastr",
+  "version": "1.4.1",
+  "_release": "1.4.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.4.1",
+    "commit": "239ec3a0208cfd28f6991c9e7fd2a09895c4fe06"
+  },
+  "_source": "http://192.168.2.107/sfr/angular-toastr-bower.git",
+  "_target": "1.4.1",
+  "_originalSource": "angular-toastr"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "font-awesome",
+  "description": "Font Awesome",
+  "version": "4.3.0",
+  "keywords": [],
+  "homepage": "http://fontawesome.io",
+  "dependencies": {},
+  "devDependencies": {},
+  "license": [
+    "OFL-1.1",
+    "MIT",
+    "CC-BY-3.0"
+  ],
+  "main": [
+    "./css/font-awesome.css",
+    "./fonts/*"
+  ],
+  "ignore": [
+    "*/.*",
+    "*.json",
+    "src",
+    "*.yml",
+    "Gemfile",
+    "Gemfile.lock",
+    "*.md"
+  ],
+  "_release": "4.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v4.3.0",
+    "commit": "92513f8156d8560fd02a393c243a4455c41dd2cf"
+  },
+  "_source": "http://192.168.2.107/sfr/fontawesome-bower.git",
+  "_target": "4.3.0",
+  "_originalSource": "font-awesome"
+}

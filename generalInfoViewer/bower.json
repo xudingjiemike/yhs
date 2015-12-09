@@ -1,0 +1,45 @@
+{
+  "name": "userMessage",
+  "version": "5.0",
+  "authors": [
+
+  ],
+  "description": "KFPT App Web Front Project",
+  "main": "app/index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "appPath": "app",
+  "dependencies": {
+    "jquery": "1.10.0",
+    "bootstrap": "3.3.4",
+    "underscore": "1.8.0",
+    "font-awesome": "4.3.0",
+    "pace": "1.0.2",
+    "hammerjs": "2.0.4",
+    "angular": "1.3.7",
+    "angular-ui-bootstrap": "0.13.0",
+    "angular-ui-router": "0.2.13",
+    "angular-ui-sortable": "0.13.2",
+    "angular-underscore-module": "1.0.1",
+    "angular-sanitize": "1.2.18",
+    "angular-moment": "0.10.1",
+    "angular-animate": "1.3.7",
+    "angular-touch" : "1.3.7",
+    "angular-ui-router-anim-in-out": "0.0.16",
+    "angular-toastr":"1.4.1",
+    "angular-validation":"1.3.1.1",
+    "fastclick":"1.0.3",
+    "iscroll":"5.1.4",
+    "angular-dragdrop":"1.0.12",
+    "ng-file-upload": "10.1.2"
+  },
+  "resolutions": {
+    "jquery": "1.10.0",
+    "angular": "1.3.7",
+    "underscore": "1.8.0"
+  }
+}

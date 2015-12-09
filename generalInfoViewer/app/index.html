@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="ui.yypt5.yhgl.GeneralInfoViewer">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="styles/base.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="cont-left" ng-controller="ContLeftController" >
+    <div>
+        <div class="tabs">
+            <div class="tab fix-margin" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag)">{{tag.tagName}}</div>
+            <!--<div class="tab fix-margin"></div>-->
+            <div class="tab-other">
+                <div class="tab-other">
+                    <input type="text" class="search-userinfo" placeholder="输入税号、用户名称等切换用户"/>
+                    <span class="do-change" title="切换用户"><i class="fa fa-plus"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="tab-content-box" ng-style="TagStyle" style="width: 400%">
+                <div class="tab-content-item" style="width: 25%" ng-repeat="tag in tags">
+                    <div ng-include="tag.templateUrl"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../bower_components/jquery/jquery.js"></script>
+<script src="../bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="../bower_components/jquery-ui/ui/datepicker.js" charset="utf-8"></script>
+<script src="../bower_components/jquery-ui/ui/i18n/datepicker-zh-CN.js" charset="utf-8"></script>
+<script src="../bower_components/bootstrap/js/bootstrap.js"></script>
+<!-- Underscore -->
+<script src="../bower_components/underscore/underscore.js"></script>
+
+<!-- moment JS -->
+<script src="../bower_components/moment/moment.js"></script>
+<script src="../bower_components/moment/locale/zh-cn.js"></script>
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-animate/angular-animate.js"></script>
+<script src="../bower_components/angular-touch/angular-touch.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="../bower_components/angular-ui-sortable/sortable.js"></script>
+<script src="../bower_components/angular-ui-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="../bower_components/angular-ui-bootstrap/ui-bootstrap.min.js"></script>
+<script src="../bower_components/angular-underscore-module/angular-underscore-module.js"></script>
+<script src="../bower_components/angular-moment/angular-moment.js"></script>
+<script src="../bower_components/angular-ui-router-anim-in-out/anim-in-out.js"></script>
+<script src="../bower_components/angular-toastr/angular-toastr.tpls.js"></script>
+<script src="../bower_components/angular-validation/angular-validation.js"></script>
+<script src="../bower_components/angular-validation/angular-validation-rule.js"></script>
+<script src="../bower_components/angular-dragdrop/src/angular-dragdrop.min.js"></script>
+<script src="../bower_components/ng-file-upload/ng-file-upload-bower-10.1.2/ng-file-upload-all.min.js"></script>
+
+<!-- endbuild -->
+
+<!--angular -->
+<!--<script src="../bower_components/angular/angular.min.js"></script>-->
+<!--ui bootstrap-->
+<!--<script src="../bower_components/angular-ui-bootstrap/ui-bootstrap.min.js"></script>-->
+
+<!--<script src="../bower_components/underscore/underscore-min.js"></script>-->
+
+<!--config-->
+<script src="scripts/app.js"></script>
+
+<!--Controller-->
+<script src="scripts/controllers/ContLeftController.js"></script>
+<script src="scripts/controllers/TaxlnstitutionController.js"></script>
+</body>
+</html>

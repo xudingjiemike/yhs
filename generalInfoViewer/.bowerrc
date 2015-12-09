@@ -1,0 +1,8 @@
+{
+  "registry" :{
+    "search": [
+      "http://192.168.60.107:3001",
+      "https://bower.herokuapp.com"
+    ]
+  }
+}

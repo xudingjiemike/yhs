@@ -1,0 +1,13 @@
+{
+  "name": "iscroll",
+  "version": "5.1.4",
+  "_release": "5.1.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "5.1.4",
+    "commit": "457d28d169511d5bde03e5ff5d92ed552d37f467"
+  },
+  "_source": "http://192.168.2.107/sfr/iscroll-bower.git",
+  "_target": "5.1.4",
+  "_originalSource": "iscroll"
+}
