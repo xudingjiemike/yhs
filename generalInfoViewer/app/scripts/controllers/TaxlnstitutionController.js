@@ -31,7 +31,8 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer').controller('TaxlnstitutionCont
         $scope.tags  = _tags;
         $scope.tags[0].TagClass = 'active';
 
-        $scope.activeView = function(number,tag){
+        $scope.activeView = function(number,tag,$element){
+            var dom = $($element);
             _.map($scope.tags,function(item){
                 item.TagClass = "";
             });
