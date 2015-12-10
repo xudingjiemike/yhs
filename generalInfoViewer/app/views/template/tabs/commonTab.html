@@ -1,8 +1,8 @@
 <div>
 <div class="tabs style2">
     <div>
-        <div class="tab" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag)">{{tag.tagName}}</div>
-
+        <div class="tab" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag,$event)" >{{tag.tagName}}</div>
+        <div class="active-bar"></div>
     </div>
 </div>
 <div class="scroll-arrow">
@@ -506,3 +506,25 @@
     </div>
 </div>
 </div>
+<script>
+    $(document).ready(function(){
+        var moved = 0;
+        $(".style2.tabs").on("click",".tab",function(){
+            if(!$(this).hasClass("active")){
+                var tabContentEl = $(".cont-left .style2 .tab-content-box");
+                var index = 7 - $(this).nextAll(".tab").length;
+                var position = -index*12.5;
+                tabContentEl.css("-webkit-transform","translate("+position+"%,0)");
+                $(".cont-left .style2 .tab").removeClass("active");
+                $(this).addClass("active");
+                $(".tabs.style2 .active-bar").css({width:$(this).width()+"px", left: this.offsetLeft+10 +"px"});
+                if(this.offsetLeft<moved){
+                    $(".arrow-left").click();
+                }
+                if(this.offsetLeft>moved && (this.offsetLeft+$(this).outerWidth())>style2_tabs.outerWidth()){
+                    $(".arrow-right").click();
+                }
+            }
+        });
+    })
+</script>

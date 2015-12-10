@@ -6,28 +6,31 @@
     <link href="styles/base.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div class="cont-left" ng-controller="ContLeftController" >
-    <div>
-        <div class="tabs">
-            <div class="tab fix-margin" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag)">{{tag.tagName}}</div>
-            <!--<div class="tab fix-margin"></div>-->
-            <div class="tab-other">
-                <div class="tab-other">
-                    <input type="text" class="search-userinfo" placeholder="输入税号、用户名称等切换用户"/>
-                    <span class="do-change" title="切换用户"><i class="fa fa-plus"></i></span>
+<div class="container">
+    <div class="page-content">
+        <div class="cont-left" ng-controller="ContLeftController" >
+            <div>
+                <div class="tabs">
+                    <div class="tab fix-margin" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag)">{{tag.tagName}}</div>
+                    <!--<div class="tab fix-margin"></div>-->
+                    <div class="tab-other">
+                        <div class="tab-other">
+                            <input type="text" class="search-userinfo" placeholder="输入税号、用户名称等切换用户"/>
+                            <span class="do-change" title="切换用户"><i class="fa fa-plus"></i></span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="tab-content">
-            <div class="tab-content-box" ng-style="TagStyle" style="width: 400%">
-                <div class="tab-content-item" style="width: 25%" ng-repeat="tag in tags">
-                    <div ng-include="tag.templateUrl"></div>
+                <div class="tab-content">
+                    <div class="tab-content-box" ng-style="TagStyle" style="width: 400%">
+                        <div class="tab-content-item" style="width: 25%" ng-repeat="tag in tags">
+                            <div ng-include="tag.templateUrl"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <script src="../bower_components/jquery/jquery.js"></script>
 <script src="../bower_components/jquery-ui/jquery-ui.js"></script>
@@ -57,20 +60,25 @@
 <script src="../bower_components/angular-dragdrop/src/angular-dragdrop.min.js"></script>
 <script src="../bower_components/ng-file-upload/ng-file-upload-bower-10.1.2/ng-file-upload-all.min.js"></script>
 
-<!-- endbuild -->
-
-<!--angular -->
-<!--<script src="../bower_components/angular/angular.min.js"></script>-->
-<!--ui bootstrap-->
-<!--<script src="../bower_components/angular-ui-bootstrap/ui-bootstrap.min.js"></script>-->
-
-<!--<script src="../bower_components/underscore/underscore-min.js"></script>-->
-
 <!--config-->
 <script src="scripts/app.js"></script>
+<script src="scripts/config.js"></script>
 
 <!--Controller-->
 <script src="scripts/controllers/ContLeftController.js"></script>
 <script src="scripts/controllers/TaxlnstitutionController.js"></script>
+<script src="scripts/controllers/TrustorsController.js"></script>
+<script src="scripts/controllers/ExpiredDetailController.js"></script>
+<script src="scripts/controllers/MainController.js"></script>
+
+
+<!--Service-->
+<script src="scripts/service/TrustorService.js"></script>
+<script src="scripts/service/ExpiredDetailService.js"></script>
+
+<!--API-->
+<script src="scripts/api/TrustorsApi.js"></script>
+<script src="scripts/api/ExpiredDetailApi.js"></script>
+
 </body>
 </html>
