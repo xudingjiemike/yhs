@@ -1,0 +1,31 @@
+<div class="table">
+    <div class="search-result">
+        <table>
+            <tr>
+                <th>表单编号</th>
+                <th>任务描述</th>
+                <th>任务状态</th>
+                <th>执行时间</th>
+                <th>要求完成时间</th>
+                <th>创建人</th>
+                <th>创建时间</th>
+            </tr>
+            <tr ng-repeat="vo in ycrwList">
+                <td>{{vo.BDBH}}</td>
+                <td>
+                    {{vo.RWMS}}
+                </td>
+                <td>
+                    {{vo.RWZT}}
+                </td>
+                <td>
+                    {{vo.PFSJ}}
+                </td>
+                <td>{{vo.YQWCRQ}}</td>
+                <td>{{vo.RWCJZ}}</td>
+                <td>{{vo.PFSJ}}</td>
+            </tr>
+
+        </table>
+    </div>
+</div>

@@ -6,7 +6,6 @@ angular
     .controller('ContLeftController',['$scope','_',function($scope,_){
 
         $scope.findInfo = "";
-        $scope.trustorUrl = "views/trustors.html";
 
         $scope.TagStyle = {'-webkit-transform':'translate(0,0'};
 
@@ -27,7 +26,7 @@ angular
         //var _tags = [{'tagName':'纳税单位','TagClass':'','templateUrl':'template/tabs/taxInstitutionPage.html'},{'tagName':'会计信息','TagClass':'','templateUrl':'template/tabs/taxpayerPage.html'},{'tagName':'中介机构','TagClass':'','templateUrl':'template/tabs/intermediaryInstitutionPage.html'}];
 
 
-        var _tags = [new _tagObj('软件授权','views/template/tabs/taxInstitutionPage.html'),new _tagObj('会计信息','views/template/tabs/taxpayerPage.html'),{'tagName':'中介机构','TagClass':'','templateUrl':'views/template/tabs/intermediaryInstitutionPage.html'}];
+        var _tags = [new _tagObj('纳税单位','views/template/tabs/taxInstitutionPage.html'),new _tagObj('会计信息','views/template/tabs/accountantPage.html'),{'tagName':'中介机构','TagClass':'','templateUrl':'views/template/tabs/intermediaryInstitutionPage.html'}];
 
         $scope.tags  = _tags;
         $scope.tags[0].TagClass = 'active';
