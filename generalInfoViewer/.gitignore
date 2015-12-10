@@ -1,6 +1,6 @@
-/generalInfoViewer/.idea/
-/generalInfoViewer/.tmp/
-/generalInfoViewer/node_modules/
-/generalInfoViewer/bower_components/
+.idea/*
+.tmp/*
+node_modules/*
+bower_components/*
 /dist/
 /test/
