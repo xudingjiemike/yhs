@@ -6,7 +6,6 @@ angular
     .controller('ContLeftController',['$scope','_',function($scope,_){
 
         $scope.findInfo = "";
-        $scope.trustorUrl = "views/trustors.html";
 
         $scope.TagStyle = {'-webkit-transform':'translate(0,0'};
 
