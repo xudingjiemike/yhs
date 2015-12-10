@@ -1,0 +1,31 @@
+<div class="table">
+    <div class="search-result">
+        <table>
+            <tr>
+                <th>受理人</th>
+                <th>联系人</th>
+                <th>主叫号码</th>
+                <th>咨询事项</th>
+                <th>处理情况</th>
+                <th>开始时间</th>
+                <th>操作</th>
+            </tr>
+            <tr ng-repeat="vo in zxjlList">
+                <td>{{vo.zxmc}}</td>
+                <td>
+                    {{vo.lxr}}
+                </td>
+                <td>
+                    {{vo.lxdh}}
+                </td>
+                <td>
+                    {{vo.zxsxStr}}
+                </td>
+                <td>{{vo.clfs}}</td>
+                <td>{{vo.zxsj}}</td>
+                <td></td>
+            </tr>
+
+        </table>
+    </div>
+</div>

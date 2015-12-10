@@ -1,0 +1,33 @@
+<div class="table">
+    <div class="search-result">
+        <table>
+            <tr>
+                <th>产品大类</th>
+                <th>潜在价值</th>
+                <th>截止日期</th>
+                <th>可能性</th>
+                <th>描述</th>
+                <th>状态</th>
+            </tr>
+            <tr ng-repeat="vo in xsList">
+                <td>{{vo.cpdl}}</td>
+                <td>
+                    {{vo.qzjz}}
+                </td>
+                <td>
+                    {{vo.jzsj}}
+                </td>
+                <td>
+                    {{vo.knx}}
+                </td>
+                <td>
+                    {{vo.xsms}}
+                </td>
+                <td>
+                    {{vo.jzzt}}
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>
