@@ -1,30 +1,6 @@
 <div ng-controller="TaxlnstitutionController">
 <div id="cont-left-top" class="cont-left-top">
-    <div class="cont-left-top-top">
-        <div class="username">
-            <span>单位：</span>
-            <span class="show-detail alink">税友软件集团股份有限公司</span>
-                                                <span class="user-position">
-                                                    通行密码：1342345635434
-                                                </span>
-        </div>
-        <div class="level">
-            <span class="level-icon level2"></span>
-            <span class="level-type">被代理</span>
-            <span class="alink level-manage"><i class="fa fa-users"></i>人员管理</span>
-        </div>
-        <div class="tags">
-            <span>标签：</span>
-            <span class="tag">中税用户</span>
-            <span class="tag">大客户</span>
-            <span class="tag">双软户</span>
-            <span class="tag">保密单位</span>
-            <span class="tag alink"><i class="fa fa-plus"></i>添加标签</span>
-        </div>
-        <div class="remark">
-            <input type="text" placeholder="请输入备注信息"/>
-        </div>
-    </div>
+    <div class="cont-left-top-top" ng-include="'views/template/information/personBasic.html'"></div>
     <div class="cont-left-top-mid">
         <div>
             <table class="service-info">

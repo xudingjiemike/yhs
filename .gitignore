@@ -1,0 +1,7 @@
+/.idea/
+/generalInfoViewer/.tmp/*
+/generalInfoViewer/dist/
+/generalInfoViewer/test/
+/generalInfoViewer/node_modules/*
+/generalInfoViewer/bower_components/*
+/generalInfoViewer/.idea/*
