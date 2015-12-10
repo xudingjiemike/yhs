@@ -30,7 +30,8 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Taxlnstitution').controller('UiY
          */
 
 
-        var _tags = [new _tagObj('软件授权','views/template/tables/tablePage.html'),new _tagObj('订单'),new _tagObj('服务/任务'),new _tagObj('银行托收'),new _tagObj('外呼'),new _tagObj('短信'),new _tagObj('礼品申请'),new _tagObj('诉求'),new _tagObj('短信'),new _tagObj('短信'),new _tagObj('短信'),new _tagObj('短信')];
+        var _tags = [new _tagObj('软件授权'),new _tagObj('订单'),new _tagObj('银行托收'),new _tagObj('礼品申请'),new _tagObj('咨询'),new _tagObj('回电'),new _tagObj('外呼'),new _tagObj('远程'),new _tagObj('派发'),new _tagObj('网点服务'),new _tagObj('诉求'),new _tagObj('短信'),new _tagObj('线索')];
+
 
         $scope.itemWidth = {'width':((1/_tags.length)*100)+'%'};
         /****

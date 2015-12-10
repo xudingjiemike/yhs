@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3d11f1b-e546-4bf0-bc54-914c262573bb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generalInfoViewer/app/scripts/directives/UiYTab.js" afterPath="$PROJECT_DIR$/generalInfoViewer/app/scripts/directives/UiYTab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_callback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_callout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_ldzx.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_sm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_sms.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_sq.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_xs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_yc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_zdxc.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/UiYTabController.js" afterPath="$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/UiYTabController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/commonTab.html" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/commonTab.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/taxInstitutionPage.html" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/taxInstitutionPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generalInfoViewer/app/index.html" afterPath="$PROJECT_DIR$/generalInfoViewer/app/index.html" />
     </list>
     <ignored path="yypt5-front-app-yhlxr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,9 +62,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.333333" vertical-offset="61" max-vertical-offset="1440">
-              <caret line="27" column="60" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="60" />
-              <folding />
+            <state vertical-scroll-proportion="-14.333333" vertical-offset="46" max-vertical-offset="1425">
+              <caret line="26" column="60" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="60" />
+              <folding>
+                <marker date="1449752537000" expanded="true" signature="447:1608" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,8 +104,8 @@
       <file leaf-file-name="UiYTabController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/UiYTabController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5193929" vertical-offset="142" max-vertical-offset="1035">
-              <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.013490725" vertical-offset="457" max-vertical-offset="1050">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -438,7 +445,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1245">
           <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
-          <folding />
+          <folding>
+            <marker date="1449752537000" expanded="true" signature="447:1608" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -600,9 +609,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.333333" vertical-offset="61" max-vertical-offset="1440">
-          <caret line="27" column="60" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="60" />
-          <folding />
+        <state vertical-scroll-proportion="-14.333333" vertical-offset="46" max-vertical-offset="1425">
+          <caret line="26" column="60" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="60" />
+          <folding>
+            <marker date="1449752537000" expanded="true" signature="447:1608" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -632,8 +643,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/UiYTabController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5193929" vertical-offset="142" max-vertical-offset="1035">
-          <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.013490725" vertical-offset="457" max-vertical-offset="1050">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
