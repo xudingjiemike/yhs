@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3d11f1b-e546-4bf0-bc54-914c262573bb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/UiYTabController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/taxpayerPage.html" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/accountantPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/ContLeftController.js" afterPath="$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/ContLeftController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/TaxlnstitutionController.js" afterPath="$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/TaxlnstitutionController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generalInfoViewer/app/scripts/directives/UiYTab.js" afterPath="$PROJECT_DIR$/generalInfoViewer/app/scripts/directives/UiYTab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/commonTab.html" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/commonTab.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generalInfoViewer/app/index.html" afterPath="$PROJECT_DIR$/generalInfoViewer/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a3d11f1b-e546-4bf0-bc54-914c262573bb" name="Default" comment="" />
     <ignored path="yypt5-front-app-yhlxr.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +37,8 @@
       <file leaf-file-name="intermediaryInstitutionPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/intermediaryInstitutionPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.458334" vertical-offset="3292" max-vertical-offset="4200">
-              <caret line="257" column="10" selection-start-line="257" selection-start-column="10" selection-end-line="257" selection-end-column="10" />
+            <state vertical-scroll-proportion="-23.458334" vertical-offset="127" max-vertical-offset="810">
+              <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -87,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/taxInstitutionPage.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="360">
-              <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+              <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
               <folding>
                 <element signature="n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
@@ -123,8 +114,8 @@
       <file leaf-file-name="accountantPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/accountantPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="420">
-              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+              <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -205,13 +196,22 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="yypt5-front-app-yhlxr" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yypt5-front-app-yhlxr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yypt5-front-app-yhlxr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -318,6 +318,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -389,7 +390,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-45" y="45" width="1261" height="713" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -397,7 +398,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -546,14 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generalInfoViewer/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="180">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/views/trustors.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31634447" vertical-offset="0" max-vertical-offset="1020">
@@ -572,8 +565,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/accountantPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="420">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -623,8 +616,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/intermediaryInstitutionPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.458334" vertical-offset="3292" max-vertical-offset="4200">
-          <caret line="257" column="10" selection-start-line="257" selection-start-column="10" selection-end-line="257" selection-end-column="10" />
+        <state vertical-scroll-proportion="-23.458334" vertical-offset="127" max-vertical-offset="810">
+          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -640,7 +633,7 @@
     <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/taxInstitutionPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="360">
-          <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
           <folding>
             <element signature="n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
