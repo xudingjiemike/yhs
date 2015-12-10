@@ -2,10 +2,11 @@
  * Created by apple on 15/12/2.
  */
 angular
-    .module('ui.yypt5.yhgl.GeneralInfoViewer')
+    .module('ui.yypt5.yhgl.GeneralInfoViewer.ContLeft')
     .controller('ContLeftController',['$scope','_',function($scope,_){
 
         $scope.findInfo = "";
+        $scope.trustorUrl = "views/trustors.html";
 
         $scope.TagStyle = {'-webkit-transform':'translate(0,0'};
 

@@ -1,0 +1,13 @@
+{
+  "name": "bootstrap",
+  "version": "3.3.4",
+  "_release": "3.3.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.3.4",
+    "commit": "1a435e65b66ecad421795283836bce3523580d43"
+  },
+  "_source": "http://192.168.2.107/sfr/bootstrap-bower.git",
+  "_target": "3.3.4",
+  "_originalSource": "bootstrap"
+}
