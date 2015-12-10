@@ -2,18 +2,18 @@
  * Created by liliang on 2015/12/9.
  */
 /**
- * Êı¾İµ÷ÊÔ¿ª¹Ø
+ * æ•°æ®è°ƒè¯•å¼€å…³
  */
 angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
     .factory("Mock", [function(){
-    var mock = true;
+        var mock = true;
 
-    return {
-        getMock: function(){
-            return mock;
-        }
-    };
-}]);
+        return {
+            getMock: function(){
+                return mock;
+            }
+        };
+    }]);
 angular
     .module("ui.yypt5.yhgl.GeneralInfoViewer")
     .factory("Host", ["Mock", function(Mock){
@@ -56,7 +56,7 @@ angular
                 urlname: "TRUSTOR",
                 url: "yypt5/api/khgl/yhs/wtdw",
                 mockurl: "userMessage/app/data/trustor.json",
-                descript: "²éÑ¯Î¯ÍĞµ¥Î»£¬²ÎÊıkhid(¿Í»§±àºÅ),khlx(¿Í»§ÀàĞÍ)"
+                descript: "æŸ¥è¯¢å§”æ‰˜å•ä½ï¼Œå‚æ•°khid(å®¢æˆ·ç¼–å·),khlx(å®¢æˆ·ç±»å‹)"
             }
         ];
 
