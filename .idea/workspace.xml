@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3d11f1b-e546-4bf0-bc54-914c262573bb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_callback.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_callout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_ldzx.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_sm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_sms.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_sq.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_xs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_yc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/yhjh/kfpt/yhjh_zdxc.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/UiYTabController.js" afterPath="$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/UiYTabController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generalInfoViewer/app/index.html" afterPath="$PROJECT_DIR$/generalInfoViewer/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generalInfoViewer/app/views/template/tables/tablePage.html" afterPath="$PROJECT_DIR$/generalInfoViewer/app/views/template/tables/tablePage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="yypt5-front-app-yhlxr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,14 +51,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.333333" vertical-offset="46" max-vertical-offset="1425">
-              <caret line="26" column="60" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="60" />
-              <folding>
-                <marker date="1449752537000" expanded="true" signature="447:1608" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="0.60456944" vertical-offset="31" max-vertical-offset="1425">
+              <caret line="25" column="60" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="60" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,11 +91,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UiYTabController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UiYTabController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/UiYTabController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.013490725" vertical-offset="457" max-vertical-offset="1050">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="457" max-vertical-offset="1050">
+              <caret line="32" column="768" selection-start-line="32" selection-start-column="768" selection-end-line="32" selection-end-column="768" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tablePage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/views/template/tables/tablePage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-49.375" vertical-offset="0" max-vertical-offset="1290">
+              <caret line="79" column="1" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -141,6 +141,7 @@
         <option value="$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/taxInstitutionPage.html" />
         <option value="$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/commonTab.html" />
         <option value="$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/UiYTabController.js" />
+        <option value="$PROJECT_DIR$/generalInfoViewer/app/views/template/tables/tablePage.html" />
       </list>
     </option>
   </component>
@@ -304,6 +305,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yypt5-front-app-yhlxr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yypt5-front-app-yhlxr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generalInfoViewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yypt5-front-app-yhlxr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yypt5-front-app-yhlxr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generalInfoViewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -445,9 +494,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1245">
           <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
-          <folding>
-            <marker date="1449752537000" expanded="true" signature="447:1608" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -503,14 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/scripts/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../webportal-front/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="593">
@@ -525,14 +564,6 @@
           <folding>
             <marker date="1449716052000" expanded="true" signature="-1:-1" placeholder="[...]" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/scripts/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -568,24 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/scripts/directives/UiYTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/commonTab.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.708333" vertical-offset="1" max-vertical-offset="6480">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/taxInstitutionPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="495">
@@ -607,16 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.333333" vertical-offset="46" max-vertical-offset="1425">
-          <caret line="26" column="60" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="60" />
-          <folding>
-            <marker date="1449752537000" expanded="true" signature="447:1608" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/scripts/directives/UiYTab.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
@@ -633,18 +636,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/views/template/tables/tablePage.html">
+    <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/UiYTabController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10544816" vertical-offset="0" max-vertical-offset="1260">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="457" max-vertical-offset="1050">
+          <caret line="32" column="768" selection-start-line="32" selection-start-column="768" selection-end-line="32" selection-end-column="768" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/scripts/controllers/UiYTabController.js">
+    <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/views/template/tabs/commonTab.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.013490725" vertical-offset="457" max-vertical-offset="1050">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.708333" vertical-offset="1" max-vertical-offset="6480">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/scripts/directives/TrustorDtv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="593">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/views/template/tables/tablePage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-49.375" vertical-offset="0" max-vertical-offset="1290">
+          <caret line="79" column="1" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/scripts/directives/UiYTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generalInfoViewer/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60456944" vertical-offset="31" max-vertical-offset="1425">
+          <caret line="25" column="60" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="60" />
           <folding />
         </state>
       </provider>
