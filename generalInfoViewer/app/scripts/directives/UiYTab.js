@@ -4,6 +4,7 @@
 angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
     .directive('uiYTab',function(){
         return{
+            restrict:'AEC',
             controller:'UiYTabController',
             templateUrl:function(element,attr){
                 return attr.tempalteUrl || 'views/template/tabs/commonTab.html';

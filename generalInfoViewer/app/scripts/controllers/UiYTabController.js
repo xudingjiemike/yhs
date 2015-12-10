@@ -30,8 +30,9 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Taxlnstitution').controller('UiY
          */
 
 
-        var _tags = [new _tagObj('软件授权'),new _tagObj('订单'),new _tagObj('服务/任务'),new _tagObj('银行托收'),new _tagObj('外呼'),new _tagObj('短信'),new _tagObj('礼品申请'),new _tagObj('诉求')];
+        var _tags = [new _tagObj('软件授权','views/template/tables/tablePage.html'),new _tagObj('订单'),new _tagObj('服务/任务'),new _tagObj('银行托收'),new _tagObj('外呼'),new _tagObj('短信'),new _tagObj('礼品申请'),new _tagObj('诉求'),new _tagObj('短信'),new _tagObj('短信'),new _tagObj('短信'),new _tagObj('短信')];
 
+        $scope.itemWidth = {'width':((1/_tags.length)*100)+'%'};
         /****
          * 点击之后改变view和tag
          * @param number
@@ -51,7 +52,8 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Taxlnstitution').controller('UiY
             });
 
             tag.TagClass = 'active';
-            $scope.TagStyle  = {'-webkit-transform':'translate(-'+((number)/_tags.length*100)+'%,0'};
+            $scope.tagNumber = _tags.length;
+            $scope.TagStyle  = {'width':(_tags.length*100)+'%','-webkit-transform':'translate(-'+((number-1)/_tags.length*100)+'%,0'};
         };
         $scope.tags  = _tags;
         $scope.tags[0].TagClass = 'active';
