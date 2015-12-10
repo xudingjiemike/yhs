@@ -1,0 +1,22 @@
+{
+  "name": "fastclick",
+  "main": "lib/fastclick.js",
+  "ignore": [
+    "**/.*",
+    "component.json",
+    "package.json",
+    "Makefile",
+    "tests",
+    "examples"
+  ],
+  "version": "1.0.3",
+  "_release": "1.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.3",
+    "commit": "a9bf33ccab85fc95b54411f487a3a61675edd026"
+  },
+  "_source": "http://192.168.2.107/sfr/fastclick-bower.git",
+  "_target": "1.0.3",
+  "_originalSource": "fastclick"
+}
