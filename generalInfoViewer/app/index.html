@@ -13,7 +13,7 @@
         <div class="cont-left" ng-controller="ContLeftController" >
             <div>
                 <div class="tabs">
-                    <div class="tab" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag)">{{tag.tagName}}</div>
+                    <div class="tab" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag)" ng-bind="tag.tagName"></div>
                     <!--<div class="tab fix-margin"></div>-->
                     <div class="tab-other">
                         <div class="tab-other">
@@ -60,16 +60,15 @@
 <script src="../bower_components/angular-validation/angular-validation.js"></script>
 <script src="../bower_components/angular-validation/angular-validation-rule.js"></script>
 <script src="../bower_components/angular-dragdrop/src/angular-dragdrop.min.js"></script>
-<script src="../bower_components/ng-file-upload/ng-file-upload-bower-10.1.2/ng-file-upload-all.min.js"></script>
 
 <!--config-->
 <script src="scripts/app.js"></script>
 <script src="scripts/config.js"></script>
-
 <script src="scripts/base.js"></script>
 
 <!--Controller-->
 <script src="scripts/controllers/ContLeftController.js"></script>
+<script src="scripts/controllers/InformationController.js"></script>
 <script src="scripts/controllers/TaxlnstitutionController.js"></script>
 <script src="scripts/controllers/TrustorsController.js"></script>
 <script src="scripts/controllers/ExpiredDetailController.js"></script>

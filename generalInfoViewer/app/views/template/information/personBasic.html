@@ -1,10 +1,11 @@
-<div>
+<div ng-controller="InformationController">
     <div class="level ptop0">
         <span>单位：</span>
         <span>税友软件集团股份有限公司</span>
-        <span class="show-detail alink hover">详细</span>
+        <span class="show-detail alink hover" ng-mouseover="mouseOverEvent()">详细</span>
     </div>
     <div class="remark">
         <input type="text" placeholder="请输入备注信息"/>
     </div>
+    <div class="company-info" ng-include="'views/template/information/companyDetail.html'" ng-mouseleave="mouseLeaveEvent()"></div>
 </div>
