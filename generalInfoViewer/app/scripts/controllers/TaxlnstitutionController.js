@@ -1,7 +1,7 @@
 /**
  * Created by apple on 15/11/24.
  */
-angular.module('ui.yypt5.yhgl.GeneralInfoViewer').controller('TaxlnstitutionController',['$scope',function($scope){
+angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Taxlnstitution').controller('TaxlnstitutionController',['$scope',function($scope){
 
         $scope.findInfo = "";
 
