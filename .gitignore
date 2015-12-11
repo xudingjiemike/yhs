@@ -5,3 +5,4 @@
 /generalInfoViewer/node_modules/*
 /generalInfoViewer/bower_components/*
 /generalInfoViewer/.idea/*
+/.gitignore/*
