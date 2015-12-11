@@ -10,22 +10,24 @@
 <body>
 <div class="container">
     <div class="page-content">
-        <div class="cont-left" ng-app="ui.yypt5.yhgl.GeneralInfoViewer" ng-controller="ContLeftController">
-            <div>
-                <div class="tabs">
-                    <div class="tab" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag)" ng-bind="tag.tagName"></div>
-                    <!--<div class="tab fix-margin"></div>-->
-                    <div class="tab-other">
+        <div ng-app="ui.yypt5.yhgl.GeneralInfoViewer" ng-controller="ContLeftController">
+            <div class="cont-left outer-box">
+                <div>
+                    <div class="tabs">
+                        <div class="tab" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag)" ng-bind="tag.tagName"></div>
+                        <!--<div class="tab fix-margin"></div>-->
                         <div class="tab-other">
-                            <input type="text" class="search-userinfo" placeholder="输入税号、用户名称等切换用户"/>
-                            <span class="do-change" title="切换用户"><i class="fa fa-plus"></i></span>
+                            <div class="tab-other">
+                                <input type="text" class="search-userinfo" placeholder="输入税号、用户名称等切换用户"/>
+                                <span class="do-change" title="切换用户"><i class="fa fa-plus"></i></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="tab-content">
-                    <div class="tab-content-box" ng-style="TagStyle" style="width: 400%">
-                        <div class="tab-content-item" style="width: 25%" ng-repeat="tag in tags">
-                            <div ng-include="tag.templateUrl"></div>
+                    <div class="tab-content">
+                        <div class="tab-content-box" ng-style="TagStyle" style="width: 400%">
+                            <div class="tab-content-item" style="width: 25%" ng-repeat="tag in tags">
+                                <div ng-include="tag.templateUrl"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

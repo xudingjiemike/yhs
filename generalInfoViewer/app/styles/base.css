@@ -78,6 +78,9 @@ input, select, textarea{
 }
 .page-content > div{
     height: 100%;
+}
+.page-content  div.outer-box{
+    height: 100%;
     float: left;
     position: relative;
     border: 1px solid #E3E3E3;
