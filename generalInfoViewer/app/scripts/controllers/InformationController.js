@@ -21,16 +21,25 @@ angular
         $scope.showAgent=function(){
             $(".layer").show();
             $(".ztop").removeClass("ztop");
-            $(".delegate-search").addClass("ztop").show();
+            $("#agentDialog").addClass("ztop").show();
         };
         $scope.closeAgent=function(){
-            $('.dialog-close').parents(".dialog").hide();
+            $('#agentClose').parents(".dialog").hide();
             if($(".dialog:visible").length == 0){
-                $('.dialog-close').parents(".layer").hide();
+                $('#agentClose').parents(".layer").hide();
             }
             $(".menus .active").removeClass("active");
         };
         $scope.showManage=function(){
-
-        }
+            $(".layer").show();
+            $(".ztop").removeClass("ztop");
+            $("#manageDialog").addClass("ztop").show();
+        };
+        $scope.closeManage=function(){
+            $('#manageClose').parents(".dialog").hide();
+            if($(".dialog:visible").length == 0){
+                $('#manageClose').parents(".layer").hide();
+            }
+            $(".menus .active").removeClass("active");
+        };
     });
