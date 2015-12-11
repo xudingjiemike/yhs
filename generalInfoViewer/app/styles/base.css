@@ -1997,7 +1997,7 @@ td.price-policy-item{
     right: 0;
     height: 38px;
     width: 50px;
-    display: none;
+    display: inline;
     text-align: center;
     padding-top: 9px;
 }
