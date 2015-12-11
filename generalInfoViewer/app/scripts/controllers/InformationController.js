@@ -2,7 +2,7 @@
  * Created by Zhang on 2015/12/10.
  */
 angular
-    .module('ui.yypt5.yhgl.GeneralInfoViewer.ContLeft')
+    .module('ui.yypt5.yhgl.GeneralInfoViewer.Information')
     .controller('InformationController',function($scope){
         var isPersonHover = false;
         var isCompanyHover = false;

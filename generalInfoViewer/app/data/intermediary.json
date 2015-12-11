@@ -1,0 +1,24 @@
+{
+  "success":true,
+  "messageCode":"00000000",
+  "message":"接口调用成功！",
+  "data":[
+    {
+      "yhdm":"用户代码",
+      "zcbm":"用户密码",
+      "yhjc":"用户简称",
+      "status":"状态",
+      "fzgsMc":"分公司名称",
+      "swsbz":"事务所标识",
+      "faxNumber":"传真号码",
+      "dwdh":"单位电话",
+      "jydz":"经营地址",
+      "areaCode":"地区代码",
+      "provinceName":"省名称",
+      "cityName":"市名称",
+      "countyName":"区县名称",
+      "streetName":"乡镇/街道名称",
+      "dlyw":[]
+    }
+  ]
+}
