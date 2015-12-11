@@ -1,28 +1,67 @@
-<div class="company-info" id="personInfo">
+<div class="cont-left-top-top">
+    <div class="username">
+        <span>单位：</span>
+        <span>税友软件集团股份有限公司</span>
+        <span class="show-detail alink hover" ng-mouseover="showDetailInfo()" ng-mouseleave="hideDetailInfo()">详细</span>
+                                                <span class="user-position">
+                                                    通行密码：1342345635434
+                                                </span>
+    </div>
+    <div class="level">
+        <span class="level-icon level2"></span>
+        <span class="level-type alink delegated" ng-click="showDialogWindow()">被代理</span>
+        <span class="alink level-manage"><i class="fa fa-users"></i>人员管理</span>
+    </div>
+    <div class="remark">
+        <input type="text" placeholder="请输入备注信息"/>
+    </div>
+</div>
+
+
+<div class="company-info" ng-mouseleave="hideDetailInfo()">
     <div class="close-info">
         <i class="fa fa-times-circle-o"></i>
     </div>
     <div class="info-item">
-        <span>单位名称：
-            <span contenteditable="true" class="edit">
-                税友软件集团股份有限公司<i class="fa fa-pencil-square-o alink"></i>
-            </span>
-        </span>
+                                            <span>单位名称：
+                                                <span contenteditable="true" class="edit">
+                                                    税友软件集团股份有限公司<i class="fa fa-pencil-square-o alink"></i>
+                                                </span>
+                                            </span>
     </div>
     <div class="info-item">
-        <span>国税税号：440312235345345344531</span>
-        <span>深圳市福田区国税局</span>
+                                            <span>
+                                                国税税号：
+                                                440312235345345344531
+                                            </span>
+                                            <span>
+                                                深圳市福田区国税局
+                                            </span>
     </div>
     <div class="info-item">
-        <span>地税税号：440312235345345344531</span>
-        <span>深圳市福田区国税局</span>
+                                            <span>
+                                                地税税号：
+                                                440312235345345344531
+                                            </span>
+                                            <span>
+                                                深圳市福田区国税局
+                                            </span>
     </div>
     <div class="info-item">
-        <span>海关代码：000120</span>
-        <span>出口企业类型：生产型</span>
+                                            <span>
+                                                海关代码：
+                                                000120
+                                            </span>
+                                            <span>
+                                                出口企业类型：
+                                                生产型
+                                            </span>
     </div>
-    <div class="info-item">所属行业：
-        <span>建安行业</span>
+    <div class="info-item">
+        所属行业：
+                                            <span>
+                                                建安行业
+                                            </span>
         <select class="trade">
             <option value="建安行业">建安行业</option>
             <option value="保险行业">保险行业</option>
@@ -30,36 +69,40 @@
             <option value="自动化行业">自动化行业</option>
         </select>
         <i class="fa fa-pencil-square-o alink edit-trade"></i>
-        <span>增值税纳税人类型：一般纳税人</span>
+                                            <span>
+                                                增值税纳税人类型：
+                                                一般纳税人
+                                            </span>
     </div>
     <div class="info-item">
-        <span>传真号码：
-            <span contenteditable="true" class="edit">
-                0571-56342123<i class="fa fa-pencil-square-o alink"></i>
-            </span>
-        </span>
+                                            <span>
+                                                传真号码：
+                                                <span contenteditable="true" class="edit">
+                                                    0571-56342123<i class="fa fa-pencil-square-o alink"></i>
+                                                </span>
+                                            </span>
     </div>
     <div class="info-item">
-        <span>单位电话：
-            <span contenteditable="true" class="edit">
-                0571-56342123<i class="fa fa-pencil-square-o alink"></i>
-            </span>
-        </span>
+                                            <span>
+                                                单位电话：
+                                                <span contenteditable="true" class="edit">
+                                                    0571-56342123<i class="fa fa-pencil-square-o alink"></i>
+                                                </span>
+                                            </span>
     </div>
     <div class="info-item">
-        <span>经营地址：
-            <span>
-                浙江省 杭州市 浦沿街道 南环路3738号税友大厦<i class="fa fa-pencil-square-o alink edit-address"></i>
-            </span>
-        </span>
-
+                                            <span>
+                                                经营地址：
+                                                <span>
+                                                    浙江省 杭州市 浦沿街道 南环路3738号税友大厦<i class="fa fa-pencil-square-o alink edit-address"></i>
+                                                </span>
+                                            </span>
         <div class="select-address-edit">
             <div class="option-item">
                 <span class="item-text item-label">所在地区：</span>
                 <select class="address" disabled="">
-                    <option selected="selected">请选择省市区</option>
+                    <option selected = "selected">请选择省市区</option>
                 </select>
-
                 <div class="address-cover setAddress"></div>
                 <div class="select-address">
                     <div class="tabs">
@@ -155,14 +198,27 @@
         </div>
     </div>
     <div class="info-item">
-        <span>委托信息：无/XXX代理 代理的产品大类</span>
+                                            <span>
+                                                委托信息：
+                                                无/XXX代理 代理的产品大类
+                                            </span>
     </div>
     <div class="info-item">
-        <span class="float-left manage-info-title">管理信息：</span>
-        <span class="float-left manage-info">
-            <span>国税业务-衢水-刘珊</span>
-            <span>地税业务-衢水-刘珊</span>
-            <span>申报业务-衢水-刘珊</span>
-        </span>
+                                            <span class="float-left manage-info-title">
+                                                管理信息：
+                                            </span>
+                                            <span class="float-left manage-info">
+                                                <span>
+                                                    国税业务-衢水-刘珊
+                                                </span>
+                                                <span>
+                                                    地税业务-衢水-刘珊
+                                                </span>
+                                                <span>
+                                                    申报业务-衢水-刘珊
+                                                </span>
+                                            </span>
     </div>
 </div>
+
+<pop-info></pop-info>
