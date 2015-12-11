@@ -19,10 +19,16 @@ angular
             });
         };
         $scope.showAgent=function(){
-            alert('222222222');
             $(".layer").show();
             $(".ztop").removeClass("ztop");
             $(".delegate-search").addClass("ztop").show();
+        };
+        $scope.closeAgent=function(){
+            $('.dialog-close').parents(".dialog").hide();
+            if($(".dialog:visible").length == 0){
+                $('.dialog-close').parents(".layer").hide();
+            }
+            $(".menus .active").removeClass("active");
         };
         $scope.showManage=function(){
 
