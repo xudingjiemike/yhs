@@ -30,7 +30,20 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Taxlnstitution').controller('UiY
          */
 
 
-        var _tags = [new _tagObj('软件授权','views/template/tables/tablePage.html'),new _tagObj('订单','views/template/tables/tablePage.html'),new _tagObj('银行托收','views/template/tables/tablePage.html'),new _tagObj('礼品申请','views/template/tables/tablePage.html'),new _tagObj('咨询','views/template/tables/tablePage.html'),new _tagObj('回电','views/template/tables/tablePage.html'),new _tagObj('外呼','views/template/tables/tablePage.html'),new _tagObj('远程','views/template/tables/tablePage.html'),new _tagObj('派发','views/template/tables/tablePage.html'),new _tagObj('网点服务','views/template/tables/tablePage.html'),new _tagObj('诉求','views/template/tables/tablePage.html'),new _tagObj('短信','views/template/tables/tablePage.html'),new _tagObj('线索','views/template/tables/tablePage.html')];
+        var _tags = [
+            new _tagObj('软件授权','views/template/tables/tablePage.html'),
+            new _tagObj('订单','views/template/tables/tablePage.html'),
+            new _tagObj('银行托收','views/template/tables/tablePage.html'),
+            new _tagObj('礼品申请','views/template/tables/tablePage.html'),
+            new _tagObj('咨询','views/template/tables/tablePage.html'),
+            new _tagObj('回电','views/template/tables/tablePage.html'),
+            new _tagObj('外呼','views/template/tables/tablePage.html'),
+            new _tagObj('远程','views/template/tables/tablePage.html'),
+            new _tagObj('派发','views/template/tables/tablePage.html'),
+            new _tagObj('网点服务','views/template/tables/tablePage.html'),
+            new _tagObj('诉求','views/template/tables/tablePage.html'),
+            new _tagObj('短信','views/template/tables/tablePage.html'),
+            new _tagObj('线索','views/template/tables/tablePage.html')];
 
 
         $scope.itemWidth = {'width':((1/_tags.length)*100)+'%'};
