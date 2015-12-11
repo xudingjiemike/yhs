@@ -8,7 +8,7 @@ angular
         function ($http, Host, Url) {
             return {
                 /**
-                 * 查询委托单位情况
+                 * 鏌ヨ濮旀墭鍗曚綅鎯呭喌
                  */
                 getTrustors: function (khid,khlx) {
                     return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("TRUSTOR")+"?khid="+khid+"&khlx="+khlx);

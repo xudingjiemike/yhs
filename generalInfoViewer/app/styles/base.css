@@ -78,6 +78,9 @@ input, select, textarea{
 }
 .page-content > div{
     height: 100%;
+}
+.page-content  div.outer-box{
+    height: 100%;
     float: left;
     position: relative;
     border: 1px solid #E3E3E3;
@@ -1214,7 +1217,7 @@ input, select, textarea{
 }
 .add-contact-item input{
     height: 30px;
-    border: 1px sold #e3e3e3;
+    border: 1px solid #e3e3e3;
     padding: 0 7px;
     font-size: 14px;
     width: 220px;
@@ -1693,7 +1696,7 @@ td.price-policy-item{
     margin-left: 0;
 }
 .cont-left .level .level-icon{
-    background: url() no-repeat center center / contain;
+    background: no-repeat center center / contain;
     width: 22%;
     height: 22px;
     float: left;
@@ -2314,7 +2317,7 @@ td.price-policy-item{
     color: #1C66D8;
 }
 .delegate-search.dialog,.manage-people.dialog{
-    width: 40%;
+    width:80%;
     left: 30px;
     top: 100px;
 }

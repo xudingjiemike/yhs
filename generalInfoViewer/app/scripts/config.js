@@ -23,6 +23,12 @@ angular
                 hosturl: "",
                 mockurl: "http://192.168.60.136:8089/",
                 descript: ""
+            },
+            {
+                hostname: "INFORMATION",
+                hosturl: "",
+                mockurl: "",
+                descript: ""
             }
         ];
 
@@ -55,8 +61,30 @@ angular
             {
                 urlname: "TRUSTOR",
                 url: "yypt5/api/khgl/yhs/wtdw",
-                mockurl: "userMessage/app/data/trustor.json",
+                mockurl: "data/trustor.json",
                 descript: "查询委托单位，参数khid(客户编号),khlx(客户类型)"
+            },
+            {
+                urlname: "PERSON",
+                url: "",
+                mockurl: "data/person.json",
+                descript: "查询联系人信息，参数lxrid(联系人编号)"
+            },
+            {
+                urlname: "COMPANY",
+                url: "",
+                mockurl: "data/company.json",
+                descript: "查询纳税单位信息，参数khid(客户编号)"
+            },{
+                urlname: "INTERMEDIARY",
+                url: "",
+                mockurl: "data/intermediary.json",
+                descript: "查询中介机构信息，参数khid(客户编号)"
+            },{
+                urlname: "AGENT",
+                url: "",
+                mockurl: "data/agent.json",
+                descript: "查询纳税单位被代理信息，参数khid(客户编号)"
             }
         ];
 

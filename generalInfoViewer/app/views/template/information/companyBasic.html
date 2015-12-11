@@ -2,17 +2,18 @@
     <div class="username">
         <span>单位：</span>
         <span>税友软件集团股份有限公司</span>
-        <span class="show-detail alink hover" ng-mouseover="mouseOverEvent()">详细</span>
+        <span class="show-detail alink hover" ng-mouseover="showCompanyDetail($event)" id="companyDetail">详细</span>
         <span class="user-position">通行密码：1342345635434</span>
     </div>
     <div class="level">
         <span class="level-icon level2"></span>
-        <span class="level-type alink delegated">被代理</span>
-        <span class="alink level-manage"><i class="fa fa-users"></i>人员管理</span>
+        <span class="level-type alink delegated" ng-click="showAgent()">被代理</span>
+        <span class="alink level-manage" ng-click="showManage()"><i class="fa fa-users"></i>人员管理</span>
     </div>
     <div class="remark">
         <input type="text" placeholder="请输入备注信息"/>
     </div>
-    <div class="company-info" ng-include="'views/template/information/personDetail.html'" ng-mouseleave="mouseLeaveEvent()"></div>
+    <div ng-include="'views/template/information/companyDetail.html'" ng-mouseleave="hideCompanyDetail()"></div>
+    <div ng-include="'views/template/information/agentInfo.html'"></div>
+    <div ng-include="'views/template/information/manageInfo.html'"></div>
 </div>
-                                        
