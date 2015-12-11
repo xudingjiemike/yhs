@@ -4,18 +4,32 @@
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.ContLeft')
     .controller('InformationController',function($scope){
-        var isHover = false;
-        $scope.showDetail=function(){
-            if(!isHover){
-                isHover = true;
-                $('.show-detail').addClass("hovered");
-                $(".company-info").slideDown(300);
+        var isPersonHover = false;
+        var isCompanyHover = false;
+        $scope.showPersonDetail=function($event){
+            if(!isPersonHover){
+                isPersonHover = true;
+                $($event.currentTarget).addClass("hovered");
+                $("#personInfo").slideDown(300);
             }
         };
-        $scope.hideDetail=function(){
-            $('.company-info').slideUp(300,function(){
-                $(".show-detail").removeClass("hovered");
-                isHover = false;
+        $scope.hidePersonDetail=function(){
+            $('#personInfo').slideUp(300,function(){
+                $('#personDetail').removeClass("hovered");
+                isPersonHover = false;
+            });
+        };
+        $scope.showCompanyDetail=function($event){
+            if(!isCompanyHover){
+                isCompanyHover = true;
+                $($event.currentTarget).addClass("hovered");
+                $("#companyInfo").slideDown(300);
+            }
+        };
+        $scope.hideCompanyDetail=function(){
+            $('#companyInfo').slideUp(300,function(){
+                $("#companyDetail").removeClass("hovered");
+                isCompanyHover = false;
             });
         };
         $scope.showAgent=function(){
