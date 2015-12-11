@@ -56,4 +56,32 @@ angular
             }
             $(".menus .active").removeClass("active");
         };
+
+        var pzInit = {}, isMove = false, pzNow = {}, pzLast = {x:0,y:0}, parent, me;
+        $("body").on("mouseup", function(){
+            isMove = false;
+            pzLast = $(me).data("finalPz") || {x:0,y:0};
+            pzLast = {x: pzLast.x + pzNow.x-pzInit.x, y: pzLast.y + pzNow.y-pzInit.y};
+            $(me).data("finalPz",pzLast);
+            me = parent = null;
+        }).on("mousemove", function(e){
+            if(isMove){
+                pzNow = {'x':e.screenX,'y':e.screenY};
+                parent.css("-webkit-transform","translate("+(pzLast.x+pzNow.x-pzInit.x)+"px,"+
+                    (pzLast.y+pzNow.y-pzInit.y)+"px)");
+            }
+        });
+        $scope.startDrag=function($event){
+            me = $event.currentTarget;
+            $($event.currentTarget).css({"cursor":"move"});
+            isMove = true;
+            pzInit = {'x':$event.screenX,'y':$event.screenY};
+            parent = $($event.currentTarget).parent();
+            pzLast = $($event.currentTarget).data("finalPz") || {x:0,y:0};
+            pzNow = {'x':$event.screenX,'y':$event.screenY};
+            parent.css("-webkit-transform","translate("+(pzLast.x+pzNow.x-pzInit.x)+"px,"+ (pzLast.y+pzNow.y-pzInit.y)+"px)");
+        };
+        $scope.endDrag=function($event){
+            $($event.currentTarget).css("cursor","default");
+        };
     });

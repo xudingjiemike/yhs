@@ -1,5 +1,5 @@
 <div class="dialog manage-people" id="manageDialog">
-    <div class="dialog-header">
+    <div class="dialog-header" ng-mousedown="startDrag($event)" ng-mouseup="endDrag($event)">
         <span class="dialog-title">人员管理</span>
         <span class="dialog-close" id="manageClose" ng-click="closeManage()"><i class="fa fa-times"></i></span>
     </div>
