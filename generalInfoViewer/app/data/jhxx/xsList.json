@@ -1,0 +1,31 @@
+{
+  "messageCode": "00000000",
+  "message": "成功",
+  "success": true,
+  "data": [
+    {
+      "bjnrcd": "0",
+      "bjsl": "0",
+      "cjsj": "2013-04-11 10:23:33",
+      "cpdl": "11",
+      "dlzfzgs": "",
+      "fpsj": "",
+      "globalDataMap": {},
+      "isDate": false,
+      "jzsj": "",
+      "jzzt": "0",
+      "knx": "5",
+      "qx": "0",
+      "qzjz": "",
+      "requestDataMap": {},
+      "responseDataMap": {},
+      "rowId": 0,
+      "xscljg": "0",
+      "xsid": "214519",
+      "xsm": "煤业建筑的线索",
+      "xsms": "打开软件报错7001错误,无法备份\r\n--------\r\n告知收费400元，或者自己重新安装",
+      "yhdm": "120101103147742",
+      "yhmc": "天津市煤业建筑器材和平公司"
+    }
+  ]
+}
