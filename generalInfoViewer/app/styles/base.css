@@ -1884,7 +1884,7 @@ td.price-policy-item{
     margin-top: -2px;
 }
 .company-info{
-    height: 400px;
+    height: 50%;
     width: 90%;
     box-shadow: 2px 4px 11px #aeaeae;
     position: absolute;
@@ -1894,6 +1894,7 @@ td.price-policy-item{
     padding: 10px 14px 0;
     border-top: 1px solid #dfdfdf;
     display: none;
+    z-index: 10;
 }
 .company-info .info-item{
     margin-bottom: 10px;
@@ -2000,7 +2001,7 @@ td.price-policy-item{
     right: 0;
     height: 38px;
     width: 50px;
-    display: none;
+    display: inline;
     text-align: center;
     padding-top: 9px;
 }
@@ -2343,9 +2344,6 @@ td.price-policy-item{
 .cont-left span.show-detail.hovered{
     border: 1px solid #dadada;
     border-bottom-color: #fff;
-}
-.show-detail.alink.hover + span{
-    margin-left: 57px;
 }
 td.tdselected{
     background-color: #FFFEC0;
