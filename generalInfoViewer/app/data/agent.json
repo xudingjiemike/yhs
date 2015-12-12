@@ -4,34 +4,34 @@
   "message":"接口调用成功！",
   "data":[
     {
-      "yhid":"用户id",
-      "yhmc":"用户名称",
-      "yhjc":"用户简称",
-      "yhbm":"用户编码",
-      "cpdlDm":"产品大类代码",
-      "cpdlMc":"产品大类名称",
-      "wtfsDm":"委托方式代码",
-      "wtfsMc":"委托方式名称"
+      "yhid":"",
+      "yhmc":"税友软件集团股份有限公司",
+      "yhjc":"",
+      "yhbm":"31205780780909078",
+      "cpdlDm":"",
+      "cpdlMc":"国税申报",
+      "wtfsDm":"",
+      "wtfsMc":""
     },
     {
-      "yhid":"用户id",
-      "yhmc":"用户名称",
-      "yhjc":"用户简称",
-      "yhbm":"用户编码",
-      "cpdlDm":"产品大类代码",
-      "cpdlMc":"产品大类名称",
-      "wtfsDm":"委托方式代码",
-      "wtfsMc":"委托方式名称"
+      "yhid":"",
+      "yhmc":"税友软件集团股份有限公司",
+      "yhjc":"",
+      "yhbm":"31205780780909078",
+      "cpdlDm":"",
+      "cpdlMc":"国税申报",
+      "wtfsDm":"",
+      "wtfsMc":""
     },
     {
-      "yhid":"用户id",
-      "yhmc":"用户名称",
-      "yhjc":"用户简称",
-      "yhbm":"用户编码",
-      "cpdlDm":"产品大类代码",
-      "cpdlMc":"产品大类名称",
-      "wtfsDm":"委托方式代码",
-      "wtfsMc":"委托方式名称"
+      "yhid":"",
+      "yhmc":"税友软件集团股份有限公司",
+      "yhjc":"",
+      "yhbm":"31205780780909078",
+      "cpdlDm":"",
+      "cpdlMc":"国税申报",
+      "wtfsDm":"",
+      "wtfsMc":""
     }
   ]
 }

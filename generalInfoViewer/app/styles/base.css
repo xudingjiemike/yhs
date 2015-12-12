@@ -1081,6 +1081,7 @@ input, select, textarea{
 }
 .table .search-result table.single{
     margin-bottom: 0;
+    text-align: center;
 }
 
 .table .search-result th{
@@ -1865,7 +1866,7 @@ td.price-policy-item{
     margin-right: 10px;
 }
 .user-position{
-    margin-left: 20px;
+    margin-left: 60px;
 }
 .user-impression{
     right: 0;
@@ -2318,7 +2319,7 @@ td.price-policy-item{
     color: #1C66D8;
 }
 .delegate-search.dialog,.manage-people.dialog{
-    width:80%;
+    width:40%;
     left: 30px;
     top: 100px;
 }

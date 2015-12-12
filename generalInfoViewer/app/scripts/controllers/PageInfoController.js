@@ -3,7 +3,13 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo')
-    .controller('PageInfoController',['_','$scope',function(_, $scope){
+    .controller('PageInfoController',['$scope','PageInfoService',function($scope,PageInfoService){
+        $scope.loadCompanyInfo=function(){
+            $scope.companyInfo = PageInfoService.getCompany('');
+            setTimeout(function(){
+                console.log($scope.companyInfo.data);
+            },1000);
+        };
         var isHover = false;
         $scope.showDetailInfo=function(){
             if(!isHover){
@@ -19,6 +25,7 @@ angular
             });
         };
         $scope.showDialogWindow=function(){
+
             $(".layer").show();
             $(".ztop").removeClass("ztop");
             $(".delegate-search").addClass("ztop").show();

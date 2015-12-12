@@ -65,6 +65,24 @@ angular
                 descript: "查询委托单位，参数khid(客户编号),khlx(客户类型)"
             },
             {
+                urlname: "CONTACTS",
+                url: "",
+                mockurl: "data/contacts.json",
+                descript: "查询联系人信息，参数lxrid(联系人编号)"
+            },
+            {
+                urlname: "COMPANY",
+                url: "",
+                mockurl: "data/company.json",
+                descript: "查询纳税单位信息，参数khid(客户编号)"
+            },
+            {
+                urlname: "INTERMEDIARY",
+                url: "",
+                mockurl: "data/intermediary.json",
+                descript: "查询中介机构信息，参数khid(客户编号)"
+            },
+            {
                 urlname: "AGENT",
                 url: "",
                 mockurl: "data/agent.json",

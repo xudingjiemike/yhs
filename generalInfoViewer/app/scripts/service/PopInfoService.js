@@ -8,7 +8,7 @@ angular
             var PopInfo = {};
             return {
                 getAgent: function(khid){
-                    PopInfoApi.getTrustors(khid).success(function (data) {
+                    PopInfoApi.getAgent(khid).success(function (data) {
                         angular.copy(data, PopInfo);
                     });
                     return PopInfo;
