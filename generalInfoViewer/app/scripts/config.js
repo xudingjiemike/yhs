@@ -23,6 +23,12 @@ angular
                 hosturl: "",
                 mockurl: "http://192.168.60.136:8089/",
                 descript: ""
+            },
+            {
+                hostname: "INFORMATION",
+                hosturl: "",
+                mockurl: "",
+                descript: ""
             }
         ];
 
@@ -57,6 +63,12 @@ angular
                 url: "yypt5/api/khgl/yhs/wtdw",
                 mockurl: "data/trustor.json",
                 descript: "查询委托单位，参数khid(客户编号),khlx(客户类型)"
+            },
+            {
+                urlname: "AGENT",
+                url: "",
+                mockurl: "data/agent.json",
+                descript: "查询被委托单位信息，参数khid(客户编号)"
             }
         ];
 
