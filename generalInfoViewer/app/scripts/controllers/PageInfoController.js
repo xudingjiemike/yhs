@@ -6,9 +6,6 @@ angular
     .controller('PageInfoController',['$scope','PageInfoService',function($scope,PageInfoService){
         $scope.loadCompanyInfo=function(){
             $scope.companyInfo = PageInfoService.getCompany('');
-            setTimeout(function(){
-                console.log($scope.companyInfo.data);
-            },1000);
         };
         var isHover = false;
         $scope.showDetailInfo=function(){

@@ -2,15 +2,15 @@
  * Created by zhousj on 2015/11/18.
  */
 angular
-    .module('ui.yypt5.yhgl.GeneralInfoViewer.Information')
+    .module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo')
     .service('SmsService', ['SmsApi',
         function (SmsApi) {
 
             return {
                 /**
-                 * »ñÈ¡·¢ËÍ¶ÌÐÅÁÐ±í
+                 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½Í¶ï¿½ï¿½ï¿½ï¿½Ð±ï¿½
                  * @param khid
-                 *          ¿Í»§ID
+                 *          ï¿½Í»ï¿½ID
                  */
                 getDxList: function (khid){
                     return SmsApi.getDxList(khid);

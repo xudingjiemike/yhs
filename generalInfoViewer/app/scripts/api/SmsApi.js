@@ -2,7 +2,7 @@
  * Created by sxfei on 2015/12/12.
  */
 angular
-    .module("ui.yypt5.yhgl.GeneralInfoViewer.Information")
+    .module("ui.yypt5.yhgl.GeneralInfoViewer.PageInfo")
     .factory("SmsApi", ["$http", "Host", "Url",
         function ($http,  Host, Url) {
 

@@ -2,7 +2,7 @@
  * Created by sxfei on 2015/11/30.
  */
 angular
-    .module("ui.yypt5.yhgl.GeneralInfoViewer.Information")
+    .module("ui.yypt5.yhgl.GeneralInfoViewer.PageInfo")
     .factory("RwglApi", ["$http", "Host", "Url",
         function ($http,  Host, Url) {
 
