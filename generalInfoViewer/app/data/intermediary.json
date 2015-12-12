@@ -1,24 +1,64 @@
 {
-  "success":true,
-  "messageCode":"00000000",
-  "message":"接口调用成功！",
-  "data":[
-    {
-      "yhdm":"用户代码",
-      "zcbm":"用户密码",
-      "yhjc":"用户简称",
-      "status":"状态",
-      "fzgsMc":"分公司名称",
-      "swsbz":"事务所标识",
-      "faxNumber":"传真号码",
-      "dwdh":"单位电话",
-      "jydz":"经营地址",
-      "areaCode":"地区代码",
-      "provinceName":"省名称",
-      "cityName":"市名称",
-      "countyName":"区县名称",
-      "streetName":"乡镇/街道名称",
-      "dlyw":[]
-    }
-  ]
+  "success": true,
+  "messageCode": "00000000",
+  "message": "接口调用成功！",
+  "data": {
+    "yhdm": "SWSQHD0014",
+    "yhmc":"税友集团代理记账公司",
+    "zcbm": "XXXXXXXXX",
+    "yhjc": "税友代账公司",
+    "status": "正常",
+    "fzgsMc": "河北分公司",
+    "swsbz": "事务所",
+    "faxNumber": "0571-56032477-001",
+    "dwdh": "0571-56032477-001",
+    "sjhm": "",
+    "jydz": "浙江省 杭州市 滨江区 南环路3738号税友大厦",
+    "areaCode": "",
+    "provinceName": "浙江省",
+    "cityName": "杭州市",
+    "countyName": "滨江区",
+    "streetName": "",
+    "bz": "中介机构备注",
+    "cpdlList": [
+      {
+        "cpdlDm": "",
+        "cpdlMc": "产品大类1"
+      },
+      {
+        "cpdlDm": "",
+        "cpdlMc": "产品大类2"
+      },
+      {
+        "cpdlDm": "",
+        "cpdlMc": "产品大类3"
+      }
+    ],
+    "ywxxList": [
+      {
+        "ywdlDm": "",
+        "ywdlMc": "国税业务",
+        "sswdDm": "",
+        "sswdMc": "衡水",
+        "sskhjlDm": "",
+        "sskhjlMc": "刘珊珊"
+      },
+      {
+        "ywdlDm": "",
+        "ywdlMc": "国税业务",
+        "sswdDm": "",
+        "sswdMc": "衡水",
+        "sskhjlDm": "",
+        "sskhjlMc": "刘珊珊"
+      },
+      {
+        "ywdlDm": "",
+        "ywdlMc": "国税业务",
+        "sswdDm": "",
+        "sswdMc": "衡水",
+        "sskhjlDm": "",
+        "sskhjlMc": "刘珊珊"
+      }
+    ]
+  }
 }

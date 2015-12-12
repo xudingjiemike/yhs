@@ -18,12 +18,15 @@
     "qytype": "一般纳税人",
     "faxNumber": "0571-56342123",
     "dwdh": "0571-56342123",
-    "jydz": "浙江省 杭州市 浦沿街道 南环路3738号税友大厦",
+    "jydz": "浙江省 杭州市 滨江区 南环路3738号税友大厦",
     "areaCode": "",
     "provinceName": "浙江省",
     "cityName": "杭州市",
-    "countyName": "浦沿街道",
-    "streetName": "南环路3738号税友大厦",
+    "countyName": "滨江区",
+    "streetName": "",
+    "levelDm":"07",
+    "levelMc":"银卡会员",
+    "bz":"单位用户备注",
     "ywxxList": [
       {
         "ywdlDm": "",

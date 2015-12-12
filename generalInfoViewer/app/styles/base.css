@@ -1865,6 +1865,10 @@ td.price-policy-item{
 .record-odd-title span.record-date, .record-odd-content > span{
     margin-right: 10px;
 }
+.intermediary-manage-info{
+    display: inline-table;
+    float:right;
+}
 .user-position{
     margin-left: 60px;
 }

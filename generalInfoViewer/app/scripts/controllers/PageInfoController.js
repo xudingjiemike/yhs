@@ -4,9 +4,19 @@
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo')
     .controller('PageInfoController',['$scope','PageInfoService',function($scope,PageInfoService){
-        $scope.loadCompanyInfo=function(){
-            $scope.companyInfo = PageInfoService.getCompany('');
+        $scope.loadPageInfo=function(){
+            switch($scope.tabType){
+                case '0':
+                    $scope.contactsInfo = PageInfoService.getContacts('');
+                    break;
+                case '1':
+                    $scope.companyInfo = PageInfoService.getCompany('');
+                    break;
+                case '2':
+                    $scope.intermediaryInfo = PageInfoService.getIntermediary('');
+                }
         };
+
         var isHover = false;
         $scope.showDetailInfo=function(){
             if(!isHover){

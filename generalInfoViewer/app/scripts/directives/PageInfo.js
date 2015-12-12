@@ -6,6 +6,9 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo')
         return {
             restrict: 'EA',
             replace:true,
+            scope:{
+                tabType:'@'
+            },
             controller:"PageInfoController",
             templateUrl: 'views/template/information/PageInfo.html'
         };

@@ -1,37 +1,56 @@
 {
-  "success":true,
-  "messageCode":"00000000",
-  "message":"接口调用成功！",
-  "data":[
-    {
-      "syId":"税友ID",
-      "lxrmc":"姓名",
-      "xb":"性别",
-      "sjhmList":[{
-        "lxsjid": "手机id",
-        "sjhm": "手机号码"
-      }],
-      "dhhmList":[{
-        "lxdhid": "电话id",
-        "qh": "区号",
-        "dhhm": "电话号码",
-        "fjh": "分机号",
-        "qhdhhmfjh": "完整的电话号码"
-      }],
-      "jsxxList":[{
-        "lxrYhid": "联系人用户id",
-        "jsdm": "角色代码",
-        "jsmc": "角色名称"
-      }],
-      "email":"邮箱",
-      "qq":"",
-      "provinceName":"省名称",
-      "cityName":"市名称",
-      "countyName":"区县名称",
-      "streetName":"乡镇/街道名称",
-      "areaCode":"地区代码",
-      "address":"详细地址"
-
-    }
-  ]
+  "success": true,
+  "messageCode": "00000000",
+  "message": "接口调用成功！",
+  "data": {
+    "lxrid": "522eace4c08b4023b0cd9d3522a6a249",
+    "syId": "",
+    "lxrmc": "李小荣",
+    "xb": "女",
+    "sjhmList": [
+      {
+        "lxsjid": "8765208",
+        "sjhm": "13180307438"
+      }
+    ],
+    "dhhmList": [
+      {
+        "dhhm": "8345638",
+        "fjh": "",
+        "lxdhid": "3441190",
+        "qh": "0317",
+        "qhdhhmfjh": "0317-8345638"
+      },
+      {
+        "dhhm": "5561865",
+        "fjh": "",
+        "lxdhid": "16658934",
+        "qh": "0317",
+        "qhdhhmfjh": "0317-5561865"
+      }
+    ],
+    "jsxxList": [
+      {
+        "jsdm": "03",
+        "jsmc": "财务负责人",
+        "lxrYhid": "4495432"
+      },
+      {
+        "jsdm": "00",
+        "jsmc": "办税员",
+        "lxrYhid": "4495437"
+      }
+    ],
+    "email": "",
+    "qq": "",
+    "provinceName": "河北",
+    "cityName": "沧州市",
+    "countyName": "泊头市",
+    "streetName": "",
+    "areaCode": "130981",
+    "address": "",
+    "bz":"联系人备注",
+    "zjjgId":"SWSQHD0014",
+    "zjjgMc":"税友集团代理记账公司"
+  }
 }
