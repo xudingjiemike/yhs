@@ -5,6 +5,7 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.PopInfo')
     .directive('popInfo', function () {
         return {
             restrict: 'EA',
+            replace:true,
             controller:"PopInfoController",
             templateUrl: 'views/template/information/PopInfo.html'
         };
