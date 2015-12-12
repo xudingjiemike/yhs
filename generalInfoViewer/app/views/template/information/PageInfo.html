@@ -78,7 +78,7 @@
                     传真号码：<span ng-bind="companyInfo.data.faxNumber"></span>
                 </div>
                 <div class="info-item">
-                    单位电话：<span ng-bind="companyInfo.data.dwdh"></span>
+                    单位电话：<span ng-bind="companyInfo.data.dhhm"></span>
                 </div>
                 <div class="info-item">
                     经营地址：<span ng-bind="companyInfo.data.jydz"></span>
@@ -133,13 +133,22 @@
                     分公司：<span ng-bind="intermediaryInfo.data.fzgsMc"></span>
                 </div>
                 <div class="info-item">
-                    事务所标识：<span ng-bind="intermediaryInfo.data.swsbz"></span>
+                    事务所标识：
+                    <span ng-if="intermediaryInfo.data.swsbz==='0'">
+                        <input type="checkbox" checked disabled>非中介机构
+                    </span>
+                    <span ng-if="intermediaryInfo.data.swsbz==='1'">
+                        <input type="checkbox" checked disabled>严格授权控制类中介机构
+                    </span>
+                    <span ng-if="intermediaryInfo.data.swsbz==='2'">
+                        <input type="checkbox" checked disabled>非严格授权控制类中介机构
+                    </span>
                 </div>
                 <div class="info-item">
                     传真号码：<span ng-bind="intermediaryInfo.data.faxNumber"></span>
                 </div>
                 <div class="info-item">
-                    单位电话：<span ng-bind="intermediaryInfo.data.dwdh"></span>
+                    单位电话：<span ng-bind="intermediaryInfo.data.dhhm"></span>
                 </div>
                 <div class="info-item">
                     经营地址：<span ng-bind="intermediaryInfo.data.jydz"></span>
@@ -147,6 +156,7 @@
                 <div class="info-item">
                     代理业务：
                     <span ng-repeat="item in intermediaryInfo.data.cpdlList">
+                        <input type="checkbox" ng-checked="item.selected" disabled>
                         <span ng-bind="item.cpdlMc"></span>
                     </span>
                 </div>

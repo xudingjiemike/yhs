@@ -9,9 +9,9 @@
     "yhjc": "税友代账公司",
     "status": "正常",
     "fzgsMc": "河北分公司",
-    "swsbz": "事务所",
+    "swsbz": "0",
     "faxNumber": "0571-56032477-001",
-    "dwdh": "0571-56032477-001",
+    "dhhm": "0571-56032477-001",
     "sjhm": "",
     "jydz": "浙江省 杭州市 滨江区 南环路3738号税友大厦",
     "areaCode": "",
@@ -23,15 +23,18 @@
     "cpdlList": [
       {
         "cpdlDm": "",
-        "cpdlMc": "产品大类1"
+        "cpdlMc": "产品大类1",
+        "selected":"1"
       },
       {
         "cpdlDm": "",
-        "cpdlMc": "产品大类2"
+        "cpdlMc": "产品大类2",
+        "selected":"1"
       },
       {
         "cpdlDm": "",
-        "cpdlMc": "产品大类3"
+        "cpdlMc": "产品大类3",
+        "selected":"1"
       }
     ],
     "ywxxList": [
