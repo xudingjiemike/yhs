@@ -10,8 +10,8 @@
 <body>
 <div class="container">
     <div class="page-content">
-        <div ng-app="ui.yypt5.yhgl.GeneralInfoViewer" ng-controller="ContLeftController">
-            <div class="cont-left outer-box">
+        <div class="outer-box" ng-app="ui.yypt5.yhgl.GeneralInfoViewer" ng-controller="ContLeftController">
+            <div class="cont-left">
                 <div>
                     <div class="tabs">
                         <div class="tab" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag)" ng-bind="tag.tagName"></div>
