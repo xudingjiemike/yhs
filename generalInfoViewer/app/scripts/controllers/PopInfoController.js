@@ -5,7 +5,7 @@ angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.PopInfo')
     .controller('PopInfoController',['$scope','PopInfoService',function($scope,PopInfoService){
         $scope.loadDialogWindow=function(){
-            $scope.agentInfo = PopInfoService.getAgent('');
+
         };
 
         $scope.hideDialogWindow=function($event){

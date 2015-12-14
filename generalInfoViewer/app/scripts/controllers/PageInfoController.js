@@ -3,7 +3,7 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo')
-    .controller('PageInfoController',['$scope','PageInfoService',function($scope,PageInfoService){
+    .controller('PageInfoController',['$scope','PageInfoService','PopInfoService',function($scope,PageInfoService,PopInfoService){
         $scope.loadPageInfo=function(){
             switch($scope.tabType){
                 case '0':
@@ -32,7 +32,7 @@ angular
             });
         };
         $scope.showDialogWindow=function(){
-
+            $scope.agentInfo = PopInfoService.getAgent();
             $(".layer").show();
             $(".ztop").removeClass("ztop");
             $(".delegate-search").addClass("ztop").show();
