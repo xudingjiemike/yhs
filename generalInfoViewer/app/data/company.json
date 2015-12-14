@@ -1,31 +1,57 @@
 {
-  "success":true,
-  "messageCode":"00000000",
-  "message":"接口调用成功！",
-  "data":[
-    {
-      "yhid":"用户id,yhlx为3、4时，yhid设置为代理商编码",
-      "yhmc":"用户名称",
-      "yhjc":"用户简称",
-      "zcbm":"注册编码",
-      "gsswjgDm":"国税税务机关代码",
-      "gsswjgMc":"国税税务机关名称",
-      "ddsswjgDm":"地税税务机关代码",
-      "ddsswjgMc":"地税税务机关名称",
-      "hgdm":"海关代码",
-      "yhlbxx":"出口企业类型",
-      "hymlDm":"行业门类代码",
-      "hymlMc":"行业门类名称",
-      "qytype":"企业类型",
-      "faxNumber":"传真号码",
-      "dwdh":"单位电话",
-      "jydz":"经营地址",
-      "areaCode":"地区代码",
-      "provinceName":"省名称",
-      "cityName":"市名称",
-      "countyName":"区县名称",
-      "streetName":"乡镇/街道名称",
-      "glxx":[]
-    }
-  ]
+  "success": true,
+  "messageCode": "00000000",
+  "message": "接口调用成功！",
+  "data": {
+    "yhid": "",
+    "yhmc": "税友软件集团股份有限公司",
+    "yhjc": "",
+    "zcbm": "1342345635434",
+    "nsrsbh": "1342345635434",
+    "gsswjgMc": "深圳市福田区国税局",
+    "dssh": "",
+    "dsswjgMc": "",
+    "hgdm": "000120",
+    "yhlbxx": "生产型",
+    "hymlDm": "",
+    "hymlMc": "建安行业",
+    "qytype": "一般纳税人",
+    "faxNumber": "0571-56342123",
+    "dhhm": "0571-56342123",
+    "jydz": "浙江省 杭州市 滨江区 南环路3738号税友大厦",
+    "areaCode": "",
+    "provinceName": "浙江省",
+    "cityName": "杭州市",
+    "countyName": "滨江区",
+    "streetName": "",
+    "levelDm":"07",
+    "levelMc":"银卡会员",
+    "bz":"单位用户备注",
+    "ywxxList": [
+      {
+        "ywdlDm": "",
+        "ywdlMc": "国税业务",
+        "sswdDm": "",
+        "sswdMc": "衢水",
+        "sskhjlDm": "",
+        "sskhjlMc": "刘珊"
+      },
+      {
+        "ywdlDm": "",
+        "ywdlMc": "地税业务",
+        "sswdDm": "",
+        "sswdMc": "衢水",
+        "sskhjlDm": "",
+        "sskhjlMc": "刘珊"
+      },
+      {
+        "ywdlDm": "",
+        "ywdlMc": "申报业务",
+        "sswdDm": "",
+        "sswdMc": "衢水",
+        "sskhjlDm": "",
+        "sskhjlMc": "刘珊"
+      }
+    ]
+  }
 }

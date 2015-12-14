@@ -1,0 +1,30 @@
+<div class="dialog delegate-search" ng-init="loadDialogWindow()" ng-click="clickWindow($event)">
+    <div class="dialog-header" ng-mousedown="dragWindow($event)" ng-mouseup="finishDrag($event)">
+        <span class="dialog-title">被代理</span>
+        <span class="dialog-close" ng-click="hideDialogWindow($event)"><i class="fa fa-times"></i></span>
+    </div>
+    <div class="dialog-body">
+        <div class="delegate-search-content">
+            <div class="table">
+                <div class="search-result">
+                    <table class="single">
+                        <thead>
+                        <tr>
+                            <th width="40%">用户名称</th>
+                            <th width="35%">用户代码</th>
+                            <th width="25%">产品大类</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in agentInfo.data">
+                            <td ng-bind="item.yhmc"></td>
+                            <td ng-bind="item.yhbm"></td>
+                            <td ng-bind="item.cpdlMc"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
