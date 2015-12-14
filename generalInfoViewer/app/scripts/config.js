@@ -65,9 +65,9 @@ angular
                 descript: "查询委托单位，参数khid(客户编号),khlx(客户类型)"
             },
             {
-                urlname: "PERSON",
+                urlname: "CONTACTS",
                 url: "",
-                mockurl: "data/person.json",
+                mockurl: "data/contacts.json",
                 descript: "查询联系人信息，参数lxrid(联系人编号)"
             },
             {
@@ -75,16 +75,63 @@ angular
                 url: "",
                 mockurl: "data/company.json",
                 descript: "查询纳税单位信息，参数khid(客户编号)"
-            },{
+            },
+            {
                 urlname: "INTERMEDIARY",
                 url: "",
                 mockurl: "data/intermediary.json",
                 descript: "查询中介机构信息，参数khid(客户编号)"
-            },{
+            },
+            {
                 urlname: "AGENT",
                 url: "",
                 mockurl: "data/agent.json",
                 descript: "查询纳税单位被代理信息，参数khid(客户编号)"
+            },{
+                urlname: "CALLBACK",
+                url: "",
+                mockurl: "data/jhxx/callbackList.json",
+                descript: "查询请回电信息列表，参数khid(客户编号)"
+            },{
+                urlname: "CALLOUT",
+                url: "",
+                mockurl: "data/jhxx/calloutList.json",
+                descript: "查询外呼任务列表信息，参数khid(客户编号)"
+            },{
+                urlname: "DX",
+                url: "",
+                mockurl: "data/jhxx/dxList.json",
+                descript: "查询短信信息，参数khid(客户编号)"
+            },{
+                urlname: "SMRW",
+                url: "",
+                mockurl: "data/jhxx/smrwList.json",
+                descript: "查询上门任务列表信息，参数khid(客户编号)"
+            },{
+                urlname: "TSJY",
+                url: "",
+                mockurl: "data/jhxx/tsjyList.json",
+                descript: "查询投诉建议信息，参数khid(客户编号)"
+            },{
+                urlname: "XS",
+                url: "",
+                mockurl: "data/jhxx/xsList.json",
+                descript: "查询线索信息，参数khid(客户编号)"
+            },{
+                urlname: "YCRW",
+                url: "",
+                mockurl: "data/jhxx/ycrwList.json",
+                descript: "查询远程任务信息，参数khid(客户编号)"
+            },{
+                urlname: "ZDXC",
+                url: "",
+                mockurl: "data/jhxx/zdxcList.json",
+                descript: "查询驻点现场信息，参数khid(客户编号)"
+            },{
+                urlname: "ZXJL",
+                url: "",
+                mockurl: "data/jhxx/zxjlList.json",
+                descript: "查询咨询记录信息，参数khid(客户编号)"
             }
         ];
 

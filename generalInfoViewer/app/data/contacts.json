@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "messageCode": "00000000",
+  "message": "接口调用成功！",
+  "data": {
+    "lxrid": "522eace4c08b4023b0cd9d3522a6a249",
+    "syId": "",
+    "lxrmc": "李小荣",
+    "xb": "女",
+    "sjhmList": [
+      {
+        "lxsjid": "8765208",
+        "sjhm": "13180307438"
+      }
+    ],
+    "dhhmList": [
+      {
+        "dhhm": "8345638",
+        "fjh": "",
+        "lxdhid": "3441190",
+        "qh": "0317",
+        "qhdhhmfjh": "0317-8345638"
+      },
+      {
+        "dhhm": "5561865",
+        "fjh": "",
+        "lxdhid": "16658934",
+        "qh": "0317",
+        "qhdhhmfjh": "0317-5561865"
+      }
+    ],
+    "jsxxList": [
+      {
+        "jsdm": "03",
+        "jsmc": "财务负责人",
+        "lxrYhid": "4495432"
+      },
+      {
+        "jsdm": "00",
+        "jsmc": "办税员",
+        "lxrYhid": "4495437"
+      }
+    ],
+    "email": "",
+    "qq": "",
+    "provinceName": "河北",
+    "cityName": "沧州市",
+    "countyName": "泊头市",
+    "streetName": "",
+    "areaCode": "130981",
+    "address": "",
+    "bz":"联系人备注",
+    "zjjgId":"SWSQHD0014",
+    "zjjgMc":"税友集团代理记账公司"
+  }
+}
