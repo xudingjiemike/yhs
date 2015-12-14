@@ -2323,7 +2323,7 @@ td.price-policy-item{
     color: #1C66D8;
 }
 .delegate-search.dialog,.manage-people.dialog{
-    width:90%;
+    width:80%;
     left: 30px;
     top: 100px;
 }
