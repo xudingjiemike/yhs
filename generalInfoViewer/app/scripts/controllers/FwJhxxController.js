@@ -67,7 +67,7 @@ angular
                 });
             };
             $(document).ready(function(){
-                $(".style2.tabs").on("click",".tab",function(){
+                $(".style2 .tabs").on("click",".tab",function(){
                     if(!$(this).hasClass("active")){
                         var tabContentEl = $(".cont-left .style2 .tab-content-box");
                         //alert(tabContentEl);
@@ -85,7 +85,7 @@ angular
                         $scope.getDxList();
                     }
                 });
-                $(".style2.tabs .tab:eq(0)").click();
+                $(".style2 .tabs .tab:eq(0)").click();
                 $scope.getCallbackList('');
                 $scope.getCalloutList();
                 $scope.getYcrwList();

@@ -27,7 +27,7 @@ angular
                 });
             };
             $(document).ready(function(){
-                $(".style2.tabs").on("click",".tab",function(){
+                $(".style2 .tabs").on("click",".tab",function(){
                     if(!$(this).hasClass("active")){
                         var tabContentEl = $(".cont-left .style2 .tab-content-box");
                         //alert(tabContentEl);
@@ -36,11 +36,11 @@ angular
                         tabContentEl.css("-webkit-transform","translate("+position+"%,0)");
                         $(".cont-left .style2 .tab").removeClass("active");
                         $(this).addClass("active");
-                        $(".tabs.style2 .active-bar").css({width:$(this).width()+"px", left: this.offsetLeft+10 +"px"});
+                        $(".tabs .style2 .active-bar").css({width:$(this).width()+"px", left: this.offsetLeft+10 +"px"});
                         $scope.getTsjyList();
                     }
                 });
-                $(".style2.tabs .tab:eq(0)").click();
+                $(".style2 .tabs .tab:eq(0)").click();
                 $scope.getTsjyList();
                 $scope.getZxjlList();
             });
