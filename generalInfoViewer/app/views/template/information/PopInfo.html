@@ -1,5 +1,5 @@
-<div class="dialog delegate-search" ng-init="loadDialogWindow()">
-    <div class="dialog-header">
+<div class="dialog delegate-search" ng-init="loadDialogWindow()" ng-click="clickWindow($event)">
+    <div class="dialog-header" ng-mousedown="dragWindow($event)" ng-mouseup="finishDrag($event)">
         <span class="dialog-title">被代理</span>
         <span class="dialog-close" ng-click="hideDialogWindow($event)"><i class="fa fa-times"></i></span>
     </div>
