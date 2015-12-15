@@ -11,9 +11,17 @@ angular
 
         var _tagProperty = {'tagName': '', 'TagClass': '', 'templateUrl': ''};
 
-        function _tagObj(tagName, templateUrl) {
+        /****
+         *
+         * @param tagName
+         * @param templateUrl
+         * @param tagtype tag类型，每个类型只会有一个
+         * @private
+         */
+        function _tagObj(tagName, templateUrl,tagtype) {
             this.tagName = tagName;
             this.templateUrl = templateUrl;
+            this.tagtype = tagtype;
         }
 
         _tagObj.prototype = _tagProperty;

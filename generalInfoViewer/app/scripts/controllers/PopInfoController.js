@@ -19,16 +19,16 @@ angular
 
         $scope.dragWindow = function ($event) {
             me = $event.target;
-            $($event.target).css({cursor: 'move'});
+            $($event.target).css('cursor', 'move');
             isMove = true;
-            pzInit = {'x': $event.screenX, 'y': $event.screenY};
+            pzInit = {x: $event.screenX, y: $event.screenY};
             parent = $($event.target).parent();
             pzLast = $($event.target).data('finalPz') || {x: 0, y: 0};
-            pzNow = {'x': $event.screenX, 'y': $event.screenY};
+            pzNow = {x: $event.screenX, y: $event.screenY};
             parent.css('-webkit-transform', 'translate(' + (pzLast.x + pzNow.x - pzInit.x) + 'px,' + (pzLast.y + pzNow.y - pzInit.y) + 'px)');
         };
         $scope.finishDrag = function ($event) {
-            $($event.target).css({cursor: 'default'});
+            $($event.target).css('cursor', 'default');
         };
         $scope.clickWindow=function($event){
             $('.dialog.ztop').removeClass('ztop');
