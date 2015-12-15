@@ -1,6 +1,6 @@
 <div ng-controller="TaxlnstitutionController">
 <div id="cont-left-top" class="cont-left-top">
-    <div ng-include="'views/template/information/personBasic.html'"></div>
+    <div page-info tab-type="1"></div>
     <div class="cont-left-top-mid">
         <div>
             <table class="service-info">
@@ -42,13 +42,8 @@
         </div>
     </div>
 </div>
-<div id="cont-left-btm" class="cont-left-btm">
+<div id="cont-left-btm" style="top:300px" class="cont-left-btm">
    <!--<div ng-include="'views/template/tabs/commonTab.html'"></div>-->
-    <ui-y-tab list ='tags'></ui-y-tab>
+    <ui-y-tab list ='tags' ></ui-y-tab>
 </div>
 </div>
-<script>
-    $(document).ready(function(){
-        $("#cont-left-btm").css("top",$("#cont-left-top").height()+'10px');
-    })
-</script>

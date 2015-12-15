@@ -1,0 +1,40 @@
+{
+  "messageCode": "00000000",
+  "message": "成功",
+  "success": true,
+  "total": "1",
+  "pageId": "1",
+  "data": [
+    {
+      "cjsj": "2014-08-21 14:41:41",
+      "dh1": "",
+      "fzgsdm": "001091010",
+      "globalDataMap": {},
+      "hccgdhhm": "018613106073",
+      "hcjg": "4",
+      "hwsj": "2014-08-25 10:28:13",
+      "lxr": "",
+      "pkName": [
+        "zxzid"
+      ],
+      "requestDataMap": {},
+      "responseDataMap": {},
+      "rwbh": "1566982",
+      "rwfs": "0",
+      "rwmc": "4、5、6、7月广州第二服务中心网抄逾期催费",
+      "sfzdzj": "N",
+      "tjrdm": "23c405fa5e654caa9bc36f62ceaf7f19",
+      "tjsj": "2014-08-21 14:43:10",
+      "whqkjl": "会尽快办理的",
+      "yhdm": "440104058934287",
+      "yhlx": "0",
+      "yieldsOfDate": [],
+      "ywbdid": "02",
+      "ywbdslxh": "7039635",
+      "zdzjtjr": "",
+      "zxqkzt": "2",
+      "zxxh": "11714739",
+      "zxzid": "506ACBCB7D8B3B77F6CC895EEFFA9F82"
+    }
+  ]
+}

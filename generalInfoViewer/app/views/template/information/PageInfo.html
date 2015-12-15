@@ -1,0 +1,171 @@
+<div class="cont-left-top-top" ng-init="loadPageInfo()">
+    <div ng-if="tabType==='0'">
+        <div class="username">
+            <span>姓名：</span>
+            <span ng-bind="contactsInfo.data.lxrmc"></span>
+            <span ng-mouseover="showDetailInfo()" ng-mouseleave="hideDetailInfo()">
+                <span class="show-detail alink hover">详细</span>
+                <span class="company-info">
+                    <div class="close-info"><i class="fa fa-times-circle-o"></i></div>
+                    <div class="info-item">
+                        姓名：<span ng-bind="contactsInfo.data.lxrmc"></span>
+                        性别：<span ng-bind="contactsInfo.data.xb"></span>
+                    </div>
+                    <div class="info-item">
+                        手机：
+                        <span ng-repeat="item in contactsInfo.data.sjhmList">
+                            <span ng-bind="item.sjhm"></span>
+                        </span>
+                    </div>
+                    <div class="info-item">
+                        电话：
+                        <span ng-repeat="item in contactsInfo.data.dhhmList">
+                            <span ng-bind="item.qhdhhmfjh"></span>
+                        </span>
+                    </div>
+                    <div class="info-item">
+                        邮箱：<span ng-bind="contactsInfo.data.email"></span>
+                    </div>
+                    <div class="info-item">
+                        QQ：<span ng-bind="contactsInfo.data.qq"></span>
+                    </div>
+                    <div class="info-item">
+                        地址：<span ng-bind="contactsInfo.data.provinceName+' '+contactsInfo.data.cityName+' '+contactsInfo.data.countyName+' '+contactsInfo.data.address"></span>
+                    </div>
+                </span>
+            </span>
+            <span class="user-position">
+                <span ng-repeat="item in contactsInfo.data.jsxxList">
+                    <span ng-bind="item.jsmc"></span>
+                    <span ng-if="$index!==contactsInfo.data.jsxxList.length-1">/</span>
+                </span>
+            </span>
+        </div>
+        <div class="remark">
+            <input type="text" placeholder="请输入备注信息" ng-model="contactsInfo.data.bz"/>
+        </div>
+    </div>
+    <div ng-if="tabType==='1'">
+        <div class="username">
+            <span>单位：</span>
+            <span ng-bind="companyInfo.data.yhmc"></span>
+        <span ng-mouseover="showDetailInfo()" ng-mouseleave="hideDetailInfo()">
+            <span class="show-detail alink hover">详细</span>
+            <span class="company-info">
+                <div class="close-info"><i class="fa fa-times-circle-o"></i></div>
+                <div class="info-item">
+                    <span>单位名称：
+                        <span ng-bind="companyInfo.data.yhmc"></span>
+                    </span>
+                </div>
+                <div class="info-item">
+                    国税税号：<span ng-bind="companyInfo.data.nsrsbh"></span>
+                    <span ng-bind="companyInfo.data.gsswjgMc"></span>
+                </div>
+                <div class="info-item">
+                    地税税号：<span ng-bind="companyInfo.data.dssh"></span>
+                    <span ng-bind="companyInfo.data.dsswjgMc"></span>
+                </div>
+                <div class="info-item">
+                    海关代码：<span ng-bind="companyInfo.data.hgdm"></span>
+                    出口企业类型：<span ng-bind="companyInfo.data.yhlbxx"></span>
+                </div>
+                <div class="info-item">
+                    所属行业：<span ng-bind="companyInfo.data.hymlMc"></span>
+                    增值税纳税人类型：<span ng-bind="companyInfo.data.qytype"></span>
+                </div>
+                <div class="info-item">
+                    传真号码：<span ng-bind="companyInfo.data.faxNumber"></span>
+                </div>
+                <div class="info-item">
+                    单位电话：<span ng-bind="companyInfo.data.dhhm"></span>
+                </div>
+                <div class="info-item">
+                    经营地址：<span ng-bind="companyInfo.data.jydz"></span>
+                </div>
+                <div class="info-item">
+                    <span class="float-left manage-info-title">管理信息：</span>
+                    <span class="float-left manage-info" >
+                        <span ng-repeat="item in companyInfo.data.ywxxList">
+                            <span ng-bind="item.ywdlMc+'-'+item.sswdMc+'-'+item.sskhjlMc"></span>
+                        </span>
+                    </span>
+                </div>
+            </span>
+        </span>
+        <span class="user-position">
+            通行密码：<span  ng-bind="companyInfo.data.zcbm"></span>
+        </span>
+        </div>
+        <div class="level">
+            <span class="level-icon" ng-class="{
+            level1:companyInfo.data.levelDm==='09',
+            level2:companyInfo.data.levelDm==='07',
+            level3:companyInfo.data.levelDm==='05',
+            level4:companyInfo.data.levelDm==='01'
+            }" title="{{companyInfo.data.levelMc}}"></span>
+            <span class="level-type alink delegated" ng-click="showDialogWindow()">被代理</span>
+            <span class="alink level-manage" ng-click="showDialogWindow()"><i class="fa fa-users"></i>人员管理</span>
+        </div>
+        <div class="remark">
+            <input type="text" placeholder="请输入备注信息" ng-model="companyInfo.data.bz"/>
+        </div>
+    </div>
+    <div ng-if="tabType==='2'">
+        <div class="username">
+            <span>单位：</span>
+            <span ng-bind="intermediaryInfo.data.yhmc"></span>
+        <span ng-mouseover="showDetailInfo()" ng-mouseleave="hideDetailInfo()">
+            <span class="show-detail alink hover">详细</span>
+            <span class="company-info">
+                <div class="close-info"><i class="fa fa-times-circle-o"></i></div>
+                <div class="info-item">
+                    用户代码：<span ng-bind="intermediaryInfo.data.yhdm"></span>
+                    状态：<span ng-bind="intermediaryInfo.data.status"></span>
+                    <span class="intermediary-manage-info">
+                        <span ng-repeat="item in intermediaryInfo.data.ywxxList">
+                            <span ng-bind="item.ywdlMc+'-'+item.sswdMc+'-'+item.sskhjlMc"></span><br/>
+                        </span>
+                    </span>
+                </div>
+                <div class="info-item">
+                    用户密码：<span ng-bind="intermediaryInfo.data.zcbm"></span>
+                    分公司：<span ng-bind="intermediaryInfo.data.fzgsMc"></span>
+                </div>
+                <div class="info-item">
+                    事务所标识：
+                    <span ng-if="intermediaryInfo.data.swsbz==='0'">
+                        <input type="checkbox" checked disabled>非中介机构
+                    </span>
+                    <span ng-if="intermediaryInfo.data.swsbz==='1'">
+                        <input type="checkbox" checked disabled>严格授权控制类中介机构
+                    </span>
+                    <span ng-if="intermediaryInfo.data.swsbz==='2'">
+                        <input type="checkbox" checked disabled>非严格授权控制类中介机构
+                    </span>
+                </div>
+                <div class="info-item">
+                    传真号码：<span ng-bind="intermediaryInfo.data.faxNumber"></span>
+                </div>
+                <div class="info-item">
+                    单位电话：<span ng-bind="intermediaryInfo.data.dhhm"></span>
+                </div>
+                <div class="info-item">
+                    经营地址：<span ng-bind="intermediaryInfo.data.jydz"></span>
+                </div>
+                <div class="info-item">
+                    代理业务：
+                    <span ng-repeat="item in intermediaryInfo.data.cpdlList">
+                        <input type="checkbox" ng-checked="item.selected" disabled>
+                        <span ng-bind="item.cpdlMc"></span>
+                    </span>
+                </div>
+            </span>
+        </span>
+        </div>
+        <div class="remark">
+            <input type="text" placeholder="请输入备注信息" ng-model="intermediaryInfo.data.bz"/>
+        </div>
+    </div>
+    <div pop-info></div>
+</div>
