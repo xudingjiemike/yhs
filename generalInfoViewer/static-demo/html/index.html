@@ -1,0 +1,2824 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>来电咨询</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+        <link href="../plugin/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../plugin/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/base.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- <div class="page-header">
+                <div class="header-left">
+                    <span>来电号码：3003</span>
+                    <span>前转号码：1001</span>
+                    <span>接入号码：56698031</span>
+                    <span class="span-btn">保持</span>
+                    <span class="span-btn">求助</span>
+                    <span class="span-btn">转接</span>
+                    <span class="span-btn">呼外线</span>
+                </div>
+                <div class="header-right">
+                    <span>综合技能组1[电话]</span>
+                    <span>话后小结计时：00：00：00</span>
+                    <span>通话计时：00：30：30</span>
+                </div>
+            </div> -->
+            <div class="page-content">
+                <div class="outer-box">
+                    <div class="cont-left">
+                    <div>
+                        <div class="tabs">
+                            <div class="tab active">张会计</div>
+                            <div class="tab fix-margin">税友软件</div>
+                            <div class="tab-other">
+                                <input type="text" class="search-userinfo duty-number" placeholder="输入税号、用户名称等切换用户" maxlength="20" />
+                                <div class="search-info-copy search-userinfo">
+                                </div>
+                                <span class="do-change" title="切换用户"><i class="fa fa-plus"></i></span>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-content-box">
+                                <div class="tab-content-item">
+                                    <div >
+                                        <div class="username">
+                                            <span>单位：</span>
+                                            <span>税友软件集团股份有限公司</span>
+                                            <span class="user-position">办税员/会计</span>
+                                        </div>
+                                        <div class="level">
+                                            <span class="level-type other">QQ：12345356356</span>
+                                            <span>手机：13312345678</span>
+                                            <span class="number">已绑定</span>
+                                        </div>
+                                        <div class="tags">
+                                            <span>标签：</span>
+                                            <span class="tag">个人标签</span>
+                                            <span class="tag">暴脾气</span>
+                                            <span class="tag">意向评级：良</span>
+                                            <span class="tag">操作能力低</span>
+                                            <span class="tag alink"><i class="fa fa-plus"></i>添加标签</span>
+                                        </div>
+                                        <div class="remark">
+                                            <input type="text" placeholder="请输入备注信息"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content-item">
+                                    <div class="cont-left-top">
+                                        <div class="cont-left-top-top">
+                                            <div class="username">
+                                                <span>单位：</span>
+                                                <span>税友软件集团股份有限公司</span>
+                                                <span class="show-detail alink hover">详细</span>
+                                                <span class="user-position">
+                                                    通行密码：1342345635434
+                                                </span>
+                                            </div>
+                                            <div class="level">
+                                                <span class="level-icon level2"></span>
+                                                <span class="level-type alink delegated">被代理</span>
+                                                <span class="alink level-manage"><i class="fa fa-users"></i>人员管理</span>
+                                            </div>
+                                            <div class="tags">
+                                                <span>标签：</span>
+                                                <span class="tag">中税用户</span>
+                                                <span class="tag">大客户</span>
+                                                <span class="tag">双软户</span>
+                                                <span class="tag">保密单位</span>
+                                                <span class="tag alink"><i class="fa fa-plus"></i>添加标签</span>
+                                            </div>
+                                            <div class="remark">
+                                                <input type="text" placeholder="请输入备注信息"/>
+                                            </div>
+                                        </div>
+                                        <div class="cont-left-top-mid">
+                                            <div>
+                                                <table class="service-info">
+                                                    <tr>
+                                                        <td class="right-bottom number" width="13%">服务授权</td>
+                                                        <td>
+                                                            <span class="service-item">电话服务-发票</span>
+                                                            <span class="service-item">电话服务-申报</span>
+                                                            <span class="service-item">网点服务-不限次</span>
+                                                            <span class="service-item">上门服务-申报</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="number">业务概况</td>
+                                                        <td class="left-top no-padding">
+                                                            <div class="service-items">
+                                                                <span class="service-item">3天内咨询：3次</span>
+                                                                <span class="service-item">一年内投诉：4次</span>
+                                                                <span class="service-item">未关闭线索：1条</span>
+                                                                <span class="service-item">到期/逾期订单：4个</span>
+                                                            </div>
+                                                            <div class="service-items">
+                                                                <span class="service-item">
+                                                                    [正在]操作：代税无忧平台V01.0.027
+                                                                </span>
+                                                            </div>
+                                                            <div class="service-items last">
+                                                                <span class="service-item">
+                                                                    银行托收协议：2份
+                                                                </span>
+                                                                <span class="service-item">未开票订单：1个</span>
+                                                                <span class="service-item">未交付品：物料+发票</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cont-left-btm">
+                                        <div class="tabs style2">
+                                            <div>
+                                                <div class="tab">软件授权</div>
+                                                <div class="tab">订单</div>
+                                                <div class="tab">服务/任务</div>
+                                                <div class="tab">银行托收</div>
+                                                <div class="tab">外呼</div>
+                                                <div class="tab">短信</div>
+                                                <div class="tab">礼品申请</div>
+                                                <div class="tab">诉求</div>   
+                                                <div class="active-bar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="scroll-arrow">
+                                            <span class="arrow-left disable"><i class="fa fa-chevron-left"></i></span>
+                                            <span class="arrow-right"><i class="fa fa-chevron-right"></i></span>
+                                        </div>
+                                        <div class="tab-content style2">
+                                            <div class="tab-content-box">
+                                                <div class="tab-content-item hastable">
+                                                    <div class="table">
+                                                        <div class="search-result">
+                                                            <div class="table-header">
+                                                                <table class="softwear-auth">
+                                                                    <tr>
+                                                                        <th width="20%">软件名称</th>
+                                                                        <th width="20%">分版名称</th>
+                                                                        <th width="10%">版本</th>
+                                                                        <th width="10%">状态</th>
+                                                                        <th width="20%">起始日期</th>
+                                                                        <th width="20%">到期日期</th>
+                                                                    </tr>
+                                                                </table>
+                                                                <div class="scroll-arrow2">
+                                                                    <div class="scroll-to-left disabled">
+                                                                        <span class="arrow-left2"></span>
+                                                                    </div>
+                                                                    <div class="scroll-to-right">
+                                                                        <span class="arrow-right2"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table-content">
+                                                                <table class="softwear-auth">
+                                                                    <tr>
+                                                                        <td width="20%">表格样式</td>
+                                                                        <td width="20%">
+                                                                            请参照这里
+                                                                        </td>
+                                                                        <td width="10%">
+                                                                            表格样式
+                                                                        </td>
+                                                                        <td width="10%">
+                                                                             请参照
+                                                                        </td>
+                                                                        <td width="20%">这</td>
+                                                                        <td width="20%">里</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>惠税无忧</td>
+                                                                        <td>
+                                                                            惠税无忧V1.01
+                                                                        </td>
+                                                                        <td>
+                                                                            v1.01
+                                                                        </td>
+                                                                        <td>
+                                                                             正常
+                                                                        </td>
+                                                                        <td>2015-12-23</td>
+                                                                        <td>2016-12-23</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>惠税无忧</td>
+                                                                        <td>
+                                                                            惠税无忧V1.01
+                                                                        </td>
+                                                                        <td>
+                                                                            v1.01
+                                                                        </td>
+                                                                        <td>
+                                                                             正常
+                                                                        </td>
+                                                                        <td>2015-12-23</td>
+                                                                        <td>2016-12-23</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>惠税无忧</td>
+                                                                        <td>
+                                                                            惠税无忧V1.01
+                                                                        </td>
+                                                                        <td>
+                                                                            v1.01
+                                                                        </td>
+                                                                        <td>
+                                                                             正常
+                                                                        </td>
+                                                                        <td>2015-12-23</td>
+                                                                        <td>2016-12-23</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>惠税无忧</td>
+                                                                        <td>
+                                                                            惠税无忧V1.01
+                                                                        </td>
+                                                                        <td>
+                                                                            v1.01
+                                                                        </td>
+                                                                        <td>
+                                                                             正常
+                                                                        </td>
+                                                                        <td>2015-12-23</td>
+                                                                        <td>2016-12-23</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content-item">
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>回电</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>任务类型[<span class="alink">30210251</span>]</span>
+                                                                <span>待回电</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>来电咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>0571-56881234</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>
+                                                                <span>咨询事项：申报失败</span>
+                                                                <span>事项补充说明：申报失败，由于操作不当</span>
+                                                                <span>咨询事项：申报出错</span>
+                                                                <span>派发[<span class="alink">50210001</span>]</span>
+                                                                <span>未完成</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>在线咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>会话ID[000035]</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content-item">
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>回电</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>任务类型[<span class="alink">30210251</span>]</span>
+                                                                <span>待回电</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>来电咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>0571-56881234</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>
+                                                                <span>咨询事项：申报失败</span>
+                                                                <span>事项补充说明：申报失败，由于操作不当</span>
+                                                                <span>咨询事项：申报出错</span>
+                                                                <span>派发[<span class="alink">50210001</span>]</span>
+                                                                <span>未完成</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>在线咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>会话ID[000035]</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content-item">
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>回电</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>任务类型[<span class="alink">30210251</span>]</span>
+                                                                <span>待回电</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>来电咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>0571-56881234</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>
+                                                                <span>咨询事项：申报失败</span>
+                                                                <span>事项补充说明：申报失败，由于操作不当</span>
+                                                                <span>咨询事项：申报出错</span>
+                                                                <span>派发[<span class="alink">50210001</span>]</span>
+                                                                <span>未完成</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>在线咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>会话ID[000035]</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content-item">
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>回电</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>任务类型[<span class="alink">30210251</span>]</span>
+                                                                <span>待回电</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>来电咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>0571-56881234</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>
+                                                                <span>咨询事项：申报失败</span>
+                                                                <span>事项补充说明：申报失败，由于操作不当</span>
+                                                                <span>咨询事项：申报出错</span>
+                                                                <span>派发[<span class="alink">50210001</span>]</span>
+                                                                <span>未完成</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>在线咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>会话ID[000035]</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content-item">
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>回电</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>任务类型[<span class="alink">30210251</span>]</span>
+                                                                <span>待回电</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>来电咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>0571-56881234</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>
+                                                                <span>咨询事项：申报失败</span>
+                                                                <span>事项补充说明：申报失败，由于操作不当</span>
+                                                                <span>咨询事项：申报出错</span>
+                                                                <span>派发[<span class="alink">50210001</span>]</span>
+                                                                <span>未完成</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>在线咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>会话ID[000035]</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content-item">
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>回电</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>任务类型[<span class="alink">30210251</span>]</span>
+                                                                <span>待回电</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>来电咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>0571-56881234</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>
+                                                                <span>咨询事项：申报失败</span>
+                                                                <span>事项补充说明：申报失败，由于操作不当</span>
+                                                                <span>咨询事项：申报出错</span>
+                                                                <span>派发[<span class="alink">50210001</span>]</span>
+                                                                <span>未完成</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>在线咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>会话ID[000035]</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content-item">
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>回电</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>任务类型[<span class="alink">30210251</span>]</span>
+                                                                <span>待回电</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>来电咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>0571-56881234</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                                <span class="alink">提交质检</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>
+                                                                <span>咨询事项：申报失败</span>
+                                                                <span>事项补充说明：申报失败，由于操作不当</span>
+                                                                <span>咨询事项：申报出错</span>
+                                                                <span>派发[<span class="alink">50210001</span>]</span>
+                                                                <span>未完成</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-opt-records">
+                                                        <div class="record-odd">
+                                                            <span class="record-odd-title">
+                                                                <span class="record-date">2015-11-23</span>
+                                                                <span>在线咨询</span>
+                                                            </span>
+                                                            <span class="record-odd-content">
+                                                                <span>会话ID[000035]</span>
+                                                                <span>陈会计</span>
+                                                                <span>张三(1001)</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="record-even">
+                                                            <span>情况记录：当时情况记录说明</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="company-info">
+                                        <div class="close-info">
+                                            <i class="fa fa-times-circle-o"></i>
+                                        </div>
+                                        <div class="info-item">
+                                            <span>单位名称：
+                                                <span contenteditable="true" class="edit">
+                                                    税友软件集团股份有限公司<i class="fa fa-pencil-square-o alink"></i>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span>
+                                                国税税号：
+                                                440312235345345344531
+                                            </span>
+                                            <span>
+                                                深圳市福田区国税局
+                                            </span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span>
+                                                地税税号：
+                                                440312235345345344531
+                                            </span>
+                                            <span>
+                                                深圳市福田区国税局
+                                            </span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span>
+                                                海关代码：
+                                                000120
+                                            </span>
+                                            <span>
+                                                出口企业类型：
+                                                生产型
+                                            </span>
+                                        </div>
+                                        <div class="info-item">
+                                            所属行业：
+                                            <span>
+                                                建安行业
+                                            </span>
+                                            <select class="trade">
+                                                <option value="建安行业">建安行业</option>
+                                                <option value="保险行业">保险行业</option>
+                                                <option value="汽车行业">汽车行业</option>
+                                                <option value="自动化行业">自动化行业</option>
+                                            </select>
+                                            <i class="fa fa-pencil-square-o alink edit-trade"></i>
+                                            <span>
+                                                增值税纳税人类型：
+                                                一般纳税人
+                                            </span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span>
+                                                传真号码：
+                                                <span contenteditable="true" class="edit">
+                                                    0571-56342123<i class="fa fa-pencil-square-o alink"></i>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span>
+                                                单位电话：
+                                                <span contenteditable="true" class="edit">
+                                                    0571-56342123<i class="fa fa-pencil-square-o alink"></i>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span>
+                                                经营地址：
+                                                <span>
+                                                    浙江省 杭州市 浦沿街道 南环路3738号税友大厦<i class="fa fa-pencil-square-o alink edit-address"></i>
+                                                </span>
+                                            </span>
+                                            <div class="select-address-edit">
+                                                <div class="option-item">
+                                                    <span class="item-text item-label">所在地区：</span>
+                                                    <select class="address" disabled="">
+                                                        <option selected = "selected">请选择省市区</option>
+                                                    </select>
+                                                    <div class="address-cover setAddress"></div>
+                                                    <div class="select-address">
+                                                        <div class="tabs">
+                                                            <div class="tab active" id="province">省份</div>
+                                                            <div class="tab fix-margin" id="city">城市</div>
+                                                            <div class="tab fix-margin" id="county">县区</div>
+                                                            <div class="tab fix-margin noborer" id="street">街道</div>
+                                                        </div>
+                                                        <div class="tab-content">
+                                                            <div class="tab-content-box">
+                                                                <div class="tab-content-item province">
+                                                                    <div class="areas a-g">
+                                                                        <div>
+                                                                            <span class="area">安徽</span>
+                                                                            <span class="area">北京</span>
+                                                                            <span class="area">重庆</span>
+                                                                            <span class="area">福建</span>
+                                                                            <span class="area">甘肃</span>
+                                                                            <span class="area">广东</span>
+                                                                            <span class="area">广西</span>
+                                                                            <span class="area">贵州</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="areas h-k">
+                                                                        <div>
+                                                                            <span class="area">海南</span>
+                                                                            <span class="area">河北</span>
+                                                                            <span class="area">黑龙江</span>
+                                                                            <span class="area">河南</span>
+                                                                            <span class="area">湖北</span>
+                                                                            <span class="area">湖南</span>
+                                                                            <span class="area">江苏</span>
+                                                                            <span class="area">江西</span>
+                                                                            <span class="area">吉林</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="areas l-s">
+                                                                        <div>
+                                                                            <span class="area">辽宁</span>
+                                                                            <span class="area">内蒙古</span>
+                                                                            <span class="area">宁夏</span>
+                                                                            <span class="area">青海</span>
+                                                                            <span class="area">山东</span>
+                                                                            <span class="area">上海</span>
+                                                                            <span class="area">山西</span>
+                                                                            <span class="area">陕西</span>
+                                                                            <span class="area">四川</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="areas t-z">
+                                                                        <div>
+                                                                            <span class="area">天津</span>
+                                                                            <span class="area">新疆</span>
+                                                                            <span class="area">西藏</span>
+                                                                            <span class="area">云南</span>
+                                                                            <span class="area">浙江</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-content-item">
+                                                                    <div class="areas">
+                                                                        <span class="area">杭州</span>
+                                                                        <span class="area">湖州</span>
+                                                                        <span class="area">嘉兴</span>
+                                                                        <span class="area">温州</span>
+                                                                        <span class="area">绍兴</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-content-item">
+                                                                    <div class="areas">
+                                                                        <span class="area">上城区</span>
+                                                                        <span class="area">滨江区</span>
+                                                                        <span class="area">余杭区</span>
+                                                                        <span class="area">萧山区</span>
+                                                                        <span class="area">西湖区</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-content-item">
+                                                                    <div class="areas">
+                                                                        <span class="area">浦沿</span>
+                                                                        <span class="area">西兴</span>
+                                                                        <span class="area">长河</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="option-item">
+                                                    <span class="item-text float-left item-label">详细地址：</span>
+                                                    <input class="address" type="text"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <span>
+                                                委托信息：
+                                                无/XXX代理 代理的产品大类
+                                            </span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="float-left manage-info-title">
+                                                管理信息：
+                                            </span>
+                                            <span class="float-left manage-info">
+                                                <span>
+                                                    国税业务-衢水-刘珊
+                                                </span>
+                                                <span>
+                                                    地税业务-衢水-刘珊
+                                                </span>
+                                                <span>
+                                                    申报业务-衢水-刘珊
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="cont-mid">
+                    <div class="cont-mid-box">
+                        <div class="part">
+                            <div class="part-top">
+                                <div>
+                                    <div class="title">
+                                        <span>问题库</span>
+                                        <span class="mid-to-max"><i class="fa fa-arrows-alt"></i></span>
+                                        <span class="mid-to-normal"><i class="fa fa-compress"></i></span>
+                                    </div>
+                                    <div class="content">
+                                        <div class="search-block">
+                                            <div>
+                                                <select>
+                                                    <option>地区</option>
+                                                    <option>北京</option>
+                                                    <option>上海</option>
+                                                    <option>杭州</option>
+                                                </select>
+                                                <select>
+                                                    <option>产品</option>
+                                                    <option>产品1</option>
+                                                    <option>产品2</option>
+                                                    <option>产品3</option>
+                                                </select>
+                                                <select>
+                                                    <option>会员等级</option>
+                                                    <option>等级1</option>
+                                                    <option>等级2</option>
+                                                    <option>等级3</option>
+                                                </select>
+                                            </div>
+                                            <div class="search-input">
+                                                <input type="text" placeholder="输入搜索内容，如“申报失败”"/>
+                                                <span>搜索</span>
+                                                <div class="search-pre-result">
+                                                    <div class="pre-result-item">
+                                                        <span class="key">tes</span>t2 报失败
+                                                    </div>
+                                                    <div class="pre-result-item">
+                                                        <span class="key">tes</span>rt3 报失败
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="result-block">
+                                            <div class="result-left">
+                                                <div class="result-content">
+                                                    <div class="result-content-body">
+                                                        <div class="result-content-title">
+                                                            <span>这是标题这是标题</span>
+                                                            <span class="expand">
+                                                                <i class="fa fa-arrows-alt"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="result-content-text">
+                                                            <span>这是内容这是内容这是内容这是内容这是内容这是内容这是内容
+                                                                这是内容这是内这是内容这是内容这是内容这是内容这是内容容
+                                                                这是内容这是内容这是内容这是内容这是内容这是内容这是内容
+                                                                这是内容这是内容这是内容这是内容这是内这是内容这是内容
+                                                                这是内容这是内容这是内容容这是内容这是内容这是内容
+                                                                这是内容这是内这是内容这是内容这是内容这是内容这是内容容
+                                                                这是内容这是内容这是内容这是内容这是内容这是内容这是内容
+                                                                这是内容这是内容这是内容这是内容这是内这是内容这是内容
+                                                                这是内容这是内容这是内容容这是内容这是内容这是内容
+                                                                这是内容这是内这是内容这是内容这是内容这是内容这是内容容
+                                                                这是内容这是内容这是内容这是内容这是内容这是内容这是内容
+                                                                这是内容这是内容这是内容这是内容这是内这是内容这是内容
+                                                                这是内容这是内容这是内容容这是内容这是内容这是内容
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="result-content-opts">
+                                                        <span class="btn">解决</span>
+                                                        <span class="btn">未解决</span>
+                                                        <span class="btn error">纠错</span>
+                                                        <span class="btn send-message-btn">发送短信</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="result-right">
+                                                <div class="result-content">
+                                                    <div class="tabs">
+                                                        <div class="tab active">常见问题</div>
+                                                        <div class="tab fix-margin">相关问题</div>
+                                                    </div>
+                                                    <div class="tab-content">
+                                                        <div class="tab-content-box">
+                                                            <div class="tab-content-item">
+                                                                <a href="javascript:void(0);"><span>常见问题常见问题</span></a>
+                                                                <a href="javascript:void(0);"><span>常见问题常见问题</span></a>
+                                                                <a href="javascript:void(0);"><span>常见问题常见问题</span></a>
+                                                                <a href="javascript:void(0);"><span>常见问题常见问题</span></a>
+                                                                <a href="javascript:void(0);"><span>常见问题常见问题</span></a>
+                                                                <a href="javascript:void(0);"><span>常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题</span></a>
+                                                                <a href="javascript:void(0);"><span>常见问题常见问题常见问题常见问题常见问题常见问题</span></a>
+                                                                <a href="javascript:void(0);"><span>常见问题常见问题常见问题常见问题</span></a>
+                                                            </div>
+                                                            <div class="tab-content-item">
+                                                                <a href="javascript:void(0);"><span>相关问题相关问题</span></a>
+                                                                <a href="javascript:void(0);"><span>相关问题相关问题</span></a>
+                                                                <a href="javascript:void(0);"><span>相关问题相关问题</span></a>
+                                                                <a href="javascript:void(0);"><span>相关问题相关问题</span></a>
+                                                                <a href="javascript:void(0);"><span>相关问题相关问题</span></a>
+                                                                <a href="javascript:void(0);"><span>相关问题相关问题相关问题相关问题相关问题相关问题相关问题相关问题</span></a>
+                                                                <a href="javascript:void(0);"><span>相关问题相关问题相关问题相关问题相关问题相关问题</span></a>
+                                                                <a href="javascript:void(0);"><span>相关问题相关问题相关问题相关问题</span></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part-bottom">
+                                <div>
+                                    <div class="title">
+                                        <span>咨询小结</span>
+                                    </div>
+                                    <div class="content">
+                                        <div class="result-block">
+                                            <div class="solve-result">
+                                                <div class="option-item">
+                                                    <span>
+                                                        <span class="select-status"></span>
+                                                        <span class="item-text">申报失败</span>
+                                                    </span>
+                                                </div>
+                                                <div class="option-item">
+                                                    <span>
+                                                        <span class="select-status"></span>
+                                                        <span class="item-text">申报失败, 验证电子签名失败</span>
+                                                    </span>
+                                                    <input class="solve-result-remark" type="text"/>
+                                                </div>
+                                                <div class="option-item">
+                                                    <span>
+                                                        <span class="select-status"></span>
+                                                        <span class="item-text">申报失败, 验证电子签名失败</span>
+                                                    </span>
+                                                    <input class="solve-result-remark" type="text"/>
+                                                </div>
+                                                <div class="option-item">
+                                                    <span>
+                                                        <span class="select-status"></span>
+                                                        <span class="item-text">申报失败, 验证电子签名失败</span>
+                                                    </span>
+                                                    <input class="solve-result-remark" type="text"/>
+                                                </div>
+                                                <div class="option-item">
+                                                    <span>
+                                                        <span class="select-status"></span>
+                                                        <span class="item-text">网店查询</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="solve-over">
+                                            <div class="user-message">
+                                                <div class="option-item">
+                                                    <span class="item-text item-label">用户想法</span>
+                                                    <div class="solve-result-remark">
+                                                        <input type="text"/>
+                                                    </div>
+                                                    <div class="user-impression">
+                                                        <span class="item-text item-label">用户印象</span>
+                                                        <select>
+                                                            <option>用户印象</option>
+                                                            <option>一般</option>
+                                                            <option>态度差</option>
+                                                            <option>好</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="solve-opts">
+                                                <span class="btn submit">提交</span>
+                                                <span class="btn normal" id="callback">回电</span>
+                                                <span class="btn normal" id="send">派发</span>
+                                                <span class="btn normal" id="remote">远程</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part more-opts">
+                                <div class="more-opts-content">
+                                    <div class="tab-box">
+                                        <div class="tabs">
+                                            <div class="tab active" id="_callback">回电</div>
+                                            <div class="tab fix-margin" id="_send">派发</div>
+                                            <div class="tab fix-margin" id="_remote">远程</div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div class="tab-content-box">
+                                                <div class="tab-content-item">
+                                                    <div class="grey-option-block callback">
+                                                        <div class="option-item">
+                                                            <span>
+                                                                <span class="select-status single-select trim"></span>
+                                                                <span class="item-text">远程支持中心</span>
+                                                                <span class="item-text-label">任务类型：</span>
+                                                                <select>
+                                                                    <option></option>
+                                                                    <option>12312313</option>
+                                                                    <option>123123312</option>
+                                                                </select>
+                                                                <span class="item-text-label">回电技能组：</span>
+                                                                <select>
+                                                                    <option></option>
+                                                                    <option>123123</option>
+                                                                    <option>13123</option>
+                                                                </select>
+                                                            </span>
+                                                        </div>
+                                                        <div class="option-item">
+                                                            <span>
+                                                                <span class="select-status single-select"></span>
+                                                                <span class="item-text">用户所属分公司</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="option-item">
+                                                            <span>
+                                                                <span class="select-status single-select"></span>
+                                                                <span class="item-text">自己</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="callback callback-below">
+                                                        <div class="option-item">
+                                                            <span class="item-text item-label">联系人：</span>
+                                                            <input type="text"/>
+                                                            <span class="item-text-label">联系号码：</span>
+                                                            <input type="text"/>
+                                                        </div>
+                                                        <div class="option-item">
+                                                            <span class="item-text float-left item-label">任务描述：</span>
+                                                            <textarea></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content-item">
+                                                    <div class="grey-option-block callback">
+                                                        <div class="option-item">
+                                                            <span>
+                                                                <span class="select-status single-select"></span>
+                                                                <span class="item-text">用户所属分公司</span>
+                                                                <span class="item-text-label">任务类型：</span>
+                                                                <select>
+                                                                    <option></option>
+                                                                    <option>12312313</option>
+                                                                    <option>123123312</option>
+                                                                </select>
+                                                            </span>
+                                                        </div>
+                                                        <div class="option-item">
+                                                            <span>
+                                                                <span class="select-status single-select"></span>
+                                                                <span class="item-text">自己</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="callback callback-below">
+                                                        <div class="option-item">
+                                                            <span class="item-text item-label">所在地区：</span>
+                                                            <select class="address" disabled="">
+                                                                <option selected = "selected">请选择省市区</option>
+                                                            </select>
+                                                            <div class="address-cover setAddress"></div>
+                                                            <div class="select-address">
+                                                                <div class="tabs">
+                                                                    <div class="tab active" id="province">省份</div>
+                                                                    <div class="tab fix-margin" id="city">城市</div>
+                                                                    <div class="tab fix-margin" id="county">县区</div>
+                                                                    <div class="tab fix-margin noborer" id="street">街道</div>
+                                                                </div>
+                                                                <div class="tab-content">
+                                                                    <div class="tab-content-box">
+                                                                        <div class="tab-content-item province">
+                                                                            <div class="areas a-g">
+                                                                                <div>
+                                                                                    <span class="area">安徽</span>
+                                                                                    <span class="area">北京</span>
+                                                                                    <span class="area">重庆</span>
+                                                                                    <span class="area">福建</span>
+                                                                                    <span class="area">甘肃</span>
+                                                                                    <span class="area">广东</span>
+                                                                                    <span class="area">广西</span>
+                                                                                    <span class="area">贵州</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="areas h-k">
+                                                                                <div>
+                                                                                    <span class="area">海南</span>
+                                                                                    <span class="area">河北</span>
+                                                                                    <span class="area">黑龙江</span>
+                                                                                    <span class="area">河南</span>
+                                                                                    <span class="area">湖北</span>
+                                                                                    <span class="area">湖南</span>
+                                                                                    <span class="area">江苏</span>
+                                                                                    <span class="area">江西</span>
+                                                                                    <span class="area">吉林</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="areas l-s">
+                                                                                <div>
+                                                                                    <span class="area">辽宁</span>
+                                                                                    <span class="area">内蒙古</span>
+                                                                                    <span class="area">宁夏</span>
+                                                                                    <span class="area">青海</span>
+                                                                                    <span class="area">山东</span>
+                                                                                    <span class="area">上海</span>
+                                                                                    <span class="area">山西</span>
+                                                                                    <span class="area">陕西</span>
+                                                                                    <span class="area">四川</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="areas t-z">
+                                                                                <div>
+                                                                                    <span class="area">天津</span>
+                                                                                    <span class="area">新疆</span>
+                                                                                    <span class="area">西藏</span>
+                                                                                    <span class="area">云南</span>
+                                                                                    <span class="area">浙江</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="tab-content-item">
+                                                                            <div class="areas">
+                                                                                <span class="area">杭州</span>
+                                                                                <span class="area">湖州</span>
+                                                                                <span class="area">嘉兴</span>
+                                                                                <span class="area">温州</span>
+                                                                                <span class="area">绍兴</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="tab-content-item">
+                                                                            <div class="areas">
+                                                                                <span class="area">上城区</span>
+                                                                                <span class="area">滨江区</span>
+                                                                                <span class="area">余杭区</span>
+                                                                                <span class="area">萧山区</span>
+                                                                                <span class="area">西湖区</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="tab-content-item">
+                                                                            <div class="areas">
+                                                                                <span class="area">浦沿</span>
+                                                                                <span class="area">西兴</span>
+                                                                                <span class="area">长河</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="option-item">
+                                                            <span class="item-text float-left item-label">详细地址：</span>
+                                                            <input class="address" type="text"/>
+                                                        </div>
+                                                        <div class="option-item">
+                                                            <span class="item-text item-label">联系人：</span>
+                                                            <input type="text"/>
+                                                            <span class="item-text-label">联系号码：</span>
+                                                            <input type="text"/>
+                                                        </div>
+                                                        <div class="option-item come-time">
+                                                            <span class="item-text item-label">上门时间：</span>
+                                                            <span>
+                                                                <span class="select-status single-select"></span>
+                                                                <span class="item-text align-left">尽快联系</span>
+                                                            </span>
+                                                            <span>
+                                                                <span class="select-status single-select trim"></span>
+                                                                <input type="text" readonly="readonly" class="date" />
+                                                                <select>
+                                                                    <option>上午</option>
+                                                                    <option>下午</option>
+                                                                </select>
+                                                            </span>
+                                                        </div>
+                                                        <div class="option-item">
+                                                            <span class="item-text float-left">任务描述：</span>
+                                                            <textarea></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content-item">
+                                                    <div class="grey-option-block callback">
+                                                        <div class="option-item">
+                                                            <span>
+                                                                <span class="select-status single-select"></span>
+                                                                <span class="item-text">远程支持中心</span>
+                                                                <span class="item-text-label">任务类型：</span>
+                                                                <select>
+                                                                    <option></option>
+                                                                    <option>12312313</option>
+                                                                    <option>123123312</option>
+                                                                </select>
+                                                            </span>
+                                                        </div>
+                                                        <div class="option-item">
+                                                            <span>
+                                                                <span class="select-status single-select"></span>
+                                                                <span class="item-text">用户所属分公司</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="option-item">
+                                                            <span>
+                                                                <span class="select-status single-select"></span>
+                                                                <span class="item-text">自己</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="callback callback-below">
+                                                        <div class="option-item">
+                                                            <span class="item-text item-label">联系人：</span>
+                                                            <input type="text"/>
+                                                            <span class="item-text-label">联系号码：</span>
+                                                            <input type="text"/>
+                                                        </div>
+                                                        <div class="option-item">
+                                                            <span class="item-text item-label">QQ号码：</span>
+                                                            <input type="text"/>
+                                                        </div>
+                                                        <div class="option-item come-time">
+                                                            <span class="item-text item-label">远程时间：</span>
+                                                            <span>
+                                                                <span class="select-status single-select"></span>
+                                                                <span class="item-text align-left">尽快联系</span>
+                                                            </span>
+                                                            <span>
+                                                                <span class="select-status single-select trim"></span>
+                                                                <input type="text" readonly="readonly" class="date" />
+                                                                <select>
+                                                                    <option>上午</option>
+                                                                    <option>下午</option>
+                                                                </select>
+                                                            </span>
+                                                        </div>
+                                                        <div class="option-item">
+                                                            <span class="item-text float-left">任务描述：</span>
+                                                            <textarea></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="more-opts-btns">
+                                        <span class="btn submit">保存</span>
+                                        <span class="btn normal" id="return">返回</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-left big-size">
+                            <div class="result-content">
+                                <div class="result-content-body">
+                                    <div class="result-content-title">
+                                        <span>这是标题这是标题</span>
+                                        <span class="compress">
+                                            <i class="fa fa-compress"></i>
+                                        </span>
+                                    </div>
+                                    <div class="result-content-text">
+                                        <span>这是内容这是内容这是内容这是内容这是内容这是内容这是内容
+                                            这是内容这是内这是内容这是内容这是内容这是内容这是内容容
+                                            这是内容这是内容这是内容这是内容这是内容这是内容这是内容
+                                            这是内容这是内容这是内容这是内容这是内这是内容这是内容
+                                            这是内容这是内容这是内容容这是内容这是内容这是内容
+                                            这是内容这是内这是内容这是内容这是内容这是内容这是内容容
+                                            这是内容这是内容这是内容这是内容这是内容这是内容这是内容
+                                            这是内容这是内容这是内容这是内容这是内这是内容这是内容
+                                            这是内容这是内容这是内容容这是内容这是内容这是内容
+                                            这是内容这是内这是内容这是内容这是内容这是内容这是内容容
+                                            这是内容这是内容这是内容这是内容这是内容这是内容这是内容
+                                            这是内容这是内容这是内容这是内容这是内这是内容这是内容
+                                            这是内容这是内容这是内容容这是内容这是内容这是内容
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="result-content-opts">
+                                    <span class="btn">解决</span>
+                                    <span class="btn">未解决</span>
+                                    <span class="btn error">纠错</span>
+                                    <span class="btn send-message-btn">发送短信</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-right">
+                    <div class="menus-area">
+                        <div class="menu-title">
+                            <span class="text">工具箱</span>
+                            <span class="down-icon"></span>
+                        </div>
+                        <div class="menus">
+                            <div class="menu-item" id="help_policy">协作规则</div>
+                            <div class="menu-item">税务信息</div>
+                            <div class="menu-item" id="price_policy">价格政策</div>
+                            <div class="menu-item" id="sales">营销推荐</div>
+                            <div class="menu-item" id="file_share">文件共享</div>
+                            <div class="menu-item" id="stop_search">驻点信息</div>
+                            <div class="menu-item" id="point_search">网点查询</div>
+                            <div class="menu-item" id="train_search">培训计划</div>
+                            <div class="menu-item">汇款转账</div>
+                            <div class="menu-item" id="express_search">快递查询</div>
+                            <div class="menu-item" id="technology_proup">技  能  组</div>
+                            <div class="menu-item">自助语音</div>
+                        </div>
+                    </div>
+                </div>
+		        <div class="layer">
+		            <div class="dialog send-message">
+		            	<div class="dialog-header">
+		            		<span class="dialog-title">
+		            			短信发送
+		            		</span>
+		            		<span class="dialog-close">
+		            			<i class="fa fa-times"></i>
+		            		</span>
+		            	</div>
+		            	<div class="dialog-body">
+		            		<div class="send-message-content">
+		            			<div class="message-template">
+		            				<div>
+		            					<div class="message-item-title">
+		            						<span>短信模板</span>
+		            					</div>
+		            					<div class="template-items">
+		            						<div class="template-item option-item">
+                                                <span>
+    		            							<span class="select-status single-select"></span>
+    		            							<span>
+    		            								短信模板名称
+    		            							</span>
+                                                </span>
+		            						</div>
+		            						<div class="template-item option-item">
+                                                <span>
+    		            							<span class="select-status single-select"></span>
+    		            							<span>
+    		            								短信模板名称
+    		            							</span>
+                                                </span>
+		            						</div>
+		            						<div class="template-item option-item">
+                                                <span>
+    		            							<span class="select-status single-select"></span>
+    		            							<span>
+    		            								短信模板名称
+    		            							</span>
+                                                </span>
+		            						</div>
+		            					</div>
+		            				</div>
+		            			</div>
+		            			<div class="message-content">
+		            				<div class="message-item-title">
+		            					<span>短信内容</span>
+	            						<span class="option-item float-right">
+                                            <span>
+    	            							<span class="select-status"></span>
+    	            							<span class="item-text">
+    	            								填充变量
+    	            							</span>
+                                            </span>
+	            						</span>
+		            				</div>
+	            					<div class="template-items">
+	            						<div class="template-item message-content-top">
+	            							<span>
+	            								这里是短信内容这里是短信内容这里是短信内容这里是短信内容这里是短信内容这里是短信内容这里是短信内容这里是短信内容这里是短信内容这里是短信内容
+	            							</span>
+	            						</div>
+	            						<div class="template-item message-content-mid">
+	            							<div class="option-item">
+                                                <span class="item-text item-label item-title">用户名称：</span>
+                                                <span class="item-text item-label">这里是用户名称</span>
+                                            </div>
+                                            <div class="option-item">
+                                                <span class="item-text item-label item-title">其他：</span>
+                                                <input type="text" class="msg-remark"/>
+                                            </div>
+	            						</div>
+	            						<div class="template-item message-content-btm">
+                                            <div class="option-item">
+                                                <span class="item-text item-label item-title">接收人：</span>
+                                                <input type="text"/>
+                                            </div>
+                                            <div class="option-item">
+                                                <span class="item-text item-label item-title">手机号码：</span>
+                                                <input type="text"/>
+                                            </div>
+                                            <div class="btns">
+                                                <span class="btn submit">发送短信</span>
+                                            </div>
+	            						</div>
+	            					</div>
+		            			</div>
+		            		</div>
+		            	</div>
+		            </div>
+		            <div class="dialog point-search">
+		            	<div class="dialog-header">
+		            		<span class="dialog-title">
+		            			常驻服务点（网点）查询
+		            		</span>
+		            		<span class="dialog-close">
+		            			<i class="fa fa-times"></i>
+		            		</span>
+		            	</div>
+		            	<div class="dialog-body">
+		            		<div class="point-search-content">
+                                <div class="blocks">
+                                    <span class="inline-block clickable">深圳</span>
+                                    <span class="inline-block clickable">福建</span>
+                                    <span class="inline-block clickable">上海</span>
+                                    <span class="inline-block clickable">河北</span>
+                                    <span class="inline-block clickable">重庆</span>
+                                    <span class="inline-block clickable">广东</span>
+                                    <span class="inline-block clickable">新疆</span>
+                                    <span class="inline-block clickable">天津</span>
+                                    <span class="inline-block clickable">广西</span>
+                                    <span class="inline-block clickable">陕西</span>
+                                    <span class="inline-block clickable">四川</span>
+                                    <span class="inline-block clickable">青海</span>
+                                    <span class="inline-block clickable">山西</span>
+                                    <span class="inline-block clickable">江西</span>
+                                    <span class="inline-block clickable">安徽</span>
+                                    <span class="inline-block clickable">甘肃</span>
+                                    <span class="inline-block clickable">湖南</span>
+                                    <span class="inline-block clickable">贵州</span>
+                                </div>
+		            		</div>
+		            	</div>
+		            </div>
+		            <div class="dialog express-search">
+		            	<div class="dialog-header">
+		            		<span class="dialog-title">
+		            			快递查询
+		            		</span>
+		            		<span class="dialog-close">
+		            			<i class="fa fa-times"></i>
+		            		</span>
+		            	</div>
+		            	<div class="dialog-body">
+		            		<div class="express-search-content">
+		            			<div class="table">
+		            				<div class="search-result">
+		            					<table class="single">
+		            						<tr>
+		            							<th colspan="5" class="single-th">
+		            								<span class="title">订单号：</span>
+		            								<span class="alink">23412355623412341</span>
+		            							</th>
+		            						</tr>
+		            						<tr>
+		            							<td width="10%">2015-10-10</td>
+		            							<td width="15%">
+		            								<div>
+		            									韵达快递
+		            								</div>
+		            								<div>
+		            									123556345634
+		            								</div>
+		            							</td>
+		            							<td width="25%">
+		            								<div>
+		            									张三丰
+		            								</div>
+		            								<div>
+		            									13312345678
+		            								</div>
+		            								<div>
+		            									陕西省武当山市古墓街3309号武当派创始人陵墓
+		            								</div>
+		            							</td>
+		            							<td width="15%">
+		            								<div>
+		            									携税宝 x1
+		            								</div>
+		            								<div>
+		            									发票 x1
+		            								</div>
+		            							</td>
+		            							<td width="35%">
+		            								<span class="alink express-detail">
+		            									<span>滨江站已派件，派件员：高波，联系电话 ：18668135828 </span>
+		            									<br/>
+		            									<span>2015-11-06 11:03:24</span>
+		            								</span>
+		            							</td>
+		            						</tr>
+		            					</table>
+		            					
+		            					<table class="single">
+		            						<tr>
+		            							<th colspan="5" class="single-th">
+		            								<span class="title">订单号：</span>
+		            								<span class="alink">23412355623412341</span>
+		            							</th>
+		            						</tr>
+		            						<tr>
+		            							<td width="10%">2015-10-10</td>
+		            							<td width="15%">
+		            								<div>
+		            									韵达快递
+		            								</div>
+		            								<div>
+		            									123556345634
+		            								</div>
+		            							</td>
+		            							<td width="25%">
+		            								<div>
+		            									张三丰
+		            								</div>
+		            								<div>
+		            									13312345678
+		            								</div>
+		            								<div>
+		            									陕西省武当山市古墓街3309号武当派创始人陵墓
+		            								</div>
+		            							</td>
+		            							<td width="15%">
+		            								<div>
+		            									携税宝 x1
+		            								</div>
+		            								<div>
+		            									发票 x1
+		            								</div>
+		            							</td>
+		            							<td width="35%">
+		            								<span class="alink express-detail">
+		            									<span>滨江站已派件，派件员：高波，联系电话 ：18668135828 </span>
+		            									<br/>
+		            									<span>2015-11-06 11:03:24</span>
+		            								</span>
+		            							</td>
+		            						</tr>
+		            					</table>
+		            					
+		            					<table class="single">
+		            						<tr>
+		            							<th colspan="5" class="single-th">
+		            								<span class="title">订单号：</span>
+		            								<span class="alink">23412355623412341</span>
+		            							</th>
+		            						</tr>
+		            						<tr>
+		            							<td width="10%">2015-10-10</td>
+		            							<td width="15%">
+		            								<div>
+		            									韵达快递
+		            								</div>
+		            								<div>
+		            									123556345634
+		            								</div>
+		            							</td>
+		            							<td width="25%">
+		            								<div>
+		            									张三丰
+		            								</div>
+		            								<div>
+		            									13312345678
+		            								</div>
+		            								<div>
+		            									陕西省武当山市古墓街3309号武当派创始人陵墓
+		            								</div>
+		            							</td>
+		            							<td width="15%">
+		            								<div>
+		            									携税宝 x1
+		            								</div>
+		            								<div>
+		            									发票 x1
+		            								</div>
+		            							</td>
+		            							<td width="35%">
+		            								<span class="alink express-detail">
+		            									<span>滨江站已派件，派件员：高波，联系电话 ：18668135828 </span>
+		            									<br/>
+		            									<span>2015-11-06 11:03:24</span>
+		            								</span>
+		            							</td>
+		            						</tr>
+		            					</table>
+		            				</div>
+		            			</div>
+                                <div class="express-info">
+                                    <div class="express-info-top">物流跟踪</div>
+                                    <div class="express-info-body">
+                                        <div class="express-status last">
+                                            <span>滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828</span>
+                                        </div>
+                                        <div class="express-status">
+                                            <span>滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828</span>
+                                        </div>
+                                        <div class="express-status">
+                                            <span>滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828</span>
+                                        </div>
+                                        <div class="express-status">
+                                            <span>滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828滨江站已派件，派件员：高波，联系电话 ：18668135828</span>
+                                        </div>
+                                        <div class="express-status">
+                                            <span>滨江站已派件，派件员：高波，联系电话 ：18668135828</span>
+                                        </div>
+                                    </div>
+                                </div>
+		            		</div>
+                            <div class="search-result-more">
+                                <div>
+                                    <span>点击显示更多信息</span>
+                                    <span>
+                                        <i class="fa fa-angle-down"></i>
+                                    </span>
+                                </div>
+                            </div>
+		            	</div>
+		            </div>
+                    <div class="dialog stop-search">
+                        <div class="dialog-header">
+                            <span class="dialog-title">
+                                驻点信息
+                            </span>
+                            <span class="dialog-close">
+                                <i class="fa fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="dialog-body">
+                            <div class="stop-search-content">
+                                <div class="table">
+                                    <div class="search-area">
+                                        <div class="search-item">
+                                            <span class="label-title">分公司：</span>
+                                            <select>
+                                                <option>河北分公司</option>
+                                                <option>上海分公司</option>
+                                            </select>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="label-title">分支机构：</span>
+                                            <select>
+                                                <option>河北分公司</option>
+                                                <option>上海分公司</option>
+                                            </select>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="btn search-btn">查询</span>
+                                        </div>
+                                    </div>
+                                    <div class="search-result">
+                                        <table>
+                                            <tr>
+                                                <th>驻点</th>
+                                                <th>月份</th>
+                                                <th>地点</th>
+                                                <th>驻点日期</th>
+                                                <th>工作时间</th>
+                                                <th>联系信息</th>
+                                                <th>说明</th>
+                                            </tr>
+                                            <tr>
+                                                <td>石家庄</td>
+                                                <td>
+                                                    2015-06
+                                                </td>
+                                                <td>
+                                                    石家庄市平安南大街33号阳光大厦3楼东侧走廊
+                                                </td>
+                                                <td>
+                                                     <div>上午 08:30-12:30</div> 
+                                                     <div>下午 13:00-17:00</div> 
+                                                </td>
+                                                <td>正常工作日</td>
+                                                <td>本拉登：0000-00000000</td>
+                                                <td>说明</td>
+                                            </tr>
+                                            <tr>
+                                                <td>石家庄</td>
+                                                <td>
+                                                    2015-06
+                                                </td>
+                                                <td>
+                                                    石家庄市平安南大街33号阳光大厦3楼东侧走廊
+                                                </td>
+                                                <td>
+                                                     <div>上午 08:30-12:30</div> 
+                                                     <div>下午 13:00-17:00</div> 
+                                                </td>
+                                                <td>正常工作日</td>
+                                                <td>本拉登：0000-00000000</td>
+                                                <td>说明</td>
+                                            </tr>
+                                            <tr>
+                                                <td>石家庄</td>
+                                                <td>
+                                                    2015-06
+                                                </td>
+                                                <td>
+                                                    石家庄市平安南大街33号阳光大厦3楼东侧走廊
+                                                </td>
+                                                <td>
+                                                     <div>上午 08:30-12:30</div> 
+                                                     <div>下午 13:00-17:00</div> 
+                                                </td>
+                                                <td>正常工作日</td>
+                                                <td>本拉登：0000-00000000</td>
+                                                <td>说明</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog price-policy">
+                        <div class="dialog-header">
+                            <span class="dialog-title">
+                                价格策略
+                            </span>
+                            <span class="dialog-close">
+                                <i class="fa fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="dialog-body">
+                            <div class="price-policy-content">
+                                <div class="table">
+                                    <div class="search-area">
+                                        <div class="search-item">
+                                            <span class="label-title">分公司：</span>
+                                            <select>
+                                                <option>河北分公司</option>
+                                                <option>上海分公司</option>
+                                            </select>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="label-title">分支机构：</span>
+                                            <select>
+                                                <option>河北分公司</option>
+                                                <option>上海分公司</option>
+                                            </select>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="btn search-btn">查询</span>
+                                        </div>
+                                    </div>
+                                    <div class="search-result">
+                                        <table class="single">
+                                            <tr>
+                                                <th class="single-th">搜索结果</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="price-policy-item">
+                                                    <div><b>2015-01-15 </b><span> 2015河北促销策略</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北促销策略</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北促销策略</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北促销策略</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北促销策略</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北促销策略</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北促销策略</span></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog help-policy">
+                        <div class="dialog-header">
+                            <span class="dialog-title">
+                                协作规则
+                            </span>
+                            <span class="dialog-close">
+                                <i class="fa fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="dialog-body">
+                            <div class="help-policy-content">
+                                <div class="table">
+                                    <div class="search-area">
+                                        <div class="search-item">
+                                            <span class="label-title">分公司：</span>
+                                            <select>
+                                                <option>河北分公司</option>
+                                                <option>上海分公司</option>
+                                            </select>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="label-title">分支机构：</span>
+                                            <select>
+                                                <option>河北分公司</option>
+                                                <option>上海分公司</option>
+                                            </select>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="btn search-btn">查询</span>
+                                        </div>
+                                    </div>
+                                    <div class="search-result">
+                                        <table class="single">
+                                            <tr>
+                                                <th class="single-th">搜索结果</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="price-policy-item">
+                                                    <div><b>2015-01-15 </b><span> 2015河北协作规则</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北协作规则</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北协作规则</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北协作规则</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北协作规则</span></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog technology-proup">
+                        <div class="dialog-header">
+                            <span class="dialog-title">
+                                技能组信息
+                            </span>
+                            <span class="dialog-close">
+                                <i class="fa fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="dialog-body">
+                            <div class="technology-proup-content">
+                                <div class="table">
+                                    <div class="search-area">
+                                        <div class="search-item">
+                                            <span class="label-title">分公司：</span>
+                                            <select>
+                                                <option>河北分公司</option>
+                                                <option>上海分公司</option>
+                                            </select>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="label-title">分支机构：</span>
+                                            <select>
+                                                <option>河北分公司</option>
+                                                <option>上海分公司</option>
+                                            </select>
+                                        </div>  
+                                        <div class="search-item">
+                                            <span class="btn search-btn">查询</span>
+                                        </div>
+                                    </div>
+                                    <div class="search-result">
+                                        <table class="single">
+                                            <tr>
+                                                <th class="single-th">搜索结果</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="price-policy-item">
+                                                    <div><b>2015-01-15 </b><span> 2015河北协作规则</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北协作规则</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北协作规则</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北协作规则</span></div>
+                                                    <div><b>2015-01-15 </b><span> 2015河北协作规则</span></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog train-search">
+                        <div class="dialog-header">
+                            <span class="dialog-title">
+                                培训计划
+                            </span>
+                            <span class="dialog-close">
+                                <i class="fa fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="dialog-body">
+                            <div class="train-search-content">
+                                <div class="table">
+                                    <div class="search-area">
+                                        <div class="search-item">
+                                            <span class="label-title">分公司：</span>
+                                            <select>
+                                                <option>河北分公司</option>
+                                                <option>上海分公司</option>
+                                            </select>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="label-title">行政区划：</span>
+                                            <select class="address" disabled="">
+                                                <option selected = "selected">请选择省市区</option>
+                                            </select>
+                                            <div class="address-cover setAddress"></div>
+                                            <div class="select-address">
+                                                <div class="tabs">
+                                                    <div class="tab active">省份</div>
+                                                    <div class="tab fix-margin">城市</div>
+                                                    <div class="tab fix-margin">县区</div>
+                                                    <div class="tab fix-margin noborer">街道</div>
+                                                </div>
+                                                <div class="tab-content">
+                                                    <div class="tab-content-box">
+                                                        <div class="tab-content-item province">
+                                                            <div class="areas a-g">
+                                                                <div>
+                                                                    <span class="area">安徽</span>
+                                                                    <span class="area">北京</span>
+                                                                    <span class="area">重庆</span>
+                                                                    <span class="area">福建</span>
+                                                                    <span class="area">甘肃</span>
+                                                                    <span class="area">广东</span>
+                                                                    <span class="area">广西</span>
+                                                                    <span class="area">贵州</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="areas h-k">
+                                                                <div>
+                                                                    <span class="area">海南</span>
+                                                                    <span class="area">河北</span>
+                                                                    <span class="area">黑龙江</span>
+                                                                    <span class="area">河南</span>
+                                                                    <span class="area">湖北</span>
+                                                                    <span class="area">湖南</span>
+                                                                    <span class="area">江苏</span>
+                                                                    <span class="area">江西</span>
+                                                                    <span class="area">吉林</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="areas l-s">
+                                                                <div>
+                                                                    <span class="area">辽宁</span>
+                                                                    <span class="area">内蒙古</span>
+                                                                    <span class="area">宁夏</span>
+                                                                    <span class="area">青海</span>
+                                                                    <span class="area">山东</span>
+                                                                    <span class="area">上海</span>
+                                                                    <span class="area">山西</span>
+                                                                    <span class="area">陕西</span>
+                                                                    <span class="area">四川</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="areas t-z">
+                                                                <div>
+                                                                    <span class="area">天津</span>
+                                                                    <span class="area">新疆</span>
+                                                                    <span class="area">西藏</span>
+                                                                    <span class="area">云南</span>
+                                                                    <span class="area">浙江</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-content-item">
+                                                            <div class="areas">
+                                                                <span class="area">杭州</span>
+                                                                <span class="area">湖州</span>
+                                                                <span class="area">嘉兴</span>
+                                                                <span class="area">温州</span>
+                                                                <span class="area">绍兴</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-content-item">
+                                                            <div class="areas">
+                                                                <span class="area">上城区</span>
+                                                                <span class="area">滨江区</span>
+                                                                <span class="area">余杭区</span>
+                                                                <span class="area">萧山区</span>
+                                                                <span class="area">西湖区</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-content-item">
+                                                            <div class="areas">
+                                                                <span class="area">浦沿</span>
+                                                                <span class="area">西兴</span>
+                                                                <span class="area">长河</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="label-title">培训主题：</span>
+                                            <input type="text" class="train-title" />
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="label-title">培训日期：</span>
+                                            <input type="text" readonly="readonly" class="date">
+                                        </div>
+                                        <div class="search-item">
+                                            <span>至：</span>
+                                            <input type="text" readonly="readonly" class="date">
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="btn search-btn">查询</span>
+                                        </div>
+                                    </div>
+                                    <div class="search-result">
+                                        <table>
+                                            <tr>
+                                                <th>培训主题</th>
+                                                <th>培训日期</th>
+                                                <th>培训时间</th>
+                                                <th>培训地点</th>
+                                                <th>开班人数</th>
+                                            </tr>
+                                            <tr>
+                                                <td>培训主题培训主题</td>
+                                                <td>
+                                                    2015-12-12
+                                                </td>
+                                                <td>
+                                                     14:00-18:00
+                                                </td>
+                                                <td>石家庄市平安南大街33号阳光大厦3楼东侧走廊</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>培训主题培训主题</td>
+                                                <td>
+                                                    2015-12-12
+                                                </td>
+                                                <td>
+                                                     14:00-18:00
+                                                </td>
+                                                <td>石家庄市平安南大街33号阳光大厦3楼东侧走廊</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>培训主题培训主题</td>
+                                                <td>
+                                                    2015-12-12
+                                                </td>
+                                                <td>
+                                                     14:00-18:00
+                                                </td>
+                                                <td>石家庄市平安南大街33号阳光大厦3楼东侧走廊</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>培训主题培训主题</td>
+                                                <td>
+                                                    2015-12-12
+                                                </td>
+                                                <td>
+                                                     14:00-18:00
+                                                </td>
+                                                <td>石家庄市平安南大街33号阳光大厦3楼东侧走廊</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>培训主题培训主题</td>
+                                                <td>
+                                                    2015-12-12
+                                                </td>
+                                                <td>
+                                                     14:00-18:00
+                                                </td>
+                                                <td>石家庄市平安南大街33号阳光大厦3楼东侧走廊</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>培训主题培训主题</td>
+                                                <td>
+                                                    2015-12-12
+                                                </td>
+                                                <td>
+                                                     14:00-18:00
+                                                </td>
+                                                <td>石家庄市平安南大街33号阳光大厦3楼东侧走廊</td>
+                                                <td>20</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog sales">
+                        <div class="dialog-header">
+                            <span class="dialog-title">
+                                营销推荐
+                            </span>
+                            <span class="dialog-close">
+                                <i class="fa fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="dialog-body">
+                            <div class="sales-search-content">
+                                <div class="table">
+                                    <div class="search-result">
+                                        <table class="single">
+                                            <tr>
+                                                <th colspan="4" class="single-th normal">
+                                                    <span class="title">用户存在即将到期的产品，记录续费意愿</span>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">11月到期</td>
+                                                <td width="150">
+                                                    携税宝标准版
+                                                </td>
+                                                <td>
+                                                    <span class="number">460.00</span>元/年
+                                                </td>
+                                                <td align="center">
+                                                    <select>
+                                                        <option>续费意愿</option>
+                                                        <option>愿意</option>
+                                                        <option>不愿意</option>
+                                                    </select>
+                                                    <select>
+                                                        <option>未明确原因</option>
+                                                        <option>未明确原因1</option>
+                                                        <option>未明确原因2</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">11月到期</td>
+                                                <td>
+                                                    携税宝标准版
+                                                </td>
+                                                <td>
+                                                    <span class="number">460.00</span>元/年
+                                                </td>
+                                                <td align="center">
+                                                    <select>
+                                                        <option>续费意愿</option>
+                                                        <option>愿意</option>
+                                                        <option>不愿意</option>
+                                                    </select>
+                                                    <select>
+                                                        <option>未明确原因</option>
+                                                        <option>未明确原因1</option>
+                                                        <option>未明确原因2</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">11月到期</td>
+                                                <td>
+                                                    网上申报尊享版【600】
+                                                </td>
+                                                <td>
+                                                    <span class="number">460.00</span>元/年
+                                                </td>
+                                                <td align="center">
+                                                    <select>
+                                                        <option>续费意愿</option>
+                                                        <option>愿意</option>
+                                                        <option>不愿意</option>
+                                                    </select>
+                                                    <select>
+                                                        <option>未明确原因</option>
+                                                        <option>未明确原因1</option>
+                                                        <option>未明确原因2</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="single">
+                                            <tr>
+                                                <th colspan="2" class="single-th normal">
+                                                    <span class="title">用户有意向新购，记录营销线索</span>
+                                                    <span class="alink float-right" id="reset"><span class="clear-data"></span>清空</span>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td width="90" align="right">进展：</td>
+                                                <td>
+                                                    <div class="option-item">
+                                                        <span>
+                                                            <span class="select-status single-select"></span>
+                                                            <span class="item-text">关注中</span>
+                                                        </span>
+                                                        <span class="item-text-label">&nbsp;</span>
+                                                        <span>
+                                                            <span class="select-status single-select"></span>
+                                                            <span class="item-text">有意向购买</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">产品大类：</td>
+                                                <td>
+                                                    <select>
+                                                        <option>产品大类</option>
+                                                        <option>产品大类1</option>
+                                                        <option>产品大类2</option>
+                                                        <option>产品大类3</option>
+                                                        <option>产品大类4</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">意向产品包：</td>
+                                                <td>
+                                                    <span class="option-item">
+                                                        <span>
+                                                            <span class="select-status"></span>
+                                                            <span class="item-text">网上申报尊享版【600】</span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="option-item">
+                                                        <span>
+                                                            <span class="select-status"></span>
+                                                            <span class="item-text">网上申报尊享版【600】</span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="option-item">
+                                                        <span>
+                                                            <span class="select-status"></span>
+                                                            <span class="item-text">网上申报尊享版【600】</span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="option-item">
+                                                        <span>
+                                                            <span class="select-status"></span>
+                                                            <span class="item-text">网上申报尊享版【600】</span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="option-item">
+                                                        <span>
+                                                            <span class="select-status"></span>
+                                                            <span class="item-text">网上申报尊享版【600】</span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="option-item">
+                                                        <span>
+                                                            <span class="select-status"></span>
+                                                            <span class="item-text">网上申报尊享版【600】</span>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="single">
+                                            <tr>
+                                                <th colspan="2" class="single-th">
+                                                    <span class="title">线索<span class="number">1</span>：</span>
+                                                    <span class="alink clue">税友软件的线索</span>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td width="90" align="right">描述：</td>
+                                                <td>
+                                                    <span class="item-text">网上申报尊享版【600】</span>
+                                                    <span class="item-text-label">携税宝舒适版【800】</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">产品大类：</td>
+                                                <td>
+                                                    <span class="item-text">国税申报</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">进展：</td>
+                                                <td>
+                                                    <div class="option-item">
+                                                        <span>
+                                                            <span class="select-status single-select"></span>
+                                                            <span class="item-text">关注中</span>
+                                                        </span>
+                                                        <span class="item-text-label">&nbsp;</span>
+                                                        <span>
+                                                            <span class="select-status single-select"></span>
+                                                            <span class="item-text">有意向购买</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">笔记内容：</td>
+                                                <td>
+                                                    <textarea></textarea>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="express-info">
+                                    <div class="express-info-top">查看线索</div>
+                                    <div class="express-info-body">
+                                        <div class="clue-detail">
+                                            <div class="option-item">
+                                                <span class="item-text item-label">客户：</span>
+                                                <span>广东测试企业版个人代理</span>
+                                            </div>
+                                            <div class="option-item">
+                                                <span class="item-text item-label">联系人：</span>
+                                                <span>本吉郡</span>
+                                            </div>
+                                            <div class="option-item">
+                                                <span class="item-text item-label">电话：</span>
+                                                <span>0571-12345678</span>
+                                                <span class="item-text-label">手机：</span>
+                                                <span>13312345678</span>
+                                            </div>
+                                            <div class="option-item come-time">
+                                                <span class="item-text item-label">产品大类：</span>
+                                                <span>国税申报</span>
+                                                <span class="item-text-label">潜在价值：</span>
+                                                <span>潜在价值</span>
+                                            </div>
+                                            <div class="option-item">
+                                                <span class="item-text item-label">进展：</span>
+                                                <span>意向购买(80%)</span>
+                                                <span class="item-text-label">截止日期：</span>
+                                                <span>2015-12-23</span>
+                                            </div>
+                                            <div class="option-item">
+                                                <span class="item-text item-label">线索描述：</span>
+                                                <span class="textarea">线索描述线索描述线索描述</span>
+                                            </div>
+                                            <div class="option-item">
+                                                <span class="item-text item-label">只读：</span>
+                                                <span>张某某</span>
+                                                <span class="float-right">
+                                                    <span class="item-text-label">创建：</span>
+                                                    <span>2015-12-23 13:12:23 by 涨工资</span>
+                                                </span>
+                                            </div>
+                                            <div class="option-item">
+                                                <span class="item-text item-label">可写：</span>
+                                                <span>袁某某</span>
+                                                <span class="float-right">
+                                                    <span class="item-text-label">更新：</span>
+                                                    <span>2015-12-23 13:12:23 by 涨工资</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <span class="btn submit">保存</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog file-share">
+                        <div class="dialog-header">
+                            <span class="dialog-title">
+                                文件共享
+                            </span>
+                            <span class="dialog-close">
+                                <i class="fa fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="dialog-body">
+                            <div class="file-share-content">
+                                <div class="table">
+                                    <div class="search-area">
+                                        <div class="search-item">
+                                            <span class="label-title">文件名：</span>
+                                            <input type="text" />
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="label-title">分公司：</span>
+                                            <select>
+                                                <option>河北分公司</option>
+                                                <option>上海分公司</option>
+                                            </select>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="option-item">
+                                                <span>
+                                                    <span class="select-status"></span>
+                                                    <span class="item-text">
+                                                        我的文件
+                                                    </span>
+                                                </span>
+                                            </span>  
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="label-title">上传人：</span>
+                                            <select>
+                                                <option>上传人1</option>
+                                                <option>上传人2</option>
+                                            </select>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="label-title">网点：</span>
+                                            <select>
+                                                <option>网点1</option>
+                                                <option>网点2</option>
+                                            </select>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="btn search-btn">查询</span>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="btn search-btn" id="file_upload">上传</span>
+                                        </div>
+                                    </div>
+                                    <div class="search-result">
+                                        <table class="single">
+                                            <tr>
+                                                <th class="single-th">
+                                                    <span class="title">搜索结果</span>
+                                                    <span class="number">(28条)</span>
+                                                    </th>
+                                            </tr>
+                                            <tr>
+                                                <td class="price-policy-item">
+                                                    <div>
+                                                        <div>
+                                                            <span class="alink">这是文件名称.docx</span>
+                                                        </div>
+                                                        <div>
+                                                            文档描述：文档描述文档描述文档描述
+                                                        </div>
+                                                        <div>
+                                                            上传人：上传人名称
+                                                        </div>
+                                                        <div>
+                                                            2015-12-23
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <span class="alink">这是文件名称.docx</span>
+                                                        </div>
+                                                        <div>
+                                                            文档描述：文档描述文档描述文档描述
+                                                        </div>
+                                                        <div>
+                                                            上传人：上传人名称
+                                                        </div>
+                                                        <div>
+                                                            2015-12-23
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <span class="alink">这是文件名称.docx</span>
+                                                        </div>
+                                                        <div>
+                                                            文档描述：文档描述文档描述文档描述
+                                                        </div>
+                                                        <div>
+                                                            上传人：上传人名称
+                                                        </div>
+                                                        <div>
+                                                            2015-12-23
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <span class="alink">这是文件名称.docx</span>
+                                                        </div>
+                                                        <div>
+                                                            文档描述：文档描述文档描述文档描述
+                                                        </div>
+                                                        <div>
+                                                            上传人：上传人名称
+                                                        </div>
+                                                        <div>
+                                                            2015-12-23
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <span class="alink">这是文件名称.docx</span>
+                                                        </div>
+                                                        <div>
+                                                            文档描述：文档描述文档描述文档描述
+                                                        </div>
+                                                        <div>
+                                                            上传人：上传人名称
+                                                        </div>
+                                                        <div>
+                                                            2015-12-23
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <span class="alink">这是文件名称.docx</span>
+                                                        </div>
+                                                        <div>
+                                                            文档描述：文档描述文档描述文档描述
+                                                        </div>
+                                                        <div>
+                                                            上传人：上传人名称
+                                                        </div>
+                                                        <div>
+                                                            2015-12-23
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <span class="alink">这是文件名称.docx</span>
+                                                        </div>
+                                                        <div>
+                                                            文档描述：文档描述文档描述文档描述
+                                                        </div>
+                                                        <div>
+                                                            上传人：上传人名称
+                                                        </div>
+                                                        <div>
+                                                            2015-12-23
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog file-upload">
+                        <div class="dialog-header">
+                            <span class="dialog-title">
+                                文件上传
+                            </span>
+                            <span class="dialog-close">
+                                <i class="fa fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="dialog-body">
+                            <div class="file-upload-content">
+                                <div class="table">
+                                    <div class="search-area">
+                                        <div class="search-item">
+                                            <span class="label-title">文件名称：</span>
+                                            <div class="select-file">
+                                                <input type="file"/>
+                                                <span class="file-name"></span>
+                                                <span class="optname">选择</span>
+                                            </div>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="label-title">文件描述：</span>
+                                            <textarea></textarea>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="label-title">适用机构：</span>
+                                            <div class="select-groups">
+                                                <span class="group-name"></span>
+                                                <span class="optname">选择</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog delegate-search">
+                        <div class="dialog-header">
+                            <span class="dialog-title">
+                                被代理
+                            </span>
+                            <span class="dialog-close">
+                                <i class="fa fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="dialog-body">
+                            <div class="delegate-search-content">
+                                <div class="table">
+                                    <div class="search-result">
+                                        <table class="single">
+                                            <tr>
+                                                <th width="40%">用户名称</th>
+                                                <th width="35%">用户代码</th>
+                                                <th width="25%">产品大类</th>
+                                            </tr>
+                                            <tr>
+                                                <td>税友软件集团股份有限公司</td>
+                                                <td>
+                                                    31205780780909078
+                                                </td>
+                                                <td>
+                                                    国税申报
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>税友软件集团股份有限公司</td>
+                                                <td>
+                                                    31205780780909078
+                                                </td>
+                                                <td>
+                                                    国税申报
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>税友软件集团股份有限公司</td>
+                                                <td>
+                                                    31205780780909078
+                                                </td>
+                                                <td>
+                                                    国税申报
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>税友软件集团股份有限公司</td>
+                                                <td>
+                                                    31205780780909078
+                                                </td>
+                                                <td>
+                                                    国税申报
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>税友软件集团股份有限公司</td>
+                                                <td>
+                                                    31205780780909078
+                                                </td>
+                                                <td>
+                                                    国税申报
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog manage-people">
+                        <div class="dialog-header">
+                            <span class="dialog-title">
+                                人员管理
+                            </span>
+                            <span class="dialog-close">
+                                <i class="fa fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="dialog-body">
+                            <div class="manage-people-content">
+                                <div class="table">
+                                    <div class="search-area">
+                                        <div class="search-item">
+                                            <span class="alink">
+                                                <i class="fa fa-plus"></i> 新增联系人</span>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="alink">
+                                                <i class="fa fa-pencil-square-o alink"></i> 修改</span>
+                                        </div>
+                                        <div class="search-item">
+                                            <span class="alink">
+                                                <i class="fa fa-times"></i> 批量删除</span>
+                                        </div>
+                                    </div>
+                                    <div class="search-result">
+                                        <table class="checkbox-series">
+                                            <tr>
+                                                <th class="option-item top-checkbox">
+                                                    <span>
+                                                        <span class="select-status"></span>
+                                                    </span>
+                                                </th>
+                                                <th>联系人</th>
+                                                <th>角色</th>
+                                                <th>联系人号码</th>
+                                                <th>操作</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="option-item">
+                                                    <span>
+                                                        <span class="select-status"></span>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    企业专线员
+                                                </td>
+                                                <td>
+                                                    角色
+                                                </td>
+                                                <td>
+                                                     <div>手机：13312345678</div> 
+                                                </td>
+                                                <td><span class="alink">删除</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="option-item">
+                                                    <span>
+                                                        <span class="select-status"></span>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    企业专线员
+                                                </td>
+                                                <td>
+                                                    角色
+                                                </td>
+                                                <td>
+                                                     <div>手机：13312345678</div> 
+                                                </td>
+                                                <td><span class="alink">删除</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="option-item">
+                                                    <span>
+                                                        <span class="select-status"></span>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    企业专线员
+                                                </td>
+                                                <td>
+                                                    角色
+                                                </td>
+                                                <td>
+                                                     <div>手机：13312345678</div> 
+                                                </td>
+                                                <td><span class="alink">删除</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="option-item">
+                                                    <span>
+                                                        <span class="select-status"></span>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    企业专线员
+                                                </td>
+                                                <td>
+                                                    角色
+                                                </td>
+                                                <td>
+                                                     <div>手机：13312345678</div> 
+                                                </td>
+                                                <td><span class="alink">删除</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+		        </div>
+            </div>
+        </div>
+        <script src="../plugin/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>
+        <script src="../plugin/angular/angular.min.js" type="text/javascript"></script>
+        <script src="../plugin/bootstrap-3.3.5-dist/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../js/base.js" type="text/javascript"></script>
+    </body>
+</html>

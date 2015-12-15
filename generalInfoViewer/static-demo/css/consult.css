@@ -1,0 +1,233 @@
+/* 
+    Created on : 2015-11-25, 17:13:38
+    Author     : Li Liang
+*/
+html {
+    font-size: 100%;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: tahoma,arial,microsoft yahei,sans-serif;
+}
+input, select, textarea{
+    font-size: 13px;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    min-width: 850px;
+}
+.search-area{
+    padding: 10px;
+    position: relative;
+    height: 100%;
+}
+.search-area .search-condition .condition-item{
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
+.condition-item input, .condition-item select{
+    width: 180px;
+    height: 26px;
+    color: #666;
+    border: 1px solid #BBBBBB;
+    padding: 0 5px;
+    font-size: 12px;
+}
+.search-area .search-condition .search-btn{
+    background: #6FB3E0;
+    padding: 3px 18px;
+    color: #FFFFFF;
+    font-size: 12px;
+    display: inline-block;
+}
+.search-result{
+    border: 1px solid #D6D6D6;
+    border-right: 0;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    top: 46px;
+}
+.search-result .result-opt{
+    background: #DFE4EB;
+    border-right: 1px solid #BBBBBB;
+    border-bottom: 1px solid #BBBBBB;
+    height: 38px;
+    line-height: 34px;
+    padding: 0 10px;
+}
+.search-result .result-opt .opt-btn{
+    background: #6FB3E0;
+    padding: 3px 18px;
+    color: #FFFFFF;
+    font-size: 12px;
+    display: inline-block;
+}
+.search-result .result-content{
+    position: absolute;
+    top: 38px;
+    width: 100%;
+    bottom: 34px;
+    font-size: 12px;
+}
+.result-content .table-header{
+    height: 32px;
+    background: #efefef;
+    font-weight: bold;
+    border-right: 1px solid #BBBBBB;
+    border-bottom: 1px solid #BBBBBB;
+}
+.overflow .result-content .table-header{
+    padding-right: 17px;
+}
+table{
+    width: 100%;
+}
+.result-content .table-header th{
+    border-right: 1px solid #BBBBBB;
+    height: 32px;
+    color: #333;
+    text-align: center;
+}
+.result-content .table-header th.last{
+    border-right: 0;
+}
+.result-content td{
+    border-right: 1px solid #BBBBBB;
+    border-bottom: 1px solid #BBBBBB;
+    padding: 7px 10px;
+}
+.overflow .result-content tr:last-child td{
+    border-bottom: 0;
+}
+.result-content td.td-last{
+    border-right: 0;
+}
+.result-content .table-content{
+    position: absolute;
+    width: 100%;
+    top: 32px;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-right: 1px solid #BBBBBB;
+}
+.alink{
+    color: #1093EB;
+    cursor: pointer;
+}
+.in-td-btn{
+    margin: 0 7px;
+    display: inline-block;
+}
+.page-bar{
+    background: #efefef;
+    height: 34px;
+    border-top: 1px solid #D6D6D6;
+    border-right: 1px solid #D6D6D6;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 0 10px; 
+    font-size: 12px;
+    display: inline-table;
+}
+.page-bar .page-left{
+    float: left;
+    height: 33px;
+}
+.page-bar .page-right{
+    float: right;
+    height: 33px;
+    line-height: 32px;
+}
+.page-bar .page-num{
+    height: 25px;
+    font-size: 12px;
+    width: 50px;
+    margin-right: 20px;
+    border: 1px solid #bbb;
+    float: left;
+    margin-top: 4px;
+}
+.page-bar .page-left span{
+    display: inline-block;
+}
+.page-bar .page-no{
+    padding: 0 5px;
+    width: 45px;
+    height: 22px;
+    margin-top: 6px;
+    margin-right: 5px;
+    line-height: 17px;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 5px;
+}
+.page-bar .pages span{
+    margin-top: 6px;
+    font-size: 14px;
+    text-align: center;
+    height: 20px;
+}
+.page-bar .pages .first{
+    padding-left: 15px;
+    border-left: 1px solid #bbb;
+    width: 35px;
+}
+.page-bar .pages i{
+    cursor: pointer;
+    width: 20px;
+    color: #479CFB;
+}
+.page-bar .pages i:hover{
+    color: #1C66D8;
+}
+.page-bar .pages .disabled i{
+    cursor: default;
+    color: #94B3F0;
+}
+.page-bar .pages .prev,.page-bar .pages .next{
+    width: 30px;
+}
+.page-bar .pages .next{
+    padding-left: 10px;
+}
+.page-bar .pages .totle-page{
+    font-size: 12px;
+}
+.page-bar .pages .last{
+    border-right: 1px solid #bbb;
+    width: 30px;
+    padding-right: 10px;
+    box-sizing: content-box;
+}
+.page-bar .pages .prev i{
+    -webkit-transform: rotateZ(180deg);
+}
+.page-bar .page-no::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+}
+.page-bar .page-no::-webkit-outer-spin-button {
+     -webkit-appearance: none; 
+}
+.refresh{
+    color: #479CFB;
+    font-size: 15px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.refresh:hover{
+    color: #1C66D8;
+}
