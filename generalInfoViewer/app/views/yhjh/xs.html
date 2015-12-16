@@ -1,33 +1,43 @@
-<div class="table" ng-controller="YxJhxxController">
-    <div class="search-result">
-        <table>
-            <tr>
-                <th>产品大类</th>
-                <th>潜在价值</th>
-                <th>截止日期</th>
-                <th>可能性</th>
-                <th>描述</th>
-                <th>状态</th>
-            </tr>
-            <tr ng-repeat="vo in xsList">
-                <td>{{vo.cpdl}}</td>
-                <td>
-                    {{vo.qzjz}}
-                </td>
-                <td>
-                    {{vo.jzsj}}
-                </td>
-                <td>
-                    {{vo.knx}}
-                </td>
-                <td>
-                    {{vo.xsms}}
-                </td>
-                <td>
-                    {{vo.jzzt}}
-                </td>
-            </tr>
+<div class="tab-content style2" ng-controller="FwJhxxController">
+    <div class="tab-content-box">
+        <div class="tab-content-item hastable">
+            <div class="table">
+                <div class="search-result">
+                    <div class="table-header" ui-y-table>
+                        <table class="softwear-auth">
+                            <tr>
+                                <th width="10%">产品大类</th>
+                                <th width="10%">潜在价值</th>
+                                <th width="10%">截止日期</th>
+                                <th width="10%">可能性</th>
+                                <th width="50%">描述</th>
+                                <th width="10%">状态</th>
+                            </tr>
+                        </table>
+                        <div class="scroll-arrow2" ui-y-table>
+                            <div class="scroll-to-left disabled">
+                                <span class="arrow-left2"></span>
+                            </div>
+                            <div class="scroll-to-right">
+                                <span class="arrow-right2"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-content">
+                        <table class="softwear-auth">
+                            <tr ng-repeat="vo in xsList">
+                                <td width="10%">{{vo.cpdl}}</td>
+                                <td width="10%"> {{vo.qzjz}}</td>
+                                <td width="10%"> {{vo.jzsj}}</td>
+                                <td width="10%"> {{vo.knx}}</td>
+                                <td width="50%"> {{vo.xsms}}</td>
+                                <td width="10%"> {{vo.jzzt}}</td>
+                            </tr>
 
-        </table>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

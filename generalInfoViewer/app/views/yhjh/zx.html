@@ -1,31 +1,45 @@
-<div class="table" ng-controller="ZxJhxxController">
-    <div class="search-result">
-        <table>
-            <tr>
-                <th>受理人</th>
-                <th>联系人</th>
-                <th>主叫号码</th>
-                <th>咨询事项</th>
-                <th>处理情况</th>
-                <th>开始时间</th>
-                <th>操作</th>
-            </tr>
-            <tr ng-repeat="vo in zxjlList">
-                <td>{{vo.zxmc}}</td>
-                <td>
-                    {{vo.lxr}}
-                </td>
-                <td>
-                    {{vo.lxdh}}
-                </td>
-                <td>
-                    {{vo.zxsxStr}}
-                </td>
-                <td>{{vo.clfs}}</td>
-                <td>{{vo.zxsj}}</td>
-                <td></td>
-            </tr>
+<div class="tab-content style2" ng-controller="FwJhxxController">
+    <div class="tab-content-box">
+        <div class="tab-content-item hastable">
+            <div class="table">
+                <div class="search-result">
+                    <div class="table-header" ui-y-table>
+                        <table class="softwear-auth">
+                            <tr>
+                                <th width="7%">受理人</th>
+                                <th width="7%">联系人</th>
+                                <th width="15%">主叫号码</th>
+                                <th width="26%">咨询事项</th>
+                                <th width="25%">处理情况</th>
+                                <th width="10%">开始时间</th>
+                                <th width="10%">操作</th>
+                            </tr>
+                        </table>
+                        <div class="scroll-arrow2" ui-y-table>
+                            <div class="scroll-to-left disabled">
+                                <span class="arrow-left2"></span>
+                            </div>
+                            <div class="scroll-to-right">
+                                <span class="arrow-right2"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-content">
+                        <table class="softwear-auth">
+                            <tr ng-repeat="vo in zxjlList">
+                                <td width="7%">{{vo.zxmc}}</td>
+                                <td width="7%"> {{vo.lxr}}</td>
+                                <td width="15%"> {{vo.lxdh}}</td>
+                                <td width="26%"> {{vo.zxsxStr}}</td>
+                                <td width="25%">{{vo.clfs}}</td>
+                                <td width="10%">{{vo.zxsj}}</td>
+                                <td width="10%"></td>
+                            </tr>
 
-        </table>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

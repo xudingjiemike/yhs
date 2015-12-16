@@ -1,3 +1,34 @@
+<style>
+
+    /*文字超长用....代替*/
+    .Edit_nobr{
+        white-space: nowrap;
+        overflow:hidden;
+        text-align:left;
+        text-overflow:ellipsis;
+        cursor:hand;
+    }
+</style>
+
+<SCRIPT LANGUAGE=javascript>
+    function click() {
+    alert('版权所有,禁止复制1')
+}
+function click1() {
+    if (event.button == 2) {
+        alert('版权所有,禁止复制2')
+    }
+}
+function CtrlKeyDown() {
+    if (event.ctrlKey) {
+        alert('版权所有,禁止复制3')
+    }
+}
+//document.onkeydown = CtrlKeyDown;
+//document.onselectstart = click;
+//document.onmousedown = click1;
+</SCRIPT>
+
 <div class="tab-content style2" ng-controller="FwJhxxController">
     <div class="tab-content-box">
         <div class="tab-content-item hastable">
@@ -6,14 +37,14 @@
                     <div class="table-header" ui-y-table>
                         <table class="softwear-auth">
                             <tr>
-                                <th>任务</th>
-                                <th>外呼情况记录</th>
-                                <th>呼出结果</th>
-                                <th>联系人</th>
-                                <th>联系电话</th>
-                                <th>呼出时间</th>
-                                <th>执行人</th>
-                                <th>创建时间</th>
+                                <th width="20%">任务</th>
+                                <th width="24%">外呼情况记录</th>
+                                <th width="7%">呼出结果</th>
+                                <th width="7%">联系人</th>
+                                <th width="15%">联系电话</th>
+                                <th width="10%">呼出时间</th>
+                                <th width="7%">执行人</th>
+                                <th width="10%">创建时间</th>
                             </tr>
                         </table>
                         <div class="scroll-arrow2" ui-y-table>
@@ -29,20 +60,14 @@
                         <table class="softwear-auth">
 
                             <tr ng-repeat="vo in callbackList">
-                                <td>{{vo.rwmc}}</td>
-                                <td>
-                                    {{vo.whqkjl}}
-                                </td>
-                                <td>
-                                    {{vo.hcjg}}
-                                </td>
-                                <td>
-                                    {{vo.lxr}}
-                                </td>
-                                <td>{{vo.hccgdhhm}}</td>
-                                <td>{{vo.hwsj}}</td>
-                                <td>{{vo.zxzid}}</td>
-                                <td>{{vo.cjsj}}</td>
+                                <td width="20%"><div class="Edit_nobr" style="width:145px;" title="{{vo.rwmc}}">{{vo.rwmc}}</div></td>
+                                <td width="24%"> {{vo.whqkjl}}</td>
+                                <td width="7%"> {{vo.hcjg}}</td>
+                                <td width="7%"> {{vo.lxr}}</td>
+                                <td width="15%">{{vo.hccgdhhm}}</td>
+                                <td width="10%">{{vo.hwsj}}</td>
+                                <td width="7%">{{vo.zxzid}}</td>
+                                <td width="10%">{{vo.cjsj}}</td>
                             </tr>
 
                         </table>
