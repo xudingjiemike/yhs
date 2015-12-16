@@ -1,0 +1,87 @@
+/**
+ * Created by Zhang on 2015/12/16.
+ */
+.cont-left .level span > .agent-info{
+    height: 50%;
+    width: 90%;
+    box-shadow: 2px 4px 11px #aeaeae;
+    position: absolute;
+    top: 55px;
+    left: 5%;
+    background: #fff;
+    padding: 10px 14px 0;
+    border-top: 1px solid #dfdfdf;
+    display: none;
+    z-index: 5;
+}
+
+.agent-info .info-item{
+    margin-bottom: 10px;
+}
+.agent-info .info-item .alink{
+    font-size: 14px;
+    margin-left: 10px;
+    float: right;
+    margin-top: 2px;
+}
+.agent-info .info-item .edit-trade{
+    float: none;
+    margin-left: -10px;
+    margin-right: 20px;
+}
+.agent-info .info-item > span{
+    margin-right: 15px;
+}
+.agent-info .info-item .manage-info{
+    width: 81%;
+    margin-right: 0;
+}
+.agent-info span.manage-info-title{
+    margin-right: 4px;
+}
+.agent-info .info-item .manage-info >span{
+    margin-right: 15px;
+}
+.agent-info .info-item .trade{
+    width: 100px;
+    height: 24px;
+    font-size: 12px;
+    display: none;
+}
+.agent-info .close-info{
+    cursor: pointer;
+    position: absolute;
+    height: 34px;
+    width: 26px;
+    right: -15px;
+    top: -19px;
+    font-size: 24px;
+    color: #878787;
+    display: none;
+}
+.agent-info .close-info:hover{
+    color: #666;
+}
+
+.cont-left span.show-agent{
+    height: 26px;
+    position: absolute;
+    top: 30px;
+    margin: 0 10px;
+    padding: 3px 7px 0;
+    z-index: 6;
+    background: #fff;
+    border: 1px solid #fff;
+}
+.cont-left span.show-agent.hovered{
+    border: 1px solid #dadada;
+    border-bottom-color: #fff;
+}
+
+.level-manage{
+    margin-left:80px;
+}
+
+.cont-left .level{
+    padding: 10px 0;
+}

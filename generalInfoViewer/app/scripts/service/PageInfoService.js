@@ -20,9 +20,16 @@ angular
                     });
                     return PageInfo;
                 },
-                getIntermediary: function(khid){
+                getIntermediary: function(yhdm){
                     var PageInfo = {};
-                    PageInfoApi.getIntermediary(khid).success(function (data) {
+                    PageInfoApi.getIntermediary(yhdm).success(function (data) {
+                        angular.copy(data, PageInfo);
+                    });
+                    return PageInfo;
+                },
+                getAgent: function(khid){
+                    var PageInfo = {};
+                    PageInfoApi.getAgent(khid).success(function (data) {
                         angular.copy(data, PageInfo);
                     });
                     return PageInfo;
