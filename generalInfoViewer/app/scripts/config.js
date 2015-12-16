@@ -140,7 +140,13 @@ angular
                 url: "",
                 mockurl: "data/ServiceAuthority/ServiceAuthority.json",
                 descript: "服务授权"
+            },{
+                urlname: "SJSQ",
+                url: "",
+                mockurl: "data/SoftwareAuthority/SoftwareAuthority.json",
+                descript: "软件授权"
             }
+
         ];
 
         return {

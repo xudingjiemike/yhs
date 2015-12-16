@@ -1,0 +1,47 @@
+
+<div class="tab-content style2" ng-controller="SoftwareAuthorityController">
+    <div class="tab-content-box">
+        <div class="tab-content-item hastable">
+            <div class="table">
+                <div class="search-result">
+                    <div class="table-header" ui-y-table>
+                        <table class="softwear-auth">
+                            <tr>
+                                <th width="10%">软件名称</th>
+                                <th width="10%">分版名称</th>
+                                <th width="10%">使用版本</th>
+                                <th width="10%">授权码</th>
+                                <th width="10%">状态</th>
+                                <th width="10%">授权类型</th>
+                                <th width="20%">起始日期</th>
+                                <th width="20%">到期日期</th>
+                            </tr>
+                        </table>
+                        <div class="scroll-arrow2" ui-y-table>
+                            <div class="scroll-to-left disabled">
+                                <span class="arrow-left2"></span>
+                            </div>
+                            <div class="scroll-to-right">
+                                <span class="arrow-right2"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-content">
+                        <table class="softwear-auth">
+                            <tr ng-repeat="item in tableItems">
+                                <td width="10%">{{item.rjMc}}</td>
+                                <td width="10%">{{item.fblbMc}}</td>
+                                <td width="10%">{{item.rjbb}}</td>
+                                <td width="10%">{{item.sqm}}</td>
+                                <td width="10%">{{item.sqztMc}}</td>
+                                <td width="10%">{{item.dlbyhlxDm}}</td>
+                                <td width="20%">{{item.sqrqq}}</td>
+                                <td width="20%">{{item.sqrqz}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
