@@ -18,10 +18,7 @@
                         <div class="tab" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag)" ng-bind="tag.tagName"></div>
                         <!--<div class="tab fix-margin"></div>-->
                         <div class="tab-other">
-                            <div class="tab-other">
-                                <input type="text" class="search-userinfo" placeholder="输入税号、用户名称等切换用户"/>
-                                <span class="do-change" title="切换用户"><i class="fa fa-plus"></i></span>
-                            </div>
+                            <div search-info></div>
                         </div>
                     </div>
                     <div class="tab-content">
@@ -84,6 +81,7 @@
 
 <script src="scripts/controllers/PageInfoController.js"></script>
 <script src="scripts/controllers/PopInfoController.js"></script>
+<script src="scripts/controllers/SearchInfoController.js"></script>
 
 
 <!--Service-->
@@ -95,6 +93,7 @@
 <script src="scripts/service/XsService.js"></script>
 <script src="scripts/service/PageInfoService.js"></script>
 <script src="scripts/service/PopInfoService.js"></script>
+<script src="scripts/service/SearchInfoService.js"></script>
 
 <!--Directives-->
 <script src="scripts/directives/TrustorDtv.js"></script>
@@ -105,6 +104,7 @@
 <script src="scripts/directives/UiYTable.js"></script>
 <script src="scripts/directives/PageInfo.js"></script>
 <script src="scripts/directives/PopInfo.js"></script>
+<script src="scripts/directives/SearchInfo.js"></script>
 
 <!--API-->
 <script src="scripts/api/TrustorsApi.js"></script>
@@ -115,5 +115,6 @@
 <script src="scripts/api/XsApi.js"></script>
 <script src="scripts/api/PageInfoApi.js"></script>
 <script src="scripts/api/PopInfoApi.js"></script>
+<script src="scripts/api/SearchInfoApi.js"></script>
 </body>
 </html>
