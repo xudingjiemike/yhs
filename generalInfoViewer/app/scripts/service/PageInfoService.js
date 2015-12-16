@@ -6,9 +6,9 @@ angular
     .service('PageInfoService', ['_','PageInfoApi',
         function (_,PageInfoApi) {
             return {
-                getContacts: function(lxrid){
+                getContacts: function(lxrid,khid,khlx,yhdm){
                     var PageInfo = {};
-                    PageInfoApi.getContacts(lxrid).success(function (data) {
+                    PageInfoApi.getContacts(lxrid,khid,khlx,yhdm).success(function (data) {
                         angular.copy(data, PageInfo);
                     });
                     return PageInfo;

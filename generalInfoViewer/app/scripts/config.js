@@ -26,7 +26,7 @@ angular
             },
             {
                 hostname: "INFORMATION",
-                hosturl: "",
+                hosturl: "http://192.168.70.246:7001/nbgl2Web/api/khgl",
                 mockurl: "",
                 descript: ""
             },
@@ -69,19 +69,19 @@ angular
             },
             {
                 urlname: "CONTACTS",
-                url: "",
+                url: "/lxr/getLxrxxByLxrid",
                 mockurl: "data/contacts.json",
                 descript: "查询联系人信息，参数lxrid(联系人编号)"
             },
             {
                 urlname: "COMPANY",
-                url: "",
+                url: "/nsdw/getNsdwByKhid",
                 mockurl: "data/company.json",
                 descript: "查询纳税单位信息，参数khid(客户编号)"
             },
             {
                 urlname: "INTERMEDIARY",
-                url: "",
+                url: "/zjjg/getZjjgByYhdm",
                 mockurl: "data/intermediary.json",
                 descript: "查询中介机构信息，参数khid(客户编号)"
             },
