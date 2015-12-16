@@ -7,11 +7,7 @@ angular
     .factory('PageInfoApi', ['$http', 'Host', 'Url',
         function ($http, Host, Url) {
             return {
-                /**
-                 * 查询委托单位情况
-                 */
                 getContacts: function (lxrid, khid, khlx, yhdm) {
-                    console.log(Host.getHostByName('INFORMATION') + Url.getUrlByName('CONTACTS'));
                     return $http.get(Host.getHostByName('INFORMATION') + Url.getUrlByName('CONTACTS'), {
                         params: {lxrid: lxrid, khid: khid, khlx: khlx, yhdm: yhdm}
                     });
@@ -19,8 +15,11 @@ angular
                 getCompany: function (khid) {
                     return $http.get(Host.getHostByName('INFORMATION') + Url.getUrlByName('COMPANY'), {params: {khid: khid}});
                 },
-                getIntermediary: function (khid) {
-                    return $http.get(Host.getHostByName('INFORMATION') + Url.getUrlByName('INTERMEDIARY'), {params: {khid: khid}});
+                getIntermediary: function (yhdm) {
+                    return $http.get(Host.getHostByName('INFORMATION') + Url.getUrlByName('INTERMEDIARY'), {params: {yhdm: yhdm}});
+                },
+                getAgent: function (khid) {
+                    return $http.get(Host.getHostByName('INFORMATION')+Url.getUrlByName('AGENT'),{params:{khid:khid}});
                 }
             };
         }

@@ -3,39 +3,32 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo')
-    .controller('PageInfoController',['$scope','PageInfoService','PopInfoService',function($scope,PageInfoService,PopInfoService){
+    .controller('PageInfoController',['$scope','PageInfoService','PopInfoService',function($scope,PageInfoService){
         $scope.loadPageInfo=function(){
+            var lxrid,khid,khlx,yhdm;
             switch($scope.tabType){
                 case '0':
-                    var lxrid='19c2f04ff6564c60bc4bc7a648c356ec';
-                    var khid='799cb25280c6439a8aff592707451606';
-                    var khlx='0';
-                    var yhdm='';
+                    lxrid='19c2f04ff6564c60bc4bc7a648c356ec';
+                    khid='799cb25280c6439a8aff592707451606';
+                    khlx='0';
+                    yhdm='';
                     $scope.contactsInfo = PageInfoService.getContacts(lxrid,khid,khlx,yhdm);
-                    setTimeout(function(){
-                        console.log($scope.contactsInfo);
-                    },1000);
                     break;
                 case '1':
-                    var khid='d7f39ebeb67049e1a9b815e70127ab66';
+                    khid='d7f39ebeb67049e1a9b815e70127ab66';
                     $scope.companyInfo = PageInfoService.getCompany(khid);
-                    setTimeout(function(){
-                        console.log($scope.companyInfo);
-                    },1000);
+                    $scope.agentInfo = PageInfoService.getAgent(khid);
                     break;
                 case '2':
-                    var yhdm='SWSBD0010';
+                    yhdm='SWSBD0010';
                     $scope.intermediaryInfo = PageInfoService.getIntermediary(yhdm);
-                    setTimeout(function(){
-                        console.log($scope.intermediaryInfo);
-                    },1000);
                 }
         };
 
-        var isHover = false;
+        var isDetailHover = false;
         $scope.showDetailInfo=function(){
-            if(!isHover){
-                isHover = true;
+            if(!isDetailHover){
+                isDetailHover = true;
                 $('.show-detail').addClass("hovered");
                 $(".company-info").slideDown(300);
             }
@@ -43,14 +36,27 @@ angular
         $scope.hideDetailInfo=function(){
             $('.company-info').slideUp(300,function(){
                 $(".show-detail").removeClass("hovered");
-                isHover = false;
+                isDetailHover = false;
             });
         };
-        $scope.showDialogWindow=function(){
-            $scope.agentInfo = PopInfoService.getAgent();
-            setTimeout(function(){
-                console.log($scope.agentInfo);
-            },1000);
+
+        var isAgentlHover = false;
+        $scope.showAgentInfo=function(){
+            if(!isAgentlHover){
+                isAgentlHover = true;
+                $('.show-agent').addClass("hovered");
+                $(".agent-info").slideDown(300);
+            }
+        };
+
+        $scope.hideAgentInfo=function(){
+            $('.agent-info').slideUp(300,function(){
+                $(".show-agent").removeClass("hovered");
+                isAgentlHover = false;
+            });
+        };
+
+        $scope.showManageWindow=function(){
             $(".layer").show();
             $(".ztop").removeClass("ztop");
             $(".delegate-search").addClass("ztop").show();
