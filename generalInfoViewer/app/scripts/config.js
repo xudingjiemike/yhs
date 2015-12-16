@@ -4,38 +4,37 @@
 /**
  * 数据调试开关
  */
+
 angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
-    .config(['$httpProvider', function ($httpProvider) {
+    .config(['$httpProvider',function ($httpProvider) {
         $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
         $httpProvider.defaults.transformResponse.push(function (data, headersGetter, status) {
-            if (headersGetter()['content-type'] === 'application/json;charset=UTF-8') {
+            if (headersGetter()['content-type'].substring(0,16) === 'application/json') {
                 if (angular.isObject(data)
                     && data.hasOwnProperty('success')
                     && data.hasOwnProperty('messageCode')
                     && data.hasOwnProperty('message')
                     && data.hasOwnProperty('data')) {
                     if (!data.success) {
-                        //错误处理：服务端错误信息
-
+                        if (data.messageCode === 'api.auth.unlogon') {
+                            // 调用客户端重登陆
+                            location.href = 'http://192.168.71.145/nbgl2Web/login.do?username=xxbyw_hb&password=123';
+                        }else{
+                            //错误处理：服务端错误信息 todo
+                        }
                     }else{
                         return data.data;
                     }
                 } else {
-                    //错误处理：数据格式错误
-
+                    //错误处理：数据格式错误 todo
                 }
             } else {
-                if (data.messageCode === 'api.auth.unlogon') {
-                    // 调用客户端重登陆
-                    location.href = 'http://192.168.71.145/nbgl2Web/login.do?username=xxbyw_hb&password=123';
-                }else{
-                    return data;
-                }
+                return data;
             }
         });
     }])
     .factory("Mock", [function () {
-        var mock = false;
+        var mock = true;
         return {
             getMock: function () {
                 return mock;
