@@ -401,7 +401,7 @@ input, select, textarea{
     overflow: hidden;
 }
 .style2.tab-content{
-    top: 42px;
+    top: 20px;
 }
 .tab-content .tab-content-box{
     position: relative;

@@ -135,6 +135,11 @@ angular
                 url: "",
                 mockurl: "data/jhxx/zxjlList.json",
                 descript: "查询咨询记录信息，参数khid(客户编号)"
+            },{
+                urlname: "FWSQ",
+                url: "",
+                mockurl: "data/ServiceAuthority/ServiceAuthority.json",
+                descript: "服务授权"
             }
         ];
 
