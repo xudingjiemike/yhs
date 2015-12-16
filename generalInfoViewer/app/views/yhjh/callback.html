@@ -1,33 +1,54 @@
-<div class="table" ng-controller="FwJhxxController">
-    <div class="search-result">
-        <table>
-            <tr>
-                <th>任务</th>
-                <th>外呼情况记录</th>
-                <th>呼出结果</th>
-                <th>联系人</th>
-                <th>联系电话</th>
-                <th>呼出时间</th>
-                <th>执行人</th>
-                <th>创建时间</th>
-            </tr>
-            <tr ng-repeat="vo in callbackList">
-                <td>{{vo.rwmc}}</td>
-                <td>
-                    {{vo.whqkjl}}
-                </td>
-                <td>
-                    {{vo.hcjg}}
-                </td>
-                <td>
-                    {{vo.lxr}}
-                </td>
-                <td>{{vo.hccgdhhm}}</td>
-                <td>{{vo.hwsj}}</td>
-                <td>{{vo.zxzid}}</td>
-                <td>{{vo.cjsj}}</td>
-            </tr>
+<div class="tab-content style2" ng-controller="FwJhxxController">
+    <div class="tab-content-box">
+        <div class="tab-content-item hastable">
+            <div class="table">
+                <div class="search-result">
+                    <div class="table-header" ui-y-table>
+                        <table class="softwear-auth">
+                            <tr>
+                                <th>任务</th>
+                                <th>外呼情况记录</th>
+                                <th>呼出结果</th>
+                                <th>联系人</th>
+                                <th>联系电话</th>
+                                <th>呼出时间</th>
+                                <th>执行人</th>
+                                <th>创建时间</th>
+                            </tr>
+                        </table>
+                        <div class="scroll-arrow2" ui-y-table>
+                            <div class="scroll-to-left disabled">
+                                <span class="arrow-left2"></span>
+                            </div>
+                            <div class="scroll-to-right">
+                                <span class="arrow-right2"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-content">
+                        <table class="softwear-auth">
 
-        </table>
+                            <tr ng-repeat="vo in callbackList">
+                                <td>{{vo.rwmc}}</td>
+                                <td>
+                                    {{vo.whqkjl}}
+                                </td>
+                                <td>
+                                    {{vo.hcjg}}
+                                </td>
+                                <td>
+                                    {{vo.lxr}}
+                                </td>
+                                <td>{{vo.hccgdhhm}}</td>
+                                <td>{{vo.hwsj}}</td>
+                                <td>{{vo.zxzid}}</td>
+                                <td>{{vo.cjsj}}</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
