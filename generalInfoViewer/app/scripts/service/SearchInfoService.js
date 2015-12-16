@@ -3,7 +3,15 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.SearchInfo')
-    .service('SearchInfoService', ['_','SearchInfoApi',
-        function (_,SearchInfoApi) {
-
+    .service('SearchInfoService', ['_', 'SearchInfoApi',
+        function (_, SearchInfoApi) {
+            return {
+                getSearch: function (yhmc) {
+                    var SearchInfo = {};
+                    SearchInfoApi.getSearch(yhmc).success(function (data) {
+                        angular.copy(data, SearchInfo);
+                    });
+                    return SearchInfo;
+                }
+            }
         }]);

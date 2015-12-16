@@ -34,7 +34,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
         });
     }])
     .factory("Mock", [function () {
-        var mock = true;
+        var mock = false;
         return {
             getMock: function () {
                 return mock;
@@ -108,7 +108,14 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
                 url: "",
                 mockurl: "data/agent.json",
                 descript: "查询纳税单位被代理信息，参数khid(客户编号)"
-            }, {
+            },
+            {
+                urlname: "SEARCH",
+                url: "nbgl2Web/api/khgl/search",
+                mockurl: "data/search.json",
+                descript: "根据关键信息检索用户列表"
+            },
+            {
                 urlname: "CALLBACK",
                 url: "",
                 mockurl: "data/jhxx/callbackList.json",
@@ -163,32 +170,6 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
         ];
         return {
             all: function () {
-                // mark it is ajax request
-
-                //$httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
-
-                // global server exception handling
-                //$httpProvider.defaults.transformResponse.push(function (data, headersGetter) {
-                //    if (angular.isObject(data) &&
-                //        data.hasOwnProperty('success') &&
-                //        data.hasOwnProperty('data')) {
-                //        if(!data.success) {
-                //            if(data.hasOwnProperty('messageCode')&&data.hasOwnProperty('message')){
-                //                if(data.messageCode === 'api.secrity.unlogon'){
-                //                    // 调用客户端重登陆
-                //
-                //                }else{
-                //                    app.toastr.error(data.messageCode+":"+data.message);
-                //                    return false;
-                //                }
-                //            }
-                //            //return app.$q.reject(data);
-                //        }
-                //        return data.data;
-                //    }else{
-                //        return data;
-                //    }
-                //});
                 return url;
             },
             getByName: function (urlname) {
