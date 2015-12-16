@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html ng-app = "test">
+    <head>
+        <title>测试文件上传</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    </head>
+
+    <body>
+        <div class="container" ng-controller = "ctr">
+        	<input type="file" ng-model="filename" fileupload="filename"/>
+        	{{filename}}
+        	<input type="button" ng-click="download()" value="下载">
+        </div>
+        <script src="../plugin/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>
+        <script src="../plugin/angular/angular.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+	        var app = angular.module('test', []);
+			app.controller('ctr', function($scope) {
+			    $scope.filename = "";
+			    $scope.download = function(){
+			    	window.open($scope.filename);
+			    }
+			});
+			app.directive("fileupload", [function () {
+			    return {
+			        scope: {
+			            fileupload: "="
+			        },
+			        link: function (scope, element, attributes) {
+			            element.bind("change", function (changeEvent) {
+			                var reader = new FileReader();
+	        				var file = changeEvent.target.files[0];
+			                reader.readAsDataURL(file);
+			                reader.onloadstart = function() { 
+							 // 这个事件在读取开始时触发
+							    console.log("onloadstart"); 
+							    console.log("fileSize: "+file.size); 
+							} 
+							reader.onprogress = function(p) { 
+								 // 这个事件在读取进行中定时触发
+								 console.log("onprogress"); 
+							 } 
+
+							 reader.onload = function(loadEvent) { 
+							    // 这个事件在读取成功结束后触发
+			                    scope.$apply(function () {
+			                        scope.fileupload = loadEvent.target.result;
+			                    });
+							 	console.log("load complete"); 
+							 } 
+
+							 reader.onloadend = function() { 
+							    // 这个事件在读取结束后，无论成功或者失败都会触发
+								 if (reader.error) { 
+							 		console.log(reader.error); 
+								 } else { 
+							 		console.log(reader.result); 
+								 }
+		        			}
+			            });
+			        }
+			    }
+			}]);
+            var pubsub = {};
+            (function (q) {
+
+                var topics = {}, // 回调函数存放的数组
+                        subUid = -1;
+                // 发布方法
+                q.publish = function (topic, args) {
+
+                    if (!topics[topic]) {
+                        return false;
+                    }
+
+                    setTimeout(function () {
+                        var subscribers = topics[topic],
+                                len = subscribers ? subscribers.length : 0;
+
+                        while (len--) {
+                            subscribers[len].func(topic, args);
+                        }
+                    }, 0);
+
+                    return true;
+
+                };
+                //订阅方法
+                q.subscribe = function (topic, func) {
+
+                    if (!topics[topic]) {
+                        topics[topic] = [];
+                    }
+
+                    var token = (++subUid).toString();
+                    topics[topic].push({
+                        token: token,
+                        func: func
+                    });
+                    return token;
+                };
+                //退订方法
+                q.unsubscribe = function (token) {
+                    for (var m in topics) {
+                        if (topics[m]) {
+                            for (var i = 0, j = topics[m].length; i < j; i++) {
+                                if (topics[m][i].token === token) {
+                                    topics[m].splice(i, 1);
+                                    return token;
+                                }
+                            }
+                        }
+                    }
+                    return false;
+                };
+            } (pubsub));
+
+            //来，订阅一个
+            pubsub.subscribe('example1', function (topics, data) {
+                console.log(topics + ": " + data);
+            });
+
+            pubsub.subscribe('example2', function (topics, data) {
+                console.log(topics + ": " + data);
+            });
+
+            //发布通知
+            pubsub.publish('example1', 'hello world!');
+            pubsub.publish('example1', ['test', 'a', 'b', 'c']);
+            pubsub.publish('example1', [{ 'color': 'blue' }, { 'text': 'hello'}]);
+
+            //发布通知
+            pubsub.publish('example2', 'hello world2!');
+        </script>
+    </body>
+</html>
