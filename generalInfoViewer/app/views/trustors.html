@@ -1,62 +1,57 @@
-<tr>
-    <td class="number">委托单位</td>
-    <td class="left-top">
-        <span class="service-item">累计委托单位数：15</span>
-        <span class="service-item">三个月内申报的单位数：10</span>
-        <span class="service-item alink end-detail"><i class="fa fa-exclamation-circle"></i>到期情况</span>
-        <table class="normal-table">
-            <tr align="center">
-                <td>钻石会员</td>
-                <td>白金会员</td>
-                <td>金卡会员</td>
-                <td>银卡会员</td>
-                <td>普通会员</td>
-            </tr>
-            <tr align="center">
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-            </tr>
-        </table>
-        <table class="normal-table">
-            <tr>
-                <td width="50%">
-                    <span>税友税友税友集团</span>
-                    <span class="middle-margin">银卡会员</span>
-                    <span class="alink">删除</span>
-                </td>
-                <td>
-                    <span>税友集团</span>
-                    <span class="middle-margin">银卡会员</span>
-                    <span class="alink">删除</span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <span>税友集团</span>
-                    <span class="middle-margin">银卡会员</span>
-                    <span class="alink">删除</span>
-                </td>
-                <td>
-                    <span>税友税友集团</span>
-                    <span class="middle-margin">银卡会员</span>
-                    <span class="alink">删除</span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <span>税友集团</span>
-                    <span class="middle-margin">银卡会员</span>
-                    <span class="alink">删除</span>
-                </td>
-                <td>
-                    <span>税友集团</span>
-                    <span class="middle-margin">银卡会员</span>
-                    <span class="alink">删除</span>
-                </td>
-            </tr>
-        </table>
-    </td>
-</tr>
+<td class="number">委托单位</td>
+<td class="left-top">
+    <div class="service-item trustor-type" ng-if="!Trustors.isPersonal">
+        <div class="option-item">
+            <span class="item-text">选择口径：</span>
+            <span class="{{type0Class}}" ng-click="switchData(0,event)">
+                <span class="select-status single-select"></span>
+                <span class="item-text">中介</span>
+            </span>
+            <span class="item-text">&nbsp;</span>
+            <span class="{{type1Class}}" ng-click="switchData(1,event)">
+                <span class="select-status single-select"></span>
+                <span class="item-text">代帐</span>
+            </span>
+        </div>
+    </div>
+    <span class="service-item" ng-if="showData.wtdwList.length>6">累计委托单位数：<span class="alink trustor-num">{{showData.wtdwList.length}}</span></span>
+    <!--<span class="service-item alink end-detail"><i class="fa fa-exclamation-circle"></i>到期情况</span>-->
+    <table class="normal-table" ng-if="showData.wtdwList.length>6 || showData.wtdwList.length == 0">
+        <tr align="center">
+            <td>钻石会员</td>
+            <td>白金会员</td>
+            <td>金卡会员</td>
+            <td>银卡会员</td>
+            <td>普通会员</td>
+        </tr>
+        <tr align="center">
+            <td>{{showData.hydjdwsSz[0]}}</td>
+            <td>{{showData.hydjdwsSz[1]}}</td>
+            <td>{{showData.hydjdwsSz[2]}}</td>
+            <td>{{showData.hydjdwsSz[3]}}</td>
+            <td>{{showData.hydjdwsSz[4]}}</td>
+        </tr>
+    </table>
+    <table class="normal-table" ng-if="showData.wtdwList.length<=6">
+        <tr ng-repeat="item in tableData">
+            <td ng-repeat="subitem in item" ng-if="item.length==1" colspan="2">
+                <span class="level-icon-small level1" ng-if="subitem.levelMc=='普通会员'"></span>
+                <span class="level-icon-small level2" ng-if="subitem.levelMc=='银卡会员'"></span>
+                <span class="level-icon-small level3" ng-if="subitem.levelMc=='金卡会员'"></span>
+                <span class="level-icon-small level4" ng-if="subitem.levelMc=='白金会员'"></span>
+                <span class="level-icon-small level5" ng-if="subitem.levelMc=='钻石会员'"></span>
+                <span class="middle-margin">{{subitem.wtdwMc}}</span>
+                <span class="alink" ng-click="deleteTrustor(subitem.wtdwId)">终止代理</span>
+            </td>
+            <td width="50%" ng-repeat="subitem in item" ng-if="item.length==2">
+                <span class="level-icon-small level1" ng-if="subitem.levelMc=='普通会员'"></span>
+                <span class="level-icon-small level2" ng-if="subitem.levelMc=='银卡会员'"></span>
+                <span class="level-icon-small level3" ng-if="subitem.levelMc=='金卡会员'"></span>
+                <span class="level-icon-small level4" ng-if="subitem.levelMc=='白金会员'"></span>
+                <span class="level-icon-small level5" ng-if="subitem.levelMc=='钻石会员'"></span>
+                <span class="middle-margin">{{subitem.wtdwMc}}</span>
+                <span class="alink" ng-click="deleteTrustor(subitem.wtdwId)">终止代理</span>
+            </td>
+        </tr>
+    </table>
+</td>
