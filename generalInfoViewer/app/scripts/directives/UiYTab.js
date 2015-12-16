@@ -1,7 +1,7 @@
 /**
  * Created by apple on 15/12/9.
  */
-angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
+angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
     .directive('uiYTab',function(){
         return{
             restrict:'AEC',
@@ -44,6 +44,12 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
 
                 $scope.leftClass = "disable";
 
+                 function init(){
+                     $scope.$broadcast('loadData',_tags[0].tagName);
+                 }
+
+                init();
+
 
                 /****
                  * 点击之后改变view和tag
@@ -52,6 +58,7 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
                  * @param $event
                  */
                 function activeView (number,tag,$event){
+                    $scope.$broadcast('loadData',tag.tagName);
                     var ev = null;
                     if($event === undefined){
                         ev = $("#firstTab");
@@ -70,56 +77,79 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
                 };
 
 
-                $scope.rightSilde = function(){
-                    step = step + 1;
-                    if(step >= (_tags.length)){
-                        step = _tags.length;
-                       $scope.rightClass = "disable";
-                    }else{
-                        $scope.tabStyle = {'width':(_tags.length*12.5)+'%','-webkit-transform':'translate(-'+(step-8)*(100/_tags.length)+'%,0'};
-                        $scope.rightClass = "";
-                        if(step == (_tags.length-1)){
-                            $scope.rightClass = "disable";
-                        }
-                        if(step > 8){
-                            $scope.leftClass = "";
-                        }
-                    }
-
-
-
-                    //$scope.tags = _tags.slice(step-8,step);
-                };
-
-
-                $scope.leftSilde = function(){
-                    step = step - 1;
-                    if(step <= 7){
-                        step = 7;
-                        $scope.leftClass = "disable";
-                    }else{
-                        $scope.tabStyle = {'width':(_tags.length*12.5)+'%','-webkit-transform':'translate(-'+(step-8)*(100/_tags.length)+'%,0'};
-                        $scope.leftClass = "";
-                        if(step == 8){
-                            $scope.leftClass = "disable";
-                        }
-                        if(step < _tags.length){
-                            $scope.rightClass = "";
-                        }
-                    }
-
-                }
-
-
-
-
-
 
             }],
 
             templateUrl:function(element,attr){
                 return attr.tempalteUrl || 'views/template/tabs/commonTab.html';
             },
+
+            link:function($scope,element,$attrs){
+                var dragable = false,translated= 0,keep = false,p = element.find(".tabsTotal"),step = 10;
+                var maxDragDist = 0;
+
+                element.on("mouseup","#scroll-arrow > span",function(){
+                    keep = false;
+                });
+
+                element.on("mousedown","#scroll-arrow > span",function(){
+                    maxDragDist= element.find(".tabsTotal").width() - element.width()-190;
+                    step = 10;
+                    if(element.width() < element.find(".tabsTotal").width()){
+                        if($(this).hasClass("arrow-left")){
+                            $(this).next().removeClass("disable");
+                        }else{
+                            step = -step;
+                            $(this).prev().removeClass("disable");
+                        }
+                        translated = p.data("translated") || translated;
+                        keep = true;
+                        moveTables(this, p, step);
+                    }
+                });
+                function moveTables(obj, target, step){
+                    if(keep){
+                        translated += step;
+                        if(step>0){
+                            step = step > 45?45:step;
+                            if(translated<0){
+                                setTimeout(function(){
+                                    element.find(".tabsTotal").css("-webkit-transform","translate("+translated+"px,0)");
+                                    target.data("translated", translated);
+                                    moveTables(obj, target, step+5);
+
+                                }, 80);
+                            }else{
+                                element.find(".tabsTotal").css("-webkit-transform","translate(0,0)");
+                                target.data("translated", 0);
+                                $(obj).addClass("disable");
+                                keep = false;
+
+                            }
+                        }else{
+                            step = step < -45?-45:step;
+                            if(-translated<maxDragDist){
+                                setTimeout(function(){
+                                    element.find(".tabsTotal").css("-webkit-transform","translate("+translated+"px,0)");
+                                    target.data("translated", translated);
+                                    moveTables(obj, target, step-5);
+                                }, 80);
+                            }else{
+                                element.find(".tabsTotal").css("-webkit-transform","translate("+-maxDragDist+"px,0)");
+                                target.data("translated", -maxDragDist);
+                                $(obj).addClass("disable");
+                                keep = false;
+                            }
+                        }
+                    }
+                };
+
+
+
+
+
+            },
+
             transclude:true,
             replace:true,
             scope:{

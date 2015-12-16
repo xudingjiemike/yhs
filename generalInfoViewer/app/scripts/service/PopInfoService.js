@@ -7,11 +7,6 @@ angular
         function (_,PopInfoApi) {
             var PopInfo = {};
             return {
-                getAgent: function(khid){
-                    PopInfoApi.getAgent(khid).success(function (data) {
-                        angular.copy(data, PopInfo);
-                    });
-                    return PopInfo;
-                }
+
             }
         }]);

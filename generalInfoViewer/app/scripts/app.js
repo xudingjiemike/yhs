@@ -9,6 +9,9 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.PopInfo',[]);
 angular.module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo',[
     'ui.yypt5.yhgl.GeneralInfoViewer.PopInfo'
 ]);
+angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab',[]);
+angular.module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo',[]);
+angular.module('ui.yypt5.yhgl.GeneralInfoViewer.SearchInfo',[]);
 angular.module('ui.yypt5.yhgl.GeneralInfoViewer',[
     'underscore',
     'ui.bootstrap',
@@ -17,5 +20,7 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer',[
     'ui.yypt5.yhgl.GeneralInfoViewer.Trustors',
     'ui.yypt5.yhgl.GeneralInfoViewer.Taxlnstitution',
     'ui.yypt5.yhgl.GeneralInfoViewer.PageInfo',
-    'ui.yypt5.yhgl.GeneralInfoViewer.PopInfo'
+    'ui.yypt5.yhgl.GeneralInfoViewer.PopInfo',
+    'ui.yypt5.yhgl.GeneralInfoViewer.Uitab',
+    'ui.yypt5.yhgl.GeneralInfoViewer.SearchInfo'
 ]);

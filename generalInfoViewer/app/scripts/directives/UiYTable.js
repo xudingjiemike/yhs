@@ -7,7 +7,7 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
            link:function($scope,element,$attrs){
                var dragable = false, maxDragDist = 0, pzNowX = 0 , translated = 0, currrentTransd = 0, pzInitX = 0, tableHeader,tableContent;
 
-               $(".table-header").on("mousedown",function(e){
+               element.on("mousedown",function(e){
                    var table = element.find("table");
                    if(element.width()<table.width()){
                        dragable = true;
@@ -78,20 +78,20 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
                    }
                });
 
-               $(".table-header").on("mousedown",".scroll-arrow2", function(e){
+               element.on("mousedown",".scroll-arrow2", function(e){
                    e.stopPropagation();
                });
 
                var keep = false;
-               $(".table-header").on("mousedown",".scroll-arrow2 > div", function(){
-                   if(!element.hasClass("disabled")){
-                       var p = element.parents(".table-header");
+               element.on("mousedown",".scroll-arrow2 > div", function(){
+                   if(!$(this).hasClass("disabled")){
+                       var p = $(this).parents(".table-header");
                        var step = 10;
-                       if(element.hasClass("scroll-to-left")){
-                           element.next().removeClass("disabled");
+                       if($(this).hasClass("scroll-to-left")){
+                           $(this).next().removeClass("disabled");
                        }else{
                            step = -step;
-                           element.prev().removeClass("disabled");
+                           $(this).prev().removeClass("disabled");
                        }
 
                        keep = true;
