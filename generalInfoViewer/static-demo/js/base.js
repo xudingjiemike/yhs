@@ -153,6 +153,8 @@ $(function(){
        $(".select-address").slideUp(300);
        $(".search-pre-result").hide();
        $(".express-info").hide();
+       $(".tdselected").removeClass("tdselected");
+       $(".selectable-table").removeClass("selectable-table ");
    });
    
    $(".dialog-close").on("click",function(){
@@ -789,8 +791,9 @@ $(function(){
         }
     });
 
-    $(".cont-left-btm .table-content").on("click","td", function(){
+    $(".cont-left-btm .table-content").on("click","td", function(e){
         setSelectedTd(this);
+        e.stopPropagation();
     });
 
     function setSelectedTd(obj){
@@ -808,7 +811,7 @@ $(function(){
         }
     }
 
-    function setNextTd(key){
+    function setNextTd(key, e){
         var target = $(".selectable-table .tdselected"), newTarget;
         var parent = target.parent();
         var tdnum = parent.find("td").length;
@@ -835,13 +838,34 @@ $(function(){
                 setSelectedTd(target.next()[0]);
             }
         }
+        e.stopPropagation();
     }
 
     $(document).keydown(function(e){
-        var key = e.which;
-        if(key == 38 || key == 40 || key == 37 || key == 39){
-            setNextTd(key);
+        if($(".selectable-table").length>0){
+            var key = e.which;
+            if(key == 38 || key == 40 || key == 37 || key == 39){
+                setNextTd(key, e);
+                e.stopPropagation();
+                e.preventDefault();
+            }
         }
+    });
+
+    $(document).keydown(function(e){
+        var key = e.which;
+        if(key == 13){
+            var target = $(".duty-number:focus");
+            if(target.length>0 && target.val().length>0){
+                $(".search-progressive-result").slideDown(200);
+            }
+        }
+    });
+
+    $(".search-progressive-result").on("click"," tr:gt(0)", function(){
+        $(this).parent().find(".selected").removeClass("selected");
+        $(this).addClass("selected");
+        $(this).parents(".search-progressive-result").slideUp(200);
     });
 
     $(".duty-number").on("keyup", function(){
