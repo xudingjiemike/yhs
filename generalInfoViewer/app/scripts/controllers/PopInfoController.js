@@ -8,7 +8,7 @@ angular
 
         };
 
-        $scope.hideDialogWindow = function ($event) {
+        $scope.hideManageWindow = function ($event) {
             $($event.target).parents('.dialog').hide();
             if ($('.dialog:visible').length == 0) {
                 $($event.target).parents('.layer').hide();
