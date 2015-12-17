@@ -10,7 +10,7 @@ angular
                 getTrustors: function(khid,khlx,yhdm){
                     var _this = this;
                     TrustorApi.getTrustors(khid,khlx,yhdm).success(function (data) {
-                        angular.copy(data.data, Trustors);
+                        angular.copy(data, Trustors);
                         Trustors.isPersonal = _this.isPersonal();
                     });
                     return Trustors;
