@@ -17,7 +17,6 @@ angular
                 case '1':
                     khid='d7f39ebeb67049e1a9b815e70127ab66';
                     $scope.companyInfo = PageInfoService.getCompany(khid);
-                    $scope.agentInfo = PageInfoService.getAgent(khid);
                     break;
                 case '2':
                     yhdm='SWSBD0010';

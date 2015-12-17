@@ -863,32 +863,7 @@ input, select, textarea{
     height: auto!important;
     display: none;
 }
-.dialog{
-    border: 2px solid #BEBDBE;
-    position: absolute;
-    display: none;
-    box-shadow: 2px 3px 20px #666;
-}
-.dialog .dialog-header{
-    background: #F3F3F3;
-    height: 30px;
-    line-height: 30px;
-    color: #666;
-    padding: 0 14px;
-}
-.dialog-header .dialog-title{
-    font-size: 16px;
-}
-.dialog-header .dialog-close{
-    float: right;
-    font-size: 16px;
-    cursor: pointer;
-}
-.dialog-body{
-    padding: 10px;
-    background: #fff;   
-    position: relative;
-}
+
 .send-message, .point-search, .express-search,.stop-search,.price-policy,
 .help-policy,.technology-proup, .train-search, .sales,.file-share,.file-upload{
     width: 650px;
@@ -1903,9 +1878,7 @@ td.price-policy-item{
 .record-odd-title span.record-date, .record-odd-content > span{
     margin-right: 10px;
 }
-.user-position{
-    margin-left: 20px;
-}
+
 .user-impression{
     right: 0;
     position: absolute;
@@ -1922,68 +1895,7 @@ td.price-policy-item{
     float: right;
     margin-top: -2px;
 }
-.company-info{
-    height: 400px;
-    width: 90%;
-    box-shadow: 2px 4px 11px #aeaeae;
-    position: absolute;
-    top: 28px;
-    left: 5%;
-    background: #fff;
-    padding: 10px 14px 0;
-    border-top: 1px solid #dfdfdf;
-    display: none;
-}
-.company-info .info-item{
-    margin-bottom: 10px;
-}
-.company-info .info-item .edit{
-    display: inline-block;
-}
-.company-info .info-item .alink{
-    font-size: 14px;
-    margin-left: 10px;
-    float: right;
-    margin-top: 2px;
-}
-.company-info .info-item .edit-trade{
-    float: none;
-    margin-left: -10px;
-    margin-right: 20px;
-}
-.company-info .info-item > span{
-    margin-right: 15px;
-}
-.company-info .info-item .manage-info{
-    width: 81%;
-    margin-right: 0;
-}
-.company-info span.manage-info-title{
-    margin-right: 4px;
-}
-.company-info .info-item .manage-info >span{
-    margin-right: 15px;
-}
-.company-info .info-item .trade{
-    width: 100px;
-    height: 24px;
-    font-size: 12px;
-    display: none;
-}
-.company-info .close-info{
-    cursor: pointer;
-    position: absolute;
-    height: 34px;
-    width: 26px;
-    right: -15px;
-    top: -19px;
-    font-size: 24px;
-    color: #878787;
-    display: none;
-}
-.company-info .close-info:hover{
-    color: #666;
-}
+
 .ztop{
     z-index: 1000;
 }
@@ -2376,23 +2288,7 @@ td.price-policy-item{
 .manage-people .option-item .select-status{
     margin-right: 0;
 }
-.cont-left span.show-detail{
-    height: 26px;
-    position: absolute;
-    top: 3px;
-    margin: 0 5px;
-    padding: 3px 7px 0;
-    z-index: 11;
-    background: #fff;
-    border: 1px solid #fff;
-}
-.cont-left span.show-detail.hovered{
-    border: 1px solid #dadada;
-    border-bottom-color: #fff;
-}
-.show-detail.alink.hover + span{
-    margin-left: 57px;
-}
+
 td.tdselected{
     background-color: #FFFEC0;
 }

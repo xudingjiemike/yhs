@@ -105,8 +105,8 @@
             level3:companyInfo.levelDm==='05',
             level4:companyInfo.levelDm==='01'
             }" title="{{companyInfo.levelMc}}"></span>
-            <span ng-mouseover="showAgentInfo()" ng-mouseleave="hideAgentInfo()">
-                <span class="show-agent alink hover">被代理</span>
+            <span ng-mouseover="showAgentInfo()" ng-mouseleave="hideAgentInfo()" ng-if="companyInfo.bdlList">
+                <span class="show-agent alink hover"><span>被代理</span></span>
                 <span class="agent-info">
                     <div class="close-info"><i class="fa fa-times-circle-o"></i></div>
                     <div class="delegate-search-content">
@@ -121,7 +121,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="agent in agentInfo">
+                                    <tr ng-repeat="agent in companyInfo.bdlList">
                                         <td ng-bind="agent.yhmc"></td>
                                         <td ng-bind="agent.yhbm"></td>
                                         <td ng-bind="agent.cpdlMc"></td>

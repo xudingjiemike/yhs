@@ -12,13 +12,13 @@ angular
                  * 查询咨询记录List
                  */
                 getZxjlList: function (khid,pageId) {
-                    return $http.get(Host.getHostByName("INFORMATION")+Url.getUrlByName("ZXJL")+"?khid="+khid+"&pageId="+pageId);
+                    return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("ZXJL")+"?khid="+khid+"&pageId="+pageId);
                 },
                 /**
                  * 查询投诉建议List
                  */
                 getTsjyList: function (khid,pageId) {
-                    return $http.get(Host.getHostByName("INFORMATION")+Url.getUrlByName("TSJY")+"?khid="+khid+"&pageId="+pageId);
+                    return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("TSJY")+"?khid="+khid+"&pageId="+pageId);
                 }
             };
         }

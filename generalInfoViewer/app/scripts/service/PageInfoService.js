@@ -26,13 +26,6 @@ angular
                         angular.copy(data, PageInfo);
                     });
                     return PageInfo;
-                },
-                getAgent: function(khid){
-                    var PageInfo = {};
-                    PageInfoApi.getAgent(khid).success(function (data) {
-                        angular.copy(data, PageInfo);
-                    });
-                    return PageInfo;
                 }
             }
         }]);

@@ -6,20 +6,20 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
-    .service('SoftwareAuthorityService',['_','SoftwareAuthorityApi',function(_,SoftwareAuthorityApi){;
+    .service('SoftwareAuthorityService',['_','SoftwareAuthorityApi',function(_,SoftwareAuthorityApi){
         var SoftwareAuthorityData = [];
         function LoadData(khid){
             SoftwareAuthorityApi.LoadSoftwareAuthorityInfo(khid).success(function(obj){
-                angular.copy(obj.data.recordList,SoftwareAuthorityData);
+                angular.copy(obj.recordList,SoftwareAuthorityData);
             })
-        };
+        }
         function getData(khid){
             if(SoftwareAuthorityData.length == 0){
                 LoadData(khid);
             }
 
             return SoftwareAuthorityData;
-        };
+        }
         return {
             getServiceAuthorityData:getData
         }

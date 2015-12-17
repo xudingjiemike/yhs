@@ -7,7 +7,7 @@ angular
         function($http,Host,Url){
           return{
              LoadServiceAuthorityInfo:function(khid){
-                 return $http.get(Host.getHostByName("INFORMATION")+Url.getUrlByName("FWSQ")+"?khid="+khid)
+                 return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("FWSQ")+"?khid="+khid)
              }
           }
     }]);

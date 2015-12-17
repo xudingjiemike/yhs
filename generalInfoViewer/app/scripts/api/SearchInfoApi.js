@@ -8,7 +8,7 @@ angular
         function ($http, Host, Url) {
             return {
                 getSearch: function (yhmc) {
-                    return $http.get(Host.getHostByName('INFORMATION')+Url.getUrlByName('SEARCH'),{params:{yhmc:yhmc}});
+                    return $http.get(Host.getHostByName('BUSINISS')+Url.getUrlByName('SEARCH'),{params:{yhmc:yhmc}});
                 }
             }
         }

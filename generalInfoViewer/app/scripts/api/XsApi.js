@@ -12,7 +12,7 @@ angular
                  * 查询电话技能组List
                  */
                 getXsList: function (khid,pageId) {
-                    return $http.get(Host.getHostByName("INFORMATION")+Url.getUrlByName("XS")+"?khid="+khid+"&pageId="+pageId);
+                    return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("XS")+"?khid="+khid+"&pageId="+pageId);
                 }
 
             };
