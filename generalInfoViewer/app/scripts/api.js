@@ -34,7 +34,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
         });
     }])
     .factory("Mock", [function () {
-        var mock = true;
+        var mock = false;
         return {
             getMock: function () {
                 return mock;
@@ -46,7 +46,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
             {
                 hostname: "BUSINISS",
                 hosturl: "http://192.168.70.246:7001/",
-                mockurl: "http://192.168.60.136:8089/",
+                mockurl: "",
                 descript: ""
             }
         ];
@@ -95,6 +95,12 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
                 urlname: "INTERMEDIARY",
                 url: "nbgl2Web/api/khgl/zjjg/getZjjgByYhdm",
                 mockurl: "generalInfoViewer/app/data/intermediary.json",
+                descript: "查询中介机构信息，参数khid(客户编号)"
+            },
+            {
+                urlname: "REMARK",
+                url: "nbgl2Web/api/khgl/lxr/updateLxrFiled",
+                mockurl: "data/intermediary.json",
                 descript: "查询中介机构信息，参数khid(客户编号)"
             },
             {
