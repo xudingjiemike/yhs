@@ -60,4 +60,8 @@ angular
             $(".ztop").removeClass("ztop");
             $(".delegate-search").addClass("ztop").show();
         };
+
+        $scope.saveRemark=function(){
+
+        };
     }]);

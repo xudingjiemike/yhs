@@ -18,7 +18,8 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
                     if (!data.success) {
                         if (data.messageCode === 'api.auth.unlogon') {
                             // 调用客户端重登陆
-                            location.href = 'http://192.168.71.145/nbgl2Web/login.do?username=xxbyw_hb&password=123';
+                            console.log(data);
+                            location.href = 'http://192.168.60.136/nbgl2Web/login.do?username=xxbyw_hb&password=123';
                         }else{
                             //错误处理：服务端错误信息 todo
                         }
@@ -45,7 +46,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
         var host = [
             {
                 hostname: "BUSINISS",
-                hosturl: "http://192.168.70.246:7001/",
+                hosturl: "http://192.168.60.136:8089/",
                 mockurl: "",
                 descript: ""
             }
@@ -75,8 +76,8 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
         var url = [
             {
                 urlname: "TRUSTOR",
-                url: "yypt5/api/khgl/wtdw/getWtdw",
-                mockurl: "generalInfoViewer/app/data/trustor.json",
+                url: "nbgl2Web/api/khgl/wtdw/getWtdw",
+                mockurl: "data/trustor.json",
                 descript: "查询委托单位，参数khid(客户编号),khlx(客户类型)，yhdm(用户代码)"
             },
             {
@@ -94,6 +95,12 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
             {
                 urlname: "INTERMEDIARY",
                 url: "nbgl2Web/api/khgl/zjjg/getZjjgByYhdm",
+                mockurl: "data/intermediary.json",
+                descript: "查询中介机构信息，参数khid(客户编号)"
+            },
+            {
+                urlname: "REMARK",
+                url: "nbgl2Web/api/khgl/lxr/updateLxrFiled",
                 mockurl: "data/intermediary.json",
                 descript: "查询中介机构信息，参数khid(客户编号)"
             },
@@ -161,7 +168,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
             },
             {
                 urlname: "DELETETRUSTOR",
-                url: "yypt5/api/khgl/wtdw/delteWtdw",
+                url: "nbgl2Web/api/khgl/wtdw/delteWtdw",
                 mockurl: "",
                 descript: ""
             }

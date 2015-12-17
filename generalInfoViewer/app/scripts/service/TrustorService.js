@@ -10,8 +10,9 @@ angular
                 getTrustors: function(khid,khlx,yhdm){
                     var _this = this;
                     TrustorApi.getTrustors(khid,khlx,yhdm).success(function (data) {
-                        angular.copy(data.data, Trustors);
+                        angular.copy(data, Trustors);
                         Trustors.isPersonal = _this.isPersonal();
+                        Trustors.hasData = true;
                     });
                     return Trustors;
                 },
@@ -43,12 +44,21 @@ angular
                                         break;
                                     }
                                 }
+                                var arr = tpmArr = [];
                                 if(i==0){
                                     Trustors.grdlWtdwData.hydjdwsSz[typeIndex] -= 1;
-                                    delete Trustors.grdlWtdwData.wtdwList[j];
+                                    angular.copy(Trustors.grdlWtdwData.wtdwList, arr);
+                                    delete Trustors.grdlWtdwData.wtdwList;
+                                    var tpmArr = arr.slice(0,index).concat(arr.slice(index+1));
+                                    Trustors.grdlWtdwData.wtdwList = [];
+                                    angular.copy(tpmArr,Trustors.grdlWtdwData.wtdwList);
                                 }else{
                                     Trustors.zjjgWtdwData.hydjdwsSz[typeIndex] -= 1;
-                                    delete Trustors.zjjgWtdwData.wtdwList[j];
+                                    angular.copy(Trustors.zjjgWtdwData.wtdwList, arr);
+                                    delete Trustors.zjjgWtdwData.wtdwList;
+                                    Trustors.zjjgWtdwData.wtdwList = [];
+                                    var tpmArr = arr.slice(0,index).concat(arr.slice(index+1));
+                                    angular.copy(tpmArr,Trustors.zjjgWtdwData.wtdwList);
                                 }
                                 break;
                             }

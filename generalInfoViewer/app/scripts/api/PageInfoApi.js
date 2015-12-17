@@ -17,6 +17,15 @@ angular
                 },
                 getIntermediary: function (yhdm) {
                     return $http.get(Host.getHostByName('BUSINISS') + Url.getUrlByName('INTERMEDIARY'), {params: {yhdm: yhdm}});
+                },
+                saveRemark:function(remark){
+                    return $http.post(Host.getHostByName('BUSINISS') + Url.getUrlByName('INTERMEDIARY'), {
+                        params: {
+                            dataId:'',
+                            filedKey:'',
+                            filedValue:''
+                        }
+                    });
                 }
             };
         }
