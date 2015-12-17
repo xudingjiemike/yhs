@@ -43,7 +43,7 @@
         </div>
         <div class="remark">
             <input type="text" placeholder="请输入备注信息" ng-model="contactsInfo.bz"/>
-            <button class="btn btn-sm btn-success" ng-model="button" ng-disabled="!contactsInfo.bz" ng-click="saveRemark()">保存</button>
+            <button class="btn btn-sm btn-success" ng-model="button" ng-disabled="!contactsInfo.bz" ng-click="saveRemark($event)">保存</button>
         </div>
     </div>
 
@@ -103,7 +103,8 @@
             <span class="level-icon" ng-class="{
             level1:companyInfo.levelDm==='09',
             level2:companyInfo.levelDm==='07',
-            level3:companyInfo.levelDm==='05',
+            level6:companyInfo.levelDm==='05',
+            level3:companyInfo.levelDm==='03',
             level4:companyInfo.levelDm==='01'
             }" title="{{companyInfo.levelMc}}"></span>
             <span ng-mouseover="showAgentInfo()" ng-mouseleave="hideAgentInfo()" ng-if="companyInfo.bdlList">
@@ -134,10 +135,13 @@
                     </div>
                 </span>
             </span>
+            <span style="margin-left: 150px" ng-if="companyInfo.bdlList"></span>
+            <span style="margin-left: 30px" ng-if="!companyInfo.bdlList"></span>
             <span class="alink level-manage" ng-click="showManageWindow()" style="vertical-align: top"><i class="fa fa-users"></i>人员管理</span>
         </div>
         <div class="remark">
             <input type="text" placeholder="请输入备注信息" ng-model="companyInfo.bz"/>
+            <button class="btn btn-sm btn-success" ng-model="button" ng-disabled="!contactsInfo.bz" ng-click="saveRemark($event)">保存</button>
         </div>
         <div pop-info></div>
     </div>
@@ -196,6 +200,7 @@
         </div>
         <div class="remark">
             <input type="text" placeholder="请输入备注信息" ng-model="intermediaryInfo.bz"/>
+            <button class="btn btn-sm btn-success" ng-model="button" ng-disabled="!contactsInfo.bz" ng-click="saveRemark($event)">保存</button>
         </div>
     </div>
 </div>

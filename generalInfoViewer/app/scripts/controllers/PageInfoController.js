@@ -61,7 +61,9 @@ angular
             $(".delegate-search").addClass("ztop").show();
         };
 
-        $scope.saveRemark=function(){
-
+        $scope.saveRemark=function($event){
+            var lxrid='19c2f04ff6564c60bc4bc7a648c356ec';
+            var remark=$($event.target).parent().children('input:text').val();
+            $scope.saveRemarkInfo=PageInfoService.saveRemark(lxrid,remark);
         };
     }]);
