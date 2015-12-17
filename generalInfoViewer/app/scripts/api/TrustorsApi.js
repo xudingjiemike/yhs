@@ -13,6 +13,8 @@ angular
                 getTrustors: function (khid,khlx,yhdm) {
                     return $http.get(Host.getHostByName("BUSINISS")+
                         Url.getUrlByName("TRUSTOR")+"?khid="+khid+"&khlx="+khlx+"&yhdm="+yhdm);
+                    //return $http.get("http://192.168.60.136/nbgl2Web/api/khgl/wtdw/getWtdw"+
+                    //    "?khid="+khid+"&khlx="+khlx+"&yhdm="+yhdm);
                 },
                 /**
                  * 删除(终止代理)委托单位

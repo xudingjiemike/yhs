@@ -1,8 +1,5 @@
 /**
- * Created by apple on 15/12/15.
- */
-/**
- * Created by apple on 15/12/9.
+ * Created by xudj on 15/12/15.
  */
 angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
     .directive('yhlxrServiceAuthority',function(){

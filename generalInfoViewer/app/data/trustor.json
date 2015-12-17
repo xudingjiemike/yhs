@@ -2,8 +2,56 @@
 	"data" : {
 		"grdlWtdwData" : {
 			"hydjSz" : ["钻石会员", "白金会员", "金卡会员", "银卡会员", "普通会员"],
-			"hydjdwsSz" : [0, 0, 0, 0, 0],
-			"wtdwList" : []
+			"hydjdwsSz" : [0, 0, 0, 0, 4],
+			"wtdwList" : [
+                {
+                    "cpdlList" : [{
+                        "cpdlDm" : "04",
+                        "cpdlMc" : "国税发票"
+                    }
+                    ],
+                    "dssh" : "",
+                    "levelMc" : "普通会员",
+                    "nsrsbh" : "130402576795504",
+                    "wtdwId" : "75e778dc3f634fbdac03984dba08a7wer",
+                    "wtdwMc" : "邯郸市惠民贸易有限公司"
+                }, {
+                    "cpdlList" : [{
+                        "cpdlDm" : "01",
+                        "cpdlMc" : "国税申报"
+                    }
+                    ],
+                    "dssh" : "",
+                    "levelMc" : "普通会员",
+                    "nsrsbh" : "130402550403250",
+                    "wtdwId" : "5409f67f5e4f4e779f68dc30673d5cb6werwq",
+                    "wtdwMc" : "邯郸市邯山区电猫家电维修部"
+                }, {
+                    "cpdlList" : [{
+                        "cpdlDm" : "01",
+                        "cpdlMc" : "国税申报"
+                    }, {
+                        "cpdlDm" : "04",
+                        "cpdlMc" : "国税发票"
+                    }
+                    ],
+                    "dssh" : "",
+                    "levelMc" : "普通会员",
+                    "nsrsbh" : "130402665285629",
+                    "wtdwId" : "b49f03190272452b932f0a0b95f81099qweqwe",
+                    "wtdwMc" : "邯郸市图远电子科技有限公司"
+                }, {
+                    "cpdlList" : [{
+                        "cpdlDm" : "04",
+                        "cpdlMc" : "国税发票"
+                    }
+                    ],
+                    "dssh" : "",
+                    "levelMc" : "普通会员",
+                    "nsrsbh" : "13040206942715X",
+                    "wtdwId" : "24bae7b3127441bfac34669c365351dfrtrt",
+                    "wtdwMc" : "邯郸市丛美贸易有限公司"
+                }]
 		},
 		"zjjgWtdwData" : {
 			"hydjSz" : ["钻石会员", "白金会员", "金卡会员", "银卡会员", "普通会员"],
