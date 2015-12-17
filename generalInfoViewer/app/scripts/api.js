@@ -75,7 +75,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
         var url = [
             {
                 urlname: "TRUSTOR",
-                url: "yypt5/api/khgl/wtdw/getWtdw",
+                url: "nbgl2Web/api/khgl/wtdw/getWtdw",
                 mockurl: "generalInfoViewer/app/data/trustor.json",
                 descript: "查询委托单位，参数khid(客户编号),khlx(客户类型)，yhdm(用户代码)"
             },
@@ -161,7 +161,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
             },
             {
                 urlname: "DELETETRUSTOR",
-                url: "yypt5/api/khgl/wtdw/delteWtdw",
+                url: "nbgl2Web/api/khgl/wtdw/delteWtdw",
                 mockurl: "",
                 descript: ""
             }
