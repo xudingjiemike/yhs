@@ -13,8 +13,8 @@
                                 <th width="10%">授权码</th>
                                 <th width="10%">状态</th>
                                 <th width="10%">授权类型</th>
-                                <th width="20%">起始日期</th>
-                                <th width="20%">到期日期</th>
+                                <th width="10%">起始日期</th>
+                                <th width="10%">到期日期</th>
                             </tr>
                         </table>
                         <div class="scroll-arrow2" ui-y-table>
@@ -26,17 +26,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="table-content">
+                    <div class="table-content" ui-y-table-content>
                         <table class="softwear-auth">
                             <tr ng-repeat="item in tableItems">
-                                <td width="10%">{{item.rjMc}}</td>
+                                <td width="10%" class="title">{{item.rjMc}}</td>
                                 <td width="10%">{{item.fblbMc}}</td>
                                 <td width="10%">{{item.rjbb}}</td>
-                                <td width="10%">{{item.sqm}}</td>
+                                <td width="10%" class="title">{{item.sqm}}</td>
                                 <td width="10%">{{item.sqztMc}}</td>
                                 <td width="10%">{{item.dlbyhlxDm}}</td>
-                                <td width="20%">{{item.sqrqq}}</td>
-                                <td width="20%">{{item.sqrqz}}</td>
+                                <td width="10%">{{item.sqrqq}}</td>
+                                <td width="10%">{{item.sqrqz}}</td>
                             </tr>
                         </table>
                     </div>

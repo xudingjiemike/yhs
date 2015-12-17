@@ -1,5 +1,5 @@
 /**
- * Created by apple on 15/12/16.
+ * Created by xudj on 15/12/16.
  */
 
 angular
@@ -10,14 +10,14 @@ angular
             SoftwareAuthorityApi.LoadSoftwareAuthorityInfo(khid).success(function(obj){
                 angular.copy(obj.recordList,SoftwareAuthorityData);
             })
-        };
+        }
         function getData(khid){
             if(SoftwareAuthorityData.length == 0){
                 LoadData(khid);
             }
 
             return SoftwareAuthorityData;
-        };
+        }
         return {
             getServiceAuthorityData:getData
         }

@@ -1,18 +1,82 @@
 /**
  * Created by Zhang on 2015/12/16.
  */
-.cont-left .level span > .agent-info{
-    height: 50%;
-    width: 90%;
+
+.company-info{
+    height: 300px;
+    width: 75%;
     box-shadow: 2px 4px 11px #aeaeae;
     position: absolute;
-    top: 55px;
+    top: 28px;
     left: 5%;
     background: #fff;
     padding: 10px 14px 0;
     border-top: 1px solid #dfdfdf;
     display: none;
-    z-index: 5;
+    z-index:5
+}
+.company-info .info-item{
+    margin-bottom: 10px;
+}
+.company-info .info-item .edit{
+    display: inline-block;
+}
+.company-info .info-item .alink{
+    font-size: 14px;
+    margin-left: 10px;
+    float: right;
+    margin-top: 2px;
+}
+.company-info .info-item .edit-trade{
+    float: none;
+    margin-left: -10px;
+    margin-right: 20px;
+}
+.company-info .info-item > span{
+    margin-right: 15px;
+}
+.company-info .info-item .manage-info{
+    width: 81%;
+    margin-right: 0;
+}
+.company-info span.manage-info-title{
+    margin-right: 4px;
+}
+.company-info .info-item .manage-info >span{
+    margin-right: 15px;
+}
+.company-info .info-item .trade{
+    width: 100px;
+    height: 24px;
+    font-size: 12px;
+    display: none;
+}
+.company-info .close-info{
+    cursor: pointer;
+    position: absolute;
+    height: 34px;
+    width: 26px;
+    right: -15px;
+    top: -19px;
+    font-size: 24px;
+    color: #878787;
+    display: none;
+}
+.company-info .close-info:hover{
+    color: #666;
+}
+
+.cont-left .level span > .agent-info{
+    height: 30%;
+    width: 90%;
+    box-shadow: 2px 4px 11px #aeaeae;
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    background: #fff;
+    padding: 10px 14px 0;
+    display: none;
+    z-index: 6;
 }
 
 .agent-info .info-item{
@@ -63,25 +127,86 @@
     color: #666;
 }
 
+.agent-info .delegate-search-content .table .search-result .single td{
+    text-align: center;
+}
+
 .cont-left span.show-agent{
-    height: 26px;
+    height: 20px;
     position: absolute;
-    top: 30px;
-    margin: 0 10px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    padding: 0 4%;
+    margin: 0 4%;
+}
+
+.cont-left span.show-agent > span{
+    margin: -3px 5px;
     padding: 3px 7px 0;
-    z-index: 6;
+    z-index: 4;
     background: #fff;
     border: 1px solid #fff;
 }
-.cont-left span.show-agent.hovered{
+
+.cont-left span.show-agent.hovered > span{
     border: 1px solid #dadada;
     border-bottom-color: #fff;
 }
 
 .level-manage{
-    margin-left:80px;
+    margin-left:150px;
 }
 
 .cont-left .level{
-    padding: 10px 0;
+    padding: 8px 0;
+    padding-bottom: 0;
+}
+
+.user-position{
+    margin-left: 57px;
+}
+
+.dialog{
+    border: 2px solid #BEBDBE;
+    position: absolute;
+    display: none;
+    box-shadow: 2px 3px 20px #666;
+}
+.dialog .dialog-header{
+    background: #F3F3F3;
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    padding: 0 14px;
+}
+.dialog-header .dialog-title{
+    font-size: 16px;
+}
+.dialog-header .dialog-close{
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+}
+.dialog-body{
+    padding: 10px;
+    background: #fff;
+    position: relative;
+}
+
+.cont-left span.show-detail{
+    height: 26px;
+    position: absolute;
+    top: 3px;
+    margin: 0 5px;
+    padding: 3px 7px 0;
+    z-index: 11;
+    background: #fff;
+    border: 1px solid #fff;
+}
+.cont-left span.show-detail.hovered{
+    border: 1px solid #dadada;
+    border-bottom-color: #fff;
+}
+.show-detail.alink.hover + span{
+    margin-left: 57px;
 }

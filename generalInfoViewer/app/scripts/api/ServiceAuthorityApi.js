@@ -1,5 +1,5 @@
 /**
- * Created by apple on 15/12/14.
+ * Created by xudj on 15/12/14.
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
@@ -7,7 +7,7 @@ angular
         function($http,Host,Url){
           return{
              LoadServiceAuthorityInfo:function(khid){
-                 return $http.get(Host.getHostByName("INFORMATION")+Url.getUrlByName("FWSQ")+"?khid="+khid)
+                 return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("FWSQ")+"?khid="+khid)
              }
           }
     }]);

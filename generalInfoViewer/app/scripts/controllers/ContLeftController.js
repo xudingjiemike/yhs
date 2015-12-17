@@ -1,5 +1,5 @@
 /**
- * Created by apple on 15/12/2.
+ * Created by xudj on 15/12/2.
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.ContLeft')
