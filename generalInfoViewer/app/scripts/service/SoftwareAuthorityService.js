@@ -10,7 +10,7 @@ angular
         var SoftwareAuthorityData = [];
         function LoadData(khid){
             SoftwareAuthorityApi.LoadSoftwareAuthorityInfo(khid).success(function(obj){
-                angular.copy(obj.data.recordList,SoftwareAuthorityData);
+                angular.copy(obj.recordList,SoftwareAuthorityData);
             })
         };
         function getData(khid){

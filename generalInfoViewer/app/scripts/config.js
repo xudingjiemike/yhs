@@ -34,7 +34,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
         });
     }])
     .factory("Mock", [function () {
-        var mock = false;
+        var mock = true;
         return {
             getMock: function () {
                 return mock;
