@@ -17,9 +17,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
                     && data.hasOwnProperty('data')) {
                     if (!data.success) {
                         if (data.messageCode === 'api.auth.unlogon') {
-                            console.log(data);
-                            // 调用客户端重登陆
-                            location.href = 'http://192.168.71.145/nbgl2Web/login.do?username=xxbyw_hb&password=123';
+                            location.href = 'http://192.168.60.136/nbgl2Web/login.do?username=xxbyw_hb&password=123';
                         }else{
                             //错误处理：服务端错误信息 todo
                         }
@@ -35,7 +33,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
         });
     }])
     .factory("Mock", [function () {
-        var mock = false;
+        var mock = true;
         return {
             getMock: function () {
                 return mock;
@@ -46,7 +44,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
         var host = [
             {
                 hostname: "BUSINISS",
-                hosturl: "http://192.168.71.145/",
+                hosturl: "http://192.168.60.136:8089/",
                 mockurl: "",
                 descript: ""
             }
@@ -98,12 +96,12 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
                 mockurl: "data/intermediary.json",
                 descript: "查询中介机构信息，参数khid(客户编号)"
             },
-            //{
-            //    urlname: "REMARK",
-            //    url: "nbgl2Web/api/khgl/lxr/updateLxrFiled",
-            //    mockurl: "data/intermediary.json",
-            //    descript: "查询中介机构信息，参数khid(客户编号)"
-            //},
+            {
+                urlname: "REMARK",
+                url: "nbgl2Web/api/khgl/lxr/updateLxrFiled",
+                mockurl: "data/intermediary.json",
+                descript: "查询中介机构信息，参数khid(客户编号)"
+            },
             {
                 urlname: "SEARCH",
                 url: "nbgl2Web/api/khgl/search",

@@ -29,10 +29,6 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
             AUTHORIZATION_STATE:[
                 {key:'1',value:''},
                 {key:'2',value:''}
-            ],
-
-        };
-        return {
-
+            ]
         };
     }]);
