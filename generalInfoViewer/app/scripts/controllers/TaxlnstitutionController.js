@@ -74,7 +74,7 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Taxlnstitution').controller('Tax
         _tagObj.prototype = _tagProperty;
 
         $scope.tags = [
-            new _tagObj('软件授权','views/template/tables/tablePage.html'),
+            new _tagObj('软件授权','views/yhlxrBusiness/softwareAuthority/tablePage.html'),
             new _tagObj('订单','views/template/tables/tablePage.html'),
             new _tagObj('银行托收','views/template/tables/tablePage.html'),
             new _tagObj('礼品申请','views/template/tables/tablePage.html'),

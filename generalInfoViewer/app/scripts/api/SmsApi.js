@@ -12,7 +12,7 @@ angular
                  * 查询短信List
                  */
                 getDxList: function (khid,pageId) {
-                    return $http.get(Host.getHostByName("INFORMATION")+Url.getUrlByName("DX")+"?khid="+khid+"&pageId="+pageId);
+                    return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("DX")+"?khid="+khid+"&pageId="+pageId);
                 }
 
             };

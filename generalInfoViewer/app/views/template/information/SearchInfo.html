@@ -1,4 +1,37 @@
 <div class="tab-other">
-    <input type="text" class="search-userinfo" placeholder="输入税号、用户名称等切换用户"/>
-    <span class="do-change" title="切换用户"><i class="fa fa-plus"></i></span>
+    <input type="text" class="search-userinfo duty-number" placeholder="输入税号、用户名称等切换用户"
+           maxlength="20" ng-keydown="showSearchResult($event)" ng-keyup="showHintText($event)"
+           ng-paste="showHintText($event)" ng-cut="showHintText($event)"/>
+    <div class="search-info-copy search-userinfo">
+    </div>
+    <div class="search-progressive-result">
+        <div class="table">
+            <div class="table-title">搜索结果</div>
+            <div class="search-result">
+                <table>
+                    <tr>
+                        <th width="30%">企业税号</th>
+                        <th width="35%">企业名称</th>
+                        <th width="20%">用户类型</th>
+                        <th width="15%">用户状态</th>
+                    </tr>
+                    <tr ng-repeat="search in searchInfo.yhList">
+                        <td align="center">
+                            <div ng-if="search.gssh">国：<span ng-bind="search.gssh"></span></div>
+                            <div ng-if="search.dssh">地：<span ng-bind="search.dssh"></span></div>
+                        </td>
+                        <td align="center" ng-bind="search.yhmc"></td>
+                        <td align="center">
+                            <div ng-if="search.yhlx==0">单位用户</div>
+                            <div ng-if="search.yhlx==1">中介机构</div>
+                            <div ng-if="search.yhlx==2">兼职会计</div>
+                            <div ng-if="search.yhlx==9">代理商</div>
+                        </td>
+                        <td align="center" ng-bind="search.statusMc"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <span class="do-change" title="新增用户" ng-click="addContacts()"><i class="fa fa-plus"></i></span>
 </div>

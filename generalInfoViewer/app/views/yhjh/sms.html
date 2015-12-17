@@ -1,29 +1,42 @@
-<div class="table" ng-controller="FwJhxxController">
-    <div class="search-result">
-        <table>
-            <tr>
-                <th>短信业务类型</th>
-                <th>接收号码</th>
-                <th>接收人</th>
-                <th>短信内容</th>
-                <th>发送时间</th>
-            </tr>
-            <tr ng-repeat="vo in dxList">
-                <td>{{vo.rwmc}}</td>
-                <td>
-                    {{vo.RWMS}}
-                </td>
-                <td>
-                    {{vo.RWLXMC}}
-                </td>
-                <td>
-                    {{vo.CJRMC}}
-                </td>
-                <td>
-                    {{vo.CJRMC}}
-                </td>
-            </tr>
+<div class="tab-content style2" ng-controller="FwJhxxController">
+    <div class="tab-content-box">
+        <div class="tab-content-item hastable">
+            <div class="table">
+                <div class="search-result">
+                    <div class="table-header" ui-y-table>
+                        <table class="softwear-auth">
 
-        </table>
+                            <tr>
+                                <th width="20%">短信业务类型</th>
+                                <th width="10%">接收号码</th>
+                                <th width="10%">接收人</th>
+                                <th width="50%">短信内容</th>
+                                <th width="10%">发送时间</th>
+                            </tr>
+                        </table>
+                        <div class="scroll-arrow2" ui-y-table>
+                            <div class="scroll-to-left disabled">
+                                <span class="arrow-left2"></span>
+                            </div>
+                            <div class="scroll-to-right">
+                                <span class="arrow-right2"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-content">
+                        <table class="softwear-auth">
+                            <tr ng-repeat="vo in dxList">
+                                <td width="20%">{{vo.rwmc}}</td>
+                                <td width="10%"> {{vo.RWMS}}</td>
+                                <td width="10%"> {{vo.RWLXMC}}</td>
+                                <td width="50%"> {{vo.CJRMC}}</td>
+                                <td width="10%"> {{vo.CJRMC}}</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

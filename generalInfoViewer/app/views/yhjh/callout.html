@@ -1,35 +1,50 @@
-<div class="table" ng-controller="FwJhxxController">
-    <div class="search-result">
-        <table>
-            <tr>
-                <th>任务</th>
-                <th>外呼情况记录</th>
-                <th>呼出结果</th>
-                <th>联系人</th>
-                <th>联系电话</th>
-                <th>呼出时间</th>
-                <th>执行人</th>
-                <th>创建时间</th>
-            </tr>
-            <tr ng-repeat="vo in calloutList">
-                <td>{{vo.rwmc}}</td>
-                <td>
-                    {{vo.whqkjl}}
-                </td>
-                <td>
-                    {{vo.hcjg}}
-                </td>
-                <td>
-                    {{vo.lxr}}
-                </td>
-                <td>{{vo.hccgdhhm}}</td>
-                <td>{{vo.hwsj}}</td>
-                <td>{{vo.zxzid}}</td>
-                <td>{{vo.cjsj}}</td>
-            </tr>
+<div class="tab-content style2" ng-controller="FwJhxxController">
+    <div class="tab-content-box">
+        <div class="tab-content-item hastable">
+            <div class="table">
+                <div class="search-result">
+                    <div class="table-header" ui-y-table>
+                        <table class="softwear-auth">
+                            <tr>
+                                <th width="20%">任务</th>
+                                <th width="24%">外呼情况记录</th>
+                                <th width="7%">呼出结果</th>
+                                <th width="7%">联系人</th>
+                                <th width="15%">联系电话</th>
+                                <th width="10%">呼出时间</th>
+                                <th width="7%">执行人</th>
+                                <th width="10%">创建时间</th>
+                            </tr>
+                        </table>
+                        <div class="scroll-arrow2" ui-y-table>
+                            <div class="scroll-to-left disabled">
+                                <span class="arrow-left2"></span>
+                            </div>
+                            <div class="scroll-to-right">
+                                <span class="arrow-right2"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-content">
+                        <table class="softwear-auth">
+                            <tr ng-repeat="vo in calloutList">
+                                <td width="20%">{{vo.rwmc}}</td>
+                                <td width="24%">{{vo.whqkjl}}</td>
+                                <td width="7%">{{vo.hcjg}}</td>
+                                <td width="7%">{{vo.lxr}}</td>
+                                <td width="15%">{{vo.hccgdhhm}}</td>
+                                <td width="10%">{{vo.hwsj}}</td>
+                                <td width="7%">{{vo.zxzid}}</td>
+                                <td width="10%">{{vo.cjsj}}</td>
+                            </tr>
 
-        </table>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
 
 

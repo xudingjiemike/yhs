@@ -27,6 +27,38 @@
     "levelDm":"07",
     "levelMc":"银卡会员",
     "bz":"单位用户备注",
+    "bdlList": [
+      {
+        "yhid":"",
+        "yhmc":"税友软件集团股份有限公司",
+        "yhjc":"",
+        "yhbm":"31205780780909078",
+        "cpdlDm":"",
+        "cpdlMc":"国税申报",
+        "wtfsDm":"",
+        "wtfsMc":""
+      },
+      {
+        "yhid":"",
+        "yhmc":"税友软件集团股份有限公司",
+        "yhjc":"",
+        "yhbm":"31205780780909078",
+        "cpdlDm":"",
+        "cpdlMc":"国税申报",
+        "wtfsDm":"",
+        "wtfsMc":""
+      },
+      {
+        "yhid":"",
+        "yhmc":"税友软件集团股份有限公司",
+        "yhjc":"",
+        "yhbm":"31205780780909078",
+        "cpdlDm":"",
+        "cpdlMc":"国税申报",
+        "wtfsDm":"",
+        "wtfsMc":""
+      }
+    ],
     "ywxxList": [
       {
         "ywdlDm": "",

@@ -43,6 +43,9 @@ angular
         $scope.tags[0].TagClass = 'active';
 
         $scope.activeView = function (number, tag) {
+
+            $scope.$broadcast('loadData',"");
+
             _.map($scope.tags, function (item) {
                 item.TagClass = "";
             });

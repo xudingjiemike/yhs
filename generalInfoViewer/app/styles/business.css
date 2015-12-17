@@ -1,0 +1,18 @@
+.service-info{
+    margin-top: 10px;
+}
+.service-info td {
+    border-bottom: 1px solid #BFBFBF;
+    border-top: 1px solid #BFBFBF;
+}
+.tabs.style2+.scroll-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 38px;
+    width: 50px;
+    display: block;
+    text-align: center;
+    padding-top: 15px;
+}
+

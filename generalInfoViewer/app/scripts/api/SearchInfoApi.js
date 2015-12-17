@@ -6,6 +6,10 @@ angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.SearchInfo')
     .factory('SearchInfoApi', ['$http', 'Host', 'Url',
         function ($http, Host, Url) {
-
+            return {
+                getSearch: function (yhmc) {
+                    return $http.get(Host.getHostByName('BUSINISS')+Url.getUrlByName('SEARCH'),{params:{yhmc:yhmc}});
+                }
+            }
         }
     ]);
