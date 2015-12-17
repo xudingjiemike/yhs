@@ -2,7 +2,7 @@
  * Created by sxfei on 2015/11/30.
  */
 angular
-    .module('ui.yypt5.yhgl.GeneralInfoViewer.Taxlnstitution')
+    .module('ui.yypt5.yhgl.GeneralInfoViewer')
     .controller('FwJhxxController', ['$scope','RwglService','SmsService',
         function ($scope,RwglService,SmsService) {
 
@@ -63,35 +63,18 @@ angular
              */
             $scope.getDxList = function(khid){
                 SmsService.getDxList(khid).success(function(data){
-                    $scope.dxList = data.data;
+                    $scope.dxList = data;
                 });
             };
-            $(document).ready(function(){
-                $(".style2 .tabs").on("click",".tab",function(){
-                    if(!$(this).hasClass("active")){
-                        var tabContentEl = $(".cont-left .style2 .tab-content-box");
-                        //alert(tabContentEl);
-                        var index = 8 - $(this).nextAll(".tab").length;
-                        var position = -index*12.5;
-                        tabContentEl.css("-webkit-transform","translate("+position+"%,0)");
-                        $(".cont-left .style2 .tab").removeClass("active");
-                        $(this).addClass("active");
-                        $(".tabs.style2 .active-bar").css({width:$(this).width()+"px", left: this.offsetLeft+10 +"px"});
-                        $scope.getCallbackList('');
-                        $scope.getCalloutList();
-                        $scope.getYcrwList();
-                        $scope.getSmrwList();
-                        $scope.getZdxcList()
-                        $scope.getDxList();
-                    }
-                });
-                $(".style2 .tabs .tab:eq(0)").click();
-                $scope.getCallbackList('');
-                $scope.getCalloutList();
-                $scope.getYcrwList();
-                $scope.getSmrwList();
-                $scope.getZdxcList()
-                $scope.getDxList();
+            $scope.$on("loadData",function(e,d){
+                if('投诉'==d) {
+                    $scope.getCallbackList('');
+                    $scope.getCalloutList();
+                    $scope.getYcrwList();
+                    $scope.getSmrwList();
+                    $scope.getZdxcList();
+                    $scope.getDxList();
+                }
             });
 
         }]);
