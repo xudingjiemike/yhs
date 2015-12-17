@@ -43,6 +43,7 @@
         </div>
         <div class="remark">
             <input type="text" placeholder="请输入备注信息" ng-model="contactsInfo.bz"/>
+            <button class="btn btn-sm btn-success" ng-model="button" ng-disabled="!contactsInfo.bz" ng-click="saveRemark()">保存</button>
         </div>
     </div>
 
