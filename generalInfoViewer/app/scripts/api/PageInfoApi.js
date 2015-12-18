@@ -3,7 +3,7 @@
  */
 
 angular
-    .module('ui.yypt5.yhgl.GeneralInfoViewer.PopInfo')
+    .module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo')
     .factory('PageInfoApi', ['$http', 'Host', 'Url',
         function ($http, Host, Url) {
             return {
@@ -18,13 +18,9 @@ angular
                 getIntermediary: function (yhdm) {
                     return $http.get(Host.getHostByName('BUSINISS') + Url.getUrlByName('INTERMEDIARY'), {params: {yhdm: yhdm}});
                 },
-                saveRemark:function(remark){
+                saveRemark:function(lxrid,remark){
                     return $http.post(Host.getHostByName('BUSINISS') + Url.getUrlByName('INTERMEDIARY'), {
-                        params: {
-                            dataId:'',
-                            filedKey:'',
-                            filedValue:''
-                        }
+                        params: {dataId:lxrid, filedKey:'bz', filedValue:remark}
                     });
                 }
             };

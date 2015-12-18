@@ -3,17 +3,22 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.SearchInfo')
-    .controller('SearchInfoController', ['$scope', 'SearchInfoService', function ($scope, SearchInfoService) {
+    .controller('SearchInfoController', ['$scope', 'SearchInfoService', 'Config',function ($scope, SearchInfoService,Config) {
         $scope.showSearchResult=function($event){
             var yhmc = $.trim($($event.target).val());
             var key = $event.which;
             if(key == 13){
+                $scope.Config=Config;
                 $scope.searchInfo = SearchInfoService.getSearch(yhmc);
                 var target = $(".duty-number:focus");
                 if(target.length>0 && target.val().length>0){
                     $(".search-progressive-result").slideDown(200);
                 }
             }
+            $(document).one("click", function () {
+                $(".search-progressive-result") .slideUp(200);
+            });
+            event.stopPropagation();
         };
         $scope.showHintText=function($event){
             var val = $($event.target).val();

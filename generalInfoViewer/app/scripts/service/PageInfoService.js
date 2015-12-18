@@ -29,7 +29,7 @@ angular
                 },
                 saveRemark:function(remark){
                     var PageInfo = {};
-                    PageInfoApi.getIntermediary(remark).success(function (data) {
+                    PageInfoApi.saveRemark(lxrid,remark).success(function (data) {
                         angular.copy(data, PageInfo);
                     });
                     return PageInfo;

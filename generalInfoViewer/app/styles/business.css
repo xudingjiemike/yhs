@@ -15,4 +15,17 @@
     text-align: center;
     padding-top: 15px;
 }
+#scroll-arrow{
+    background: #F8F8F8;
+}
+.title{
+    white-space:nowrap;
+    word-break:keep-all;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.softwear-auth{
+    table-layout:fixed;
+}
+
 

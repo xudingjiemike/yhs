@@ -2,8 +2,8 @@
  * Created by Zhang on 2015/12/11.
  */
 angular
-    .module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo')
-    .controller('PageInfoController',['$scope','PageInfoService','PopInfoService',function($scope,PageInfoService){
+    .module('ui.yypt5.yhgl.GeneralInfoViewer')
+    .controller('PageInfoController',['$scope','PageInfoService','Config',function($scope,PageInfoService,Config){
         $scope.loadPageInfo=function(){
             var lxrid,khid,khlx,yhdm;
             switch($scope.tabType){
@@ -16,10 +16,12 @@ angular
                     break;
                 case '1':
                     khid='d7f39ebeb67049e1a9b815e70127ab66';
+                    $scope.Config=Config;
                     $scope.companyInfo = PageInfoService.getCompany(khid);
                     break;
                 case '2':
                     yhdm='SWSBD0010';
+                    $scope.Config=Config;
                     $scope.intermediaryInfo = PageInfoService.getIntermediary(yhdm);
                 }
         };
@@ -61,7 +63,9 @@ angular
             $(".delegate-search").addClass("ztop").show();
         };
 
-        $scope.saveRemark=function(){
-
+        $scope.saveRemark=function($event){
+            var lxrid='19c2f04ff6564c60bc4bc7a648c356ec';
+            var remark=$($event.target).parent().children('input:text').val();
+            $scope.saveRemarkInfo=PageInfoService.saveRemark(lxrid,remark);
         };
     }]);

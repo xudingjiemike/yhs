@@ -23,7 +23,7 @@
         "dssh": "14123123123123123",
         "yhdm": "中介机构/代理商/会计用户编码",
         "status": "2",
-        "statusMc": "已注销",
+        "statusMc": "注销",
         "lxrxxList": []
       },
       {
@@ -45,7 +45,7 @@
         "dssh": "14123123123123123",
         "yhdm": "中介机构/代理商/会计用户编码",
         "status": "2",
-        "statusMc": "已注销",
+        "statusMc": "注销",
         "lxrxxList": []
       },{
         "yhlx":"0",
@@ -55,7 +55,7 @@
         "dssh": "14123123123123123",
         "yhdm": "中介机构/代理商/会计用户编码",
         "status": "2",
-        "statusMc": "已注销",
+        "statusMc": "注销",
         "lxrxxList": []
       },{
         "yhlx":"0",
@@ -65,7 +65,7 @@
         "dssh": "14123123123123123",
         "yhdm": "中介机构/代理商/会计用户编码",
         "status": "2",
-        "statusMc": "已注销",
+        "statusMc": "注销",
         "lxrxxList": []
       },{
         "yhlx":"0",
@@ -75,7 +75,7 @@
         "dssh": "14123123123123123",
         "yhdm": "中介机构/代理商/会计用户编码",
         "status": "2",
-        "statusMc": "已注销",
+        "statusMc": "注销",
         "lxrxxList": []
       },{
         "yhlx":"0",
@@ -85,7 +85,7 @@
         "dssh": "14123123123123123",
         "yhdm": "中介机构/代理商/会计用户编码",
         "status": "2",
-        "statusMc": "已注销",
+        "statusMc": "注销",
         "lxrxxList": []
       },{
         "yhlx":"0",
@@ -95,7 +95,7 @@
         "dssh": "14123123123123123",
         "yhdm": "中介机构/代理商/会计用户编码",
         "status": "2",
-        "statusMc": "已注销",
+        "statusMc": "注销",
         "lxrxxList": []
       }
     ]

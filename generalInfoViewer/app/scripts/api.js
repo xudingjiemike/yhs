@@ -17,8 +17,6 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
                     && data.hasOwnProperty('data')) {
                     if (!data.success) {
                         if (data.messageCode === 'api.auth.unlogon') {
-                            // 调用客户端重登陆
-                            console.log(data);
                             location.href = 'http://192.168.60.136/nbgl2Web/login.do?username=xxbyw_hb&password=123';
                         }else{
                             //错误处理：服务端错误信息 todo
@@ -168,7 +166,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
             },
             {
                 urlname: "DELETETRUSTOR",
-                url: "nbgl2Web/api/khgl/wtdw/delteWtdw",
+                url: "",
                 mockurl: "",
                 descript: ""
             }

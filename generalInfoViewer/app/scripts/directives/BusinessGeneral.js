@@ -1,8 +1,5 @@
 /**
- * Created by apple on 15/12/15.
- */
-/**
- * Created by apple on 15/12/9.
+ * Created by xudj on 15/12/15.
  */
 angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
     .directive('yhlxrBusinessGeneral',function(){
@@ -10,10 +7,10 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
            restrict: 'EA',
            replace:true,
            controller:['$scope','BusinessGeneralService','_',function($scope,BusinessGeneralService,_){
-               ServiceAuthorityService.LoadData("1");
-               $scope.serviceAuthorityInfos = ServiceAuthorityService.getServiceAuthorityData();
+               //ServiceAuthorityService.LoadData("1");
+               //$scope.BusinessGeneralService = BusinessGeneralService.getServiceAuthorityData();
 
            }],
-           templateUrl: 'views/template/serviceAuthority/serviceAuthority.html'
+           templateUrl: 'views/template/businessGeneral/businessGeneral.html'
        }
     });
