@@ -97,10 +97,22 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
                 descript: "查询中介机构信息，参数khid(客户编号)"
             },
             {
-                urlname: "REMARK",
+                urlname: "CONTACTS_UPDATE",
                 url: "nbgl2Web/api/khgl/lxr/updateLxrFiled",
-                mockurl: "data/intermediary.json",
-                descript: "查询中介机构信息，参数khid(客户编号)"
+                mockurl: "data/update_remark.json",
+                descript: "修改联系人信息，参数dataId(联系人编号),fieldKey(字段名),fieldValue(字段值)"
+            },
+            {
+                urlname: "COMPANY_UPDATE",
+                url: "nbgl2Web/api/khgl/nsdw/updateNsdwFiled",
+                mockurl: "data/update_remark.json",
+                descript: "查询纳税单位信息，参数dataId(联系人编号),fieldKey(字段名),fieldValue(字段值)"
+            },
+            {
+                urlname: "INTERMEDIARY_UPDATE",
+                url: "nbgl2Web/api/khgl/zjjg/updateZjjgFiled",
+                mockurl: "data/update_remark.json",
+                descript: "查询中介机构信息，参数dataId(联系人编号),fieldKey(字段名),fieldValue(字段值)"
             },
             {
                 urlname: "SEARCH",
