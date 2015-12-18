@@ -21,6 +21,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
                         }else{
                             //错误处理：服务端错误信息 todo
                         }
+                        return data;
                     }else{
                         return data.data;
                     }
@@ -166,7 +167,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
             },
             {
                 urlname: "DELETETRUSTOR",
-                url: "",
+                url: "nbgl2Web/api/khgl/wtdw/delteWtdw",
                 mockurl: "",
                 descript: ""
             }

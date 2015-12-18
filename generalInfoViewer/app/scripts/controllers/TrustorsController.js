@@ -3,18 +3,22 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.Trustors')
-    .controller('TrustorController', ['$scope','TrustorService','Params',
-        function ($scope,TrustorService,Params) {
+    .controller('TrustorController', ['$scope','trustorService','Params',
+        function ($scope,trustorService,Params) {
             $scope.initTime = 0;
             $scope.showData = null;
-            $scope.Trustors = TrustorService.getTrustors(Params.set({
-                khid: "f853fc71d2b14bf498258e9c35070892",
+            trustorService.getTrustors(Params.set({
+                khid: "ba1afae132be46079f6a41917d575721",
                 khlx: 2,
-                yhdm: "SWSXT009",
-                kjid: accce4becbc24e08bc73b6265c3d2d62
-            }));
+                yhdm: "",
+                kjid: "ba1afae132be46079f6a41917d575721"
+            })).then(function(data){
+                $scope.Trustors = data.data;
+                $scope.Trustors.isPersonal = trustorService.isPersonal(data.data);
+                $scope.Trustors.hasData = true;
+            });
             $scope.$watch('Trustors',function(){
-                if($scope.Trustors.zjjgWtdwData || $scope.Trustors.grdlWtdwData){
+                if($scope.Trustors && ($scope.Trustors.zjjgWtdwData || $scope.Trustors.grdlWtdwData)){
                     if($scope.initTime == 0) {
                         $scope.showData = $scope.Trustors.zjjgWtdwData || $scope.Trustors.grdlWtdwData;
                     }
@@ -25,24 +29,22 @@ angular
                 if($scope.initTime>0) {
                     $scope.showData = $scope.Trustors.zjjgWtdwData;
                 }
-                console.log("Trustors.zjjgWtdwData is changed");
             },true);
 
             $scope.$watch('Trustors.grdlWtdwData', function () {
                 if($scope.initTime>0) {
                     $scope.showData = $scope.Trustors.grdlWtdwData;
                 }
-                console.log("Trustors.grdlWtdwData is changed");
             },true);
 
             $scope.tableData = [];
             $scope.deleteTrustor = function(wtdwId){
-                TrustorService.deleteTrustor(Params.set({
-                    "khid": "accce4becbc24e08bc73b6265c3d2d62",//如果是兼职会计和代账会计，khid的值取kjid
-                    "yhdm": "SWSXT009",
+                trustorService.deleteTrustor({
+                    "khid": "ba1afae132be46079f6a41917d575721",//如果是兼职会计和代账会计，khid的值取kjid
+                    "yhdm": "",
                     "khlx": 2,
                     "wtdwId": wtdwId
-                }),wtdwId);
+                }, wtdwId, $scope.Trustors);
             };
 
             //样式
@@ -64,7 +66,6 @@ angular
             $scope.$watch('showData',function(){
                 if($scope.showData && $scope.showData.wtdwList){
                     $scope.initTime+=1;
-                    console.log($scope.initTime);
                     var tableData = [];
                     var length = $scope.showData.wtdwList.length>6?6:$scope.showData.wtdwList.length;
                     var groupLength = parseInt(length/2)+ length%2;

@@ -4,7 +4,7 @@
 
 angular
     .module("ui.yypt5.yhgl.GeneralInfoViewer.ExpiredDetail")
-    .factory("ExpiredDetailApi", ["$http", "Api",
+    .factory("expiredDetailApi", ["$http", "Api",
         function ($http, Api) {
             return {
                 /**
