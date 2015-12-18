@@ -3,7 +3,7 @@
  */
 
 angular
-    .module('ui.yypt5.yhgl.GeneralInfoViewer.PopInfo')
+    .module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo')
     .factory('PageInfoApi', ['$http', 'Host', 'Url',
         function ($http, Host, Url) {
             return {
