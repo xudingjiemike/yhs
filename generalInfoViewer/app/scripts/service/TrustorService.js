@@ -7,23 +7,23 @@ angular
         function (_,TrustorApi) {
             var Trustors = {};
             return {
-                getTrustors: function(khid,khlx,yhdm){
+                getTrustors: function(params){
                     var _this = this;
-                    TrustorApi.getTrustors(khid,khlx,yhdm).success(function (data) {
+                    TrustorApi.getTrustors(params).success(function (data) {
                         angular.copy(data, Trustors);
                         Trustors.isPersonal = _this.isPersonal();
                         Trustors.hasData = true;
                     });
                     return Trustors;
                 },
-                deleteTrustor: function(wtdwId){
+                deleteTrustor: function(params,wtdwId){
                     var list = [];
                     list.push(Trustors.grdlWtdwData.wtdwList);
                     if(!this.isPersonal()){
                         list.push(Trustors.zjjgWtdwData.wtdwList);
                     }
                     this.dataDelete(list, wtdwId);
-                    //TrustorApi.deleteTrustor().success(function (data) {
+                    //TrustorApi.deleteTrustor(params).success(function (data) {
                     //
                     //});
                 },

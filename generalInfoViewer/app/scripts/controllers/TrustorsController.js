@@ -3,11 +3,16 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.Trustors')
-    .controller('TrustorController', ['$scope','TrustorService','$timeout',
-        function ($scope,TrustorService,$timeout) {
+    .controller('TrustorController', ['$scope','TrustorService','Params',
+        function ($scope,TrustorService,Params) {
             $scope.initTime = 0;
             $scope.showData = null;
-            $scope.Trustors = TrustorService.getTrustors("f853fc71d2b14bf498258e9c35070892",2,"SWSXT009");
+            $scope.Trustors = TrustorService.getTrustors(Params.set({
+                khid: "f853fc71d2b14bf498258e9c35070892",
+                khlx: 2,
+                yhdm: "SWSXT009",
+                kjid: accce4becbc24e08bc73b6265c3d2d62
+            }));
             $scope.$watch('Trustors',function(){
                 if($scope.Trustors.zjjgWtdwData || $scope.Trustors.grdlWtdwData){
                     if($scope.initTime == 0) {
@@ -32,7 +37,12 @@ angular
 
             $scope.tableData = [];
             $scope.deleteTrustor = function(wtdwId){
-                TrustorService.deleteTrustor(wtdwId,"");
+                TrustorService.deleteTrustor(Params.set({
+                    "khid": "accce4becbc24e08bc73b6265c3d2d62",//如果是兼职会计和代账会计，khid的值取kjid
+                    "yhdm": "SWSXT009",
+                    "khlx": 2,
+                    "wtdwId": wtdwId
+                }),wtdwId);
             };
 
             //样式

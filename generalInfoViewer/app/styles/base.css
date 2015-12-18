@@ -1704,6 +1704,9 @@ td.price-policy-item{
     background-image: url(../images/vip_gold.png);
 }
 .cont-left .level .level-icon.level4{
+    background-image: url(../images/vip_whitegold.png);
+}
+.cont-left .level .level-icon.level5{
     background-image: url(../images/vip_diamond.png);
 }
 .level-icon-small{
