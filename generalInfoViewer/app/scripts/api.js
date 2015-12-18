@@ -21,6 +21,7 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
                         }else{
                             //错误处理：服务端错误信息 todo
                         }
+                        return data;
                     }else{
                         return data.data;
                     }
@@ -159,29 +160,30 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
                 url: '',
                 mockurl: 'data/jhxx/zdxcList.json',
                 descript: '查询驻点现场信息，参数khid(客户编号)'
-            }, {
-                urlname: 'ZXJL',
-                url: '',
-                mockurl: 'data/jhxx/zxjlList.json',
-                descript: '查询咨询记录信息，参数khid(客户编号)'
             },
             {
-                urlname: 'FWSQ',
-                url: '',
-                mockurl: 'data/ServiceAuthority/ServiceAuthority.json',
-                descript: '服务授权'
+                urlname: "ZXJL",
+                url: "",
+                mockurl: "data/jhxx/zxjlList.json",
+                descript: "查询咨询记录信息，参数khid(客户编号)"
             },
             {
-                urlname: 'SJSQ',
-                url: '',
-                mockurl: 'data/SoftwareAuthority/SoftwareAuthority.json',
-                descript: '软件授权'
+                urlname: "FWSQ",
+                url: "",
+                mockurl: "data/ServiceAuthority/ServiceAuthority.json",
+                descript: "服务授权"
             },
             {
-                urlname: 'DELETETRUSTOR',
-                url: '',
-                mockurl: '',
-                descript: ''
+                urlname: "SJSQ",
+                url: "",
+                mockurl: "data/SoftwareAuthority/SoftwareAuthority.json",
+                descript: "软件授权"
+            },
+            {
+                urlname: "DELETETRUSTOR",
+                url: "nbgl2Web/api/khgl/wtdw/delteWtdw",
+                mockurl: "",
+                descript: ""
             }
 
         ];
