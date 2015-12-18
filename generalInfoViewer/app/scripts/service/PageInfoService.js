@@ -27,9 +27,23 @@ angular
                     });
                     return PageInfo;
                 },
-                saveRemark:function(remark){
+                updateContacts:function(lxrid,field,content){
                     var PageInfo = {};
-                    PageInfoApi.saveRemark(lxrid,remark).success(function (data) {
+                    PageInfoApi.updateContacts(lxrid,field,content).success(function (data) {
+                        angular.copy(data, PageInfo);
+                    });
+                    return PageInfo;
+                },
+                updateCompany:function(yhid,field,content){
+                    var PageInfo = {};
+                    PageInfoApi.updateCompany(yhid,field,content).success(function (data) {
+                        angular.copy(data, PageInfo);
+                    });
+                    return PageInfo;
+                },
+                updateIntermediary:function(yhdm,field,content){
+                    var PageInfo = {};
+                    PageInfoApi.updateIntermediary(yhdm,field,content).success(function (data) {
                         angular.copy(data, PageInfo);
                     });
                     return PageInfo;

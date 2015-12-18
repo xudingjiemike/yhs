@@ -64,8 +64,20 @@ angular
         };
 
         $scope.saveRemark=function($event){
-            var lxrid='19c2f04ff6564c60bc4bc7a648c356ec';
-            var remark=$($event.target).parent().children('input:text').val();
-            $scope.saveRemarkInfo=PageInfoService.saveRemark(lxrid,remark);
+            var dataId=$($event.target).parent().children('input.dataId').val();
+            var filedKey='bz';
+            var filedValue= $.trim($($event.target).parent().children('input.bz').val());
+            console.log(dataId);
+            console.log(filedValue);
+            switch($scope.tabType){
+                case '0':
+                    $scope.updateContactsRemarkResult=PageInfoService.updateContacts(dataId,filedKey,filedValue);
+                    break;
+                case '1':
+                    $scope.updateContactsRemarkResult=PageInfoService.updateCompany(dataId,filedKey,filedValue);
+                    break;
+                case '2':
+                    $scope.updateIntermediaryRemarkResult=PageInfoService.updateIntermediary(dataId,filedKey,filedValue);
+            }
         };
     }]);

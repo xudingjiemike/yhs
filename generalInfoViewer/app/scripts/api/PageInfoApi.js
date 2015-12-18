@@ -18,10 +18,17 @@ angular
                 getIntermediary: function (yhdm) {
                     return $http.get(Host.getHostByName('BUSINISS') + Url.getUrlByName('INTERMEDIARY'), {params: {yhdm: yhdm}});
                 },
-                saveRemark:function(lxrid,remark){
-                    return $http.post(Host.getHostByName('BUSINISS') + Url.getUrlByName('INTERMEDIARY'), {
-                        params: {dataId:lxrid, filedKey:'bz', filedValue:remark}
-                    });
+                updateContacts:function(lxrid,field,content){
+                    return $http.post(Host.getHostByName('BUSINISS') + Url.getUrlByName('CONTACTS_UPDATE'),
+                        JSON.stringify({dataId:lxrid, filedKey:field, filedValue:content}));
+                },
+                updateCompany:function(yhid,field,content){
+                    return $http.post(Host.getHostByName('BUSINISS') + Url.getUrlByName('COMPANY_UPDATE'),
+                        JSON.stringify({dataId:yhid, filedKey:field, filedValue:content}));
+                },
+                updateIntermediary:function(yhdm,field,content){
+                    return $http.post(Host.getHostByName('BUSINISS') + Url.getUrlByName('INTERMEDIARY_UPDATE'),
+                        JSON.stringify({dataId:yhdm, filedKey:field, filedValue:content}));
                 }
             };
         }
