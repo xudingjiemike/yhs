@@ -6,7 +6,6 @@
             <span ng-mouseover="showDetailInfo()" ng-mouseleave="hideDetailInfo()">
                 <span class="show-detail alink hover">详细</span>
                 <span class="company-info">
-                    <div class="close-info"><i class="fa fa-times-circle-o"></i></div>
                     <div class="info-item">
                         姓名：<span ng-bind="contactsInfo.lxrmc"></span>
                         性别：<span ng-bind="contactsInfo.xb"></span>
@@ -55,7 +54,6 @@
         <span ng-mouseover="showDetailInfo()" ng-mouseleave="hideDetailInfo()">
             <span class="show-detail alink hover">详细</span>
             <span class="company-info">
-                <div class="close-info"><i class="fa fa-times-circle-o"></i></div>
                 <div class="info-item">
                     <span>单位名称：
                         <span ng-bind="companyInfo.yhmc"></span>
@@ -100,12 +98,11 @@
             通行密码：<span  ng-bind="companyInfo.zcbm"></span>
         </span>
         </div>
-        <div class="level">
+        <div class="level" style="margin-bottom: -10px;">
             <span class="level-icon {{Config.getUserLevelById(companyInfo.levelDm)}}" title="{{companyInfo.levelMc}}"></span>
-            <span ng-mouseover="showAgentInfo()" ng-mouseleave="hideAgentInfo()" ng-if="companyInfo.bdlList">
+            <span ng-mouseover="showAgentInfo()" ng-mouseleave="hideAgentInfo($event)" ng-if="companyInfo.bdlList">
                 <span class="show-agent alink hover"><span>被代理</span></span>
                 <span class="agent-info">
-                    <div class="close-info"><i class="fa fa-times-circle-o"></i></div>
                     <div class="delegate-search-content">
                         <div class="table">
                             <div class="search-result">
@@ -149,7 +146,6 @@
         <span ng-mouseover="showDetailInfo()" ng-mouseleave="hideDetailInfo()">
             <span class="show-detail alink hover">详细</span>
             <span class="company-info">
-                <div class="close-info"><i class="fa fa-times-circle-o"></i></div>
                 <div class="info-item">
                     用户代码：<span ng-bind="intermediaryInfo.yhdm"></span>
                     状态：<span ng-bind="Config.getAuthorizationStateById(intermediaryInfo.status)"></span>

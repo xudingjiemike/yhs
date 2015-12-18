@@ -3,7 +3,7 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.PopInfo')
-    .controller('PopInfoController', ['$scope', 'PopInfoService', function ($scope, PopInfoService) {
+    .controller('PopInfoController', ['$scope', 'popInfoService', function ($scope, popInfoService) {
         $scope.loadDialogWindow = function () {
 
         };

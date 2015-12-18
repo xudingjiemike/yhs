@@ -3,13 +3,13 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.SearchInfo')
-    .controller('SearchInfoController', ['$scope', 'SearchInfoService', 'Config',function ($scope, SearchInfoService,Config) {
+    .controller('SearchInfoController', ['$scope', 'searchInfoService', 'Config',function ($scope, searchInfoService,Config) {
         $scope.showSearchResult=function($event){
             var yhmc = $.trim($($event.target).val());
             var key = $event.which;
             if(key == 13){
                 $scope.Config=Config;
-                $scope.searchInfo = SearchInfoService.getSearch(yhmc);
+                $scope.searchInfo = searchInfoService.getSearch(yhmc);
                 var target = $(".duty-number:focus");
                 if(target.length>0 && target.val().length>0){
                     $(".search-progressive-result").slideDown(200);
@@ -17,6 +17,7 @@ angular
             }
             $(document).one("click", function () {
                 $(".search-progressive-result") .slideUp(200);
+                $("div.search-info-copy.search-userinfo") .hide();
             });
             event.stopPropagation();
         };

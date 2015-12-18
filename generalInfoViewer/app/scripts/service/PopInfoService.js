@@ -3,9 +3,9 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.PopInfo')
-    .service('PopInfoService', ['_','PopInfoApi',
-        function (_,PopInfoApi) {
-            var PopInfo = {};
+    .service('popInfoService', ['_','popInfoApi',
+        function (_,popInfoApi) {
+            var popInfo = {};
             return {
 
             }

@@ -11,7 +11,7 @@ angular
                 khid: "f853fc71d2b14bf498258e9c35070892",
                 khlx: 2,
                 yhdm: "SWSXT009",
-                kjid: accce4becbc24e08bc73b6265c3d2d62
+                kjid: "accce4becbc24e08bc73b6265c3d2d62"
             }));
             $scope.$watch('Trustors',function(){
                 if($scope.Trustors.zjjgWtdwData || $scope.Trustors.grdlWtdwData){

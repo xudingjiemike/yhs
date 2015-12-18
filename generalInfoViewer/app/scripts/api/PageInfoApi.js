@@ -4,7 +4,7 @@
 
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo')
-    .factory('PageInfoApi', ['$http', 'Host', 'Url',
+    .factory('pageInfoApi', ['$http', 'Host', 'Url',
         function ($http, Host, Url) {
             return {
                 getContacts: function (lxrid, khid, khlx, yhdm) {
@@ -27,6 +27,7 @@ angular
                         JSON.stringify({dataId:yhid, filedKey:field, filedValue:content}));
                 },
                 updateIntermediary:function(yhdm,field,content){
+                    console.log(JSON.stringify({dataId:yhdm, filedKey:field, filedValue:content}));
                     return $http.post(Host.getHostByName('BUSINISS') + Url.getUrlByName('INTERMEDIARY_UPDATE'),
                         JSON.stringify({dataId:yhdm, filedKey:field, filedValue:content}));
                 }
