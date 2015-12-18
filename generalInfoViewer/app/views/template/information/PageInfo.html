@@ -42,7 +42,8 @@
             </span>
         </div>
         <div class="remark">
-            <input type="text" placeholder="请输入备注信息" ng-model="contactsInfo.bz"/>
+            <input type="text" class="dataId" ng-model="contactsInfo.lxrid" hidden>
+            <input type="text" class="bz" placeholder="请输入备注信息" ng-model="contactsInfo.bz" ng-disabled="!contactsInfo.lxrid"/>
             <button class="btn btn-sm btn-success" ng-disabled="!contactsInfo.bz" ng-click="saveRemark($event)">保存</button>
         </div>
     </div>
@@ -134,7 +135,8 @@
             <span class="alink level-manage" ng-click="showManageWindow()" style="vertical-align: top"><i class="fa fa-users"></i>人员管理</span>
         </div>
         <div class="remark">
-            <input type="text" placeholder="请输入备注信息" ng-model="companyInfo.bz"/>
+            <input type="text" class="dataId" ng-model="companyInfo.yhid" hidden>
+            <input type="text" class="bz" placeholder="请输入备注信息" ng-model="companyInfo.bz" ng-disabled="!companyInfo.yhid"/>
             <button class="btn btn-sm btn-success" ng-disabled="!companyInfo.bz" ng-click="saveRemark($event)">保存</button>
         </div>
         <div pop-info></div>
@@ -193,7 +195,8 @@
         </span>
         </div>
         <div class="remark">
-            <input type="text" placeholder="请输入备注信息" ng-model="intermediaryInfo.bz"/>
+            <input type="text" class="dataId" ng-model="intermediaryInfo.yhdm" hidden>
+            <input type="text" class="bz" placeholder="请输入备注信息" ng-model="intermediaryInfo.bz" ng-disabled="!intermediaryInfo.yhdm"/>
             <button class="btn btn-sm btn-success" ng-disabled="!intermediaryInfo.bz" ng-click="saveRemark($event)">保存</button>
         </div>
     </div>

@@ -263,16 +263,19 @@
     margin-top: -2px;
 }
 .cont-left .level .level-icon.level1{
-    background-image: url(../images/vip_normal.png);
+    background-image: url(../images/vip_diamond.png);
 }
 .cont-left .level .level-icon.level2{
-    background-image: url(../images/vip_silver.png);
+    background-image: url(../images/vip_platinum.png);
 }
 .cont-left .level .level-icon.level3{
     background-image: url(../images/vip_gold.png);
 }
 .cont-left .level .level-icon.level4{
-    background-image: url(../images/vip_diamond.png);
+    background-image: url(../images/vip_silver.png);
+}
+.cont-left .level .level-icon.level5{
+    background-image: url(../images/vip_normal.png);
 }
 .level-icon-small{
     background: no-repeat center center / contain;
@@ -282,17 +285,17 @@
     margin-top: 2px;
 }
 .level-icon-small.level1{
-    background-image: url(../images/vip_normal_small.png);
+    background-image: url(../images/vip_diamond_small.png);
 }
 .level-icon-small.level2{
-    background-image: url(../images/vip_silver_small.png);
+    background-image: url(../images/vip_platinum_small.png);
 }
 .level-icon-small.level3{
     background-image: url(../images/vip_gold_small.png);
 }
 .level-icon-small.level4{
-    background-image: url(../images/vip_whitegold_small.png);
+    background-image: url(../images/vip_silver_small.png);
 }
 .level-icon-small.level5{
-    background-image: url(../images/vip_diamond_small.png);
+    background-image: url(../images/vip_normal_small.png);
 }
