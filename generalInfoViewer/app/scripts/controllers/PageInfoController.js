@@ -97,9 +97,7 @@ angular
         };
 
         $scope.showManageWindow = function () {
-            $(".layer").show();
-            $(".ztop").removeClass("ztop");
-            $(".delegate-search").addClass("ztop").show();
+            //打开工作台【人员管理】标签页
         };
 
         $scope.saveRemark = function ($event) {
