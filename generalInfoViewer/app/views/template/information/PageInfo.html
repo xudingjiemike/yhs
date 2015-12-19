@@ -34,6 +34,9 @@
                 </span>
             </span>
             <span class="user-position">
+                <span ng-if="contactsInfo.yhmc!==''">
+                    单位： <span ng-bind="contactsInfo.yhmc"></span>
+                </span>
                 <span ng-repeat="item in contactsInfo.jsxxList">
                     <span ng-bind="item.jsmc"></span>
                     <span ng-if="$index!==contactsInfo.jsxxList.length-1">/</span>
@@ -43,7 +46,7 @@
         <div class="remark">
             <input type="text" class="dataId" ng-model="contactsInfo.lxrid" hidden>
             <input type="text" class="bz" placeholder="请输入备注信息" ng-model="contactsInfo.bz" ng-disabled="!contactsInfo.lxrid"/>
-            <button class="btn btn-sm btn-success" ng-disabled="!contactsInfo.bz" ng-click="saveRemark($event)">保存</button>
+            <button class="btn btn-sm btn-success lxr" ng-click="saveRemark($event)" disabled>保存</button>
         </div>
     </div>
 
@@ -85,11 +88,9 @@
                     经营地址：<span ng-bind="companyInfo.jydz"></span>
                 </div>
                 <div class="info-item">
-                    <span class="float-left manage-info-title">管理信息：</span>
-                    <span class="float-left manage-info" >
-                        <span ng-repeat="item in companyInfo.ywxxList">
-                            <span ng-bind="item.ywdlMc+'-'+item.sswdMc+'-'+item.sskhjlMc"></span>
-                        </span>
+                    管理信息：
+                    <span ng-repeat="item in companyInfo.ywxxList">
+                        <span ng-bind="item.ywdlMc+'-'+item.sswdMc+'-'+item.sskhjlMc"></span>
                     </span>
                 </div>
             </span>
@@ -102,7 +103,7 @@
             <span class="level-icon {{Config.getUserLevelById(companyInfo.levelDm)}}" title="{{companyInfo.levelMc}}"></span>
             <span ng-mouseover="showAgentInfo()" ng-mouseleave="hideAgentInfo($event)" ng-if="companyInfo.bdlList">
                 <span class="show-agent alink hover"><span>被代理</span></span>
-                <span class="agent-info">
+                <span class="agent-info" style="height:{{8+companyInfo.bdlList.length*4}}%;">
                     <div class="delegate-search-content">
                         <div class="table">
                             <div class="search-result">
@@ -134,7 +135,7 @@
         <div class="remark">
             <input type="text" class="dataId" ng-model="companyInfo.yhid" hidden>
             <input type="text" class="bz" placeholder="请输入备注信息" ng-model="companyInfo.bz" ng-disabled="!companyInfo.yhid"/>
-            <button class="btn btn-sm btn-success" ng-disabled="!companyInfo.bz" ng-click="saveRemark($event)">保存</button>
+            <button class="btn btn-sm btn-success dwyh" ng-click="saveRemark($event)" disabled>保存</button>
         </div>
         <div pop-info></div>
     </div>
@@ -155,15 +156,10 @@
                     分公司：<span ng-bind="intermediaryInfo.fzgsMc"></span>
                 </div>
                 <div class="info-item">
-                    事务所标识：
-                    <span ng-if="intermediaryInfo.swsbz==='0'">
-                        <input type="checkbox" checked disabled>非中介机构
-                    </span>
-                    <span ng-if="intermediaryInfo.swsbz==='1'">
-                        <input type="checkbox" checked disabled>严格授权控制类中介机构
-                    </span>
-                    <span ng-if="intermediaryInfo.swsbz==='2'">
-                        <input type="checkbox" checked disabled>非严格授权控制类中介机构
+                    控制类型：
+                    <span ng-if="intermediaryInfo.swsbz==='1'||intermediaryInfo.swsbz==='2'">
+                        <input type="checkbox" checked disabled>
+                        <span ng-bind="Config.getControlTypeById(intermediaryInfo.swsbz)"></span>
                     </span>
                 </div>
                 <div class="info-item">
@@ -176,13 +172,7 @@
                     经营地址：<span ng-bind="intermediaryInfo.jydz"></span>
                 </div>
                 <div class="info-item">
-                    代理业务：
-                    <span ng-repeat="item in intermediaryInfo.cpdlList">
-                        <input type="checkbox" ng-checked="item.selected" disabled>
-                        <span ng-bind="item.cpdlMc"></span>
-                    </span>
-                </div>
-                <div class="info-item">
+                    管理信息：
                     <span ng-repeat="item in intermediaryInfo.ywxxList">
                         <span ng-bind="item.ywdlMc+'-'+item.sswdMc+'-'+item.sskhjlMc"></span>
                     </span>
@@ -193,7 +183,7 @@
         <div class="remark">
             <input type="text" class="dataId" ng-model="intermediaryInfo.yhdm" hidden>
             <input type="text" class="bz" placeholder="请输入备注信息" ng-model="intermediaryInfo.bz" ng-disabled="!intermediaryInfo.yhdm"/>
-            <button class="btn btn-sm btn-success" ng-disabled="!intermediaryInfo.bz" ng-click="saveRemark($event)">保存</button>
+            <button class="btn btn-sm btn-success zjjg" ng-click="saveRemark($event)" disabled>保存</button>
         </div>
     </div>
 </div>

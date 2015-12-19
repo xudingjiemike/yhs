@@ -3,7 +3,7 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
-    .controller('PageInfoController', ['$scope', 'pageInfoService', 'Config', function ($scope, pageInfoService, Config) {
+    .controller('PageInfoController', ['$scope', '$timeout','pageInfoService', 'Config', function ($scope, $timeout, pageInfoService, Config) {
         $scope.loadPageInfo = function () {
             var lxrid, khid, khlx, yhdm;
             switch ($scope.tabType) {
@@ -13,18 +13,57 @@ angular
                     khlx = '0';
                     yhdm = '';
                     $scope.contactsInfo = pageInfoService.getContacts(lxrid, khid, khlx, yhdm);
+                    $timeout(function(){
+                        $scope.contactsOld=$scope.contactsInfo.bz;
+                    },1000);
                     break;
                 case '1':
                     khid = 'd7f39ebeb67049e1a9b815e70127ab66';
                     $scope.Config = Config;
                     $scope.companyInfo = pageInfoService.getCompany(khid);
+                    $timeout(function(){
+                        $scope.companyOld=$scope.companyInfo.bz;
+                    },1000);
                     break;
                 case '2':
                     yhdm = 'SWSBD0010';
                     $scope.Config = Config;
                     $scope.intermediaryInfo = pageInfoService.getIntermediary(yhdm);
+                    $timeout(function(){
+                        $scope.intermediaryOld=$scope.intermediaryInfo.bz;
+                    },1000);
             }
         };
+
+        $scope.$watch('contactsInfo.bz',function(newValue){
+            if(newValue&&$scope.contactsOld){
+                if(newValue===$scope.contactsOld){
+                    $('button.lxr').attr('disabled',true);
+                }else{
+                    $('button.lxr').attr('disabled',false);
+                }
+            }
+        });
+
+        $scope.$watch('companyInfo.bz',function(newValue){
+            if($scope.companyOld){
+                if(newValue===$scope.companyOld){
+                    $('button.dwyh').attr('disabled',true);
+                }else{
+                    $('button.dwyh').attr('disabled',false);
+                }
+            }
+        });
+
+        $scope.$watch('intermediaryInfo.bz',function(newValue){
+            if($scope.intermediaryOld){
+                if(newValue===$scope.intermediaryOld){
+                    $('button.zjjg').attr('disabled',true);
+                }else{
+                    $('button.zjjg').attr('disabled',false);
+                }
+            }
+        });
 
         var isDetailHover = false;
         $scope.showDetailInfo = function () {
@@ -64,18 +103,34 @@ angular
         };
 
         $scope.saveRemark = function ($event) {
+            $($event.target).attr('disabled',true);
             var dataId = $($event.target).parent().children('input.dataId').val();
             var filedKey = 'bz';
             var filedValue = $.trim($($event.target).parent().children('input.bz').val());
             switch ($scope.tabType) {
                 case '0':
                     $scope.updateContactsRemarkResult = pageInfoService.updateContacts(dataId, filedKey, filedValue);
+                    $timeout(function(){
+                        if(!$scope.updateContactsRemarkResult){
+                            $($event.target).attr('disabled',false);
+                        }
+                    },1000);
                     break;
                 case '1':
                     $scope.updateContactsRemarkResult = pageInfoService.updateCompany(dataId, filedKey, filedValue);
+                    $timeout(function(){
+                        if(!$scope.updateContactsRemarkResult){
+                            $($event.target).attr('disabled',false);
+                        }
+                    },1000);
                     break;
                 case '2':
                     $scope.updateIntermediaryRemarkResult = pageInfoService.updateIntermediary(dataId, filedKey, filedValue);
+                    $timeout(function(){
+                        if(!$scope.updateIntermediaryRemarkResult){
+                            $($event.target).attr('disabled',false);
+                        }
+                    },1000);
             }
         };
     }]);

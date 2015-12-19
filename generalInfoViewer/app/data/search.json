@@ -1,103 +1,119 @@
 {
-  "success": true,
-  "messageCode": "",
-  "message": "",
   "data": {
-    "yhList":[
+    "yhList": [
       {
-        "yhlx":"0",
-        "yhid":"",
-        "yhmc":"杭州电子科技大学",
-        "gssh": "14123123123123123",
-        "dssh": "14123123123123123",
-        "yhdm": "中介机构/代理商/会计用户编码",
+        "dssh": "",
+        "gssh": "440604325029928",
+        "lxrxxList": [],
         "status": "1",
         "statusMc": "正常",
-        "lxrxxList": []
+        "yhdm": "",
+        "yhid": "0904890310f443ebaef81303dfa07e54",
+        "yhlx": "0",
+        "yhmc": "佛山市星寳祥材料有限公司"
       },
       {
-        "yhlx":"0",
-        "yhid":"",
-        "yhmc":"杭州电子科技大学",
-        "gssh": "14123123123123123",
-        "dssh": "14123123123123123",
-        "yhdm": "中介机构/代理商/会计用户编码",
-        "status": "2",
-        "statusMc": "注销",
-        "lxrxxList": []
-      },
-      {
-        "yhlx":"0",
-        "yhid":"",
-        "yhmc":"杭州电子科技大学",
-        "gssh": "14123123123123123",
-        "dssh": "14123123123123123",
-        "yhdm": "中介机构/代理商/会计用户编码",
+        "dssh": "",
+        "gssh": "622801198401051452",
+        "lxrxxList": [],
         "status": "1",
         "statusMc": "正常",
-        "lxrxxList": []
+        "yhdm": "",
+        "yhid": "1c5db2aeb3d54742925289bcfdc30787",
+        "yhlx": "0",
+        "yhmc": "西峰区家多寳门业部"
       },
       {
-        "yhlx":"0",
-        "yhid":"",
-        "yhmc":"杭州电子科技大学",
-        "gssh": "14123123123123123",
-        "dssh": "14123123123123123",
-        "yhdm": "中介机构/代理商/会计用户编码",
-        "status": "2",
-        "statusMc": "注销",
-        "lxrxxList": []
-      },{
-        "yhlx":"0",
-        "yhid":"",
-        "yhmc":"杭州电子科技大学",
-        "gssh": "14123123123123123",
-        "dssh": "14123123123123123",
-        "yhdm": "中介机构/代理商/会计用户编码",
-        "status": "2",
-        "statusMc": "注销",
-        "lxrxxList": []
-      },{
-        "yhlx":"0",
-        "yhid":"",
-        "yhmc":"杭州电子科技大学",
-        "gssh": "14123123123123123",
-        "dssh": "14123123123123123",
-        "yhdm": "中介机构/代理商/会计用户编码",
-        "status": "2",
-        "statusMc": "注销",
-        "lxrxxList": []
-      },{
-        "yhlx":"0",
-        "yhid":"",
-        "yhmc":"杭州电子科技大学",
-        "gssh": "14123123123123123",
-        "dssh": "14123123123123123",
-        "yhdm": "中介机构/代理商/会计用户编码",
-        "status": "2",
-        "statusMc": "注销",
-        "lxrxxList": []
-      },{
-        "yhlx":"0",
-        "yhid":"",
-        "yhmc":"杭州电子科技大学",
-        "gssh": "14123123123123123",
-        "dssh": "14123123123123123",
-        "yhdm": "中介机构/代理商/会计用户编码",
-        "status": "2",
-        "statusMc": "注销",
-        "lxrxxList": []
-      },{
-        "yhlx":"0",
-        "yhid":"",
-        "yhmc":"杭州电子科技大学",
-        "gssh": "14123123123123123",
-        "dssh": "14123123123123123",
-        "yhdm": "中介机构/代理商/会计用户编码",
-        "status": "2",
-        "statusMc": "注销",
-        "lxrxxList": []
+        "dssh": "500109339633173",
+        "gssh": "",
+        "lxrxxList": [],
+        "status": "1",
+        "statusMc": "正常",
+        "yhdm": "",
+        "yhid": "1e31b9c277f54cadb66bfa06f3de9307",
+        "yhlx": "0",
+        "yhmc": "重庆娌易帆网络科技有限公司"
+      },
+      {
+        "dssh": "",
+        "gssh": "652325197608190227",
+        "lxrxxList": [],
+        "status": "1",
+        "statusMc": "正常",
+        "yhdm": "",
+        "yhid": "345d87d3457f43b38e82b9077be58f1c",
+        "yhlx": "0",
+        "yhmc": "水磨沟区华凌市场缘寳商行"
+      },
+      {
+        "dssh": "640104554166416",
+        "gssh": "640104554166416",
+        "lxrxxList": [],
+        "status": "1",
+        "statusMc": "正常",
+        "yhdm": "",
+        "yhid": "40b97b76442246619e47c07c3d9d084d",
+        "yhlx": "0",
+        "yhmc": "银川缘聚寳投资咨询有限公司"
+      },
+      {
+        "dssh": "430423673599855",
+        "gssh": "",
+        "lxrxxList": [],
+        "status": "1",
+        "statusMc": "正常",
+        "yhdm": "",
+        "yhid": "4aad16217f044342a1c347bea8ff146f",
+        "yhlx": "0",
+        "yhmc": "衡山县拉娌废品回收有限公司"
+      },
+      {
+        "dssh": "",
+        "gssh": "62242619820711411X",
+        "lxrxxList": [],
+        "status": "1",
+        "statusMc": "正常",
+        "yhdm": "",
+        "yhid": "5b53a2b41ff941578a873adbf97eb1d4",
+        "yhlx": "0",
+        "yhmc": "城关区寳康名车维修中心"
+      },
+      {
+        "dssh": "640104317867294",
+        "gssh": "640104317867294",
+        "lxrxxList": [],
+        "status": "1",
+        "statusMc": "正常",
+        "yhdm": "",
+        "yhid": "5f5acb8ff96e4168bd26435a4ec9cc6a",
+        "yhlx": "0",
+        "yhmc": "银川缘聚寳商贸有限公司"
+      },
+      {
+        "dssh": "",
+        "gssh": "441900303895702",
+        "lxrxxList": [],
+        "status": "1",
+        "statusMc": "正常",
+        "yhdm": "",
+        "yhid": "67060d3071f343d0b12958d77a5dd540",
+        "yhlx": "0",
+        "yhmc": "东莞市娌姿服装有限公司"
+      },
+      {
+        "dssh": "",
+        "gssh": "622322660045079",
+        "lxrxxList": [],
+        "status": "1",
+        "statusMc": "正常",
+        "yhdm": "",
+        "yhid": "aaf2b78acb8d4b6e9cf29ba365f0a529",
+        "yhlx": "0",
+        "yhmc": "民勤县寳源棉业有限责任公司"
       }
     ]
-  }
+  },
+  "message": "接口访问成功！",
+  "messageCode": "000000",
+  "success": true
 }

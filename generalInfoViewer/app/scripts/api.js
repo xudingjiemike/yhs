@@ -3,7 +3,7 @@
  */
 angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
     .constant({
-        mock:false,
+        mock:false  ,
         loginHost:'http://192.168.71.145/'
     })
     .config(['$httpProvider','loginHost',function ($httpProvider,loginHost) {
