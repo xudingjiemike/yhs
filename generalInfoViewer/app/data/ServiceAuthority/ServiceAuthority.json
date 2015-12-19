@@ -1,8 +1,13 @@
 {
-  "data":[{
+  "data":{
+    "fwsqList":[{
     "gjMc":"电话服务--申报"
   },{
     "gjMc":"电话服务--发票"
   }
   ]
+  },
+  "message" : "接口访问成功！",
+  "messageCode" : "000000",
+  "success" : true
 }

@@ -22,12 +22,9 @@
                         </td>
                         <td align="center" ng-bind="search.yhmc"></td>
                         <td align="center">
-                            <div ng-if="search.yhlx==0">单位用户</div>
-                            <div ng-if="search.yhlx==1">中介机构</div>
-                            <div ng-if="search.yhlx==2">兼职会计</div>
-                            <div ng-if="search.yhlx==9">代理商</div>
+                            <div ng-bind="Config.getUserTypeById(search.yhlx)"></div>
                         </td>
-                        <td align="center" ng-bind="search.statusMc"></td>
+                        <td align="center" ng-bind="Config.getAuthorizationStateById(search.status)"></td>
                     </tr>
                 </table>
             </div>

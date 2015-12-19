@@ -6,11 +6,15 @@ angular
     .service('ServiceAuthorityService',['_','ServiceAuthorityApi',function(_,ServiceAuthorityApi){
           var ServiceAuthorityData = [];
           function LoadData(khid){
-              ServiceAuthorityApi.LoadServiceAuthorityInfo(khid).success(function(obj){
-                  angular.copy(obj,ServiceAuthorityData);
+              ServiceAuthorityApi.LoadServiceAuthorityInfo(khid).success(function(data){
+
+                  angular.copy(data.fwsqList,ServiceAuthorityData);
               })
           }
-          function getData(){
+          function getData(khid){
+              if(ServiceAuthorityData.length == 0){
+                  LoadData(khid);
+              }
               return ServiceAuthorityData;
           }
           return {

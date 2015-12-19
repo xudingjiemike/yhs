@@ -3,33 +3,47 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo')
-    .service('PageInfoService', ['_','PageInfoApi',
-        function (_,PageInfoApi) {
+    .service('pageInfoService', ['_','pageInfoApi',
+        function (_,pageInfoApi) {
             return {
                 getContacts: function(lxrid,khid,khlx,yhdm){
                     var PageInfo = {};
-                    PageInfoApi.getContacts(lxrid,khid,khlx,yhdm).success(function (data) {
+                    pageInfoApi.getContacts(lxrid,khid,khlx,yhdm).success(function (data) {
                         angular.copy(data, PageInfo);
                     });
                     return PageInfo;
                 },
                 getCompany: function(khid){
                     var PageInfo = {};
-                    PageInfoApi.getCompany(khid).success(function (data) {
+                    pageInfoApi.getCompany(khid).success(function (data) {
                         angular.copy(data, PageInfo);
                     });
                     return PageInfo;
                 },
                 getIntermediary: function(yhdm){
                     var PageInfo = {};
-                    PageInfoApi.getIntermediary(yhdm).success(function (data) {
+                    pageInfoApi.getIntermediary(yhdm).success(function (data) {
                         angular.copy(data, PageInfo);
                     });
                     return PageInfo;
                 },
-                saveRemark:function(remark){
+                updateContacts:function(lxrid,field,content){
                     var PageInfo = {};
-                    PageInfoApi.getIntermediary(remark).success(function (data) {
+                    pageInfoApi.updateContacts(lxrid,field,content).success(function (data) {
+                        angular.copy(data, PageInfo);
+                    });
+                    return PageInfo;
+                },
+                updateCompany:function(yhid,field,content){
+                    var PageInfo = {};
+                    pageInfoApi.updateCompany(yhid,field,content).success(function (data) {
+                        angular.copy(data, PageInfo);
+                    });
+                    return PageInfo;
+                },
+                updateIntermediary:function(yhdm,field,content){
+                    var PageInfo = {};
+                    pageInfoApi.updateIntermediary(yhdm,field,content).success(function (data) {
                         angular.copy(data, PageInfo);
                     });
                     return PageInfo;

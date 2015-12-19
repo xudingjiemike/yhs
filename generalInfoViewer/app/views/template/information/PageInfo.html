@@ -6,7 +6,6 @@
             <span ng-mouseover="showDetailInfo()" ng-mouseleave="hideDetailInfo()">
                 <span class="show-detail alink hover">详细</span>
                 <span class="company-info">
-                    <div class="close-info"><i class="fa fa-times-circle-o"></i></div>
                     <div class="info-item">
                         姓名：<span ng-bind="contactsInfo.lxrmc"></span>
                         性别：<span ng-bind="contactsInfo.xb"></span>
@@ -42,8 +41,9 @@
             </span>
         </div>
         <div class="remark">
-            <input type="text" placeholder="请输入备注信息" ng-model="contactsInfo.bz"/>
-            <button class="btn btn-sm btn-success" ng-model="button" ng-disabled="!contactsInfo.bz" ng-click="saveRemark()">保存</button>
+            <input type="text" class="dataId" ng-model="contactsInfo.lxrid" hidden>
+            <input type="text" class="bz" placeholder="请输入备注信息" ng-model="contactsInfo.bz" ng-disabled="!contactsInfo.lxrid"/>
+            <button class="btn btn-sm btn-success" ng-disabled="!contactsInfo.bz" ng-click="saveRemark($event)">保存</button>
         </div>
     </div>
 
@@ -54,7 +54,6 @@
         <span ng-mouseover="showDetailInfo()" ng-mouseleave="hideDetailInfo()">
             <span class="show-detail alink hover">详细</span>
             <span class="company-info">
-                <div class="close-info"><i class="fa fa-times-circle-o"></i></div>
                 <div class="info-item">
                     <span>单位名称：
                         <span ng-bind="companyInfo.yhmc"></span>
@@ -99,17 +98,11 @@
             通行密码：<span  ng-bind="companyInfo.zcbm"></span>
         </span>
         </div>
-        <div class="level">
-            <span class="level-icon" ng-class="{
-            level1:companyInfo.levelDm==='09',
-            level2:companyInfo.levelDm==='07',
-            level3:companyInfo.levelDm==='05',
-            level4:companyInfo.levelDm==='01'
-            }" title="{{companyInfo.levelMc}}"></span>
-            <span ng-mouseover="showAgentInfo()" ng-mouseleave="hideAgentInfo()" ng-if="companyInfo.bdlList">
+        <div class="level" style="margin-bottom: -10px;">
+            <span class="level-icon {{Config.getUserLevelById(companyInfo.levelDm)}}" title="{{companyInfo.levelMc}}"></span>
+            <span ng-mouseover="showAgentInfo()" ng-mouseleave="hideAgentInfo($event)" ng-if="companyInfo.bdlList">
                 <span class="show-agent alink hover"><span>被代理</span></span>
                 <span class="agent-info">
-                    <div class="close-info"><i class="fa fa-times-circle-o"></i></div>
                     <div class="delegate-search-content">
                         <div class="table">
                             <div class="search-result">
@@ -134,10 +127,14 @@
                     </div>
                 </span>
             </span>
+            <span style="margin-left: 150px" ng-if="companyInfo.bdlList"></span>
+            <span style="margin-left: 30px" ng-if="!companyInfo.bdlList"></span>
             <span class="alink level-manage" ng-click="showManageWindow()" style="vertical-align: top"><i class="fa fa-users"></i>人员管理</span>
         </div>
         <div class="remark">
-            <input type="text" placeholder="请输入备注信息" ng-model="companyInfo.bz"/>
+            <input type="text" class="dataId" ng-model="companyInfo.yhid" hidden>
+            <input type="text" class="bz" placeholder="请输入备注信息" ng-model="companyInfo.bz" ng-disabled="!companyInfo.yhid"/>
+            <button class="btn btn-sm btn-success" ng-disabled="!companyInfo.bz" ng-click="saveRemark($event)">保存</button>
         </div>
         <div pop-info></div>
     </div>
@@ -149,15 +146,9 @@
         <span ng-mouseover="showDetailInfo()" ng-mouseleave="hideDetailInfo()">
             <span class="show-detail alink hover">详细</span>
             <span class="company-info">
-                <div class="close-info"><i class="fa fa-times-circle-o"></i></div>
                 <div class="info-item">
                     用户代码：<span ng-bind="intermediaryInfo.yhdm"></span>
-                    状态：<span ng-bind="intermediaryInfo.status"></span>
-                    <span class="intermediary-manage-info">
-                        <span ng-repeat="item in intermediaryInfo.ywxxList">
-                            <span ng-bind="item.ywdlMc+'-'+item.sswdMc+'-'+item.sskhjlMc"></span><br/>
-                        </span>
-                    </span>
+                    状态：<span ng-bind="Config.getAuthorizationStateById(intermediaryInfo.status)"></span>
                 </div>
                 <div class="info-item">
                     用户密码：<span ng-bind="intermediaryInfo.zcbm"></span>
@@ -191,11 +182,18 @@
                         <span ng-bind="item.cpdlMc"></span>
                     </span>
                 </div>
+                <div class="info-item">
+                    <span ng-repeat="item in intermediaryInfo.ywxxList">
+                        <span ng-bind="item.ywdlMc+'-'+item.sswdMc+'-'+item.sskhjlMc"></span>
+                    </span>
+                </div>
             </span>
         </span>
         </div>
         <div class="remark">
-            <input type="text" placeholder="请输入备注信息" ng-model="intermediaryInfo.bz"/>
+            <input type="text" class="dataId" ng-model="intermediaryInfo.yhdm" hidden>
+            <input type="text" class="bz" placeholder="请输入备注信息" ng-model="intermediaryInfo.bz" ng-disabled="!intermediaryInfo.yhdm"/>
+            <button class="btn btn-sm btn-success" ng-disabled="!intermediaryInfo.bz" ng-click="saveRemark($event)">保存</button>
         </div>
     </div>
 </div>
