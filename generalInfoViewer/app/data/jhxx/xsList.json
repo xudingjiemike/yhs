@@ -1,31 +1,37 @@
 {
+  "data": {
+    "list": [
+      {
+        "bjnrcd": "0",
+        "bjsl": "0",
+        "cjsj": "2011-05-04 11:04:41",
+        "cpdl": "04",
+        "cpdlmc": "国税发票",
+        "czzt": "",
+        "dlzfzgs": "",
+        "fpsj": "",
+        "globalDataMap": {},
+        "isDate": false,
+        "jzsj": "",
+        "jzzt": "2",
+        "knx": "100",
+        "qx": "0",
+        "qzjz": "0",
+        "requestDataMap": {},
+        "responseDataMap": {},
+        "rowId": 0,
+        "xscljg": "0",
+        "xsid": "47787",
+        "xsm": "秦皇岛天信船舶服务有限公司的一条线索",
+        "xsms": "非签约：开票咨询\r\n--------\r\n建议交费。",
+        "yhdm": "13030257131365X",
+        "yhmc": "秦皇岛天信船舶服务有限公司"
+      }
+    ],
+    "pageId": 0,
+    "total": 1
+  },
+  "message": "操作成功！",
   "messageCode": "00000000",
-  "message": "成功",
-  "success": true,
-  "data": [
-    {
-      "bjnrcd": "0",
-      "bjsl": "0",
-      "cjsj": "2013-04-11 10:23:33",
-      "cpdl": "11",
-      "dlzfzgs": "",
-      "fpsj": "",
-      "globalDataMap": {},
-      "isDate": false,
-      "jzsj": "",
-      "jzzt": "0",
-      "knx": "5",
-      "qx": "0",
-      "qzjz": "",
-      "requestDataMap": {},
-      "responseDataMap": {},
-      "rowId": 0,
-      "xscljg": "0",
-      "xsid": "214519",
-      "xsm": "煤业建筑的线索",
-      "xsms": "打开软件报错7001错误,无法备份\r\n--------\r\n告知收费400元，或者自己重新安装",
-      "yhdm": "120101103147742",
-      "yhmc": "天津市煤业建筑器材和平公司"
-    }
-  ]
+  "success": true
 }

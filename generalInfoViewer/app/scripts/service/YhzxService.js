@@ -16,11 +16,15 @@ angular
                         if (temp < pageInfoZx.pageId) {
                             return;
                         }
+                    }else if (pageInfoZx.total == -1) {
+                        pageInfoZx.total = 0;
+                    } else if (pageInfoZx.total == 0) {
+                        return;
                     }
                     pageInfoZx.pageId++;
                     YhzxApi.getZxjlList(khid, pageInfoZx.pageId, pageInfoZx.pageSize).success(function (data) {
-                        pageInfoZx.total = 30;
-                        angular.forEach(data, function (temp) {
+                        pageInfoZx.total = data.total;
+                        angular.forEach(data.list, function (temp) {
                             zxjlList.push(temp);
                         });
                         //angular.copy(data, zxjlList);
@@ -35,11 +39,15 @@ angular
                         if (temp < pageInfoTs.pageId) {
                             return;
                         }
+                    }else if (pageInfoTs.total == -1) {
+                        pageInfoTs.total = 0;
+                    } else if (pageInfoTs.total == 0) {
+                        return;
                     }
                     pageInfoTs.pageId++;
                     YhzxApi.getTsjyList(khid, pageInfoTs.pageId, pageInfoTs.pageSize).success(function (data) {
-                        pageInfoTs.total = 30;
-                        angular.forEach(data, function (temp) {
+                        pageInfoTs.total = data.total;
+                        angular.forEach(data.list, function (temp) {
                             tsjyList.push(temp);
                         });
                     });

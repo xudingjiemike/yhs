@@ -3,18 +3,18 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
-    .controller('YxJhxxController', ['$scope','XsService',
-        function ($scope,XsService) {
+    .controller('DxJhxxController', ['$scope','SmsService',
+        function ($scope,SmsService) {
             /**
              * 获取线索列表
              * @param khid
              *          客户ID
              */
-            $scope.getXsList = XsService.getXsList();
+            $scope.dxList = SmsService.getDxList();
 
             $scope.$on("loadData",function(e,d){
-                if('线索'==d){
-                    XsService.loadXsList();
+                if('短信'==d){
+                    SmsService.loadDxList();
                 }
             });
 

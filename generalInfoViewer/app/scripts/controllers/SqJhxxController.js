@@ -3,7 +3,7 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
-    .controller('ZxJhxxController', ['$scope', 'YhzxService',
+    .controller('SqJhxxController', ['$scope', 'YhzxService',
         function ($scope, YhzxService) {
             var khid = '';
 

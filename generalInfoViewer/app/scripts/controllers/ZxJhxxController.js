@@ -15,7 +15,6 @@ angular
 
             $scope.$on("loadData", function (e, d) {
                 if ('咨询' == d) {
-                    alert(d);
                     YhzxService.loadZxjlList(khid);
                 }
             });

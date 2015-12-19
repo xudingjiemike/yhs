@@ -1,40 +1,44 @@
 {
+  "data": {
+    "list": [
+      {
+        "cjsj": "2015-01-05 17:51:04",
+        "dh1": "0755-61579556",
+        "fzgsdm": "001084016",
+        "globalDataMap": {},
+        "hccgdhhm": "013924020801",
+        "hcjg": "4",
+        "hcjgmc": "",
+        "hwsj": "2015-01-06 09:27:45",
+        "lxr": "向小姐",
+        "pkName": [
+          "zxzid"
+        ],
+        "requestDataMap": {},
+        "responseDataMap": {},
+        "rwbh": "1823103",
+        "rwfs": "0",
+        "rwmc": "请回电201501@深圳报税认证组[电话][远程任务]",
+        "sfzdzj": "N",
+        "tjrdm": "38C658C24A5DCBF0AC7EC71141BA3F12",
+        "tjsj": "2015-01-04 10:23:45",
+        "whqkjl": "用户自己解决了",
+        "yhdm": "440300581573826",
+        "yhlx": "0",
+        "yieldsOfDate": [],
+        "ywbdid": "04",
+        "ywbdslxh": "8201423",
+        "zdzjtjr": "",
+        "zxqkzt": "2",
+        "zxxh": "13714305",
+        "zxzName": "袁建伟",
+        "zxzid": "E1904A7721C9DE8ACAB404C861213D64"
+      }
+    ],
+    "pageId": 1,
+    "total": 1
+  },
+  "message": "操作成功！",
   "messageCode": "00000000",
-  "message": "成功",
-  "success": true,
-  "total": "1",
-  "pageId": "1",
-  "data": [
-    {
-      "cjsj": "2014-08-21 14:41:41",
-      "dh1": "",
-      "fzgsdm": "001091010",
-      "globalDataMap": {},
-      "hccgdhhm": "018613106073",
-      "hcjg": "4",
-      "hwsj": "2014-08-25 10:28:13",
-      "lxr": "",
-      "pkName": [
-        "zxzid"
-      ],
-      "requestDataMap": {},
-      "responseDataMap": {},
-      "rwbh": "1566982",
-      "rwfs": "0",
-      "rwmc": "4、5、6、7月广州第二服务中心网抄逾期催费",
-      "sfzdzj": "N",
-      "tjrdm": "宋先飞",
-      "tjsj": "2014-08-21 14:43:10",
-      "whqkjl": "会尽快办理的",
-      "yhdm": "440104058934287",
-      "yhlx": "0",
-      "yieldsOfDate": [],
-      "ywbdid": "02",
-      "ywbdslxh": "7039635",
-      "zdzjtjr": "",
-      "zxqkzt": "2",
-      "zxxh": "11714739",
-      "zxzid": "宋先飞"
-    }
-  ]
+  "success": true
 }

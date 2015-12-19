@@ -7,8 +7,8 @@
                         <table class="softwear-auth">
 
                             <tr>
-                                <th width="20%">表单编号</th>
-                                <th width="29%">任务描述</th>
+                                <th width="10%">表单编号</th>
+                                <th width="39%">任务描述</th>
                                 <th width="10%">任务类型名称</th>
                                 <th width="7%">登记人</th>
                                 <th width="10%">登记时间</th>
@@ -26,17 +26,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="table-content">
+                    <div class="table-content" ui-y-table-content>
                         <table class="softwear-auth">
                             <tr ng-repeat="vo in zdxcList">
-                                <td width="20%">{{vo.rwmc}}</td>
-                                <td width="29%"> {{vo.RWMS}}</td>
-                                <td width="10%"> {{vo.RWLXMC}}</td>
-                                <td width="7%"> {{vo.CJRMC}}</td>
-                                <td width="10%">{{vo.CJSJ}}</td>
-                                <td width="7%">{{vo.ZXRMC}}</td>
-                                <td width="10%">{{vo.WJRQ}}</td>
-                                <td width="7%">{{vo.RWZT}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{vo.bdbh}}" tooltip-append-to-body ="true">{{vo.bdbh}}</td>
+                                <td width="39%"> {{vo.rwms}}</td>
+                                <td width="10%"> {{vo.rwlxmc}}</td>
+                                <td width="7%"> {{vo.cjrmc}}</td>
+                                <td width="10%">{{vo.cjsj}}</td>
+                                <td width="7%">{{vo.zxrmc}}</td>
+                                <td width="10%">{{vo.wjrq}}</td>
+                                <td width="7%">{{vo.rwztmc}}</td>
                             </tr>
 
                         </table>
