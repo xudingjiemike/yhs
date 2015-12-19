@@ -4,7 +4,7 @@
 
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.SearchInfo')
-    .factory('SearchInfoApi', ['$http', 'Host', 'Url',
+    .factory('searchInfoApi', ['$http', 'Host', 'Url',
         function ($http, Host, Url) {
             return {
                 getSearch: function (yhmc) {

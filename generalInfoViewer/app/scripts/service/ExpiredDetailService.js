@@ -4,8 +4,8 @@
 
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.ExpiredDetail')
-    .service('ExpiredDetailService', ['_','ExpiredDetailApi',
-        function (_,ExpiredDetailApi) {
+    .service('expiredDetailService', ['_','expiredDetailApi',
+        function (_,expiredDetailApi) {
 
 
         }]);

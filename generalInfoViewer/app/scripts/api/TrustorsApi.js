@@ -4,23 +4,23 @@
 
 angular
     .module("ui.yypt5.yhgl.GeneralInfoViewer.Trustors")
-    .factory("TrustorApi", ["$http", "Host","Url",
+    .factory("trustorApi", ["$http", "Host","Url",
         function ($http, Host, Url) {
             return {
                 /**
                  * 获取委托单位
                  */
-                getTrustors: function (khid,khlx,yhdm) {
+                getTrustors: function (params) {
                     return $http.get(Host.getHostByName("BUSINISS")+
-                        Url.getUrlByName("TRUSTOR")+"?khid="+khid+"&khlx="+khlx+"&yhdm="+yhdm);
-                    //return $http.get("http://192.168.60.136/nbgl2Web/api/khgl/wtdw/getWtdw"+
-                    //    "?khid="+khid+"&khlx="+khlx+"&yhdm="+yhdm);
+                        Url.getUrlByName("TRUSTOR")+params);
+                    //return $http.get("http://192.168.60.136/nbgl2Web/api/khgl/wtdw/getWtdw"+params);
                 },
                 /**
                  * 删除(终止代理)委托单位
                  */
-                deleteTrustor: function(){
-                    return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("DELETETRUSTOR")+"?");
+                deleteTrustor: function(params){
+                    return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("DELETETRUSTOR"),params);
+                    //return $http.post("http://192.168.60.136/nbgl2Web/api/khgl/wtdw/delteWtdw",params);
                 }
             };
         }

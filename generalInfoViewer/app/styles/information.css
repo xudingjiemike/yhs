@@ -233,3 +233,69 @@
 .remark button[disabled]{
     border: 1px solid #ccc;
 }
+
+.cont-left .level{
+    padding: 4px 0;
+}
+.cont-left .level.ptop0{
+    padding-top: 0;
+}
+.cont-left .level span{
+    display: inline-block;
+    height: 22px;
+}
+.cont-left .level .level-type{
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    padding: 0 6%;
+    margin: 0 6%;
+}
+.cont-left .level .level-type.other{
+    border-left: 0;
+    padding-left: 0;
+    margin-left: 0;
+}
+.cont-left .level .level-icon{
+    background: no-repeat center center / contain;
+    width: 22%;
+    height: 22px;
+    float: left;
+    margin-top: -2px;
+}
+.cont-left .level .level-icon.level1{
+    background-image: url(../images/vip_diamond.png);
+}
+.cont-left .level .level-icon.level2{
+    background-image: url(../images/vip_platinum.png);
+}
+.cont-left .level .level-icon.level3{
+    background-image: url(../images/vip_gold.png);
+}
+.cont-left .level .level-icon.level4{
+    background-image: url(../images/vip_silver.png);
+}
+.cont-left .level .level-icon.level5{
+    background-image: url(../images/vip_normal.png);
+}
+.level-icon-small{
+    background: no-repeat center center / contain;
+    width: 16px;
+    height: 13px;
+    float: left;
+    margin-top: 2px;
+}
+.level-icon-small.level1{
+    background-image: url(../images/vip_diamond_small.png);
+}
+.level-icon-small.level2{
+    background-image: url(../images/vip_platinum_small.png);
+}
+.level-icon-small.level3{
+    background-image: url(../images/vip_gold_small.png);
+}
+.level-icon-small.level4{
+    background-image: url(../images/vip_silver_small.png);
+}
+.level-icon-small.level5{
+    background-image: url(../images/vip_normal_small.png);
+}

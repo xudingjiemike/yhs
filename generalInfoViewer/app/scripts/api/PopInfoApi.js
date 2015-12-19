@@ -4,7 +4,7 @@
 
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.PopInfo')
-    .factory('PopInfoApi', ['$http', 'Host','Url',
+    .factory('popInfoApi', ['$http', 'Host','Url',
         function ($http, Host, Url) {
             return {
 
