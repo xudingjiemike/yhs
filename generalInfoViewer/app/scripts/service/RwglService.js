@@ -31,15 +31,19 @@ angular
                 getZdxcList: function () {
                     return zdxcList;
                 },
-                loadCallbackList: function (khid) {
-                    if (pageInfoCallback.total > 0) {
-                        var temp = pageInfoCallback.total / pageInfoCallback.pageSize;
-                        if (temp < pageInfoCallback.pageId) {
-                            return;
-                        }
-                    } else if (pageInfoCallback.total == -1) {
+                loadCallbackList: function (khid,isFirst) {
+                    if (pageInfoCallback.total == -1) {
                         pageInfoCallback.total = 0;
                     } else if (pageInfoCallback.total == 0) {
+                        return;
+                    }else if (!isFirst) {//不是第一次，是点击下拉框
+                        if (pageInfoCallback.total > 0) {
+                            var temp = pageInfoCallback.total / pageInfoCallback.pageSize;
+                            if (temp < pageInfoCallback.pageId) {
+                                return;
+                            }
+                        }
+                    }else{//是第一次查询但查过了就不再查了
                         return;
                     }
                     pageInfoCallback.pageId++;
@@ -51,15 +55,19 @@ angular
                             });
                         });
                 },
-                loadCalloutList: function (khid) {
-                    if (pageInfoCallout.total > 0) {
-                        var temp = pageInfoCallout.total / pageInfoCallout.pageSize;
-                        if (temp < pageInfoCallout.pageId) {
-                            return;
-                        }
-                    } else if (pageInfoCallout.total == -1) {
+                loadCalloutList: function (khid,isFirst) {
+                    if (pageInfoCallout.total == -1) {
                         pageInfoCallout.total = 0;
                     } else if (pageInfoCallout.total == 0) {
+                        return;
+                    }else if (!isFirst) {//不是第一次，是点击下拉框
+                        if (pageInfoCallout.total > 0) {
+                            var temp = pageInfoCallout.total / pageInfoCallout.pageSize;
+                            if (temp < pageInfoCallout.pageId) {
+                                return;
+                            }
+                        }
+                    }else{//是第一次查询但查过了就不再查了
                         return;
                     }
                     pageInfoCallout.pageId++;
@@ -71,15 +79,19 @@ angular
                             });
                         });
                 },
-                loadYcrwList: function (khid) {
-                    if (pageInfoYc.total > 0) {
-                        var temp = pageInfoYc.total / pageInfoYc.pageSize;
-                        if (temp < pageInfoYc.pageId) {
-                            return;
-                        }
-                    } else if (pageInfoYc.total == -1) {
+                loadYcrwList: function (khid,isFirst) {
+                    if (pageInfoYc.total == -1) {
                         pageInfoYc.total = 0;
                     } else if (pageInfoYc.total == 0) {
+                        return;
+                    }else if (!isFirst) {//不是第一次，是点击下拉框
+                        if (pageInfoYc.total > 0) {
+                            var temp = pageInfoYc.total / pageInfoYc.pageSize;
+                            if (temp < pageInfoYc.pageId) {
+                                return;
+                            }
+                        }
+                    }else{//是第一次查询但查过了就不再查了
                         return;
                     }
                     pageInfoYc.pageId++;
@@ -90,15 +102,19 @@ angular
                         });
                     });
                 },
-                loadSmrwList: function (khid) {
-                    if (pageInfoSm.total > 0) {
-                        var temp = pageInfoSm.total / pageInfoSm.pageSize;
-                        if (temp < pageInfoSm.pageId) {
-                            return;
-                        }
-                    } else if (pageInfoSm.total == -1) {
+                loadSmrwList: function (khid,isFirst) {
+                    if (pageInfoSm.total == -1) {
                         pageInfoSm.total = 0;
                     } else if (pageInfoSm.total == 0) {
+                        return;
+                    } else if (!isFirst) {//不是第一次，是点击下拉框
+                        if (pageInfoSm.total > 0) {
+                            var temp = pageInfoSm.total / pageInfoSm.pageSize;
+                            if (temp < pageInfoSm.pageId) {
+                                return;
+                            }
+                        }
+                    }else{//是第一次查询但查过了就不再查了
                         return;
                     }
                     pageInfoSm.pageId++;
@@ -109,15 +125,19 @@ angular
                         });
                     });
                 },
-                loadZdxcList: function (khid) {
-                    if (pageInfoZd.total > 0) {
-                        var temp = pageInfoZd.total / pageInfoZd.pageSize;
-                        if (temp < pageInfoZd.pageId) {
-                            return;
-                        }
-                    } else if (pageInfoZd.total == -1) {
+                loadZdxcList: function (khid,isFirst) {
+                    if (pageInfoZd.total == -1) {
                         pageInfoZd.total = 0;
                     } else if (pageInfoZd.total == 0) {
+                        return;
+                    } else if (!isFirst) {//不是第一次，是点击下拉框
+                        if (pageInfoZd.total > 0) {
+                            var temp = pageInfoZd.total / pageInfoZd.pageSize;
+                            if (temp < pageInfoZd.pageId) {
+                                return;
+                            }
+                        }
+                    }else{//是第一次查询但查过了就不再查了
                         return;
                     }
                     pageInfoZd.pageId++;
@@ -127,9 +147,6 @@ angular
                             zdxcList.push(temp);
                         });
                     });
-                },
-                loadMoreData: function(khid){
-                    this.loadCalloutList(khid);
                 }
             }
 

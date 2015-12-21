@@ -6,12 +6,12 @@
                     <div class="table-header" ui-y-table>
                         <table class="softwear-auth">
                             <tr>
-                                <th width="10%">受理人</th>
-                                <th width="10%">联系人</th>
-                                <th width="15%">主叫号码</th>
-                                <th width="35%">咨询事项</th>
-                                <th width="10%">处理情况</th>
-                                <th width="10%">开始时间</th>
+                                <th width="7%">受理人</th>
+                                <th width="7%">联系人</th>
+                                <th width="12%">主叫号码</th>
+                                <th width="46%">咨询事项</th>
+                                <th width="7%">处理情况</th>
+                                <th width="11%">开始时间</th>
                                 <th width="10%">操作</th>
                             </tr>
                         </table>
@@ -24,16 +24,43 @@
                             </div>
                         </div>
                     </div>
-                    <div class="table-content" ui-y-table-content>
+                    <div class="table-content" ui-y-table-content scroll-load-more load-more="loadMoreData()">
                         <table class="softwear-auth">
-                            <tr ng-repeat="vo in zxjlList">
-                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{vo.zxmc}}" tooltip-append-to-body ="true">{{vo.zxmc}}</td>
-                                <td width="10%"> {{vo.lxr}}</td>
-                                <td width="15%"> {{vo.lxdh}}</td>
-                                <td width="35%"> {{vo.zxsxStr}}</td>
-                                <td width="10%">{{vo.clfsmc}}</td>
-                                <td width="10%">{{vo.zxsj}}</td>
-                                <td width="10%"></td>
+                            <tr ng-repeat="vo in zxjlList track by $index">
+                                <td width="7%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.zxmc}}" tooltip-append-to-body="true">{{vo.zxmc}}
+                                    </div>
+                                </td>
+                                <td width="7%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.lxr}}" tooltip-append-to-body="true"> {{vo.lxr}}
+                                    </div>
+                                </td>
+                                <td width="12%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.lxdh}}" tooltip-append-to-body="true"> {{vo.lxdh}}
+                                    </div>
+                                </td>
+                                <td width="46%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.zxsxStr}}" tooltip-append-to-body="true"> {{vo.zxsxStr}}
+                                    </div>
+                                </td>
+                                <td width="7%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.clfsmc}}" tooltip-append-to-body="true">{{vo.clfsmc}}
+                                    </div>
+                                </td>
+                                <td width="11%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.zxsj}}" tooltip-append-to-body="true">{{vo.zxsj}}
+                                    </div>
+                                </td>
+                                <td width="10%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="" tooltip-append-to-body="true"></div>
+                                </td>
                             </tr>
 
                         </table>

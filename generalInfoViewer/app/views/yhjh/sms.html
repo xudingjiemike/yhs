@@ -23,14 +23,34 @@
                             </div>
                         </div>
                     </div>
-                    <div class="table-content" ui-y-table-content>
+                    <div class="table-content" ui-y-table-content scroll-load-more load-more="loadMoreData()">
                         <table class="softwear-auth">
-                            <tr ng-repeat="vo in dxList">
-                                <td width="20%">{{vo.rwmc}}</td>
-                                <td width="10%"> {{vo.RWMS}}</td>
-                                <td width="10%"> {{vo.djrmc}}</td>
-                                <td width="50%"> {{vo.CJRMC}}</td>
-                                <td width="10%"> {{vo.CJRMC}}</td>
+                            <tr ng-repeat="vo in dxList track by $index">
+                                <td width="20%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.rwmc}}" tooltip-append-to-body="true">{{vo.rwmc}}
+                                    </div>
+                                </td>
+                                <td width="10%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.RWMS}}" tooltip-append-to-body="true"> {{vo.RWMS}}
+                                    </div>
+                                </td>
+                                <td width="10%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.djrmc}}" tooltip-append-to-body="true"> {{vo.djrmc}}
+                                    </div>
+                                </td>
+                                <td width="50%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.CJRMC}}" tooltip-append-to-body="true">{{vo.CJRMC}}
+                                    </div>
+                                </td>
+                                <td width="10%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.CJRMC}}" tooltip-append-to-body="true"> {{vo.CJRMC}}
+                                    </div>
+                                </td>
                             </tr>
 
                         </table>
