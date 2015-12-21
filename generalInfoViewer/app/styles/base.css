@@ -1704,11 +1704,12 @@ td.price-policy-item{
     background-image: url(../images/vip_gold.png);
 }
 .cont-left .level .level-icon.level4{
-    background-image: url(../images/vip_whitegold.png);
+    background-image: url(../images/vip_platinum.png);
 }
 .cont-left .level .level-icon.level5{
     background-image: url(../images/vip_diamond.png);
 }
+
 .level-icon-small{
     background: no-repeat center center / contain;
     width: 16px;
@@ -1726,7 +1727,7 @@ td.price-policy-item{
     background-image: url(../images/vip_gold_small.png);
 }
 .level-icon-small.level4{
-    background-image: url(../images/vip_whitegold_small.png);
+    background-image: url(../images/vip_platinum_small.png);
 }
 .level-icon-small.level5{
     background-image: url(../images/vip_diamond_small.png);
