@@ -67,7 +67,27 @@ angular
                     break;
             }
 
-                $scope.$broadcast('loadData',tag);
+            $scope.$broadcast('loadData',tag.tagtype);
+
+            $scope.$on('modifyTab',function(e,d){
+                createTab(d.title, d.tagtype);
+            });
+            function createTab (title,tagtype){
+                if(angular.equals(tagtype,Config.getTabTip().company)){
+                    var newTab =  new _tagObj(title, 'views/template/tabs/taxInstitutionPage.html',Config.getTabTip().company)
+                    var addTab = true;
+                    _.map(_tags,function(item){
+                        if(angular.equals(tagtype,item.tagtype)){
+                            addTab = false;
+                            return newTab;
+                        }
+                    })
+                    if(addTab){
+                        _tags.push(newTab);
+                    }
+                }
+
+            }
 
 
         };

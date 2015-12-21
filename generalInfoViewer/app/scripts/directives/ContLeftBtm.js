@@ -10,7 +10,7 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
                 */
                $timeout(function(){
                    angular.element("#cont-left-btm").css("top",$("#cont-left-top").outerHeight()+6+"px");
-               },10);
+               },500);
            }],
            link:function($scope,element,$attrs){
               //$timeout(function(){

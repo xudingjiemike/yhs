@@ -40,7 +40,7 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Taxlnstitution').controller('Tax
          */
         $timeout(function(){
             angular.element("#cont-left-btm").css("top",$("#cont-left-top").outerHeight()+6+"px");
-        },10);
+        },500);
 
 
 

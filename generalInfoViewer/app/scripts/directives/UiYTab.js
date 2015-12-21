@@ -69,7 +69,10 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
                 $scope.leftClass = "disable";
 
                 $scope.$on("loadData",function(){
-                    $scope.tableItems = SoftwareAuthorityService.getServiceAuthorityData("1");
+                    if(angular.equals($scope.tableItems,undefined)){
+                        $scope.tableItems = SoftwareAuthorityService.getServiceAuthorityData("1");
+                    }
+
 
                 });
 
