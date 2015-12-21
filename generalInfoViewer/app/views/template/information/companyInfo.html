@@ -1,0 +1,86 @@
+<div class="username">
+    <span>单位：</span>
+    <span ng-bind="companyInfo.yhmc"></span>
+        <span ng-mouseover="showDetailInfo()" ng-mouseleave="hideDetailInfo()">
+            <span class="show-detail alink hover">详细</span>
+            <span class="company-info">
+                <div class="info-item">
+                    <span>单位名称：
+                        <span ng-bind="companyInfo.yhmc"></span>
+                    </span>
+                </div>
+                <div class="info-item">
+                    国税税号：<span ng-bind="companyInfo.nsrsbh"></span>
+                    <span ng-bind="companyInfo.gsswjgMc"></span>
+                </div>
+                <div class="info-item">
+                    地税税号：<span ng-bind="companyInfo.dssh"></span>
+                    <span ng-bind="companyInfo.dsswjgMc"></span>
+                </div>
+                <div class="info-item">
+                    海关代码：<span ng-bind="companyInfo.hgdm"></span>
+                    出口企业类型：<span ng-bind="companyInfo.yhlbxx"></span>
+                </div>
+                <div class="info-item">
+                    所属行业：<span ng-bind="companyInfo.hymlMc"></span>
+                    增值税纳税人类型：<span ng-bind="companyInfo.qytype"></span>
+                </div>
+                <div class="info-item">
+                    传真号码：<span ng-bind="companyInfo.faxNumber"></span>
+                </div>
+                <div class="info-item">
+                    单位电话：<span ng-bind="companyInfo.dhhm"></span>
+                </div>
+                <div class="info-item">
+                    经营地址：<span ng-bind="companyInfo.jydz"></span>
+                </div>
+                <div class="info-item">
+                    管理信息：
+                    <span ng-repeat="item in companyInfo.ywxxList">
+                        <span ng-bind="item.ywdlMc+'-'+item.sswdMc+'-'+item.sskhjlMc"></span>
+                    </span>
+                </div>
+            </span>
+        </span>
+        <span class="user-position">
+            通行密码：<span  ng-bind="companyInfo.zcbm"></span>
+        </span>
+</div>
+<div class="level" style="margin-bottom: -10px;">
+    <span class="level-icon {{Config.getUserLevelById(companyInfo.levelDm)}}" title="{{companyInfo.levelMc}}"></span>
+            <span ng-mouseover="showAgentInfo()" ng-mouseleave="hideAgentInfo($event)" ng-if="companyInfo.bdlList">
+                <span class="show-agent alink hover"><span>被代理</span></span>
+                <span class="agent-info" style="height:{{8+companyInfo.bdlList.length*4}}%;">
+                    <div class="delegate-search-content">
+                        <div class="table">
+                            <div class="search-result">
+                                <table class="single">
+                                    <thead>
+                                    <tr>
+                                        <th width="40%">用户名称</th>
+                                        <th width="35%">用户代码</th>
+                                        <th width="25%">产品大类</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr ng-repeat="agent in companyInfo.bdlList">
+                                        <td ng-bind="agent.yhmc"></td>
+                                        <td ng-bind="agent.yhbm"></td>
+                                        <td ng-bind="agent.cpdlMc"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+            </span>
+    <span style="margin-left: 150px" ng-if="companyInfo.bdlList"></span>
+    <span style="margin-left: 30px" ng-if="!companyInfo.bdlList"></span>
+    <span class="alink level-manage" ng-click="showManageWindow()" style="vertical-align: top"><i class="fa fa-users"></i>人员管理</span>
+</div>
+<div class="remark">
+    <input type="text" class="dataId" ng-model="companyInfo.yhid" hidden>
+    <input type="text" class="bz" placeholder="请输入备注信息" ng-model="companyInfo.bz" ng-disabled="!companyInfo.yhid"/>
+    <button class="btn btn-sm dwyh" ng-click="saveRemark($event)" disabled>保存</button>
+</div>

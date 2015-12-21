@@ -127,6 +127,9 @@ angular
                             zdxcList.push(temp);
                         });
                     });
+                },
+                loadMoreData: function(khid){
+                    this.loadCalloutList(khid);
                 }
             }
 

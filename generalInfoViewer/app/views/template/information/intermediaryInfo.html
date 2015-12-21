@@ -1,0 +1,44 @@
+<div class="username">
+    <span>单位：</span>
+    <span ng-bind="intermediaryInfo.yhmc"></span>
+        <span ng-mouseover="showDetailInfo()" ng-mouseleave="hideDetailInfo()">
+            <span class="show-detail alink hover">详细</span>
+            <span class="company-info">
+                <div class="info-item">
+                    用户代码：<span ng-bind="intermediaryInfo.yhdm"></span>
+                    状态：<span ng-bind="Config.getAuthorizationStateById(intermediaryInfo.status)"></span>
+                </div>
+                <div class="info-item">
+                    用户密码：<span ng-bind="intermediaryInfo.zcbm"></span>
+                    分公司：<span ng-bind="intermediaryInfo.fzgsMc"></span>
+                </div>
+                <div class="info-item">
+                    控制类型：
+                    <span ng-if="intermediaryInfo.swsbz==='1'||intermediaryInfo.swsbz==='2'">
+                        <input type="checkbox" checked disabled>
+                        <span ng-bind="Config.getControlTypeById(intermediaryInfo.swsbz)"></span>
+                    </span>
+                </div>
+                <div class="info-item">
+                    传真号码：<span ng-bind="intermediaryInfo.faxNumber"></span>
+                </div>
+                <div class="info-item">
+                    单位电话：<span ng-bind="intermediaryInfo.dhhm"></span>
+                </div>
+                <div class="info-item">
+                    经营地址：<span ng-bind="intermediaryInfo.jydz"></span>
+                </div>
+                <div class="info-item">
+                    管理信息：
+                    <span ng-repeat="item in intermediaryInfo.ywxxList">
+                        <span ng-bind="item.ywdlMc+'-'+item.sswdMc+'-'+item.sskhjlMc"></span>
+                    </span>
+                </div>
+            </span>
+        </span>
+</div>
+<div class="remark">
+    <input type="text" class="dataId" ng-model="intermediaryInfo.yhdm" hidden>
+    <input type="text" class="bz" placeholder="请输入备注信息" ng-model="intermediaryInfo.bz" ng-disabled="!intermediaryInfo.yhdm"/>
+    <button class="btn btn-sm zjjg" ng-click="saveRemark($event)" disabled>保存</button>
+</div>

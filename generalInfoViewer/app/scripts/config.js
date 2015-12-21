@@ -5,11 +5,11 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
     .factory("Config", [function () {
         var CONFIG={
             USER_LEVEL:[
-                {key:'01',value:'level1'},
-                {key:'03',value:'level2'},
+                {key:'01',value:'level5'},
+                {key:'03',value:'level4'},
                 {key:'05',value:'level3'},
-                {key:'07',value:'level4'},
-                {key:'09',value:'level5'}
+                {key:'07',value:'level2'},
+                {key:'09',value:'level1'}
             ],
             USER_TYPE:[
                 {key:'0',value:'单位用户'},

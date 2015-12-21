@@ -1,0 +1,48 @@
+<div class="username">
+    <span>姓名：</span>
+    <span ng-bind="contactsInfo.lxrmc"></span>
+            <span ng-mouseover="showDetailInfo()" ng-mouseleave="hideDetailInfo()">
+                <span class="show-detail alink hover">详细</span>
+                <span class="company-info">
+                    <div class="info-item">
+                        姓名：<span ng-bind="contactsInfo.lxrmc"></span>
+                        性别：<span ng-bind="contactsInfo.xb"></span>
+                    </div>
+                    <div class="info-item">
+                        手机：
+                        <span ng-repeat="item in contactsInfo.sjhmList">
+                            <span ng-bind="item.sjhm"></span>
+                        </span>
+                    </div>
+                    <div class="info-item">
+                        电话：
+                        <span ng-repeat="item in contactsInfo.dhhmList">
+                            <span ng-bind="item.qhdhhmfjh"></span>
+                        </span>
+                    </div>
+                    <div class="info-item">
+                        邮箱：<span ng-bind="contactsInfo.email"></span>
+                    </div>
+                    <div class="info-item">
+                        QQ：<span ng-bind="contactsInfo.qq"></span>
+                    </div>
+                    <div class="info-item">
+                        地址：<span ng-bind="contactsInfo.provinceName+' '+contactsInfo.cityName+' '+contactsInfo.countyName+' '+contactsInfo.address"></span>
+                    </div>
+                </span>
+            </span>
+            <span class="user-position">
+                <span ng-if="contactsInfo.yhmc!==''">
+                    单位： <span ng-bind="contactsInfo.yhmc"></span>
+                </span>
+                <span ng-repeat="item in contactsInfo.jsxxList">
+                    <span ng-bind="item.jsmc"></span>
+                    <span ng-if="$index!==contactsInfo.jsxxList.length-1">/</span>
+                </span>
+            </span>
+</div>
+<div class="remark">
+    <input type="text" class="dataId" ng-model="contactsInfo.lxrid" hidden>
+    <input type="text" class="bz" placeholder="请输入备注信息" ng-model="contactsInfo.bz" ng-disabled="!contactsInfo.lxrid"/>
+    <button class="lxr" ng-click="saveRemark($event)" disabled>保存</button>
+</div>
