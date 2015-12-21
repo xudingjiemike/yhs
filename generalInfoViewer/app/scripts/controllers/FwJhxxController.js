@@ -37,6 +37,14 @@ angular
              */
             $scope.zdxcList = RwglService.getZdxcList();
 
+            /**
+             * 加载更多数据
+             *
+             */
+            $scope.loadMoreData = function(){
+                RwglService.loadMoreData();
+            };
+
             $scope.$on("loadData",function(e,d){
                 if('回电'==d) {
                     RwglService.loadCallbackList();

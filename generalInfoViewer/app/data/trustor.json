@@ -11,7 +11,7 @@
                     }
                     ],
                     "dssh" : "",
-                    "levelMc" : "普通会员",
+                    "levelMc" : "钻石会员",
                     "nsrsbh" : "130402576795504",
                     "wtdwId" : "75e778dc3f634fbdac03984dba08a7wer",
                     "wtdwMc" : "邯郸市惠民贸易有限公司"
@@ -36,7 +36,7 @@
                     }
                     ],
                     "dssh" : "",
-                    "levelMc" : "普通会员",
+                    "levelMc" : "白金会员",
                     "nsrsbh" : "130402665285629",
                     "wtdwId" : "b49f03190272452b932f0a0b95f81099qweqwe",
                     "wtdwMc" : "邯郸市图远电子科技有限公司"
@@ -47,10 +47,21 @@
                     }
                     ],
                     "dssh" : "",
-                    "levelMc" : "普通会员",
+                    "levelMc" : "金卡会员",
                     "nsrsbh" : "13040206942715X",
                     "wtdwId" : "24bae7b3127441bfac34669c365351dfrtrt",
                     "wtdwMc" : "邯郸市丛美贸易有限公司"
+                }, {
+                    "cpdlList" : [{
+                        "cpdlDm" : "04",
+                        "cpdlMc" : "国税发票"
+                    }
+                    ],
+                    "dssh" : "",
+                    "levelMc" : "银卡会员",
+                    "nsrsbh" : "13212919450906001201",
+                    "wtdwId" : "1e1fd2edc6e24babb5f1e0b2f32c3ed8",
+                    "wtdwMc" : "邯郸市邯山区爱民汽车配件经营部"
                 }]
 		},
 		"zjjgWtdwData" : {
