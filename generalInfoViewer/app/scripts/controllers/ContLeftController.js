@@ -3,11 +3,11 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.ContLeft')
-    .controller('ContLeftController', ['$scope', '_', function ($scope, _) {
+    .controller('ContLeftController', ['$scope', '_','$timeout','Config', function ($scope, _ ,$timeout,Config) {
 
         $scope.findInfo = "";
 
-        $scope.TagStyle = {'-webkit-transform': 'translate(0,0'};
+        $scope.TagStyle = {'-webkit-transform': 'translate(0,0)'};
 
         var _tagProperty = {'tagName': '', 'TagClass': '', 'templateUrl': ''};
 
@@ -34,9 +34,9 @@ angular
         //var _tags = [{'tagName':'纳税单位','TagClass':'','templateUrl':'template/tabs/taxInstitutionPage.html'},{'tagName':'会计信息','TagClass':'','templateUrl':'template/tabs/taxpayerPage.html'},{'tagName':'中介机构','TagClass':'','templateUrl':'template/tabs/intermediaryInstitutionPage.html'}];
 
         var _tags = [
-            new _tagObj('会计信息', 'views/template/tabs/accountantPage.html'),
-            new _tagObj('纳税单位', 'views/template/tabs/taxInstitutionPage.html'),
-            new _tagObj('中介机构', 'views/template/tabs/intermediaryInstitutionPage.html')
+            new _tagObj('会计信息', 'views/template/tabs/accountantPage.html',Config.getTabTip().contacts),
+            new _tagObj('纳税单位', 'views/template/tabs/taxInstitutionPage.html',Config.getTabTip().company),
+            new _tagObj('中介机构', 'views/template/tabs/intermediaryInstitutionPage.html',Config.getTabTip().intermediary)
         ];
 
         $scope.tags = _tags;
@@ -44,7 +44,7 @@ angular
 
         $scope.activeView = function (number, tag) {
 
-            $scope.$broadcast('loadData',"");
+            //
 
             _.map($scope.tags, function (item) {
                 item.TagClass = "";
@@ -54,18 +54,22 @@ angular
 
             switch (number) {
                 case 0:
-                    $scope.TagStyle = {'-webkit-transform': 'translate(0,0'};
+                    $scope.TagStyle = {'-webkit-transform': 'translate(0,0)'};
                     break;
                 case 1:
-                    $scope.TagStyle = {'-webkit-transform': 'translate(-25%,0'};
+                    $scope.TagStyle = {'-webkit-transform': 'translate(-25%,0)'};
                     break;
                 case 2:
-                    $scope.TagStyle = {'-webkit-transform': 'translate(-50%,0'};
+                    $scope.TagStyle = {'-webkit-transform': 'translate(-50%,0)'};
                     break;
                 case 3:
-                    $scope.TagStyle = {'-webkit-transform': 'translate(-75%,0'};
+                    $scope.TagStyle = {'-webkit-transform': 'translate(-75%,0)'};
                     break;
             }
+
+                $scope.$broadcast('loadData',tag);
+
+
         };
 
     }]);

@@ -4,9 +4,12 @@
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
     .controller('PageInfoController', ['$scope', '$timeout','pageInfoService', 'Config', function ($scope, $timeout, pageInfoService, Config) {
-        $scope.loadPageInfo = function () {
+        $scope.$on('loadData',function(e,d){
+            fetchData(d);
+        });
+        var fetchData=function(isLoad){
             var lxrid, khid, khlx, yhdm;
-            switch ($scope.tabType) {
+            switch (isLoad) {
                 case '0':
                     lxrid = '19c2f04ff6564c60bc4bc7a648c356ec';
                     khid = '799cb25280c6439a8aff592707451606';
@@ -33,6 +36,9 @@ angular
                         $scope.intermediaryOld=$scope.intermediaryInfo.bz;
                     },1000);
             }
+        };
+        $scope.loadPageInfo = function () {
+            //fetchData();
         };
 
         $scope.$watch('contactsInfo.bz',function(newValue){
