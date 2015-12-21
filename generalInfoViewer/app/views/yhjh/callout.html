@@ -1,4 +1,4 @@
-<div class="tab-content style2" ng-controller="FwJhxxController">
+<div class="tab-content style2" ng-controller="CalloutJhxxController">
     <div class="tab-content-box">
         <div class="tab-content-item hastable">
             <div class="table">
@@ -7,13 +7,13 @@
                         <table class="softwear-auth">
                             <tr>
                                 <th width="20%">任务</th>
-                                <th width="24%">外呼情况记录</th>
+                                <th width="25%">外呼情况记录</th>
                                 <th width="7%">呼出结果</th>
                                 <th width="7%">联系人</th>
-                                <th width="15%">联系电话</th>
-                                <th width="10%">呼出时间</th>
+                                <th width="12%">联系电话</th>
+                                <th width="11%">呼出时间</th>
                                 <th width="7%">执行人</th>
-                                <th width="10%">创建时间</th>
+                                <th width="11%">创建时间</th>
                             </tr>
                         </table>
                         <div class="scroll-arrow2" ui-y-table>
@@ -26,16 +26,48 @@
                         </div>
                     </div>
                     <div class="table-content">
-                        <table class="softwear-auth" ui-y-table-content>
-                            <tr ng-repeat="vo in calloutList">
-                                <td width="20%">{{vo.rwmc}}</td>
-                                <td width="24%">{{vo.whqkjl}}</td>
-                                <td width="7%">{{vo.hcjg}}</td>
-                                <td width="7%">{{vo.lxr}}</td>
-                                <td width="15%">{{vo.hccgdhhm}}</td>
-                                <td width="10%">{{vo.hwsj}}</td>
-                                <td width="7%">{{vo.zxzName}}</td>
-                                <td width="10%">{{vo.cjsj}}</td>
+                        <table class="softwear-auth" ui-y-table-content scroll-load-more load-more="loadMoreData()">
+                            <tr ng-repeat="vo in calloutList track by $index">
+                                <td width="20%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.rwmc}}" tooltip-append-to-body="true">{{vo.rwmc}}
+                                    </div>
+                                </td>
+                                <td width="25%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.whqkjl}}" tooltip-append-to-body="true">{{vo.whqkjl}}
+                                    </div>
+                                </td>
+                                <td width="7%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.hcjgmc}}" tooltip-append-to-body="true">{{vo.hcjgmc}}
+                                    </div>
+                                </td>
+                                <td width="7%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.lxr}}" tooltip-append-to-body="true">{{vo.lxr}}
+                                    </div>
+                                </td>
+                                <td width="12%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.hccgdhhm}}" tooltip-append-to-body="true">{{vo.hccgdhhm}}
+                                    </div>
+                                </td>
+                                <td width="11%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.hwsj}}" tooltip-append-to-body="true">{{vo.hwsj}}
+                                    </div>
+                                </td>
+                                <td width="7%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.zxzName}}" tooltip-append-to-body="true">{{vo.zxzName}}
+                                    </div>
+                                </td>
+                                <td width="11%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.cjsj}}" tooltip-append-to-body="true">{{vo.cjsj}}
+                                    </div>
+                                </td>
                             </tr>
 
                         </table>

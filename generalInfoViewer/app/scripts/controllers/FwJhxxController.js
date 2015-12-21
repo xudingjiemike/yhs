@@ -42,6 +42,7 @@ angular
              *
              */
             $scope.loadMoreData = function(){
+                alert(aa);
                 RwglService.loadMoreData();
             };
 

@@ -23,9 +23,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="table-content" ui-y-table-content>
+                    <div class="table-content" ui-y-table-content scroll-load-more load-more = "loadMoreData()">
                         <table class="softwear-auth">
-                            <tr ng-repeat="vo in xsList">
+                            <tr ng-repeat="vo in xsList track by $index">
                                 <td width="10%">{{vo.cpdl}}</td>
                                 <td width="10%"> {{vo.qzjz}}</td>
                                 <td width="10%"> {{vo.jzsj}}</td>
