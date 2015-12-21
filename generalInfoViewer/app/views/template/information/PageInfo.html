@@ -46,7 +46,7 @@
         <div class="remark">
             <input type="text" class="dataId" ng-model="contactsInfo.lxrid" hidden>
             <input type="text" class="bz" placeholder="请输入备注信息" ng-model="contactsInfo.bz" ng-disabled="!contactsInfo.lxrid"/>
-            <button class="btn btn-sm btn-success lxr" ng-click="saveRemark($event)" disabled>保存</button>
+            <button class="lxr" ng-click="saveRemark($event)" disabled>保存</button>
         </div>
     </div>
 
@@ -135,7 +135,7 @@
         <div class="remark">
             <input type="text" class="dataId" ng-model="companyInfo.yhid" hidden>
             <input type="text" class="bz" placeholder="请输入备注信息" ng-model="companyInfo.bz" ng-disabled="!companyInfo.yhid"/>
-            <button class="btn btn-sm btn-success dwyh" ng-click="saveRemark($event)" disabled>保存</button>
+            <button class="btn btn-sm dwyh" ng-click="saveRemark($event)" disabled>保存</button>
         </div>
     </div>
 
@@ -182,7 +182,7 @@
         <div class="remark">
             <input type="text" class="dataId" ng-model="intermediaryInfo.yhdm" hidden>
             <input type="text" class="bz" placeholder="请输入备注信息" ng-model="intermediaryInfo.bz" ng-disabled="!intermediaryInfo.yhdm"/>
-            <button class="btn btn-sm btn-success zjjg" ng-click="saveRemark($event)" disabled>保存</button>
+            <button class="btn btn-sm zjjg" ng-click="saveRemark($event)" disabled>保存</button>
         </div>
     </div>
 </div>
