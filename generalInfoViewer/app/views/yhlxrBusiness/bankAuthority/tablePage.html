@@ -1,0 +1,53 @@
+<div class="tab-content style2">
+    <div class="tab-content-box">
+        <div class="tab-content-item hastable">
+            <div class="table">
+                <div class="search-result">
+                    <div class="table-header" ui-y-table>
+                        <table class="softwear-auth">
+                            <tr>
+                                <th width="10%">操作</th>
+                                <th width="10%">产品包</th>
+                                <th width="10%">签单日期</th>
+                                <th width="10%">受托金额</th>
+                                <th width="10%">联系人</th>
+                                <th width="10%">状态</th>
+                                <th width="10%">协议号</th>
+                                <th width="10%">银行名称</th>
+                                <th width="15%">最后扣款日期</th>
+                                <th width="15%">最后扣款状态</th>
+                            </tr>
+                        </table>
+                        <div class="scroll-arrow2" ui-y-table>
+                            <div class="scroll-to-left disabled">
+                                <span class="arrow-left2"></span>
+                            </div>
+                            <div class="scroll-to-right">
+                                <span class="arrow-right2"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-content" ui-y-table-content>
+                        <table class="softwear-auth">
+                            <tr ng-repeat="item in tableItems">
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.rjMc}}" tooltip-append-to-body ="true"></td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.cpbmc}}" tooltip-append-to-body ="true">{{item.cpbmc}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.qdrq}}" tooltip-append-to-body ="true">{{item.qdrq}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.tsje}}" tooltip-append-to-body ="true">{{item.tsje}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.lxrmc}}" tooltip-append-to-body ="true">{{item.lxrmc}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.statusMc}}" tooltip-append-to-body ="true">{{item.statusMc}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.xyh}}" tooltip-append-to-body ="true">{{item.xyh}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.yhmc}}" tooltip-append-to-body ="true">{{item.yhmc}}</td>
+                                <td width="15%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.kkrq}}" tooltip-append-to-body ="true">{{item.kkrq}}</td>
+                                <td width="15%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.kkbz}}" tooltip-append-to-body ="true">{{item.kkbz}}</td>
+                            </tr>
+                        </table>
+                        <!--<table class="softwear-auth">-->
+
+                        <!--</table>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,6 +5,7 @@
 angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
     .directive('uiYTableContent',function(){
         return{
+            controller:'TabsController',
             link:function($scope,element,$attrs){
               element.on('mouseover',"td",function(e){
                   if(this.offsetWidth < this.scrollWidth){

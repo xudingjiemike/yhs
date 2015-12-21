@@ -4,6 +4,7 @@
 angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
     .directive('uiYTable',function(){
        return{
+
            link:function($scope,element,$attrs){
                var dragable = false, maxDragDist = 0, pzNowX = 0 , translated = 0, currrentTransd = 0, pzInitX = 0, tableHeader,tableContent;
 
@@ -143,6 +144,6 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
                        }
                    }
                };
-           }
+           },
        }
     });

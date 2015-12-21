@@ -1,0 +1,47 @@
+
+<div class="tab-content style2">
+    <div class="tab-content-box">
+        <div class="tab-content-item hastable">
+            <div class="table">
+                <div class="search-result">
+                    <div class="table-header" ui-y-table>
+                        <table class="softwear-auth">
+                            <tr>
+                                <th width="10%">申请单编号</th>
+                                <th width="10%">商品信息</th>
+                                <th width="10%">申请日期</th>
+                                <th width="10%">核对状态</th>
+                                <th width="10%">京东单号</th>
+                                <th width="10%">交付状态</th>
+                                <th width="10%">退货状态</th>
+                                <th width="10%">操作</th>
+                            </tr>
+                        </table>
+                        <div class="scroll-arrow2" ui-y-table>
+                            <div class="scroll-to-left disabled">
+                                <span class="arrow-left2"></span>
+                            </div>
+                            <div class="scroll-to-right">
+                                <span class="arrow-right2"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-content" ui-y-table-content>
+                        <table class="softwear-auth">
+                            <tr ng-repeat="item in tableItems">
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.sqdbh}}" tooltip-append-to-body ="true">{{item.sqdbh}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.spxx}}" tooltip-append-to-body ="true">{{item.spxx}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.sqDatetime}}" tooltip-append-to-body ="true">{{item.sqDatetime}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.checkState}}" tooltip-append-to-body ="true">{{item.checkState}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.jdDdid}}" tooltip-append-to-body ="true">{{item.jdDdid}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.deliveryStateName}}" tooltip-append-to-body ="true">{{item.deliveryStateName}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.thdStateName}}" tooltip-append-to-body ="true">{{item.thdStateName}}</td>
+                                <td width="10%" class="title">操作</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

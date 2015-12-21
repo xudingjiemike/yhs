@@ -7,8 +7,6 @@ angular
         function($http,Host,Url){
             return{
                 LoadSoftwareAuthorityInfo:function(khid){
-                    console.log(Host.getHostByName("BUSINISS")+Url.getUrlByName("SJSQ"));
-
                     return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("SJSQ")+"?khid="+khid)
                 }
             }
