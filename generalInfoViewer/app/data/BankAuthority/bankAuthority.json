@@ -1,0 +1,30 @@
+{
+	"data" : {
+		"total" : 1,
+		"list" : [{
+				"cpbId" : "7864",
+				"cpbmc" : "携税宝（标准版）-续费包",
+				"khId" : "b976c2acbf7d41179ab1c1e3b14fb528",
+				"khlx" : "0",
+				"khmc" : "永年县永恒摩托车大世界",
+				"kkbz" : "",
+				"kkrq" : "",
+				"lxrId" : "5c41e639c10946de855ee03aff145496",
+				"lxrmc" : "赵建鹏法人",
+				"qdrId" : "096aaa8b2fb741c6bcbf464f7e0597c6",
+				"qdrq" : "2012-09-04",
+				"status" : "3",
+                "statusMc" : "3",
+				"tsje" : "560",
+				"tsxyId" : "154046",
+				"xyh" : "0008046",
+				"xysswd" : "001085013",
+				"yhmc" : "邯郸中国银行",
+				"zfyy" : ""
+			}
+		]
+	},
+	"message" : "接口访问成功！",
+	"messageCode" : "000000",
+	"success" : true
+}

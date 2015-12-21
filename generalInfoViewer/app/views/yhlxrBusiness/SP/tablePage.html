@@ -1,0 +1,51 @@
+
+<div class="tab-content style2">
+    <div class="tab-content-box">
+        <div class="tab-content-item hastable">
+            <div class="table">
+                <div class="search-result">
+                    <div class="table-header" ui-y-table>
+                        <table class="softwear-auth">
+                            <tr>
+                                <th width="10%">产品名称</th>
+                                <th width="10%">价格</th>
+                                <th width="10%">状态</th>
+                                <th width="10%">订购日期</th>
+                                <th width="10%">生效日期</th>
+                                <th width="10%">失效日期</th>
+                                <th width="10%">退订日期</th>
+                                <th width="10%">类型</th>
+                                <th width="10%">账号</th>
+                                <th width="10%">账号状态</th>
+                            </tr>
+                        </table>
+                        <div class="scroll-arrow2" ui-y-table>
+                            <div class="scroll-to-left disabled">
+                                <span class="arrow-left2"></span>
+                            </div>
+                            <div class="scroll-to-right">
+                                <span class="arrow-right2"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-content" ui-y-table-content>
+                        <table class="softwear-auth">
+                            <tr ng-repeat="item in tableItems">
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.productName}}" tooltip-append-to-body ="true">{{item.productName}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.price}}" tooltip-append-to-body ="true">{{item.price}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.stateName}}" tooltip-append-to-body ="true">{{item.stateName}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.dgAcceptedTime}}" tooltip-append-to-body ="true">{{item.dgAcceptedTime}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.effectiveTime}}" tooltip-append-to-body ="true">{{item.effectiveTime}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.expireTime}}" tooltip-append-to-body ="true">{{item.expireTime}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.tdAcceptedTime}}" tooltip-append-to-body ="true">{{item.tdAcceptedTime}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.accountTypeName}}" tooltip-append-to-body ="true">{{item.accountTypeName}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.account}}" tooltip-append-to-body ="true">{{item.account}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.accountStatusName}}" tooltip-append-to-body ="true">{{item.accountStatusName}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

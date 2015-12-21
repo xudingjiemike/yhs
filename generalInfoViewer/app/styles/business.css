@@ -23,8 +23,13 @@
     word-break:keep-all;
     overflow:hidden;
     text-overflow:ellipsis;
+    text-align: center;
 }
 .softwear-auth{
+    table-layout:fixed;
+}
+.softwareAuthority{
+    width: 100%;
     table-layout:fixed;
 }
 

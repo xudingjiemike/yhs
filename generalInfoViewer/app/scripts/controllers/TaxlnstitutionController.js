@@ -19,9 +19,10 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Taxlnstitution').controller('Tax
 
         $scope.tags = [
             new _tagObj('软件授权','views/yhlxrBusiness/softwareAuthority/tablePage.html'),
-            new _tagObj('订单','views/template/tables/tablePage.html'),
-            new _tagObj('银行托收','views/template/tables/tablePage.html'),
-            new _tagObj('礼品申请','views/template/tables/tablePage.html'),
+            new _tagObj('订单','views/yhlxrBusiness/order/tablePage.html'),
+            new _tagObj('银行托收','views/yhlxrBusiness/bankAuthority/tablePage.html'),
+            new _tagObj('礼品申请','views/yhlxrBusiness/giftApply/tablePage.html'),
+            new _tagObj('SP','views/yhlxrBusiness/SP/tablePage.html'),
             new _tagObj('咨询','views/yhjh/zx.html'),
             new _tagObj('回电','views/yhjh/callback.html'),
             new _tagObj('外呼','views/yhjh/callout.html'),

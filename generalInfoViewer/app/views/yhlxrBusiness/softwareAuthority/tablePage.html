@@ -1,11 +1,11 @@
 
-<div class="tab-content style2" ng-controller="SoftwareAuthorityController">
+<div class="tab-content style2">
     <div class="tab-content-box">
         <div class="tab-content-item hastable">
             <div class="table">
                 <div class="search-result">
                     <div class="table-header" ui-y-table>
-                        <table class="softwear-auth">
+                        <table class="softwareAuthority">
                             <tr>
                                 <th width="10%">软件名称</th>
                                 <th width="10%">分版名称</th>
@@ -27,16 +27,16 @@
                         </div>
                     </div>
                     <div class="table-content" ui-y-table-content>
-                        <table class="softwear-auth">
+                        <table class="softwareAuthority">
                             <tr ng-repeat="item in tableItems">
                                 <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.rjMc}}" tooltip-append-to-body ="true">{{item.rjMc}}</td>
-                                <td width="10%">{{item.fblbMc}}</td>
-                                <td width="10%">{{item.rjbb}}</td>
-                                <td width="10%" class="title">{{item.sqm}}</td>
-                                <td width="10%">{{item.sqztMc}}</td>
-                                <td width="10%">{{item.dlbyhlxDm}}</td>
-                                <td width="10%">{{item.sqrqq}}</td>
-                                <td width="10%">{{item.sqrqz}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.fblbMc}}" tooltip-append-to-body ="true">{{item.fblbMc}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.rjbb}}" tooltip-append-to-body ="true">{{item.rjbb}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.sqm}}" tooltip-append-to-body ="true">{{item.sqm}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.sqztMc}}" tooltip-append-to-body ="true">{{item.sqztMc}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.dlbyhlxDm}}" tooltip-append-to-body ="true">{{item.dlbyhlxDm}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.sqrqq}}" tooltip-append-to-body ="true">{{item.sqrqq}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.sqrqz}}" tooltip-append-to-body ="true">{{item.sqrqz}}</td>
                             </tr>
                         </table>
                     </div>

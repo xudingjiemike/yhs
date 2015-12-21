@@ -180,6 +180,30 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
                 descript: "软件授权"
             },
             {
+                urlname: "YHTS",
+                url: "",
+                mockurl: "data/BankAuthority/BankAuthority.json",
+                descript: "银行托收"
+            },
+            {
+                urlname: "LPSQ",
+                url: "",
+                mockurl: "data/GiftApply/GiftApply.json",
+                descript: "银行托收"
+            },
+            {
+                urlname: "DD",
+                url: "",
+                mockurl: "data/Order/order.json",
+                descript: "订单"
+            },
+            {
+                urlname: "SP",
+                url: "",
+                mockurl: "data/SP/sp.json",
+                descript: "sp"
+            },
+            {
                 urlname: "DELETETRUSTOR",
                 url: "nbgl2Web/api/khgl/wtdw/delteWtdw",
                 mockurl: "",

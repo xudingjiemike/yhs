@@ -1,0 +1,20 @@
+{
+  "success":true,
+  "messageCode":"00000000",
+  "message":"接口调用成功！",
+  "data":[
+    {
+      "productName":"测试产品1",
+      "price":"100",
+      "state":"1",
+      "stateName":"正常",
+      "dgAcceptedTime":"2010-10-01",
+      "effectiveTime":"2011-10-10",
+      "expireTime":"2018-10-01",
+      "tdAcceptedTime":"2016-10-10",
+      "accountTypeName":"普通用户",
+      "account":"河北1",
+      "accountStatusName":"正常"
+    }
+  ]
+}

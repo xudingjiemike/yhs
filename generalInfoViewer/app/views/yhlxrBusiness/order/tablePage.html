@@ -1,4 +1,3 @@
-
 <div class="tab-content style2">
     <div class="tab-content-box">
         <div class="tab-content-item hastable">
@@ -7,15 +6,20 @@
                     <div class="table-header" ui-y-table>
                         <table class="softwear-auth">
                             <tr>
-                                <th width="20%">软件名称</th>
-                                <th width="20%">分版名称</th>
-                                <th width="10%">版本</th>
-                                <th width="10%">状态</th>
-                                <th width="20%">起始日期</th>
-                                <th width="20%">到期日期</th>
+                                <th width="10%">订单编号</th>
+                                <th width="10%">产品包</th>
+                                <th width="10%">下单日期</th>
+                                <th width="10%">应收金额</th>
+                                <th width="10%">收款状态</th>
+                                <th width="15%">收款时间</th>
+                                <th width="10%">开票状态</th>
+                                <th width="10%">开票时间</th>
+                                <th width="10%">交付状态</th>
+                                <th width="15%">交付时间</th>
+                                <th width="10%">操作</th>
                             </tr>
                         </table>
-                        <div class="scroll-arrow2">
+                        <div class="scroll-arrow2" ui-y-table>
                             <div class="scroll-to-left disabled">
                                 <span class="arrow-left2"></span>
                             </div>
@@ -24,488 +28,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="table-content">
+                    <div class="table-content" ui-y-table-content>
                         <table class="softwear-auth">
-                            <tr>
-                                <td width="20%">表格样式</td>
-                                <td width="20%">
-                                    请参照这里
-                                </td>
-                                <td width="10%">
-                                    表格样式
-                                </td>
-                                <td width="10%">
-                                    请参照
-                                </td>
-                                <td width="20%">这</td>
-                                <td width="20%">里</td>
-                            </tr>
-                            <tr>
-                                <td>惠税无忧</td>
-                                <td>
-                                    惠税无忧V1.01
-                                </td>
-                                <td>
-                                    v1.01
-                                </td>
-                                <td>
-                                    正常
-                                </td>
-                                <td>2015-12-23</td>
-                                <td>2016-12-23</td>
-                            </tr>
-                            <tr>
-                                <td>惠税无忧</td>
-                                <td>
-                                    惠税无忧V1.01
-                                </td>
-                                <td>
-                                    v1.01
-                                </td>
-                                <td>
-                                    正常
-                                </td>
-                                <td>2015-12-23</td>
-                                <td>2016-12-23</td>
-                            </tr>
-                            <tr>
-                                <td>惠税无忧</td>
-                                <td>
-                                    惠税无忧V1.01
-                                </td>
-                                <td>
-                                    v1.01
-                                </td>
-                                <td>
-                                    正常
-                                </td>
-                                <td>2015-12-23</td>
-                                <td>2016-12-23</td>
-                            </tr>
-                            <tr>
-                                <td>惠税无忧</td>
-                                <td>
-                                    惠税无忧V1.01
-                                </td>
-                                <td>
-                                    v1.01
-                                </td>
-                                <td>
-                                    正常
-                                </td>
-                                <td>2015-12-23</td>
-                                <td>2016-12-23</td>
+                            <tr ng-repeat="item in tableItems">
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.orderId}}" tooltip-append-to-body ="true">{{item.orderId}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.cpbs}}" tooltip-append-to-body ="true">{{item.cpbs}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.ddTime}}" tooltip-append-to-body ="true">{{item.ddTime}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.ddje}}" tooltip-append-to-body ="true">{{item.ddje}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.skzt}}" tooltip-append-to-body ="true">{{item.skzt}}</td>
+                                <td width="15%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.sksj}}" tooltip-append-to-body ="true">{{item.sksj}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.skzt}}" tooltip-append-to-body ="true">{{item.skzt}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.sksj}}" tooltip-append-to-body ="true">{{item.sksj}}</td>
+                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.jfzt}}" tooltip-append-to-body ="true">{{item.jfzt}}</td>
+                                <td width="15%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{item.jfsj}}" tooltip-append-to-body ="true">{{item.jfsj}}</td>
+                                <td width="10%" class="title">操作</td>
                             </tr>
                         </table>
+                        <!--<table class="softwear-auth">-->
+
+                        <!--</table>-->
                     </div>
                 </div>
             </div>
         </div>
-        <!--<div class="tab-content-item">-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>回电</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>任务类型[<span class="alink">30210251</span>]</span>-->
-                                                                <!--<span>待回电</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>来电咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>0571-56881234</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                                                            <!--<span>-->
-                                                                <!--<span>咨询事项：申报失败</span>-->
-                                                                <!--<span>事项补充说明：申报失败，由于操作不当</span>-->
-                                                                <!--<span>咨询事项：申报出错</span>-->
-                                                                <!--<span>派发[<span class="alink">50210001</span>]</span>-->
-                                                                <!--<span>未完成</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>在线咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>会话ID[000035]</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="tab-content-item">-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>回电</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>任务类型[<span class="alink">30210251</span>]</span>-->
-                                                                <!--<span>待回电</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>来电咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>0571-56881234</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                                                            <!--<span>-->
-                                                                <!--<span>咨询事项：申报失败</span>-->
-                                                                <!--<span>事项补充说明：申报失败，由于操作不当</span>-->
-                                                                <!--<span>咨询事项：申报出错</span>-->
-                                                                <!--<span>派发[<span class="alink">50210001</span>]</span>-->
-                                                                <!--<span>未完成</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>在线咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>会话ID[000035]</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="tab-content-item">-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>回电</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>任务类型[<span class="alink">30210251</span>]</span>-->
-                                                                <!--<span>待回电</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>来电咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>0571-56881234</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                                                            <!--<span>-->
-                                                                <!--<span>咨询事项：申报失败</span>-->
-                                                                <!--<span>事项补充说明：申报失败，由于操作不当</span>-->
-                                                                <!--<span>咨询事项：申报出错</span>-->
-                                                                <!--<span>派发[<span class="alink">50210001</span>]</span>-->
-                                                                <!--<span>未完成</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>在线咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>会话ID[000035]</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="tab-content-item">-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>回电</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>任务类型[<span class="alink">30210251</span>]</span>-->
-                                                                <!--<span>待回电</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>来电咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>0571-56881234</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                                                            <!--<span>-->
-                                                                <!--<span>咨询事项：申报失败</span>-->
-                                                                <!--<span>事项补充说明：申报失败，由于操作不当</span>-->
-                                                                <!--<span>咨询事项：申报出错</span>-->
-                                                                <!--<span>派发[<span class="alink">50210001</span>]</span>-->
-                                                                <!--<span>未完成</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>在线咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>会话ID[000035]</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="tab-content-item">-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>回电</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>任务类型[<span class="alink">30210251</span>]</span>-->
-                                                                <!--<span>待回电</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>来电咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>0571-56881234</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                                                            <!--<span>-->
-                                                                <!--<span>咨询事项：申报失败</span>-->
-                                                                <!--<span>事项补充说明：申报失败，由于操作不当</span>-->
-                                                                <!--<span>咨询事项：申报出错</span>-->
-                                                                <!--<span>派发[<span class="alink">50210001</span>]</span>-->
-                                                                <!--<span>未完成</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>在线咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>会话ID[000035]</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="tab-content-item">-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>回电</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>任务类型[<span class="alink">30210251</span>]</span>-->
-                                                                <!--<span>待回电</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>来电咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>0571-56881234</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                                                            <!--<span>-->
-                                                                <!--<span>咨询事项：申报失败</span>-->
-                                                                <!--<span>事项补充说明：申报失败，由于操作不当</span>-->
-                                                                <!--<span>咨询事项：申报出错</span>-->
-                                                                <!--<span>派发[<span class="alink">50210001</span>]</span>-->
-                                                                <!--<span>未完成</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>在线咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>会话ID[000035]</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="tab-content-item">-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>回电</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>任务类型[<span class="alink">30210251</span>]</span>-->
-                                                                <!--<span>待回电</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>来电咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>0571-56881234</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                                <!--<span class="alink">提交质检</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                                                            <!--<span>-->
-                                                                <!--<span>咨询事项：申报失败</span>-->
-                                                                <!--<span>事项补充说明：申报失败，由于操作不当</span>-->
-                                                                <!--<span>咨询事项：申报出错</span>-->
-                                                                <!--<span>派发[<span class="alink">50210001</span>]</span>-->
-                                                                <!--<span>未完成</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="user-opt-records">-->
-                <!--<div class="record-odd">-->
-                                                            <!--<span class="record-odd-title">-->
-                                                                <!--<span class="record-date">2015-11-23</span>-->
-                                                                <!--<span>在线咨询</span>-->
-                                                            <!--</span>-->
-                                                            <!--<span class="record-odd-content">-->
-                                                                <!--<span>会话ID[000035]</span>-->
-                                                                <!--<span>陈会计</span>-->
-                                                                <!--<span>张三(1001)</span>-->
-                                                            <!--</span>-->
-                <!--</div>-->
-                <!--<div class="record-even">-->
-                    <!--<span>情况记录：当时情况记录说明</span>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
     </div>
 </div>

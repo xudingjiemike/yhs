@@ -1,0 +1,23 @@
+{
+	"data" : {
+		"total" : 1,
+		"list" : [{
+				"checkState" : "1",
+				"checkStateName" : "核实通过",
+				"deliveryState" : "",
+				"deliveryStateName" : "",
+				"jdDdid" : "",
+				"jdddState" : "",
+				"spxx" : "【京】金龙鱼特香花生油1.8L X 1;【京】蓝月亮机洗绝配套餐 X 1",
+				"sqDatetime" : "2015-04-16",
+				"sqdState" : "2",
+				"sqdbh" : "201504165181554 ",
+				"thdState" : "",
+				"thdStateName" : ""
+			}
+		]
+	},
+	"message" : "接口访问成功！",
+	"messageCode" : "000000",
+	"success" : true
+}
