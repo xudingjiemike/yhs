@@ -5,7 +5,8 @@ angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
     .controller('PageInfoController', ['$scope', '$timeout','pageInfoService', 'Config', function ($scope, $timeout, pageInfoService, Config) {
         $scope.$on('loadData',function(e,d){
-            fetchData(d);
+            console.log(d.tagtype);
+            fetchData(d.tagtype);
         });
         var fetchData=function(isLoad){
             var lxrid, khid, khlx, yhdm;

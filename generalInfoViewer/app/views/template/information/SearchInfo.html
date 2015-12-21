@@ -15,7 +15,7 @@
                         <th width="20%">用户类型</th>
                         <th width="15%">用户状态</th>
                     </tr>
-                    <tr ng-repeat="search in searchInfo.yhList">
+                    <tr ng-repeat="search in searchInfo.yhList" ng-click="selectItem(search)">
                         <td align="center">
                             <div ng-if="search.gssh">国：<span ng-bind="search.gssh"></span></div>
                             <div ng-if="search.dssh">地：<span ng-bind="search.dssh"></span></div>

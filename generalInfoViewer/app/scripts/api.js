@@ -74,43 +74,43 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
             {
                 urlname: 'CONTACTS',
                 url: 'nbgl2Web/api/khgl/lxr/getLxrxxByLxrid',
-                mockurl: 'data/contacts.json',
+                mockurl: 'data/Information/contacts.json',
                 descript: '查询联系人信息，参数lxrid(联系人编号)'
             },
             {
                 urlname: 'COMPANY',
                 url: 'nbgl2Web/api/khgl/nsdw/getNsdwByKhid',
-                mockurl: 'data/company.json',
+                mockurl: 'data/Information/company.json',
                 descript: '查询纳税单位信息，参数khid(客户编号)'
             },
             {
                 urlname: 'INTERMEDIARY',
                 url: 'nbgl2Web/api/khgl/zjjg/getZjjgByYhdm',
-                mockurl: 'data/intermediary.json',
+                mockurl: 'data/Information/intermediary.json',
                 descript: '查询中介机构信息，参数khid(客户编号)'
             },
             {
                 urlname: 'CONTACTS_UPDATE',
                 url: 'nbgl2Web/api/khgl/lxr/updateLxrFiled',
-                mockurl: 'data/update_remark.json',
+                mockurl: 'data/Information/update_remark.json',
                 descript: '修改联系人信息，参数dataId(联系人编号),fieldKey(字段名),fieldValue(字段值)'
             },
             {
                 urlname: 'COMPANY_UPDATE',
                 url: 'nbgl2Web/api/khgl/nsdw/updateNsdwFiled',
-                mockurl: 'data/update_remark.json',
+                mockurl: 'data/Information/update_remark.json',
                 descript: '查询纳税单位信息，参数dataId(联系人编号),fieldKey(字段名),fieldValue(字段值)'
             },
             {
                 urlname: 'INTERMEDIARY_UPDATE',
                 url: 'nbgl2Web/api/khgl/zjjg/updateZjjgFiled',
-                mockurl: 'data/update_remark.json',
+                mockurl: 'data/Information/update_remark.json',
                 descript: '查询中介机构信息，参数dataId(联系人编号),fieldKey(字段名),fieldValue(字段值)'
             },
             {
                 urlname: 'SEARCH',
                 url: 'nbgl2Web/api/khgl/search',
-                mockurl: 'data/search.json',
+                mockurl: 'data/Information/search.json',
                 descript: '根据关键信息检索用户列表'
             },
             {
