@@ -1,4 +1,4 @@
-<div class="tab-content style2" ng-controller="FwJhxxController">
+<div class="tab-content style2" ng-controller="SmrwJhxxController">
     <div class="tab-content-box">
         <div class="tab-content-item hastable">
             <div class="table">
@@ -7,12 +7,12 @@
                         <table class="softwear-auth">
                             <tr>
                                 <th width="10%">工单编号</th>
-                                <th width="36%">任务描述</th>
+                                <th width="43%">任务描述</th>
                                 <th width="7%">任务状态</th>
-                                <th width="10%">执行时间</th>
-                                <th width="10%">要求完成时间</th>
+                                <th width="11%">执行时间</th>
+                                <th width="11%">要求完成时间</th>
                                 <th width="7%">创建人</th>
-                                <th width="10%">创建时间</th>
+                                <th width="11%">创建时间</th>
                             </tr>
                         </table>
                         <div class="scroll-arrow2" ui-y-table>
@@ -24,16 +24,44 @@
                             </div>
                         </div>
                     </div>
-                    <div class="table-content" ui-y-table-content>
+                    <div class="table-content" ui-y-table-content scroll-load-more load-more="loadMoreData()">
                         <table class="softwear-auth">
-                            <tr ng-repeat="vo in smrwList">
-                                <td width="10%" class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{vo.bdbh}}" tooltip-append-to-body ="true">{{vo.bdbh}}</td>
-                                <td width="36%">{{vo.rwms}}</td>
-                                <td width="7%">{{vo.rwztmc}}</td>
-                                <td width="10%">{{vo.pfsj}}</td>
-                                <td width="10%">{{vo.yqwcrq}}</td>
-                                <td width="7%">{{vo.rwcjz}}</td>
-                                <td width="10%">{{vo.pfsj}}</td>
+                            <tr ng-repeat="vo in smrwList track by $index">
+                                <td width="10%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.bdbh}}" tooltip-append-to-body="true">{{vo.bdbh}}
+                                    </div>
+                                </td>
+                                <td width="43%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.rwms}}" tooltip-append-to-body="true">{{vo.rwms}}
+                                    </div>
+                                </td>
+                                <td width="7%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.rwztmc}}" tooltip-append-to-body="true">{{vo.rwztmc}}
+                                    </div>
+                                </td>
+                                <td width="11%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.pfsj}}" tooltip-append-to-body="true">{{vo.pfsj}}
+                                    </div>
+                                </td>
+                                <td width="11%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.yqwcrq}}" tooltip-append-to-body="true">{{vo.yqwcrq}}
+                                    </div>
+                                </td>
+                                <td width="7%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.rwcjz}}" tooltip-append-to-body="true">{{vo.rwcjz}}
+                                    </div>
+                                </td>
+                                <td width="11%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.pfsj}}" tooltip-append-to-body="true">{{vo.pfsj}}
+                                    </div>
+                                </td>
                             </tr>
 
                         </table>

@@ -7,12 +7,12 @@
                         <table class="softwear-auth">
 
                             <tr>
-                                <th width="10%">诉求类型</th>
-                                <th width="10%">诉求时间</th>
-                                <th width="30%">诉求内容</th>
-                                <th width="30%">回复内容</th>
-                                <th width="10%">处理状态</th>
-                                <th width="10%">登记人</th>
+                                <th width="7%">诉求类型</th>
+                                <th width="11%">诉求时间</th>
+                                <th width="34%">诉求内容</th>
+                                <th width="34%">回复内容</th>
+                                <th width="7%">处理状态</th>
+                                <th width="7%">登记人</th>
                             </tr>
                         </table>
                         <div class="scroll-arrow2" ui-y-table>
@@ -24,15 +24,39 @@
                             </div>
                         </div>
                     </div>
-                    <div class="table-content" ui-y-table-content>
+                    <div class="table-content" ui-y-table-content scroll-load-more load-more="loadMoreData()">
                         <table class="softwear-auth">
-                            <tr ng-repeat="vo in tsjyList">
-                                <td width="10%">{{vo.sqlxmc}}</td>
-                                <td width="10%"> {{vo.sqsj}}</td>
-                                <td width="30%"> {{vo.sqnr}}</td>
-                                <td width="30%"> {{vo.hfnr}}</td>
-                                <td width="10%"> {{vo.sqztmc}}</td>
-                                <td width="10%"> {{vo.djrmc}}</td>
+                            <tr ng-repeat="vo in tsjyList track by $index">
+                                <td width="7%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.sqlxmc}}" tooltip-append-to-body="true">{{vo.sqlxmc}}
+                                    </div>
+                                </td>
+                                <td width="11%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.sqsj}}" tooltip-append-to-body="true"> {{vo.sqsj}}
+                                    </div>
+                                </td>
+                                <td width="34%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.sqnr}}" tooltip-append-to-body="true">{{vo.sqnr}}
+                                    </div>
+                                </td>
+                                <td width="34%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.hfnr}}" tooltip-append-to-body="true"> {{vo.hfnr}}
+                                    </div>
+                                </td>
+                                <td width="7%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.sqztmc}}" tooltip-append-to-body="true"> {{vo.sqztmc}}
+                                    </div>
+                                </td>
+                                <td width="7%">
+                                    <div class="title" tooltip-is-open="true" tooltip-placement="bottom"
+                                         tooltip="{{vo.djrmc}}" tooltip-append-to-body="true"> {{vo.djrmc}}
+                                    </div>
+                                </td>
                             </tr>
 
                         </table>

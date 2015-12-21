@@ -16,12 +16,16 @@ angular
 
             $scope.$on("loadData", function (e, d) {
                 if ('诉求' == d) {
-                    YhzxService.loadTsjyList(khid);
+                    YhzxService.loadTsjyList(khid,true);
                 }
             });
 
-            $scope.pageChanged = function () {
-                YhzxService.loadTsjyList(khid);
+            /**
+             * 加载更多数据
+             *
+             */
+            $scope.loadMoreData = function(){
+                YhzxService.loadTsjyList(khid,false);
             };
 
         }]);

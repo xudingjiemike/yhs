@@ -5,6 +5,7 @@ angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
     .controller('DxJhxxController', ['$scope','SmsService',
         function ($scope,SmsService) {
+            var khid = '';
             /**
              * 获取线索列表
              * @param khid
@@ -14,10 +15,16 @@ angular
 
             $scope.$on("loadData",function(e,d){
                 if('短信'==d){
-                    SmsService.loadDxList();
+                    SmsService.loadDxList(khid,true);
                 }
             });
-
+            /**
+             * 加载更多数据
+             *
+             */
+            $scope.loadMoreData = function(){
+                SmsService.loadDxList(khid,false);
+            };
 
 
         }]);

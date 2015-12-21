@@ -11,15 +11,19 @@ angular
                 getDxList: function (){
                     return dxList;
                 },
-                loadDxList: function (khid) {
-                    if (pageInfoDx.total > 0) {
-                        var temp = pageInfoDx.total / pageInfoDx.pageSize;
-                        if (temp < pageInfoDx.pageId) {
-                            return;
-                        }
-                    }else if (pageInfoDx.total == -1) {
+                loadDxList: function (khid,isFirst) {
+                    if (pageInfoDx.total == -1) {
                         pageInfoDx.total = 0;
                     } else if (pageInfoDx.total == 0) {
+                        return;
+                    } else if (!isFirst) {//不是第一次，是点击下拉框
+                        if (pageInfoDx.total > 0) {
+                            var temp = pageInfoDx.total / pageInfoDx.pageSize;
+                            if (temp < pageInfoDx.pageId) {
+                                return;
+                            }
+                        }
+                    }else{//是第一次查询但查过了就不再查了
                         return;
                     }
                     pageInfoDx.pageId++;

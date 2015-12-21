@@ -15,12 +15,14 @@ angular
 
             $scope.$on("loadData", function (e, d) {
                 if ('咨询' == d) {
-                    YhzxService.loadZxjlList(khid);
+                    YhzxService.loadZxjlList(khid,true);
                 }
             });
-
-            $scope.pageChanged = function () {
-                YhzxService.loadZxjlList(khid);
+            /**
+             * 加载更多数据
+             *
+             */
+            $scope.loadMoreData = function(){
+                YhzxService.loadZxjlList(khid,false);
             };
-
         }]);

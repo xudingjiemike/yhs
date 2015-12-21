@@ -10,15 +10,19 @@ angular
             var pageInfoZx = {total: -1, pageSize: 5, pageId: 1};
             var pageInfoTs = {total: -1, pageSize: 5, pageId: 1};
             return {
-                loadZxjlList: function (khid) {
-                    if (pageInfoZx.total > 0) {
-                        var temp = pageInfoZx.total / pageInfoZx.pageSize;
-                        if (temp < pageInfoZx.pageId) {
-                            return;
-                        }
-                    }else if (pageInfoZx.total == -1) {
+                loadZxjlList: function (khid,isFirst) {
+                    if (pageInfoZx.total == -1) {
                         pageInfoZx.total = 0;
                     } else if (pageInfoZx.total == 0) {
+                        return;
+                    } else if (!isFirst) {//不是第一次，是点击下拉框
+                        if (pageInfoZx.total > 0) {
+                            var temp = pageInfoZx.total / pageInfoZx.pageSize;
+                            if (temp < pageInfoZx.pageId) {
+                                return;
+                            }
+                        }
+                    }else{//是第一次查询但查过了就不再查了
                         return;
                     }
                     pageInfoZx.pageId++;
@@ -33,15 +37,19 @@ angular
                 getZxjlList: function () {
                     return zxjlList;
                 },
-                loadTsjyList: function (khid) {
-                    if (pageInfoTs.total > 0) {
-                        var temp = pageInfoTs.total / pageInfoTs.pageSize;
-                        if (temp < pageInfoTs.pageId) {
-                            return;
-                        }
-                    }else if (pageInfoTs.total == -1) {
+                loadTsjyList: function (khid,isFirst) {
+                    if (pageInfoTs.total == -1) {
                         pageInfoTs.total = 0;
                     } else if (pageInfoTs.total == 0) {
+                        return;
+                    } else if (!isFirst) {//不是第一次，是点击下拉框
+                        if (pageInfoTs.total > 0) {
+                            var temp = pageInfoTs.total / pageInfoTs.pageSize;
+                            if (temp < pageInfoTs.pageId) {
+                                return;
+                            }
+                        }
+                    }else{//是第一次查询但查过了就不再查了
                         return;
                     }
                     pageInfoTs.pageId++;
