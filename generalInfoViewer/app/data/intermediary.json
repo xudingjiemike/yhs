@@ -1,67 +1,85 @@
 {
-  "success": true,
-  "messageCode": "00000000",
-  "message": "接口调用成功！",
   "data": {
-    "yhdm": "SWSQHD0014",
-    "yhmc":"税友集团代理记账公司",
-    "zcbm": "XXXXXXXXX",
-    "yhjc": "税友代账公司",
-    "status": "1",
-    "fzgsMc": "河北分公司",
-    "swsbz": "1",
-    "faxNumber": "0571-56032477-001",
-    "dhhm": "0571-56032477-001",
-    "sjhm": "",
-    "jydz": "浙江省 杭州市 滨江区 南环路3738号税友大厦",
     "areaCode": "",
-    "provinceName": "浙江省",
-    "cityName": "杭州市",
-    "countyName": "滨江区",
-    "streetName": "",
-    "bz": "中介机构备注",
+    "bz": "中介机构测试数据",
+    "cityName": "",
+    "countyName": "",
     "cpdlList": [
       {
-        "cpdlDm": "",
-        "cpdlMc": "产品大类1",
-        "selected":"1"
+        "cpdlDm": "11",
+        "cpdlMc": "个税代扣代缴",
+        "selected": "0"
       },
       {
-        "cpdlDm": "",
-        "cpdlMc": "产品大类2",
-        "selected":"1"
+        "cpdlDm": "05",
+        "cpdlMc": "出口退税",
+        "selected": "0"
       },
       {
-        "cpdlDm": "",
-        "cpdlMc": "产品大类3",
-        "selected":"1"
+        "cpdlDm": "16",
+        "cpdlMc": "国税企税",
+        "selected": "0"
+      },
+      {
+        "cpdlDm": "25",
+        "cpdlMc": "地税企税",
+        "selected": "0"
+      },
+      {
+        "cpdlDm": "01",
+        "cpdlMc": "国税申报",
+        "selected": "1"
+      },
+      {
+        "cpdlDm": "04",
+        "cpdlMc": "国税发票",
+        "selected": "0"
+      },
+      {
+        "cpdlDm": "20",
+        "cpdlMc": "个性产品（国）",
+        "selected": "0"
+      },
+      {
+        "cpdlDm": "07",
+        "cpdlMc": "国税纳管",
+        "selected": "1"
+      },
+      {
+        "cpdlDm": "08",
+        "cpdlMc": "地税纳管",
+        "selected": "0"
       }
     ],
+    "dhhm": "",
+    "dlsbz": "0",
+    "faxNumber": "",
+    "fzgsDm": "001085",
+    "fzgsMc": "河北公司",
+    "jydz": "",
+    "provinceName": "",
+    "sjhm": "",
+    "status": "1",
+    "statusMc": "",
+    "streetName": "",
+    "swsbz": "1",
+    "yhdm": "SWSBD0010",
+    "yhid": "",
+    "yhjc": "",
+    "yhmc": "涿州市华虹税务师事务所有限责任公司",
     "ywxxList": [
       {
-        "ywdlDm": "",
-        "ywdlMc": "国税业务",
-        "sswdDm": "",
-        "sswdMc": "衡水",
-        "sskhjlDm": "",
-        "sskhjlMc": "刘珊珊"
-      },
-      {
-        "ywdlDm": "",
-        "ywdlMc": "国税业务",
-        "sswdDm": "",
-        "sswdMc": "衡水",
-        "sskhjlDm": "",
-        "sskhjlMc": "刘珊珊"
-      },
-      {
-        "ywdlDm": "",
-        "ywdlMc": "国税业务",
-        "sswdDm": "",
-        "sswdMc": "衡水",
-        "sskhjlDm": "",
-        "sskhjlMc": "刘珊珊"
+        "sskhjlDm": "2b8c36c78b5942608e660ceb85074479",
+        "sskhjlMc": "牛萌",
+        "sswdDm": "001085010",
+        "sswdMc": "保定",
+        "ywdlDm": "01",
+        "ywdlMc": "国税业务"
       }
-    ]
-  }
+    ],
+    "zcbm": "SWSBD0010"
+  },
+  "message": "接口访问成功！",
+  "messageCode": "000000",
+  "success": true
 }

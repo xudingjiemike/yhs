@@ -1,34 +1,3 @@
-<style>
-
-    /*文字超长用....代替*/
-    .Edit_nobr{
-        white-space: nowrap;
-        overflow:hidden;
-        text-align:left;
-        text-overflow:ellipsis;
-        cursor:hand;
-    }
-</style>
-
-<SCRIPT LANGUAGE=javascript>
-    function click() {
-    alert('版权所有,禁止复制1')
-}
-function click1() {
-    if (event.button == 2) {
-        alert('版权所有,禁止复制2')
-    }
-}
-function CtrlKeyDown() {
-    if (event.ctrlKey) {
-        alert('版权所有,禁止复制3')
-    }
-}
-//document.onkeydown = CtrlKeyDown;
-//document.onselectstart = click;
-//document.onmousedown = click1;
-</SCRIPT>
-
 <div class="tab-content style2" ng-controller="FwJhxxController">
     <div class="tab-content-box">
         <div class="tab-content-item hastable">
@@ -56,17 +25,17 @@ function CtrlKeyDown() {
                             </div>
                         </div>
                     </div>
-                    <div class="table-content">
+                    <div class="table-content" ui-y-table-content>
                         <table class="softwear-auth">
 
-                            <tr ng-repeat="vo in callbackList">
-                                <td width="20%"><div class="Edit_nobr" style="width:145px;" title="{{vo.rwmc}}">{{vo.rwmc}}</div></td>
+                            <tr ng-repeat="vo in callbackList track by $index">
+                                <td width="20%"><div class="title" tooltip-is-open="true" tooltip-placement="bottom" tooltip="{{vo.rwmc}}" tooltip-append-to-body ="true">{{vo.rwmc}}</div></td>
                                 <td width="24%"> {{vo.whqkjl}}</td>
                                 <td width="7%"> {{vo.hcjg}}</td>
                                 <td width="7%"> {{vo.lxr}}</td>
                                 <td width="15%">{{vo.hccgdhhm}}</td>
                                 <td width="10%">{{vo.hwsj}}</td>
-                                <td width="7%">{{vo.zxzid}}</td>
+                                <td width="7%">{{vo.zxzName}}</td>
                                 <td width="10%">{{vo.cjsj}}</td>
                             </tr>
 

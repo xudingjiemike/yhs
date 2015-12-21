@@ -1,56 +1,42 @@
 {
-  "success": true,
-  "messageCode": "00000000",
-  "message": "接口调用成功！",
   "data": {
-    "lxrid": "522eace4c08b4023b0cd9d3522a6a249",
-    "syId": "",
-    "lxrmc": "李小荣",
-    "xb": "女",
-    "sjhmList": [
-      {
-        "lxsjid": "8765208",
-        "sjhm": "13180307438"
-      }
-    ],
+    "address": "深圳市福田区福民路中央花园长乐阁６０１室",
+    "areaCode": "",
+    "bz": "联系人测试数据",
+    "cityName": "",
+    "countyName": "",
     "dhhmList": [
       {
-        "dhhm": "8345638",
+        "dhhm": "83862959",
         "fjh": "",
-        "lxdhid": "3441190",
-        "qh": "0317",
-        "qhdhhmfjh": "0317-8345638"
-      },
-      {
-        "dhhm": "5561865",
-        "fjh": "",
-        "lxdhid": "16658934",
-        "qh": "0317",
-        "qhdhhmfjh": "0317-5561865"
-      }
-    ],
-    "jsxxList": [
-      {
-        "jsdm": "03",
-        "jsmc": "财务负责人",
-        "lxrYhid": "4495432"
-      },
-      {
-        "jsdm": "00",
-        "jsmc": "办税员",
-        "lxrYhid": "4495437"
+        "lxdhid": "2",
+        "qh": "0755",
+        "qhdhhmfjh": "0755-83862959"
       }
     ],
     "email": "",
+    "fzgsDm": "",
+    "fzgsMc": "",
+    "jsxxList": [],
+    "lxrid": "19c2f04ff6564c60bc4bc7a648c356ec",
+    "lxrmc": "吴岚",
+    "provinceName": "",
     "qq": "",
-    "provinceName": "河北",
-    "cityName": "沧州市",
-    "countyName": "泊头市",
+    "sjhmList": [
+      {
+        "lxsjid": "2",
+        "sjhm": "13714268095"
+      }
+    ],
+    "status": "",
+    "statusMc": "",
     "streetName": "",
-    "areaCode": "130981",
-    "address": "",
-    "bz":"联系人备注",
-    "yhdm":"SWSQHD0014",
-    "yhmc":"税友集团代理记账公司"
-  }
+    "syId": "",
+    "xb": "未知",
+    "yhdm": "",
+    "yhmc": ""
+  },
+  "message": "接口访问成功！",
+  "messageCode": "000000",
+  "success": true
 }

@@ -3,24 +3,25 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
-    .controller('ZxJhxxController', ['$scope', 'YhzxService',
+    .controller('SqJhxxController', ['$scope', 'YhzxService',
         function ($scope, YhzxService) {
             var khid = '';
+
             /**
-             * 获取咨询列表
+             * 获取投诉建议列表
              * @param khid
              *          客户ID
              */
-            $scope.zxjlList = YhzxService.getZxjlList();
+            $scope.tsjyList = YhzxService.getTsjyList();
 
             $scope.$on("loadData", function (e, d) {
-                if ('咨询' == d) {
-                    YhzxService.loadZxjlList(khid);
+                if ('诉求' == d) {
+                    YhzxService.loadTsjyList(khid);
                 }
             });
 
             $scope.pageChanged = function () {
-                YhzxService.loadZxjlList(khid);
+                YhzxService.loadTsjyList(khid);
             };
 
         }]);

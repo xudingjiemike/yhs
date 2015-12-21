@@ -3,8 +3,7 @@
  */
 
 .company-info{
-    height: 300px;
-    width: 75%;
+    min-width: 60%;
     box-shadow: 2px 4px 11px #aeaeae;
     position: absolute;
     top: 28px;
@@ -67,7 +66,6 @@
 }
 
 .cont-left .level span > .agent-info{
-    height: 30%;
     width: 90%;
     box-shadow: 2px 4px 11px #aeaeae;
     position: absolute;
