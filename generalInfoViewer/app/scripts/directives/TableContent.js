@@ -5,20 +5,11 @@
 angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
     .directive('uiYTableContent',function(){
         return{
-            controller:'TabsController',
+
             link:function($scope,element,$attrs){
-              element.on('mouseover',"td",function(e){
-                  if(this.offsetWidth < this.scrollWidth){
 
 
-                          $(this).attr({"tooltip":""});
 
-
-                      //$(this).tooltip();
-                      //$(this).append('<div class="popover-content">Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</div>');
-                  }
-
-              })
 
                 $(".cont-left-btm .table-content").on("click","td", function(e){
                     setSelectedTd(this);

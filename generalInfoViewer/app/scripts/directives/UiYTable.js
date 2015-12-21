@@ -144,6 +144,6 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
                        }
                    }
                };
-           },
+           }
        }
     });

@@ -3,7 +3,7 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
-    .service('OrderService',['_','TabsDataApi',function(_,TabsDataApi){
+    .service('OrderService',['_','TabsDataApi','Config',function(_,TabsDataApi,Config){
         var OrderData = [];
         function LoadData(khid){
             TabsDataApi.Load(khid,"DD").success(function(obj){
@@ -26,6 +26,12 @@ angular
                     OrderData[orderItemIndex].cpbs = cpbs
                 }
                 //var items = OrderData.ddcpbList;
+                _.map(OrderData,function(item){
+                    item.skzt =  Config.getOrderReceiptStateById(item.skzt);
+                    item.kpzt = Config.getOrderBillStateById(item.kpzt);
+                    item.jfzt = Config.getOrderDeliverStateById(item.jfzt)
+                });
+
 
 
                 //OrderData.cpbs = cpbs;

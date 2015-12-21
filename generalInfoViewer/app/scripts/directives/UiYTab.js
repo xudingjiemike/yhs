@@ -5,11 +5,35 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
     .directive('uiYTab',function(){
         return{
             restrict:'AEC',
-            controller: ['$scope','$attrs','_',function($scope,$attrs,_){
+            controller: ['$scope','$attrs','_','$timeout','SoftwareAuthorityService','BankAuthorityService','GiftApplyService','OrderService','SpService','Config',function($scope,$attrs,_,$timeout,SoftwareAuthorityService,BankAuthorityService,GiftApplyService,OrderService,SpService,Config){
 
                 var _tags = $scope.list;
 
                 var step = 8;
+
+
+                var tablist = [{
+                    tabName:"银行托收",
+                    func: BankAuthorityService.getBankAuthorityData,
+                    data:""
+                },{
+                    tabName:"软件授权",
+                    func: SoftwareAuthorityService.getServiceAuthorityData,
+                    data:""
+                },{
+                    tabName:"礼品申请",
+                    func: GiftApplyService.getGiftApplyData,
+                    data:""
+                },{
+                    tabName:"订单",
+                    func: OrderService.getOrderData,
+                    data:""
+                },{
+                    tabName:"SP",
+                    func: SpService.getSpData,
+                    data:""
+                }];
+
 
                 $scope.findInfo = "";
 
@@ -44,11 +68,29 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
 
                 $scope.leftClass = "disable";
 
-                 function init(){
-                     $scope.$broadcast('loadData',_tags[0].tagName);
-                 }
+                $scope.$on("loadData",function(){
+                    $scope.tableItems = SoftwareAuthorityService.getServiceAuthorityData("1");
 
-                init();
+                });
+
+                /***
+                 *  获取数据 xudj  ？
+                 * @param list
+                 * @param tagName
+                 * @param Id
+                 */
+                function getData(list,tagName,Id){
+                    var data = [];
+                    _.map(list,function(item){
+                        if(angular.equals(item.tabName,tagName)){
+                            if(_.isEmpty(item.data)){
+                                item.data = item.func(Id);
+                            }
+                            data = item.data;
+                        }
+                    });
+                    return data;
+                }
 
 
                 /****
@@ -58,7 +100,7 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
                  * @param $event
                  */
                 function activeView (number,tag,$event){
-                    $scope.$broadcast('loadData',tag.tagName);
+
                     var ev = null;
                     if($event === undefined){
                         ev = $("#firstTab");
@@ -74,6 +116,26 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
                     $scope.tagNumber = _tags.length;
 
                     $scope.templateStyle  = {'width':(_tags.length*100)+'%','-webkit-transform':'translate(-'+((number)/_tags.length*100)+'%,0'};
+
+                    if(angular.equals(tag.tagName,"软件授权")){
+
+                        $scope.tableItems = getData(tablist,"软件授权","1");
+                    }
+
+                    if(angular.equals(tag.tagName,"银行托收")){
+                        $scope.tableItems = getData(tablist,"银行托收","1");
+                    }
+                    if(angular.equals(tag.tagName,"礼品申请")){
+                        $scope.tableItems = getData(tablist,"礼品申请","1");
+                    }
+                    if(angular.equals(tag.tagName,"订单")){
+                        $scope.tableItems = getData(tablist,"订单","1");
+                    }
+                    if(angular.equals(tag.tagName,"SP")){
+                        $scope.tableItems = getData(tablist,"SP","1");
+                    }
+
+
                 };
 
 
