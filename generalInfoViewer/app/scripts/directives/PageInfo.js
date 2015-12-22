@@ -10,6 +10,6 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.PageInfo')
                 tabType:'@'
             },
             controller:"PageInfoController",
-            templateUrl: 'views/template/information/PageInfo.html'
+            templateUrl: 'views/template/information/pageInfo.html'
         };
     });

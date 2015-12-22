@@ -1,4 +1,5 @@
-<div class="cont-left-top">
+<div ng-controller="IntermediaryInstitutionController">
+<div id="cont-left-top-intermediary" class="cont-left-top">
     <div page-info tab-type="2"></div>
     <div class="cont-left-top-mid">
         <div>
@@ -12,35 +13,12 @@
                         <span class="service-item">上门服务-申报</span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="number">业务概况</td>
-                    <td class="left-top no-padding">
-                        <div class="service-items">
-                            <span class="service-item">3天内咨询：3次</span>
-                            <span class="service-item">一年内投诉：4次</span>
-                        </div>
-                        <div class="service-items">
-                            <span class="service-item">
-                                [正在]操作：代税无忧平台V01.0.027
-                            </span>
-                        </div>
-                        <div class="service-items">
-                            <span class="service-item">
-                                银行托收协议：2份
-                            </span>
-                            <span class="service-item">未开票订单：1个</span>
-                            <span class="service-item">未交付品：物料+发票</span>
-                        </div>
-                        <div class="service-items last">
-                            <span class="service-item">线索：1条</span>
-                            <span class="service-item">到期/逾期提醒订单：4个</span>
-                        </div>
-                    </td>
-                </tr>
+                    <tr trustordir></tr>
             </table>
         </div>
     </div>
 </div>
-<div class="cont-left-btm">
-
+<div id="cont-left-btm-intermediary" class="cont-left-btm">
+    <ui-y-tab list ='tags' ></ui-y-tab>
+</div>
 </div>

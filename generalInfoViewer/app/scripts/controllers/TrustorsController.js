@@ -3,15 +3,16 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.Trustors')
-    .controller('TrustorController', ['$scope','trustorService','Params',
-        function ($scope,trustorService,Params) {
+    .controller('TrustorController', ['$scope','trustorService','Params','DataStore',
+        function ($scope,trustorService,Params,DataStore) {
+            var param = DataStore.getAll();
             $scope.initTime = 0;
             $scope.showData = null;
             trustorService.getTrustors(Params.set({
-                khid: "ba1afae132be46079f6a41917d575721",
-                khlx: 2,
-                yhdm: "",
-                kjid: "ba1afae132be46079f6a41917d575721"
+                khid: param.khid,
+                khlx: param.khlx,
+                yhdm: param.yhdm,
+                kjid: param.kjid
             })).then(function(data){
                 $scope.Trustors = data.data;
                 $scope.Trustors.isPersonal = trustorService.isPersonal(data.data);
@@ -40,9 +41,9 @@ angular
             $scope.tableData = [];
             $scope.deleteTrustor = function(wtdwId){
                 trustorService.deleteTrustor({
-                    "khid": "ba1afae132be46079f6a41917d575721",//如果是兼职会计和代账会计，khid的值取kjid
-                    "yhdm": "",
-                    "khlx": 2,
+                    "khid": param.khlx==1?param.khid:param.kjid,//如果是兼职会计和代账会计，khid的值取kjid
+                    "yhdm": param.yhdm,
+                    "khlx": param.khlx,
                     "wtdwId": wtdwId
                 }, wtdwId, $scope.Trustors);
             };

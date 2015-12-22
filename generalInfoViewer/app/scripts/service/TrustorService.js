@@ -9,16 +9,6 @@ angular
                 getTrustors: function(params){
                     var _this = this, Trustors = {};
                     return trustorApi.getTrustors(params);
-                    //.success(function (data) {
-                        //angular.copy(data, Trustors);
-                        //Trustors.isPersonal = _this.isPersonal(Trustors);
-                        //Trustors.hasData = true;
-                        //return Trustors;
-
-                        //Trustors.isPersonal = _this.isPersonal(data.data);
-                        //Trustors.hasData = true;
-                        //return Trustors;
-                   // });
                 },
                 deleteTrustor: function(params,wtdwId, editData){
                     var _this = this, list = [], returnData = {};

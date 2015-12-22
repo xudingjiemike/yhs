@@ -107,6 +107,10 @@ angular
             //打开工作台【人员管理】标签页
         };
 
+        $scope.showItem=function(){
+
+        };
+
         $scope.saveRemark = function ($event) {
             $($event.target).attr('disabled',true);
             var dataId = $($event.target).parent().children('input.dataId').val();
