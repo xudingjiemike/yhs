@@ -18,7 +18,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
             set: function(params){ return new Param(params).toString();}
         };
     }]).factory("DataStore", [function () {
-        var _data = {};
+        var _data = angular.toJson(sessionStorage.getItem("yhlxr"));
         return {
             set: function (key,val) {
                 if(key && (typeof key == "string") && val){
@@ -30,7 +30,6 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
                 }else{
                     return;
                 }
-                this.hasData = true;
             },
             get: function(key){
                 if(key && (typeof key == "string")){
@@ -40,7 +39,6 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
             },
             getAll: function(){
                 return _data;
-            },
-            hasData: false
+            }
         };
     }]);
