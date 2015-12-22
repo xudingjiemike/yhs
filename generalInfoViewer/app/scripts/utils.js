@@ -36,6 +36,9 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
                     return _data[key];
                 }
                 return null;
+            },
+            getAll: function(){
+                return _data;
             }
         };
     }]);
