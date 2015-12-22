@@ -3,8 +3,8 @@
  */
 angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.Trustors')
-    .controller('TrustorController', ['$scope','trustorService','Params',
-        function ($scope,trustorService,Params) {
+    .controller('TrustorController', ['$scope','trustorService','Params','DataStore',
+        function ($scope,trustorService,Params,DataStore) {
             $scope.initTime = 0;
             $scope.showData = null;
             trustorService.getTrustors(Params.set({

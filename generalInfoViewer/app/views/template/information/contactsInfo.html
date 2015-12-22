@@ -33,7 +33,7 @@
             </span>
             <span class="user-position">
                 <span ng-if="contactsInfo.yhmc!==''">
-                    单位： <span ng-bind="contactsInfo.yhmc"></span>
+                    单位： <span ng-bind="contactsInfo.yhmc" class="alink hover" ng-click="showItem()"></span>
                 </span>
                 <span ng-repeat="item in contactsInfo.jsxxList">
                     <span ng-bind="item.jsmc"></span>
