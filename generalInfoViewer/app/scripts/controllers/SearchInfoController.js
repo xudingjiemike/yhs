@@ -47,7 +47,7 @@ angular
         $scope.selectItem=function(search){
             var obj={
                 title:'新用户',
-                tabType:'1'
+                tagType:'1'
             };
             $scope.$emit('modifyTab',obj);
         };
