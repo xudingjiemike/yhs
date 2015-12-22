@@ -7,6 +7,6 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.SearchInfo')
             restrict: 'EA',
             replace:true,
             controller:"SearchInfoController",
-            templateUrl: 'views/template/information/SearchInfo.html'
+            templateUrl: 'views/template/information/searchInfo.html'
         };
     });
