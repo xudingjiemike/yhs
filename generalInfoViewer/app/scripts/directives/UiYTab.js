@@ -34,7 +34,11 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
                     data:""
                 }];
 
+                var taxInstitution = false;
+                var intermediaryInstitution = false;
+                var accountant = false;
 
+                $scope.tableItems = {};
                 $scope.findInfo = "";
 
                 $scope.TagStyle = {'-webkit-transform':'translate(0,0'};
@@ -68,10 +72,19 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
 
                 $scope.leftClass = "disable";
 
-                $scope.$on("loadData",function(){
-                    if(angular.equals($scope.tableItems,undefined)){
-                        $scope.tableItems = SoftwareAuthorityService.getServiceAuthorityData("1");
+                $scope.$on("loadData",function(e,d){
+                    if( !d.checked){
+                        if(angular.equals("1",d.tagtype)){
+                            $scope.tableItems.SoftWare = SoftwareAuthorityService.getServiceAuthorityData("1");
+                        }
+                        if(angular.equals("2",d.tagtype)){
+                            $scope.tableItems.Order = OrderService.getOrderData("1");
+                        }
+
+
                     }
+
+
 
 
                 });
@@ -88,6 +101,7 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
                         if(angular.equals(item.tabName,tagName)){
                             if(_.isEmpty(item.data)){
                                 item.data = item.func(Id);
+                                //return data
                             }
                             data = item.data;
                         }
@@ -122,20 +136,20 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
 
                     if(angular.equals(tag.tagName,"软件授权")){
 
-                        $scope.tableItems = getData(tablist,"软件授权","1");
+                        $scope.tableItems.SoftWare = getData(tablist,"软件授权","1");
                     }
 
                     if(angular.equals(tag.tagName,"银行托收")){
-                        $scope.tableItems = getData(tablist,"银行托收","1");
+                        $scope.tableItems.BankAuthority = getData(tablist,"银行托收","1");
                     }
                     if(angular.equals(tag.tagName,"礼品申请")){
-                        $scope.tableItems = getData(tablist,"礼品申请","1");
+                        $scope.tableItems.GiftApply = getData(tablist,"礼品申请","1");
                     }
                     if(angular.equals(tag.tagName,"订单")){
-                        $scope.tableItems = getData(tablist,"订单","1");
+                        $scope.tableItems.Order = getData(tablist,"订单","1");
                     }
                     if(angular.equals(tag.tagName,"SP")){
-                        $scope.tableItems = getData(tablist,"SP","1");
+                        $scope.tableItems.Sp = getData(tablist,"SP","1");
                     }
 
 

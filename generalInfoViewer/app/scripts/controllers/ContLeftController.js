@@ -16,12 +16,14 @@ angular
          * @param tagName
          * @param templateUrl
          * @param tagtype tag类型，每个类型只会有一个
+         * @param  checked 是否已被点击过
          * @private
          */
-        function _tagObj(tagName, templateUrl,tagtype) {
+        function _tagObj(tagName, templateUrl,tagtype,checked) {
             this.tagName = tagName;
             this.templateUrl = templateUrl;
             this.tagtype = tagtype;
+            this.checked = checked;
         }
 
         _tagObj.prototype = _tagProperty;
@@ -32,9 +34,9 @@ angular
          */
 
         var _tags = [
-            new _tagObj('会计信息', 'views/template/tabs/accountantPage.html',Config.getTabTip().contacts),
-            new _tagObj('纳税单位', 'views/template/tabs/taxInstitutionPage.html',Config.getTabTip().company),
-            new _tagObj('中介机构', 'views/template/tabs/intermediaryInstitutionPage.html',Config.getTabTip().intermediary)
+            new _tagObj('会计信息', 'views/template/tabs/accountantPage.html',Config.getTabTip().contacts,false),
+            new _tagObj('纳税单位', 'views/template/tabs/taxInstitutionPage.html',Config.getTabTip().company,false),
+            new _tagObj('中介机构', 'views/template/tabs/intermediaryInstitutionPage.html',Config.getTabTip().intermediary,false)
         ];
 
         /****
@@ -66,7 +68,9 @@ angular
                     break;
             }
 
-            $scope.$broadcast('loadData',tag.tagtype);
+
+            $scope.$broadcast('loadData',tag);
+            tag.checked = true;
 
         };
 
