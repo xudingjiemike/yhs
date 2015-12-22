@@ -7,29 +7,23 @@ angular
     .factory('pageInfoApi', ['$http', 'Host', 'Url',
         function ($http, Host, Url) {
             return {
-                getContacts: function (lxrid, khid, khlx, yhdm) {
-                    return $http.get(Host.getHostByName('BUSINISS') + Url.getUrlByName('CONTACTS'), {
-                        params: {lxrid: lxrid, khid: khid, khlx: khlx, yhdm: yhdm}
-                    });
+                getContacts: function (param) {
+                    return $http.get(Host.getHostByName('BUSINISS') + Url.getUrlByName('CONTACTS'), {params: param});
                 },
-                getCompany: function (khid) {
-                    return $http.get(Host.getHostByName('BUSINISS') + Url.getUrlByName('COMPANY'), {params: {khid: khid}});
+                getCompany: function (param) {
+                    return $http.get(Host.getHostByName('BUSINISS') + Url.getUrlByName('COMPANY'), {params: param});
                 },
-                getIntermediary: function (yhdm) {
-                    return $http.get(Host.getHostByName('BUSINISS') + Url.getUrlByName('INTERMEDIARY'), {params: {yhdm: yhdm}});
+                getIntermediary: function (param) {
+                    return $http.get(Host.getHostByName('BUSINISS') + Url.getUrlByName('INTERMEDIARY'), {params: param});
                 },
-                updateContacts:function(lxrid,field,content){
-                    return $http.post(Host.getHostByName('BUSINISS') + Url.getUrlByName('CONTACTS_UPDATE'),
-                        JSON.stringify({dataId:lxrid, filedKey:field, filedValue:content}));
+                updateContacts:function(param){
+                    return $http.post(Host.getHostByName('BUSINISS') + Url.getUrlByName('CONTACTS_UPDATE'), JSON.stringify(param));
                 },
-                updateCompany:function(yhid,field,content){
-                    return $http.post(Host.getHostByName('BUSINISS') + Url.getUrlByName('COMPANY_UPDATE'),
-                        JSON.stringify({dataId:yhid, filedKey:field, filedValue:content}));
+                updateCompany:function(param){
+                    return $http.post(Host.getHostByName('BUSINISS') + Url.getUrlByName('COMPANY_UPDATE'), JSON.stringify(param));
                 },
-                updateIntermediary:function(yhdm,field,content){
-                    console.log(JSON.stringify({dataId:yhdm, filedKey:field, filedValue:content}));
-                    return $http.post(Host.getHostByName('BUSINISS') + Url.getUrlByName('INTERMEDIARY_UPDATE'),
-                        JSON.stringify({dataId:yhdm, filedKey:field, filedValue:content}));
+                updateIntermediary:function(param){
+                    return $http.post(Host.getHostByName('BUSINISS') + Url.getUrlByName('INTERMEDIARY_UPDATE'),JSON.stringify(param));
                 }
             };
         }

@@ -49,7 +49,7 @@
 <div class="level" style="margin-bottom: -10px;">
     <span class="level-icon {{Config.getUserLevelById(companyInfo.levelDm)}}" title="{{companyInfo.levelMc}}"></span>
             <span ng-mouseover="showAgentInfo()" ng-mouseleave="hideAgentInfo($event)" ng-if="companyInfo.bdlList">
-                <span class="show-agent alink hover"><span>被代理</span></span>
+                <span class="show-agent alink hover"><span class="alink hover">被代理</span></span>
                 <span class="agent-info" style="height:{{8+companyInfo.bdlList.length*4}}%;">
                     <div class="delegate-search-content">
                         <div class="table">
@@ -77,7 +77,7 @@
             </span>
     <span style="margin-left: 150px" ng-if="companyInfo.bdlList"></span>
     <span style="margin-left: 30px" ng-if="!companyInfo.bdlList"></span>
-    <span class="alink level-manage" ng-click="showManageWindow()" style="vertical-align: top"><i class="fa fa-users"></i>人员管理</span>
+    <span class="alink aclick level-manage" ng-click="showManageWindow()" style="vertical-align: top"><i class="fa fa-users"></i>人员管理</span>
 </div>
 <div class="remark">
     <input type="text" class="dataId" ng-model="companyInfo.yhid" hidden>

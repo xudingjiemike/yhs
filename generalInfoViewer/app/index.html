@@ -16,7 +16,9 @@
             <div class="cont-left">
                 <div>
                     <div class="tabs">
-                        <div class="tab" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag)" ng-bind="tag.tagName"></div>
+                        <div class="tab" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag)">
+                            <span class="forntclass title" ng-bind="tag.tagName" title="{{tag.tagName}}"></span>
+                        </div>
                         <!--<div class="tab fix-margin"></div>-->
                         <div class="tab-other">
                             <div search-info></div>

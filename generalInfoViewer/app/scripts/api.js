@@ -3,8 +3,9 @@
  */
 angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
     .constant({
-        mock: false,
-        loginHost:'http://192.168.70.202:88/'
+        mock: true,
+        //loginHost:'http://192.168.70.202:88/'
+        loginHost:'http://192.168.71.145/yhs/'
     })
     .config(['$httpProvider','loginHost',function ($httpProvider,loginHost) {
         $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -37,7 +38,8 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
         var host = [
             {
                 hostname: 'BUSINISS',
-                hosturl: 'http://192.168.70.202:88/',
+                //hosturl: 'http://192.168.70.202:88/',
+                hosturl: 'http://192.168.71.145/yhs/',
                 mockurl: '',
                 descript: ''
             }
