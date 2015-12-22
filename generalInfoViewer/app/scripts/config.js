@@ -15,7 +15,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
                 {key:'0',value:'单位用户'},
                 {key:'1',value:'中介机构'},
                 {key:'2',value:'兼职会计'},
-                {key:'9',value:'代理�?'}
+                {key:'9',value:'代理商'}
             ],
             AUTHORIZATION_STATE:[
                 {key:'1',value:'正常'},

@@ -18,7 +18,9 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
             set: function(params){ return new Param(params).toString();}
         };
     }]).factory("DataStore", [function () {
+
         var _data = angular.toJson(sessionStorage.getItem("yhlxr"))?{}:angular.toJson(sessionStorage.getItem("yhlxr"));
+
         return {
             set: function (key,val) {
                 if(key && (typeof key == "string") && val){
