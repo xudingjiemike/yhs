@@ -5,12 +5,7 @@ angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.Trustors')
     .controller('TrustorController', ['$scope','trustorService','Params','DataStore',
         function ($scope,trustorService,Params,DataStore) {
-            var param = {};
-            if(DataStore.hasData){
-                param = DataStore.getAll();
-            }else{
-                param =  eval("("+sessionStorage.getItem("yhlxr")+")");
-            }
+            var param = DataStore.getAll();
             $scope.initTime = 0;
             $scope.showData = null;
             trustorService.getTrustors(Params.set({
