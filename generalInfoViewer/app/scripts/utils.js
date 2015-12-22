@@ -30,6 +30,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
                 }else{
                     return;
                 }
+                this.hasData = true;
             },
             get: function(key){
                 if(key && (typeof key == "string")){
@@ -39,6 +40,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
             },
             getAll: function(){
                 return _data;
-            }
+            },
+            hasData: false
         };
     }]);
