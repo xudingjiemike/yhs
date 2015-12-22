@@ -47,9 +47,9 @@ angular
         $scope.selectItem=function(search){
             var obj={
                 title:'新用户',
-                tabType:'1'
+                tagType:'1'
             };
-            $scope.$broadcast('modifyTab',obj);
+            $scope.$emit('modifyTab',obj);
         };
         $scope.addContacts=function(){
             //新增用户 todo

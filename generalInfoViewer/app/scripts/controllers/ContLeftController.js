@@ -31,20 +31,19 @@ angular
          * @private
          */
 
-        //var _tags = [{'tagName':'纳税单位','TagClass':'','templateUrl':'template/tabs/taxInstitutionPage.html'},{'tagName':'会计信息','TagClass':'','templateUrl':'template/tabs/taxpayerPage.html'},{'tagName':'中介机构','TagClass':'','templateUrl':'template/tabs/intermediaryInstitutionPage.html'}];
-
         var _tags = [
             new _tagObj('会计信息', 'views/template/tabs/accountantPage.html',Config.getTabTip().contacts),
             new _tagObj('纳税单位', 'views/template/tabs/taxInstitutionPage.html',Config.getTabTip().company),
             new _tagObj('中介机构', 'views/template/tabs/intermediaryInstitutionPage.html',Config.getTabTip().intermediary)
         ];
 
-        $scope.tags = _tags;
-        $scope.tags[0].TagClass = 'active';
-
-        $scope.activeView = function (number, tag) {
-
-            //
+        /****
+         * 点击tab 切换标签页
+         * @param number
+         * @param tag
+         * @private
+         */
+        function _activeView (number, tag) {
 
             _.map($scope.tags, function (item) {
                 item.TagClass = "";
@@ -69,27 +68,64 @@ angular
 
             $scope.$broadcast('loadData',tag.tagtype);
 
-            $scope.$on('modifyTab',function(e,d){
-                createTab(d.title, d.tagtype);
-            });
-            function createTab (title,tagtype){
-                if(angular.equals(tagtype,Config.getTabTip().company)){
-                    var newTab =  new _tagObj(title, 'views/template/tabs/taxInstitutionPage.html',Config.getTabTip().company)
-                    var addTab = true;
-                    _.map(_tags,function(item){
-                        if(angular.equals(tagtype,item.tagtype)){
-                            addTab = false;
-                            return newTab;
-                        }
-                    })
-                    if(addTab){
-                        _tags.push(newTab);
+        };
+
+        /***
+         * 创建新的标签页，替换原来的tab或者插入
+         * @param title
+         * @param tagtype
+         */
+        function createTab (title,tagtype){
+            if(angular.equals(tagtype,Config.getTabTip().company)){
+                _.map(_tags, function (item) {
+                    item.TagClass = "";
+                });
+
+                var newTab =  new _tagObj(title, 'views/template/tabs/taxInstitutionPage.html',Config.getTabTip().company)
+                newTab.TagClass = 'active';
+                var addTab = true;
+                var index = 0;
+                for(var i = 0 ; i < _tags.length ; i++){
+                    if(angular.equals(tagtype,_tags[i].tagtype)){
+                        addTab = false;
+                        index = i;
+                        break ;
                     }
                 }
 
+                if(addTab){
+                    _tags.push(newTab);
+                    $timeout(function(){
+                        _activeView(_tags.length -1,newTab);
+                    },100)
+
+                }else{
+                    _tags[index] = newTab;
+                    $timeout(function(){
+                        _activeView(index,newTab);
+                    },100)
+
+                }
             }
 
 
-        };
+
+        }
+
+        $scope.tags = _tags;
+        $scope.tags[0].TagClass = 'active';
+
+        /****
+         * 监听搜索框选择事件
+         */
+        $scope.$on('modifyTab',function(e,d){
+            createTab(d.title, d.tagType);
+            $scope.tags = _tags;
+        });
+
+
+        $scope.activeView = _activeView;
+
+
 
     }]);
