@@ -6,9 +6,11 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
        return {
            restrict: 'EA',
            replace:true,
-           controller:['$scope','BusinessGeneralService','_',function($scope,BusinessGeneralService,_){
-               //ServiceAuthorityService.LoadData("1");
-               //$scope.BusinessGeneralService = BusinessGeneralService.getServiceAuthorityData();
+           controller:['$scope','BusinessGeneralService','_','DataStore',function($scope,BusinessGeneralService,_,DataStore){
+              var Params = {};
+               angular.copy(DataStore.getAll(),Params);
+               var a = BusinessGeneralService.getBusinessGeneralData(Params);
+
 
            }],
            templateUrl: 'views/template/businessGeneral/businessGeneral.html'

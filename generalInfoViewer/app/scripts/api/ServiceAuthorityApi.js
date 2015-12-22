@@ -8,7 +8,7 @@ angular
           return{
              LoadServiceAuthorityInfo:function(Params){
                  console.log(Host.getHostByName("BUSINISS")+Url.getUrlByName("FWSQ"));
-                 return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("FWSQ"),{params: {khid: Params.get('khid')}})
+                 return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("FWSQ"),{params: {khid: Params['khid']}})
              }
           }
     }]);
