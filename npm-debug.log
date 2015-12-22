@@ -1,0 +1,112 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'update',
+1 verbose cli   '-g',
+1 verbose cli   'npm',
+1 verbose cli   '-dd' ]
+2 info using npm@2.14.4
+3 info using node@v4.1.2
+4 silly mapToRegistry name npm
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry https://registry.npmjs.org/
+7 silly mapToRegistry uri https://registry.npmjs.org/npm
+8 verbose request uri https://registry.npmjs.org/npm
+9 verbose request no auth needed
+10 info attempt registry request try #1 at 14:39:42
+11 verbose request id dd9d263c64bf4bce
+12 verbose etag "2HCAFXYWQT4OQM57WH6MYBXDC"
+13 http request GET https://registry.npmjs.org/npm
+14 info retry will retry, error on last attempt: Error: socket hang up
+15 info attempt registry request try #2 at 14:40:56
+16 verbose etag "2HCAFXYWQT4OQM57WH6MYBXDC"
+17 http request GET https://registry.npmjs.org/npm
+18 info retry will retry, error on last attempt: Error: socket hang up
+19 info attempt registry request try #3 at 14:43:03
+20 verbose etag "2HCAFXYWQT4OQM57WH6MYBXDC"
+21 http request GET https://registry.npmjs.org/npm
+22 silly get cb [ 304, undefined ]
+23 verbose etag https://registry.npmjs.org/npm from cache
+24 verbose get saving npm to /Users/apple/.npm/registry.npmjs.org/npm/.cache.json
+25 info outdated updating [ [ '/usr/local/lib', 'npm', '2.14.4', '3.5.2', '3.5.2', 'latest' ] ]
+26 verbose install where, what [ '/usr/local/lib', [ 'npm@3.5.2' ] ]
+27 verbose install initial load of /usr/local/lib/package.json
+28 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+29 silly cache add args [ 'npm@3.5.2', null ]
+30 verbose cache add spec npm@3.5.2
+31 silly cache add parsed spec Result {
+31 silly cache add   raw: 'npm@3.5.2',
+31 silly cache add   scope: null,
+31 silly cache add   name: 'npm',
+31 silly cache add   rawSpec: '3.5.2',
+31 silly cache add   spec: '3.5.2',
+31 silly cache add   type: 'version' }
+32 silly addNamed npm@3.5.2
+33 verbose addNamed "3.5.2" is a plain semver version for npm
+34 silly mapToRegistry name npm
+35 silly mapToRegistry using default registry
+36 silly mapToRegistry registry https://registry.npmjs.org/
+37 silly mapToRegistry uri https://registry.npmjs.org/npm
+38 verbose addNameVersion registry:https://registry.npmjs.org/npm not in flight; fetching
+39 verbose get https://registry.npmjs.org/npm not expired, no request
+40 silly mapToRegistry name npm
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://registry.npmjs.org/
+43 silly mapToRegistry uri https://registry.npmjs.org/npm
+44 verbose addRemoteTarball https://registry.npmjs.org/npm/-/npm-3.5.2.tgz not in flight; adding
+45 verbose addRemoteTarball [ 'https://registry.npmjs.org/npm/-/npm-3.5.2.tgz',
+45 verbose addRemoteTarball   '8db5bac4abf04604afd1e55c5cd9a7a9dafb749f' ]
+46 info retry fetch attempt 1 at 14:44:50
+47 info attempt registry request try #1 at 14:44:50
+48 http fetch GET https://registry.npmjs.org/npm/-/npm-3.5.2.tgz
+49 info retry will retry, error on last attempt: Error: socket hang up
+50 info attempt registry request try #2 at 14:46:03
+51 http fetch GET https://registry.npmjs.org/npm/-/npm-3.5.2.tgz
+52 info retry will retry, error on last attempt: Error: socket hang up
+53 info attempt registry request try #3 at 14:48:07
+54 http fetch GET https://registry.npmjs.org/npm/-/npm-3.5.2.tgz
+55 error fetch failed https://registry.npmjs.org/npm/-/npm-3.5.2.tgz
+56 warn retry will retry, error on last attempt: Error: socket hang up
+57 info retry fetch attempt 2 at 14:49:24
+58 info attempt registry request try #1 at 14:49:24
+59 http fetch GET https://registry.npmjs.org/npm/-/npm-3.5.2.tgz
+60 info retry will retry, error on last attempt: Error: read ETIMEDOUT
+61 info attempt registry request try #2 at 14:53:54
+62 http fetch GET https://registry.npmjs.org/npm/-/npm-3.5.2.tgz
+63 info retry will retry, error on last attempt: Error: read ETIMEDOUT
+64 info attempt registry request try #3 at 14:55:55
+65 http fetch GET https://registry.npmjs.org/npm/-/npm-3.5.2.tgz
+66 error fetch failed https://registry.npmjs.org/npm/-/npm-3.5.2.tgz
+67 warn retry will retry, error on last attempt: Error: socket hang up
+68 info retry fetch attempt 3 at 14:57:59
+69 info attempt registry request try #1 at 14:57:59
+70 http fetch GET https://registry.npmjs.org/npm/-/npm-3.5.2.tgz
+71 info retry will retry, error on last attempt: Error: socket hang up
+72 info attempt registry request try #2 at 14:59:22
+73 http fetch GET https://registry.npmjs.org/npm/-/npm-3.5.2.tgz
+74 info retry will retry, error on last attempt: Error: socket hang up
+75 info attempt registry request try #3 at 15:01:36
+76 http fetch GET https://registry.npmjs.org/npm/-/npm-3.5.2.tgz
+77 error fetch failed https://registry.npmjs.org/npm/-/npm-3.5.2.tgz
+78 verbose stack Error: socket hang up
+78 verbose stack     at TLSSocket.onHangUp (_tls_wrap.js:1032:19)
+78 verbose stack     at TLSSocket.g (events.js:260:16)
+78 verbose stack     at emitNone (events.js:72:20)
+78 verbose stack     at TLSSocket.emit (events.js:166:7)
+78 verbose stack     at endReadableNT (_stream_readable.js:893:12)
+78 verbose stack     at doNTCallback2 (node.js:430:9)
+78 verbose stack     at process._tickCallback (node.js:344:17)
+79 verbose cwd /Users/apple/git/yypt5-front-app-yhlxr
+80 error Darwin 15.0.0
+81 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "update" "-g" "npm" "-dd"
+82 error node v4.1.2
+83 error npm  v2.14.4
+84 error code ECONNRESET
+85 error network socket hang up
+85 error network This is most likely not a problem with npm itself
+85 error network and is related to network connectivity.
+85 error network In most cases you are behind a proxy or have bad network settings.
+85 error network
+85 error network If you are behind a proxy, please make sure that the
+85 error network 'proxy' config is set properly.  See: 'npm help config'
+86 verbose exit [ 1, true ]

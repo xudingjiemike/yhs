@@ -5,8 +5,8 @@ angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
     .service('OrderService',['_','TabsDataApi','Config',function(_,TabsDataApi,Config){
         var OrderData = [];
-        function LoadData(khid){
-            TabsDataApi.Load(khid,"DD").success(function(obj){
+        function LoadData(Params){
+            TabsDataApi.Load(Params,"DD").success(function(obj){
                 angular.copy(obj.list,OrderData);
                 for(var orderItemIndex in OrderData){
                     var cpbs = "";
@@ -46,9 +46,9 @@ angular
 
             })
         }
-        function getData(khid){
+        function getData(Params){
             if(OrderData.length == 0){
-                LoadData(khid);
+                LoadData(Params);
             }
 
             return OrderData;

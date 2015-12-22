@@ -6,8 +6,8 @@ angular
     .factory('SoftwareAuthorityApi', ['$http', 'Host','Url',
         function($http,Host,Url){
             return{
-                LoadSoftwareAuthorityInfo:function(khid){
-                    return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("SJSQ")+"?khid="+khid)
+                LoadSoftwareAuthorityInfo:function(Params){
+                    return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("SJSQ")+"?khid="+Params.get("khid"))
                 }
             }
         }]);
