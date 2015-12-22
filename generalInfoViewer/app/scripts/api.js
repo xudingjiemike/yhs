@@ -117,55 +117,55 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
             },
             {
                 urlname: 'CALLBACK',
-                url: '',
+                url: 'yypt5/api/rwgl/calloutList',
                 mockurl: 'data/jhxx/callbackList.json',
                 descript: '查询请回电信息列表，参数khid(客户编号)'
             },
             {
                 urlname: 'CALLOUT',
-                url: '',
+                url: 'yypt5/api/rwgl/calloutList',
                 mockurl: 'data/jhxx/calloutList.json',
                 descript: '查询外呼任务列表信息，参数khid(客户编号)'
             },
             {
                 urlname: 'DX',
-                url: '',
+                url: 'yypt5/api/kfdm/comm/sms/dxList',
                 mockurl: 'data/jhxx/dxList.json',
                 descript: '查询短信信息，参数khid(客户编号)'
             },
             {
                 urlname: 'SMRW',
-                url: '',
+                url: 'yypt5/api/rwgl/smrwList',
                 mockurl: 'data/jhxx/smrwList.json',
                 descript: '查询上门任务列表信息，参数khid(客户编号)'
             },
             {
                 urlname: 'TSJY',
-                url: '',
+                url: 'yypt5/api/zxgl/tsxx/tsxxCx',
                 mockurl: 'data/jhxx/tsjyList.json',
                 descript: '查询投诉建议信息，参数khid(客户编号)'
             },
             {
                 urlname: 'XS',
-                url: '',
+                url: 'yypt5/api/yxgl/yxxs/yxxsByYh',
                 mockurl: 'data/jhxx/xsList.json',
                 descript: '查询线索信息，参数khid(客户编号)'
             },
             {
                 urlname: 'YCRW',
-                url: '',
+                url: 'yypt5/api/rwgl/ycrwList',
                 mockurl: 'data/jhxx/ycrwList.json',
                 descript: '查询远程任务信息，参数khid(客户编号)'
             },
             {
                 urlname: 'ZDXC',
-                url: '',
+                url: 'yypt5/api/rwgl/zdxcList',
                 mockurl: 'data/jhxx/zdxcList.json',
                 descript: '查询驻点现场信息，参数khid(客户编号)'
             },
             {
                 urlname: "ZXJL",
-                url: "",
+                url: "yypt5/api/zxgl/ldxzList",
                 mockurl: "data/jhxx/zxjlList.json",
                 descript: "查询咨询记录信息，参数khid(客户编号)"
             },
