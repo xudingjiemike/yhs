@@ -34,6 +34,10 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
                     data:""
                 }];
 
+                var taxInstitution = false;
+                var intermediaryInstitution = false;
+                var accountant = false;
+
                 $scope.tableItems = {};
                 $scope.findInfo = "";
 
@@ -69,9 +73,17 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
                 $scope.leftClass = "disable";
 
                 $scope.$on("loadData",function(e,d){
-                    if(angular.equals($scope.tableItems,{})){
-                        $scope.tableItems.SoftWare = SoftwareAuthorityService.getServiceAuthorityData("1");
+                    if( !d.checked){
+                        if(angular.equals("1",d.tagtype)){
+                            $scope.tableItems.SoftWare = SoftwareAuthorityService.getServiceAuthorityData("1");
+                        }
+                        if(angular.equals("2",d.tagtype)){
+                            $scope.tableItems.Order = OrderService.getOrderData("1");
+                        }
+
+
                     }
+
 
 
 
