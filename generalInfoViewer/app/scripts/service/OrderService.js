@@ -30,6 +30,14 @@ angular
                     item.skzt =  Config.getOrderReceiptStateById(item.skzt);
                     item.kpzt = Config.getOrderBillStateById(item.kpzt);
                     item.jfzt = Config.getOrderDeliverStateById(item.jfzt)
+
+                    item.changeDeal = (function(){
+                        if((!angular.equals(item.zfbz,"1"))&&((!angular.equals(item.jfzt,"3"))||angular.equals(item.kpzt,"1"))){
+                            return "变更交易约定";
+                        }else{
+                            return "无";
+                        }
+                    })();
                 });
 
 
