@@ -20,7 +20,7 @@ angular.module("ui.yypt5.yhgl.GeneralInfoViewer")
     }]).factory("DataStore", [function () {
 
         var _data = angular.toJson(sessionStorage.getItem("yhlxr"))?{ lxrid: '19c2f04ff6564c60bc4bc7a648c356ec', khid: '799cb25280c6439a8aff592707451606', khlx: '0', yhdm: 'SWSBD0010', lxrmc:'徐鼎杰是大帅比', khmc:'税友517'}:angular.toJson(sessionStorage.getItem("yhlxr"));
-      
+
         return {
             set: function (key,val) {
                 if(key && (typeof key == "string") && val){

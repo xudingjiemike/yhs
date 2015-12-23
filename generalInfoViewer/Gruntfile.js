@@ -120,14 +120,14 @@ module.exports = function (grunt) {
         },
 
         // Renames files for browser caching purposes
-        filerev: {
-            dist: {
-                src: [
-                    'dist/scripts/{,*/}*.js',
-                    'dist/styles/{,*/}*.css'
-                ]
-            }
-        },
+        //filerev: {
+        //    dist: {
+        //        src: [
+        //            'dist/scripts/{,*/}*.js',
+        //            'dist/styles/{,*/}*.css'
+        //        ]
+        //    }
+        //},
         htmlmin: {
             dist: {
                 options: {
@@ -244,7 +244,6 @@ module.exports = function (grunt) {
         'concat:generated',
         'cssmin:generated',
         'copy:dist',
-        'filerev',
         'usemin',
         'jst'
     ]);

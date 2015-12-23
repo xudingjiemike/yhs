@@ -10,33 +10,8 @@
     <link href="styles/information.css" rel="stylesheet" type="text/css"/>
 </head>
 <body ng-app="ui.yypt5.yhgl.GeneralInfoViewer">
-<div class="container">
-    <div class="page-content">
-        <div class="outer-box"  ng-controller="ContLeftController">
-            <div class="cont-left">
-                <div>
-                    <div class="tabs">
-                        <div class="tab" ng-class="tag.TagClass" ng-repeat="tag in tags" ng-click="activeView($index,tag)">
-                            <span class="forntclass title" ng-bind="tag.tagName" title="{{tag.tagName}}"></span>
-                        </div>
-                        <!--<div class="tab fix-margin"></div>-->
-                        <div class="tab-other">
-                            <div search-info></div>
-                        </div>
-                    </div>
-                    <div class="tab-content">
-                        <div class="tab-content-box" ng-style="TagStyle" style="width: 400%">
-                            <div class="tab-content-item" style="width: 25%" ng-repeat="tag in tags">
-                                <div ng-include="tag.templateUrl"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
+<y-yhs></y-yhs>
 
 
 
@@ -131,6 +106,7 @@
 <script src="scripts/directives/BusinessGeneral.js"></script>
 <script src="scripts/directives/TableContent.js"></script>
 <script src="scripts/directives/ScrollLoadMoreDtv.js"></script>
+<script src="scripts/directives/Yyhs.js"></script>
 
 <!--API-->
 <script src="scripts/api/TrustorsApi.js"></script>
