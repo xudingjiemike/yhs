@@ -10,8 +10,8 @@ angular
             $scope.initTime = 0;
             $scope.showData = null;
             trustorService.getTrustors(Params.set({
-                khid: param.khid,
-                khlx: param.khlx,
+                khid: param.yhid,
+                khlx: param.yhlx,
                 yhdm: param.yhdm,
                 kjid: param.kjid
             })).then(function(data){
@@ -42,9 +42,9 @@ angular
             $scope.tableData = [];
             $scope.deleteTrustor = function(wtdwId){
                 trustorService.deleteTrustor({
-                    "khid": param.khid,
+                    "khid": param.yhid,
                     "yhdm": param.yhdm,
-                    "khlx": param.khlx,
+                    "khlx": param.yhlx,
                     "wtdwId": wtdwId,
                      kjid: param.kjid
                 }, wtdwId, $scope.Trustors);
