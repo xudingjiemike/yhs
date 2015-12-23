@@ -5,14 +5,14 @@ angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
     .service('SpService',['_','TabsDataApi',function(_,TabsDataApi){
         var SpData = [];
-        function LoadData(khid){
-            TabsDataApi.Load(khid,"SP").success(function(obj){
+        function LoadData(Params){
+            TabsDataApi.Load(Params,"SP").success(function(obj){
                 angular.copy(obj,SpData);
             })
         }
-        function getData(khid){
+        function getData(Params){
             if(SpData.length == 0){
-                LoadData(khid);
+                LoadData(Params);
             }
 
             return SpData;

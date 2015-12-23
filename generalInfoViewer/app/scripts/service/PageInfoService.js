@@ -6,47 +6,23 @@ angular
     .service('pageInfoService', ['_','pageInfoApi',
         function (_,pageInfoApi) {
             return {
-                getContacts: function(lxrid,khid,khlx,yhdm){
-                    var PageInfo = {};
-                    pageInfoApi.getContacts(lxrid,khid,khlx,yhdm).success(function (data) {
-                        angular.copy(data, PageInfo);
-                    });
-                    return PageInfo;
+                getContacts: function(param){
+                    return pageInfoApi.getContacts(param);
                 },
-                getCompany: function(khid){
-                    var PageInfo = {};
-                    pageInfoApi.getCompany(khid).success(function (data) {
-                        angular.copy(data, PageInfo);
-                    });
-                    return PageInfo;
+                getCompany: function(param){
+                    return pageInfoApi.getCompany(param);
                 },
-                getIntermediary: function(yhdm){
-                    var PageInfo = {};
-                    pageInfoApi.getIntermediary(yhdm).success(function (data) {
-                        angular.copy(data, PageInfo);
-                    });
-                    return PageInfo;
+                getIntermediary: function(param){
+                    return pageInfoApi.getIntermediary(param);
                 },
-                updateContacts:function(lxrid,field,content){
-                    var PageInfo = {};
-                    pageInfoApi.updateContacts(lxrid,field,content).success(function (data) {
-                        angular.copy(data, PageInfo);
-                    });
-                    return PageInfo;
+                updateContacts:function(param){
+                    return pageInfoApi.updateContacts(param);
                 },
-                updateCompany:function(yhid,field,content){
-                    var PageInfo = {};
-                    pageInfoApi.updateCompany(yhid,field,content).success(function (data) {
-                        angular.copy(data, PageInfo);
-                    });
-                    return PageInfo;
+                updateCompany:function(param){
+                    return pageInfoApi.updateCompany(param);
                 },
-                updateIntermediary:function(yhdm,field,content){
-                    var PageInfo = {};
-                    pageInfoApi.updateIntermediary(yhdm,field,content).success(function (data) {
-                        angular.copy(data, PageInfo);
-                    });
-                    return PageInfo;
+                updateIntermediary:function(param){
+                    return pageInfoApi.updateIntermediary(param);
                 }
             }
         }]);

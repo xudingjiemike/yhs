@@ -35,5 +35,7 @@
 .tab-content{
 
 }
-
-
+.forntclass{
+    width: 56px;
+    display: inline-block;
+}
