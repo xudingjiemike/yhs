@@ -14,10 +14,10 @@ module.exports = function (grunt) {
     grunt.initConfig({
 
         // Project settings
-        //config: {
-        //    // Deploy directory for dev env
-        //    publish: 'E:/workspaces/kfpt3server_new/src/main/webapp'
-        //},
+        config: {
+            // Deploy directory for dev env
+            publish: 'apple/main/webapp'
+        },
 
         cdnify: {
             static: {
@@ -83,7 +83,10 @@ module.exports = function (grunt) {
                         cwd: 'app',
                         dest: 'dist',
                         src: [
-                            'views/{,*/}*.html'
+                            'views/{,*/}*.html',
+                            'views/template/{,*/}*.html',
+                            'views/yhlxrBusiness/{,*/}*.html',
+                            'index.html'
                         ]
                     },
                     {
@@ -138,7 +141,10 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'dist',
                     src: [
-                        'dist/views/yhlxr/*.html'
+                        'dist/views/yhlxr/*.html',
+                        'dist/views/template/{,*/}*.html',
+                        'dist/views/yhlxrBusiness/{,*/}*.html',
+                        'dist/index.html'
                     ],
                     dest: 'dist'
                 }]
@@ -170,15 +176,6 @@ module.exports = function (grunt) {
         uglify: {
             options: {
                 mangle: false
-            },
-            generated: {
-                files: [
-                    {
-                        src: ['.tmp/concat/modules/yhzx/scripts/app.js'],
-                        dest: 'dist/modules/yhzx/scripts/app.js'
-                    }
-
-                ]
             }
         },
         // �ļ��ϲ�
@@ -218,8 +215,22 @@ module.exports = function (grunt) {
             },
             generated: {
                 files: {
-                    'dist/styles/vendor.css': ['.tmp/concat/styles/vendor.css'],
                     'dist/styles/yhlxr.css': ['.tmp/styles/app.css']
+                }
+            }
+        },
+
+        jst: {
+            compile: {
+                options: {
+                    namespace:"yhs",
+                    processName:function(filename) {
+                        var attrs = (filename || '').slice('/');
+                        return attrs[attrs.length - 1];
+                    }
+                },
+                files: {
+                    "dist/views/template.js":  ['dist/views/yhlxr/*.html', 'dist/views/template/{,*/}*.html', 'dist/views/yhlxrBusiness/{,*/}*.html','dist/views/trustors.html','dist/index.html']
                 }
             }
         }
@@ -231,11 +242,11 @@ module.exports = function (grunt) {
         'clean:dist',
         'useminPrepare',
         'concat:generated',
-        //'uglify:generated',
         'cssmin:generated',
         'copy:dist',
         'filerev',
-        'usemin'
+        'usemin',
+        'jst'
     ]);
 
     // Build & deploy assets into backend server

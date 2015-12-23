@@ -9,7 +9,7 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
            controller:['$scope','BusinessGeneralService','_','DataStore',function($scope,BusinessGeneralService,_,DataStore){
               var Params = {};
                angular.copy(DataStore.getAll(),Params);
-               var a = BusinessGeneralService.getBusinessGeneralData(Params);
+               $scope.BusinessGeneral = BusinessGeneralService.getBusinessGeneralData(Params);
 
 
            }],

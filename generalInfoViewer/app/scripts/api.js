@@ -4,8 +4,7 @@
 angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
     .constant({
         mock: false,
-        //loginHost:'http://192.168.70.202:88/'
-        loginHost:'http://192.168.71.145/yhs/'
+        loginHost:'http://192.168.70.202:88/'
     })
     .config(['$httpProvider','loginHost',function ($httpProvider,loginHost) {
         $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -38,8 +37,7 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
         var host = [
             {
                 hostname: 'BUSINISS',
-                //hosturl: 'http://192.168.70.202:88/',
-                hosturl: 'http://192.168.71.145/yhs/',
+                hosturl: 'http://10.200.102.130/yhs/',
                 mockurl: '',
                 descript: ''
             }
@@ -177,49 +175,49 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
             },
             {
                 urlname: "SJSQ",
-                url: "",
+                url: "yypt5/api/khgl/sqxx/getRjsqbyKhid",
                 mockurl: "data/SoftwareAuthority/SoftwareAuthority.json",
                 descript: "软件授权"
             },
             {
                 urlname: "YHTS",
-                url: "",
+                url: "yypt5/api/khgl/nsdw/getYhtsxx",
                 mockurl: "data/BankAuthority/BankAuthority.json",
                 descript: "银行托收"
             },
             {
                 urlname: "LPSQ",
-                url: "",
+                url: "yypt5/api/khgl/nsdw/getGiftSqxx",
                 mockurl: "data/GiftApply/GiftApply.json",
-                descript: "银行托收"
+                descript: "礼品申请"
             },
             {
                 urlname: "DD",
-                url: "",
+                url: "yypt5/pai/khgl/order/getUserOrder",
                 mockurl: "data/Order/order.json",
                 descript: "订单"
             },
             {
                 urlname: "SP",
-                url: "",
+                url: "yypt5/api/khgl/nsdw/getSpxx",
                 mockurl: "data/SP/sp.json",
                 descript: "sp"
             },
             {
                 urlname: "YWGK3DAY",
-                url: "",
+                url: "yypt5/api/zxgl/getThreeDayZxcs",
                 mockurl: "data/BusinessGeneral/ThreeDay.json",
                 descript: "业务概况3天"
             },
             {
                 urlname: "YWGK1YEAR",
-                url: "",
+                url: "yypt5/api/zxgl/tsxx/getOneYearTscs",
                 mockurl: "data/BusinessGeneral/OneYear.json",
                 descript: "业务概况1年"
             },
             {
                 urlname: "YWGKNOCLOSE",
-                url: "",
+                url: "yypt5/api/yxgl/yxxs/getWgbxsts",
                 mockurl: "data/BusinessGeneral/NotClose.json",
                 descript: "业务概况未关闭"
             },
