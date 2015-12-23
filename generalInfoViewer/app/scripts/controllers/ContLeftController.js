@@ -34,19 +34,18 @@ angular
              * @private
              */
 
-            var _tags = [
-                new _tagObj('会计信息', 'views/template/tabs/accountantPage.html', Config.getTabTip().contacts, false),
-                new _tagObj('纳税单位', 'views/template/tabs/taxInstitutionPage.html', Config.getTabTip().company, false),
-                new _tagObj('中介机构', 'views/template/tabs/intermediaryInstitutionPage.html', Config.getTabTip().intermediary, false)
-            ];
+            var _tags = [];
+           var user = DataStore.getAll();
+            if(angular.equals(DataStore.getAll()['khlx'],"0")){
+                _tags = [
+                    new _tagObj(user['lxrmc'], 'views/template/tabs/accountantPage.html', Config.getTabTip().contacts, false),
+                    new _tagObj(user['khmc'], 'views/template/tabs/taxInstitutionPage.html', Config.getTabTip().company, false)
+                ];
+            }
 
-            //测试用数据，by Zhang todo
-            DataStore.set({
-                lxrid: '19c2f04ff6564c60bc4bc7a648c356ec',
-                khid: '799cb25280c6439a8aff592707451606',
-                khlx: '0',
-                yhdm: 'SWSBD0010'
-            });
+
+
+
 
             /****
              * 点击tab 切换标签页
