@@ -5,12 +5,20 @@ angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer.SearchInfo')
     .controller('SearchInfoController', ['$scope', 'searchInfoService', 'DataStore', 'Config',
         function ($scope, searchInfoService, DataStore, Config) {
+            /**
+             * 显示搜索结果列表
+             * @param $event
+             */
             $scope.showSearchResult = function ($event) {
                 var yhmc = $.trim($($event.target).val());
                 var key = $event.which;
                 if (key == 13) {
                     $scope.Config = Config;
-                    $scope.searchInfo = searchInfoService.getSearch(yhmc);
+                    searchInfoService.getSearch({
+                        yhmc:yhmc
+                    }).then(function(data){
+                        $scope.searchInfo = data.data;
+                    });
                     var target = $(".duty-number:focus");
                     if (target.length > 0 && target.val().length > 0) {
                         $(".search-progressive-result").slideDown(200);
@@ -22,6 +30,11 @@ angular
                 });
                 event.stopPropagation();
             };
+
+            /**
+             * 显示提示文本信息
+             * @param $event
+             */
             $scope.showHintText = function ($event) {
                 var val = $($event.target).val();
                 var showEle = $($event.target).next();
@@ -45,16 +58,29 @@ angular
                 }
                 showEle.text($.trim(val));
             };
+
+            /**
+             * 点击一条记录，打开/更新选项卡
+             * @param item
+             */
             $scope.selectItem = function (item) {
                 var obj = {
                     yhjc:item.yhjc,
                     yhmc:item.yhmc,
                     tagType: '1'
                 };
-                DataStore.set('khid', item.yhid);
+                DataStore.set({
+                    yhid:item.yhid,
+                    yhlx:obj.tagType,
+                    kjid:''
+                });
                 $scope.$emit('modifyTab', obj);
             };
+
+            /**
+             * 新增用户 todo
+             */
             $scope.addContacts = function () {
-                //新增用户 todo
+
             };
         }]);

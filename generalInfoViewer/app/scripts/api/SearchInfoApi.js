@@ -7,8 +7,13 @@ angular
     .factory('searchInfoApi', ['$http', 'Host', 'Url',
         function ($http, Host, Url) {
             return {
-                getSearch: function (yhmc) {
-                    return $http.get(Host.getHostByName('BUSINISS')+Url.getUrlByName('SEARCH'),{params:{yhmc:yhmc}});
+                /**
+                 * 获取搜索结果
+                 * @param param
+                 * @returns {HttpPromise}
+                 */
+                getSearch: function (param) {
+                    return $http.get(Host.getHostByName('BUSINISS')+Url.getUrlByName('SEARCH'),{params:param});
                 }
             }
         }

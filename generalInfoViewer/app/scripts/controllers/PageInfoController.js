@@ -5,21 +5,18 @@ angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
     .controller('PageInfoController', ['$scope', '$timeout', 'pageInfoService', 'DataStore', 'Config',
         function ($scope, $timeout, pageInfoService, DataStore, Config) {
+            /**
+             * 初始化加载数据
+             */
             $scope.loadPageInfo = function () {
                 var param = {};
                 switch ($scope.tabType) {
                     case '0':
-                        //DataStore.set({
-                        //    lxrid: '19c2f04ff6564c60bc4bc7a648c356ec',
-                        //    khid: '799cb25280c6439a8aff592707451606',
-                        //    khlx: '0',
-                        //    yhdm: ''
-                        //});
                         param = DataStore.getAll();
                         pageInfoService.getContacts({
                             lxrid: param.lxrid,
-                            khid: param.khid,
-                            khlx: param.khlx,
+                            khid: param.yhid,
+                            khlx: param.yhlx,
                             yhdm: param.yhdm
                         }).then(function (data) {
                             $scope.contactsInfo = data.data;
@@ -27,22 +24,16 @@ angular
                         });
                         break;
                     case '1':
-                        //DataStore.set({
-                        //    khid: 'd7f39ebeb67049e1a9b815e70127ab66'
-                        //});
                         param = DataStore.getAll();
                         $scope.Config = Config;
                         pageInfoService.getCompany({
-                            khid: param.khid
+                            khid: param.yhid
                         }).then(function (data) {
                             $scope.companyInfo = data.data;
                             $scope.companyOld = $scope.companyInfo.bz;
                         });
                         break;
                     case '2':
-                        //DataStore.set({
-                        //    yhdm: 'SWSBD0010'
-                        //});
                         param = DataStore.getAll();
                         $scope.Config = Config;
                         pageInfoService.getIntermediary({
@@ -53,6 +44,10 @@ angular
                         });
                 }
             };
+
+            /**
+             * 监控联系人备注变化
+             */
             $scope.$watch('contactsInfo.bz', function (newValue) {
                 if (newValue && $scope.contactsOld) {
                     if (newValue === $scope.contactsOld) {
@@ -63,6 +58,9 @@ angular
                 }
             });
 
+            /**
+             * 监控单位用户备注变化
+             */
             $scope.$watch('companyInfo.bz', function (newValue) {
                 if (newValue && $scope.companyOld) {
                     if (newValue === $scope.companyOld) {
@@ -73,6 +71,9 @@ angular
                 }
             });
 
+            /**
+             * 监控中介机构备注变化
+             */
             $scope.$watch('intermediaryInfo.bz', function (newValue) {
                 if (newValue && $scope.intermediaryOld) {
                     if (newValue === $scope.intermediaryOld) {
@@ -83,7 +84,11 @@ angular
                 }
             });
 
-            var isDetailHover = false;
+            var isDetailHover = false;  //【详情】是否鼠标悬停
+
+            /**
+             * 显示【详情】信息
+             */
             $scope.showDetailInfo = function () {
                 if (!isDetailHover) {
                     isDetailHover = true;
@@ -91,6 +96,10 @@ angular
                     $(".company-info").slideDown(300);
                 }
             };
+
+            /**
+             * 隐藏【详情】信息
+             */
             $scope.hideDetailInfo = function () {
                 $('.company-info').slideUp(300, function () {
                     $(".show-detail").removeClass("hovered");
@@ -98,7 +107,11 @@ angular
                 });
             };
 
-            var isAgentlHover = false;
+            var isAgentlHover = false;  //【被代理】是否鼠标悬停
+
+            /**
+             * 显示【被代理】信息
+             */
             $scope.showAgentInfo = function () {
                 if (!isAgentlHover) {
                     isAgentlHover = true;
@@ -107,6 +120,9 @@ angular
                 }
             };
 
+            /**
+             * 隐藏【被代理】信息
+             */
             $scope.hideAgentInfo = function ($event) {
                 $('.agent-info').slideUp(300, function () {
                     $(".show-agent").removeClass("hovered");
@@ -114,10 +130,17 @@ angular
                 });
             };
 
+            /**
+             * 打开工作台【人员管理】标签页
+             */
             $scope.showManageWindow = function () {
-                //打开工作台【人员管理】标签页
+
             };
 
+            /**
+             * 点击链接，打开/更新选项卡
+             * @param item
+             */
             $scope.showItem = function (item) {
                 var khlx=DataStore.get('khlx');
                 var obj={
@@ -129,10 +152,18 @@ angular
                 }else{
                     obj.tagType='2';
                 }
-                DataStore.set('khid',item.yhid);
+                DataStore.set({
+                    yhid:item.yhid,
+                    yhlx:obj.tagType,
+                    kjid:''
+                });
                 $scope.$emit('modifyTab',obj);
             };
 
+            /**
+             * 保存备注
+             * @param $event
+             */
             $scope.saveRemark = function ($event) {
                 $($event.target).attr('disabled', true);
                 var param={

@@ -6,12 +6,13 @@ angular
     .service('searchInfoService', ['_', 'searchInfoApi',
         function (_, searchInfoApi) {
             return {
-                getSearch: function (yhmc) {
-                    var SearchInfo = {};
-                    searchInfoApi.getSearch(yhmc).success(function (data) {
-                        angular.copy(data, SearchInfo);
-                    });
-                    return SearchInfo;
+                /**
+                 * 获取搜索结果
+                 * @param param
+                 * @returns {*|HttpPromise}
+                 */
+                getSearch: function (param) {
+                    return searchInfoApi.getSearch(param);
                 }
             }
         }]);
