@@ -119,7 +119,6 @@ angular
             };
 
             $scope.showItem = function (item) {
-                console.log(DataStore.get('khlx'));
                 var khlx=DataStore.get('khlx');
                 var obj={
                     yhjc:item.yhjc,

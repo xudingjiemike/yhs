@@ -42,10 +42,11 @@ angular
             $scope.tableData = [];
             $scope.deleteTrustor = function(wtdwId){
                 trustorService.deleteTrustor({
-                    "khid": param.khlx==1?param.khid:param.kjid,//如果是兼职会计和代账会计，khid的值取kjid
+                    "khid": param.khid,
                     "yhdm": param.yhdm,
                     "khlx": param.khlx,
-                    "wtdwId": wtdwId
+                    "wtdwId": wtdwId,
+                     kjid: param.kjid
                 }, wtdwId, $scope.Trustors);
             };
 
