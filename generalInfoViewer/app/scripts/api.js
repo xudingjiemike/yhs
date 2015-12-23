@@ -38,7 +38,7 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
             {
                 hostname: 'BUSINISS',
                 //hosturl: 'http://192.168.70.202:88/',
-                hosturl: 'http://192.168.71.145/yhs/',
+                hosturl: '',
                 mockurl: '',
                 descript: ''
             }
