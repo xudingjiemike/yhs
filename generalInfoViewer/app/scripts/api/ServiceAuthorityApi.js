@@ -6,8 +6,8 @@ angular
     .factory('ServiceAuthorityApi', ['$http', 'Host','Url',
         function($http,Host,Url){
           return{
-             LoadServiceAuthorityInfo:function(khid){
-                 return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("FWSQ"),{params: {khid: khid}})
+             LoadServiceAuthorityInfo:function(Params){
+                 return $http.get(Host.getHostByName("BUSINISS")+Url.getUrlByName("FWSQ"),{params: {khid: Params['khid']}})
              }
           }
     }]);

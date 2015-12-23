@@ -5,7 +5,9 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
     .directive('uiYTab',function(){
         return{
             restrict:'AEC',
-            controller: ['$scope','$attrs','_','$timeout','SoftwareAuthorityService','BankAuthorityService','GiftApplyService','OrderService','SpService','Config',function($scope,$attrs,_,$timeout,SoftwareAuthorityService,BankAuthorityService,GiftApplyService,OrderService,SpService,Config){
+            controller: ['$scope','$attrs','_','$timeout','SoftwareAuthorityService','BankAuthorityService','GiftApplyService','OrderService','SpService','Config','DataStore',function($scope,$attrs,_,$timeout,SoftwareAuthorityService,BankAuthorityService,GiftApplyService,OrderService,SpService,Config,DataStore){
+                var Params = {};
+                angular.copy(DataStore.getAll(),Params);
 
                 var _tags = $scope.list;
 
@@ -75,10 +77,10 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
                 $scope.$on("loadData",function(e,d){
                     if( !d.checked){
                         if(angular.equals("1",d.tagtype)){
-                            $scope.tableItems.SoftWare = SoftwareAuthorityService.getServiceAuthorityData("1");
+                            $scope.tableItems.SoftWare = SoftwareAuthorityService.getServiceAuthorityData(Params);
                         }
                         if(angular.equals("2",d.tagtype)){
-                            $scope.tableItems.Order = OrderService.getOrderData("1");
+                            $scope.tableItems.Order = OrderService.getOrderData(Params);
                         }
 
 
@@ -95,12 +97,12 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
                  * @param tagName
                  * @param Id
                  */
-                function getData(list,tagName,Id){
+                function getData(list,tagName,Params){
                     var data = [];
                     _.map(list,function(item){
                         if(angular.equals(item.tabName,tagName)){
                             if(_.isEmpty(item.data)){
-                                item.data = item.func(Id);
+                                item.data = item.func(Params);
                                 //return data
                             }
                             data = item.data;
@@ -136,20 +138,20 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer.Uitab')
 
                     if(angular.equals(tag.tagName,"软件授权")){
 
-                        $scope.tableItems.SoftWare = getData(tablist,"软件授权","1");
+                        $scope.tableItems.SoftWare = getData(tablist,"软件授权",Params);
                     }
 
                     if(angular.equals(tag.tagName,"银行托收")){
-                        $scope.tableItems.BankAuthority = getData(tablist,"银行托收","1");
+                        $scope.tableItems.BankAuthority = getData(tablist,"银行托收",Params);
                     }
                     if(angular.equals(tag.tagName,"礼品申请")){
-                        $scope.tableItems.GiftApply = getData(tablist,"礼品申请","1");
+                        $scope.tableItems.GiftApply = getData(tablist,"礼品申请",Params);
                     }
                     if(angular.equals(tag.tagName,"订单")){
-                        $scope.tableItems.Order = getData(tablist,"订单","1");
+                        $scope.tableItems.Order = getData(tablist,"订单",Params);
                     }
                     if(angular.equals(tag.tagName,"SP")){
-                        $scope.tableItems.Sp = getData(tablist,"SP","1");
+                        $scope.tableItems.Sp = getData(tablist,"SP",Params);
                     }
 
 

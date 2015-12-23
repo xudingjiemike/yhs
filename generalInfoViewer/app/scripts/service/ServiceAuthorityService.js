@@ -5,15 +5,15 @@ angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
     .service('ServiceAuthorityService',['_','ServiceAuthorityApi',function(_,ServiceAuthorityApi){
           var ServiceAuthorityData = [];
-          function LoadData(khid){
-              ServiceAuthorityApi.LoadServiceAuthorityInfo(khid).success(function(data){
+          function LoadData(Params){
+              ServiceAuthorityApi.LoadServiceAuthorityInfo(Params).success(function(data){
 
                   angular.copy(data.fwsqList,ServiceAuthorityData);
               })
           }
-          function getData(khid){
+          function getData(Params){
               if(ServiceAuthorityData.length == 0){
-                  LoadData(khid);
+                  LoadData(Params);
               }
               return ServiceAuthorityData;
           }

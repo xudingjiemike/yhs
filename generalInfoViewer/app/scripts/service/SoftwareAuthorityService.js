@@ -6,14 +6,14 @@ angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
     .service('SoftwareAuthorityService',['_','SoftwareAuthorityApi',function(_,SoftwareAuthorityApi){
         var SoftwareAuthorityData = [];
-        function LoadData(khid){
-            SoftwareAuthorityApi.LoadSoftwareAuthorityInfo(khid).success(function(obj){
+        function LoadData(Params){
+            SoftwareAuthorityApi.LoadSoftwareAuthorityInfo(Params).success(function(obj){
                 angular.copy(obj.list,SoftwareAuthorityData);
             })
         }
-        function getData(khid){
+        function getData(Params){
             if(SoftwareAuthorityData.length == 0){
-                LoadData(khid);
+                LoadData(Params);
             }
 
             return SoftwareAuthorityData;

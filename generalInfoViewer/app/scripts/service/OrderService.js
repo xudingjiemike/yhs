@@ -5,8 +5,8 @@ angular
     .module('ui.yypt5.yhgl.GeneralInfoViewer')
     .service('OrderService',['_','TabsDataApi','Config',function(_,TabsDataApi,Config){
         var OrderData = [];
-        function LoadData(khid){
-            TabsDataApi.Load(khid,"DD").success(function(obj){
+        function LoadData(Params){
+            TabsDataApi.Load(Params,"DD").success(function(obj){
                 angular.copy(obj.list,OrderData);
                 for(var orderItemIndex in OrderData){
                     var cpbs = "";
@@ -30,6 +30,14 @@ angular
                     item.skzt =  Config.getOrderReceiptStateById(item.skzt);
                     item.kpzt = Config.getOrderBillStateById(item.kpzt);
                     item.jfzt = Config.getOrderDeliverStateById(item.jfzt)
+
+                    item.changeDeal = (function(){
+                        if((!angular.equals(item.zfbz,"1"))&&((!angular.equals(item.jfzt,"3"))||angular.equals(item.kpzt,"1"))){
+                            return "变更交易约定";
+                        }else{
+                            return "无";
+                        }
+                    })();
                 });
 
 
@@ -38,9 +46,9 @@ angular
 
             })
         }
-        function getData(khid){
+        function getData(Params){
             if(OrderData.length == 0){
-                LoadData(khid);
+                LoadData(Params);
             }
 
             return OrderData;

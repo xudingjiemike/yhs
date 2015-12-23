@@ -4,8 +4,7 @@
 angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
     .constant({
         mock: true,
-        //loginHost:'http://192.168.70.202:88/'
-        loginHost:'http://192.168.71.145/yhs/'
+        loginHost:'http://192.168.70.202:88/'
     })
     .config(['$httpProvider','loginHost',function ($httpProvider,loginHost) {
         $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -204,6 +203,24 @@ angular.module('ui.yypt5.yhgl.GeneralInfoViewer')
                 url: "",
                 mockurl: "data/SP/sp.json",
                 descript: "sp"
+            },
+            {
+                urlname: "YWGK3DAY",
+                url: "",
+                mockurl: "data/BusinessGeneral/ThreeDay.json",
+                descript: "业务概况3天"
+            },
+            {
+                urlname: "YWGK1YEAR",
+                url: "",
+                mockurl: "data/BusinessGeneral/OneYear.json",
+                descript: "业务概况1年"
+            },
+            {
+                urlname: "YWGKNOCLOSE",
+                url: "",
+                mockurl: "data/BusinessGeneral/NotClose.json",
+                descript: "业务概况未关闭"
             },
             {
                 urlname: "DELETETRUSTOR",
